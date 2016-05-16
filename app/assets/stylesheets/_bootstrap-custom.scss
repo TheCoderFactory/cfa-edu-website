@@ -1,11 +1,11 @@
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
+ * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 // Core variables and mixins
-@import "bootstrap/custom";
+/* @import "bootstrap/custom"; */
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
@@ -34,7 +34,7 @@
 @import "bootstrap/card";
 @import "bootstrap/breadcrumb";
 @import "bootstrap/pagination";
-@import "bootstrap/tags";
+/* @import "bootstrap/tags"; */
 @import "bootstrap/jumbotron";
 @import "bootstrap/alert";
 @import "bootstrap/progress";
