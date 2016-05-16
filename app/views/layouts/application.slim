@@ -9,7 +9,9 @@ html
 
 body
 
-  = render "layouts/header"
-  = yield
-  = render "layouts/footer"
+  .wrapper
+    = render "layouts/header"
+    .content
+      = yield
+    = render "layouts/footer"
 

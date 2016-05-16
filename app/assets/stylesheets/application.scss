@@ -3,6 +3,60 @@
 @import "home-page";
 @import "headings";
 
-body {
+html, body {
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: grey;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+
+  li.nav-item {
+    margin-right: 10px;
+  }
+  a.header-major-cta {
+    background-color: #FFF;
+    border: 2px solid #EC5037;
+    border-radius: 5px;
+    color: #EC5037 !important;
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+.content {
+  padding-top: 100px;
+  padding-bottom: 500px;
+}
+
+.footer {
+  background-color: #333;
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 500px;
+
+  ul {
+    padding: 0px;
+  }
+  li {
+    list-style-type: none;
+    color: #ADADAD;
+  }
 }
