@@ -1,0 +1,104 @@
+.hero {
+  background-image: url('main-header-bg.jpg');
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  color: #FFF;
+
+  .hero-btns {
+    margin-top: 30px;
+  }
+  .hero-cards {
+    margin-top: 30px;
+  }
+  .hero-card {
+    width: 30% !important;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    margin-top: 60px;
+    color: white;
+  }
+  .hero-card-middle {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 30% !important;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    margin-top: 60px;
+    color: white;
+  }
+}
+.press-logos {
+  background-color: #EEE;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .container .press-logo {
+    display: inline-block;
+    line-height: 50px;
+  }
+  .press-logo img {
+    vertical-align: middle;
+  }
+}
+.course-options {
+  background-color: #333;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .container {
+    display: flex;
+  }
+  .course-option-heading {
+    width: 90%;
+    margin: auto;
+  }
+  .course-option-1, .course-option-2, .course-option-3, .course-option-4 {
+    background-color: #EC5037;
+   flex: 1;
+  }
+  .course-option-1, .course-option-2, .course-option-3 {
+    padding-top: 200px;
+  }
+  .course-option-4 {
+    padding-top: 100px;
+
+    .course-option-4-content {
+      text-align: center;
+      color: white;
+      width: 90%;
+      margin: auto;
+
+      p {
+        font-size: 14px;
+      }
+
+      hr {
+        width: 50%;
+        height: 2px;
+        color: #FFF;
+        background-color: #FFF;
+      }
+    }
+
+  }
+  .course-option-1 {
+    background-image: url('foundOutMore1.jpg');
+    background-position: bottom;
+  }
+  .course-option-2 {
+    background-image: url('foundOutMore2.jpg');
+    background-position: top;
+  }
+  .course-option-3 {
+    background-image: url('foundOutMore3.jpg');
+    background-position: center;
+  }
+}

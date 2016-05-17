@@ -1,5 +1,7 @@
 @import "bootstrap-custom";
+@import "font-awesome";
 @import "form-styles";
+@import "cta-styles";
 @import "home-page";
 @import "headings";
 
@@ -34,11 +36,22 @@ header {
     color: #EC5037 !important;
     font-size: 14px;
     padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  li.active:after {
+    content: ' ';
+    position: absolute;
+    border: solid 10px transparent;
+    border-top: solid 0px transparent;
+    border-width: 10px;
+    margin-top: 15px;
+    border-color: #FFF transparent transparent transparent;
   }
 }
 
 .content {
-  padding-top: 100px;
+  padding-top: 61px;
   padding-bottom: 500px;
 }
 
@@ -59,4 +72,12 @@ header {
     list-style-type: none;
     color: #ADADAD;
   }
+}
+
+a {
+  color: #38A9C7;
+}
+
+a:hover {
+  color: white;
 }
