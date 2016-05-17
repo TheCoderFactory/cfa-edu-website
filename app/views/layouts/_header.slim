@@ -1,20 +1,20 @@
 header
   nav.navbar.navbar-light.bg-faded
-    .container
-      ul.nav.navbar-nav
-        li.nav-item
-          a href="#"
-            img src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
-      ul.nav.navbar-nav.pull-xs-right
-        li.nav-item.active
-          a.nav-link href="#" FAST TRACK
-        li.nav-item.active
-          a.nav-link href="#" CORPORATE
-        li.nav-item.active
-          a.nav-link href="#" WORKSHOP
-        li.nav-item.active
-          a.nav-link href="#" KIDS CODING
-        li.nav-item.active
-          a.nav-link href="#" CONTACT
-        li.nav-item
-          a.nav-link.header-major-cta href="#" APPLY
+    button.navbar-toggler.navbar-toggleable-sm type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" &#9776;
+    a.navbar-brand href="#"
+      img src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
+      .collapse#exCollapsingNavbar
+        ul.nav.navbar-nav.pull-xs-right
+          li.nav-item.active
+            a.nav-link href="#" FAST TRACK
+          li.nav-item.active
+            a.nav-link href="#" CORPORATE
+          li.nav-item.active
+            a.nav-link href="#" WORKSHOP
+          li.nav-item.active
+            a.nav-link href="#" KIDS CODING
+          li.nav-item.active
+            a.nav-link href="#" CONTACT
+          li.nav-item
+            a.nav-link.header-major-cta href="#" APPLY
+
