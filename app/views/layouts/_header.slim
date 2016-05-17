@@ -1,20 +1,21 @@
 header
   nav.navbar.navbar-light.bg-faded
-    button.navbar-toggler.navbar-toggleable-sm type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" &#9776;
+    button.navbar-toggler.hide-on-xs-down type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" &#9776;
     a.navbar-brand href="#"
-      img src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
-      .collapse#exCollapsingNavbar
-        ul.nav.navbar-nav.pull-xs-right
-          li.nav-item.active
-            a.nav-link href="#" FAST TRACK
-          li.nav-item.active
-            a.nav-link href="#" CORPORATE
-          li.nav-item.active
-            a.nav-link href="#" WORKSHOP
-          li.nav-item.active
-            a.nav-link href="#" KIDS CODING
-          li.nav-item.active
-            a.nav-link href="#" CONTACT
-          li.nav-item
-            a.nav-link.header-major-cta href="#" APPLY
+      .container
+        img src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
+        .collapse.navbar-toggleable-sm#exCollapsingNavbar
+          ul.nav.navbar-nav.pull-xs-right
+            li.nav-item
+              a.nav-link href="#" FAST TRACK
+            li.nav-item
+              a.nav-link href="#" CORPORATE
+            li.nav-item
+              a.nav-link href="#" WORKSHOP
+            li.nav-item
+              a.nav-link href="#" KIDS CODING
+            li.nav-item
+              a.nav-link href="#" CONTACT
+            li.nav-item
+              a.nav-link.header-major-cta href="#" APPLY
 

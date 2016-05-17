@@ -77,7 +77,15 @@ header {
 a {
   color: #38A9C7;
 }
-
 a:hover {
   color: white;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
+  #exCollapsingNavbar {
+    clear: both;
+  }
 }
