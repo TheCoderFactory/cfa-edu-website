@@ -1,25 +1,48 @@
-h1 {}
-
+h1 {
+  color: #FFF;
+  font-size: 30px;
+}
 h2 {
   color: #FFF;
   font-size: 26px;
 }
-
 h3 {
   color: #FFF;
   font-size: 24px;
 }
-
 h4 {
   color: #ADADAD;
   font-size: 18px;
 }
-
 h5 {
   color: #FFF;
   font-size: 18px;
 }
-
 h6 {
   color: #EC5037
+}
+
+@media only screen and (max-width: 767px) {
+
+  h1 {
+    font-size: 17px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 11px;
+  }
+  h5 {
+    font-size: 11px;
+  }
+  h6 {
+  }
+  a {
+    font-size: 11px;
+  }
 }

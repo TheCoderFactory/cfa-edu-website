@@ -1,9 +1,9 @@
 @import "bootstrap";
+@import "headings";
 @import "font-awesome";
 @import "form-styles";
 @import "cta-styles";
 @import "home-page";
-@import "headings";
 
 html, body {
   height: 100%;
@@ -26,6 +26,9 @@ header {
   z-index: 9999;
   top: 0;
 
+  img {
+    display: inline !important;
+  }
   li.nav-item {
     margin-right: 10px;
   }
@@ -79,13 +82,4 @@ a {
 }
 a:hover {
   color: white;
-}
-
-@media (max-width: 767px) {
-  .navbar-nav .nav-item + .nav-item {
-    margin-left: 0;
-  }
-  #exCollapsingNavbar {
-    clear: both;
-  }
 }

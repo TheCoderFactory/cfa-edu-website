@@ -1,10 +1,19 @@
 .hero {
   background-image: url('main-header-bg.jpg');
   width: 100%;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 20px;
   color: #FFF;
 
+  .video-mobile {
+    font-size: 20px !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -20px;
+  }
+  .options-container {
+    display: flex;
+  }
   .hero-btns {
     margin-top: 30px;
   }
@@ -13,7 +22,6 @@
   }
   .hero-card {
     width: 30% !important;
-    background-color: #000;
     background-color: rgba(0,0,0,0.7);
     padding: 15px;
     margin-top: 60px;
@@ -23,11 +31,17 @@
     margin-left: 5%;
     margin-right: 5%;
     width: 30% !important;
-    background-color: #000;
     background-color: rgba(0,0,0,0.7);
     padding: 15px;
     margin-top: 60px;
     color: white;
+  }
+  .hero-card-mobile {
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    color: white;
+    margin-top: 15px;
+    margin: auto;
   }
 }
 .press-logos {
@@ -38,15 +52,25 @@
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
   }
   .container .press-logo {
     display: inline-block;
     line-height: 50px;
   }
-  .press-logo img {
-    vertical-align: middle;
+}
+.press-logos-mobile {
+  background-color: #EEE;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+  .press-logo {
+    margin: 10px;
+  }
+
 }
 .course-options {
   background-color: #333;
