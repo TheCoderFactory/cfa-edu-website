@@ -11,15 +11,13 @@ $(document).ready(function () {
 });
 
 function changeTestimonial(testimonial) {
-  // console.log("#testimonial-"+currTestimonial);
+  if (testimonial > 5 || testimonial < 1) testimonial = 3;
   $("#testimonial-"+currTestimonial).addClass('inactive-testimonial');
   $("#testimonial-"+currTestimonial).removeClass('active-testimonial');
   $("#testimonial-"+currTestimonial+"-content").hide();
   $("#testimonial-"+testimonial).removeClass('inactive-testimonial');
   $("#testimonial-"+testimonial).addClass('active-testimonial');
   $("#testimonial-"+testimonial+"-content").show();
-  console.log(testimonial);
-  console.log(currTestimonial);
   currTestimonial = testimonial;
 }
 
@@ -27,8 +25,10 @@ function nextTestimonial(direction) {
   if (direction === "left") {
     if (currTestimonial === 1) changeTestimonial(5);
     else changeTestimonial(currTestimonial-1);
-  } else {
+  } else if (direction === "right") {
     if (currTestimonial === 5) changeTestimonial(1);
     else changeTestimonial(currTestimonial+1);
+  } else {
+    changeTestimonial(3);
   }
 }

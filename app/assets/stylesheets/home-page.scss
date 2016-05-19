@@ -128,7 +128,21 @@
 }
 .testimonials {
   background-color: #EEE;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
+  h3, h5 {
+    color: #333;
+  }
+  #testimonial-images {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  hr {
+    width: 5%;
+    height: 1px;
+  }
   .img-circle {
     border-radius: 50%;
   }
@@ -137,9 +151,16 @@
     height: 100%;
   }
   .inactive-testimonial {
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
     -webkit-filter: grayscale(100%);
+    -webkit-filter: brightness(40%);
+  }
+  p {
+    color: #ADADAD;
+  }
+  .quote {
+    width: 50%;
   }
 }
 .business-details {
