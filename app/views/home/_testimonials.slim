@@ -4,24 +4,26 @@
     .container#testimonial-images
       .row
         .col-xs-1
-          a onclick="nextTestimonial('left')" <
+          a.testimonial-button onclick="nextTestimonial('left')"
+            img.img-fluid src="#{asset_path 'left-arrow.png'}"
         .col-xs-2
-          a onclick="changeTestimonial(1)"
+          a.testimonial-button onclick="changeTestimonial(1)"
             img.img-fluid.img-circle.inactive-testimonial#testimonial-1 src="#{asset_path 'sam.jpg'}"
         .col-xs-2
-          a onclick="changeTestimonial(2)"
+          a.testimonial-button onclick="changeTestimonial(2)"
             img.img-fluid.img-circle.inactive-testimonial#testimonial-2 src="#{asset_path 'sam.jpg'}"
         .col-xs-2
-          a onclick="changeTestimonial(3)"
+          a.testimonial-button onclick="changeTestimonial(3)"
             img.img-fluid.img-circle.inactive-testimonial#testimonial-3 src="#{asset_path 'sam.jpg'}"
         .col-xs-2
-          a onclick="changeTestimonial(4)"
+          a.testimonial-button onclick="changeTestimonial(4)"
             img.img-fluid.img-circle.inactive-testimonial#testimonial-4 src="#{asset_path 'sam.jpg'}"
         .col-xs-2
-          a onclick="changeTestimonial(5)"
+          a.testimonial-button onclick="changeTestimonial(5)"
             img.img-fluid.img-circle.inactive-testimonial#testimonial-5 src="#{asset_path 'sam.jpg'}"
         .col-xs-1
-          a onclick="nextTestimonial('right')" >
+          a.testimonial-button onclick="nextTestimonial('right')"
+            img.img-fluid src="#{asset_path 'right-arrow.png'}"
     .container#testimonial-1-content
       .row
         .col-xs-12
