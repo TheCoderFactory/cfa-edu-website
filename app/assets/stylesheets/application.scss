@@ -55,7 +55,10 @@ header {
 
 .content {
   padding-top: 61px;
-  padding-bottom: 750px;
+  padding-bottom: 500px;
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 750px;
+  }
 }
 
 .footer {
@@ -66,7 +69,10 @@ header {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 750px;
+  height: 500px;
+  @media only screen and (max-width: 767px) {
+    height: 750px;
+  }
 
   ul {
     padding: 0px;
