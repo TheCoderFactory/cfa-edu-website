@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('main-header-bg.jpg');
+  background-image: url(asset-path('main-header-bg.jpg'));
   width: 100%;
   padding-top: 30px;
   padding-bottom: 20px;
@@ -114,15 +114,15 @@
 
   }
   .course-option-1 {
-    background-image: url('foundOutMore1.jpg');
+    background-image: url(asset-path('foundOutMore1.jpg'));
     background-position: bottom;
   }
   .course-option-2 {
-    background-image: url('foundOutMore2.jpg');
+    background-image: url(asset-path('foundOutMore2.jpg'));
     background-position: top;
   }
   .course-option-3 {
-    background-image: url('foundOutMore3.jpg');
+    background-image: url(asset-path('foundOutMore3.jpg'));
     background-position: center;
   }
 }
@@ -211,7 +211,7 @@
     flex: 1;
   }
   .course-1-image, .course-2-image, .course-3-image, .course-4-image {
-    background-image: url('shortCoursesHeaderImage.jpg');
+    background-image: url(asset-path('shortCoursesHeaderImage.jpg'));
     width: 100%;
     height: 200px;
     padding: 10px;
