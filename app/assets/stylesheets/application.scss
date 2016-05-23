@@ -51,6 +51,12 @@ header {
     margin-top: 15px;
     border-color: #FFF transparent transparent transparent;
   }
+  @media only screen and (max-width: 767px) {
+    li {
+      float: none !important;
+      margin-left: 0px !important;
+    }
+  }
 }
 
 .content {
