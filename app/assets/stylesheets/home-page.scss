@@ -179,6 +179,38 @@
     cursor: pointer;
   }
 }
+.mobile-testimonials {
+  background-color: #EEE;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  h3, h5 {
+    color: #333;
+  }
+  #mobile-testimonial-images {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  hr {
+    width: 5%;
+    height: 1px;
+  }
+  .img-circle {
+    border-radius: 50%;
+  }
+  .mobile-active-testimonial {
+    display: block;
+  }
+  .mobile-inactive-testimonial {
+    display: none;
+  }
+  p {
+    color: #ADADAD;
+  }
+  .testimonial-button {
+    cursor: pointer;
+  }
+}
 .infographic {
   padding-top: 20px;
   padding-bottom: 20px;
