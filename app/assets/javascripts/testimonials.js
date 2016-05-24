@@ -1,4 +1,8 @@
-var currTestimonial = 3;
+var currTestimonial;
+
+$(document).on("page:change", function () {
+  currTestimonial = 3;
+});
 
 function changeTestimonial(testimonial) {
   console.log(currTestimonial);
