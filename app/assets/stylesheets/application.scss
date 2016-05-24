@@ -90,6 +90,9 @@ header {
   input {
     margin: 0px;
   }
+  .hs_email > label {
+    display: inline-block !important;
+  }
 }
 
 a {
