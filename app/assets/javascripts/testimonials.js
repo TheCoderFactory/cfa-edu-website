@@ -1,6 +1,7 @@
 var currTestimonial = 3;
 
 function changeTestimonial(testimonial) {
+  console.log(currTestimonial);
   if (testimonial > 5 || testimonial < 1) testimonial = 3;
   $("#testimonial-"+currTestimonial).removeClass('active-testimonial');
   $("#testimonial-"+currTestimonial).addClass('inactive-testimonial');
