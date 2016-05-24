@@ -1,16 +1,12 @@
 .hero {
   background-image: url(asset-path('main-header-bg.jpg'));
+  background-repeat: cover;
+  background-size: 100% 100%;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 20px;
   color: #FFF;
 
-  .video-mobile {
-    font-size: 20px !important;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: -20px;
-  }
   .options-container {
     display: flex;
   }
@@ -23,6 +19,7 @@
   .hero-card {
     width: 30% !important;
     background-color: rgba(0,0,0,0.7);
+    background-size: 100%;
     padding: 15px;
     margin-top: 60px;
     color: white;
@@ -36,11 +33,15 @@
     margin-top: 60px;
     color: white;
   }
+  .mobile-hero-cards {
+    margin-top: 30px;
+  }
   .hero-card-mobile {
     background-color: rgba(0,0,0,0.7);
     padding: 15px;
     color: white;
-    margin-top: 15px;
+    margin-top: 30px;
+    width: 90%;
     margin: auto;
   }
 }
@@ -68,7 +69,7 @@
     align-items: center;
   }
   .press-logo {
-    margin: 10px;
+    margin: 15px;
   }
 
 }
@@ -86,7 +87,7 @@
   }
   .course-option-1, .course-option-2, .course-option-3, .course-option-4 {
     background-color: #EC5037;
-   flex: 1;
+    flex: 1;
   }
   .course-option-1, .course-option-2, .course-option-3 {
     padding-top: 200px;
@@ -115,14 +116,20 @@
   }
   .course-option-1 {
     background-image: url(asset-path('foundOutMore1.jpg'));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-position: bottom;
   }
   .course-option-2 {
     background-image: url(asset-path('foundOutMore2.jpg'));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-position: top;
   }
   .course-option-3 {
     background-image: url(asset-path('foundOutMore3.jpg'));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-position: center;
   }
 }
@@ -155,6 +162,12 @@
     height: 75%;
     -webkit-filter: grayscale(100%);
     -webkit-filter: brightness(40%);
+  }
+  .active-testimonial-content {
+    display: block;
+  }
+  .inactive-testimonial-content {
+    display: none;
   }
   p {
     color: #ADADAD;
@@ -212,6 +225,8 @@
   }
   .course-1-image, .course-2-image, .course-3-image, .course-4-image {
     background-image: url(asset-path('shortCoursesHeaderImage.jpg'));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     width: 100%;
     height: 200px;
     padding: 10px;
@@ -251,7 +266,7 @@
 
   h5 {
     color: #333;
-    margin-top: 10px;
+    margin-top: 25px;
   }
   .hs-form {
     width: 100%;
@@ -259,7 +274,7 @@
       width: 100%;
       margin: 0px;
       box-sizing: inherit;
-    max-width: 100%;
+      max-width: 100%;
     }
   }
   .hs_hs_persona > label {
@@ -267,6 +282,7 @@
     margin-top: 10px;
     margin-bottom: 0px;
     margin-left: 10px;
+    @extend .pull-left;
   }
   .hs_hs_persona > .input > select {
     margin-top: 5px;
@@ -276,11 +292,21 @@
     margin-top: 10px;
     margin-bottom: 0px;
     margin-left: 10px;
+    @extend .pull-left;
   }
   .hs_campus_preference > .input > select {
     margin-top: 5px;
   }
   .hs-button {
     @extend .pull-right;
+    @media only screen and (max-width: 767px) {
+      float: none;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    p, h5, .hs-button{
+      display: block;
+      text-align: -webkit-center !important;
+    }
   }
 }

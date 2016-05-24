@@ -1,4 +1,4 @@
-.testimonials
+.testimonials.hidden-sm-down
   center
     h3 MEET OUR ALUMNI
     .container#testimonial-images
@@ -14,7 +14,7 @@
             img.img-fluid.img-circle.inactive-testimonial#testimonial-2 src="#{asset_path 'sam.jpg'}"
         .col-xs-2
           a.testimonial-button onclick="changeTestimonial(3)"
-            img.img-fluid.img-circle.inactive-testimonial#testimonial-3 src="#{asset_path 'sam.jpg'}"
+            img.img-fluid.img-circle.active-testimonial#testimonial-3 src="#{asset_path 'sam.jpg'}"
         .col-xs-2
           a.testimonial-button onclick="changeTestimonial(4)"
             img.img-fluid.img-circle.inactive-testimonial#testimonial-4 src="#{asset_path 'sam.jpg'}"
@@ -24,7 +24,7 @@
         .col-xs-1
           a.testimonial-button onclick="nextTestimonial('right')"
             img.img-fluid src="#{asset_path 'right-arrow.png'}"
-    .container#testimonial-1-content
+    .container.inactive-testimonial-content#testimonial-1-content
       .row
         .col-xs-12
           h5 Sam Henderson 1
@@ -33,7 +33,7 @@
           p.quote
             | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
           a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
-    .container#testimonial-2-content
+    .container.inactive-testimonial-content#testimonial-2-content
       .row
         .col-xs-12
           h5 Sam Henderson 2
@@ -42,7 +42,7 @@
           p.quote
             | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
           a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
-    .container#testimonial-3-content
+    .container.active-testimonial-content#testimonial-3-content
       .row
         .col-xs-12
           h5 Sam Henderson 3
@@ -51,7 +51,7 @@
           p.quote
             | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
           a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
-    .container#testimonial-4-content
+    .container.inactive-testimonial-content#testimonial-4-content
       .row
         .col-xs-12
           h5 Sam Henderson 4
@@ -60,7 +60,78 @@
           p.quote
             | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
           a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
-    .container#testimonial-5-content
+    .container.inactive-testimonial-content#testimonial-5-content
+      .row
+        .col-xs-12
+          h5 Sam Henderson 5
+          p Artist - <a href="#">View Story</a>
+          hr
+          p.quote
+            | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+          a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
+.testimonials-mobile.hidden-md-up
+  center
+    h3 MEET OUR ALUMNI
+    .container#mobile-testimonial-images
+      .row
+        .col-xs-3
+          a.testimonial-button onclick="nextTestimonial('left')"
+            img.img-fluid src="#{asset_path 'left-arrow.png'}"
+        .col-xs-6.mobile-testimonial
+          a.testimonial-button onclick="changeTestimonial(1)"
+            img.img-fluid.img-circle.inactive-testimonial#mobile-testimonial-1 src="#{asset_path 'sam.jpg'}"
+        .col-xs-6.mobile-testimonial
+          a.testimonial-button onclick="changeTestimonial(2)"
+            img.img-fluid.img-circle.inactive-testimonial#mobile-testimonial-2 src="#{asset_path 'sam.jpg'}"
+        .col-xs-6.mobile-testimonial
+          a.testimonial-button onclick="changeTestimonial(3)"
+            img.img-fluid.img-circle.inactive-testimonial#mobile-testimonial-3 src="#{asset_path 'sam.jpg'}"
+        .col-xs-6.mobile-testimonial
+          a.testimonial-button onclick="changeTestimonial(4)"
+            img.img-fluid.img-circle.inactive-testimonial#mobile-testimonial-4 src="#{asset_path 'sam.jpg'}"
+        .col-xs-6.mobile-testimonial
+          a.testimonial-button onclick="changeTestimonial(5)"
+            img.img-fluid.img-circle.inactive-testimonial#mobile-testimonial-5 src="#{asset_path 'sam.jpg'}"
+        .col-xs-3.mobile-testimonial
+          a.testimonial-button onclick="nextTestimonial('right')"
+            img.img-fluid src="#{asset_path 'right-arrow.png'}"
+    .container#mobile-testimonial-1-content
+      .row
+        .col-xs-12
+          h5 Sam Henderson 1
+          p Artist - <a href="#">View Story</a>
+          hr
+          p.quote
+            | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+          a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
+    .container#mobile-testimonial-2-content
+      .row
+        .col-xs-12
+          h5 Sam Henderson 2
+          p Artist - <a href="#">View Story</a>
+          hr
+          p.quote
+            | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+          a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
+    .container#mobile-testimonial-3-content
+      .row
+        .col-xs-12
+          h5 Sam Henderson 3
+          p Artist - <a href="#">View Story</a>
+          hr
+          p.quote
+            | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+          a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
+    .container#mobile-testimonial-4-content
+      .row
+        .col-xs-12
+          h5 Sam Henderson 4
+          p Artist - <a href="#">View Story</a>
+          hr
+          p.quote
+            | "[The atomosphere] is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+          a href="#" #{fa_icon 'play', class: 'fa-fg'} Watch Video
+    .container#mobile-testimonial-5-content
       .row
         .col-xs-12
           h5 Sam Henderson 5
