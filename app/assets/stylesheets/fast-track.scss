@@ -1,0 +1,135 @@
+.fast-track-apply {
+  background-color: #EEE;
+  .hs_hs_persona > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_hs_persona > .input > select {
+    margin-top: 5px;
+  }
+  .hs_campus_preference > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_campus_preference > .input > select {
+    margin-top: 5px;
+  }
+  .hs_age > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_age > .input > input {
+    margin-top: 5px;
+  }
+  .hs_gender > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_gender > .input > select {
+    margin-top: 5px;
+  }
+  .hs_ft_reason_for_application > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_reason_for_application > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_ft_background > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_background > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_ft_passion > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_passion > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_ft_prior_coding_experience > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_prior_coding_experience > .input > input {
+    margin-top: 5px;
+  }
+  .hs_ft_overcame_problem > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_overcame_problem > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_ft_why_choose_you > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_why_choose_you > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_ft_links > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_ft_links > .input > input {
+    margin-top: 5px;
+  }
+  .hs_how_did_you_hear_about_us > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_how_did_you_hear_about_us > .input > input {
+    margin-top: 5px;
+  }
+}
