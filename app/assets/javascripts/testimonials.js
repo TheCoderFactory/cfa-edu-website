@@ -1,23 +1,15 @@
 var currTestimonial = 3;
 
-$(document).ready(function () {
-  $("#testimonial-1-content").hide();
-  $("#testimonial-2-content").hide();
-  $("#testimonial-3-content").show();
-  $("#testimonial-4-content").hide();
-  $("#testimonial-5-content").hide();
-  $("#testimonial-3").removeClass('inactive-testimonial');
-  $("#testimonial-3").addClass('active-testimonial');
-});
-
 function changeTestimonial(testimonial) {
   if (testimonial > 5 || testimonial < 1) testimonial = 3;
   $("#testimonial-"+currTestimonial).addClass('inactive-testimonial');
   $("#testimonial-"+currTestimonial).removeClass('active-testimonial');
-  $("#testimonial-"+currTestimonial+"-content").hide();
+  $("#testimonial-"+currTestimonial+"-content").addClass('inactive-testimonial-content');
+  $("#testimonial-"+currTestimonial+"-content").removeClass('active-testimonial-content');
   $("#testimonial-"+testimonial).removeClass('inactive-testimonial');
   $("#testimonial-"+testimonial).addClass('active-testimonial');
-  $("#testimonial-"+testimonial+"-content").show();
+  $("#testimonial-"+testimonial+"-content").removeClass('inactive-testimonial-content');
+  $("#testimonial-"+testimonial+"-content").addClass('active-testimonial-content');
   currTestimonial = testimonial;
 }
 
