@@ -1,18 +1,12 @@
 .hero {
   background-image: url(asset-path('main-header-bg.jpg'));
-  background-repeat: no-repeat;
+  background-repeat: cover;
   background-size: 100% 100%;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 20px;
   color: #FFF;
 
-  .video-mobile {
-    font-size: 20px !important;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: -20px;
-  }
   .options-container {
     display: flex;
   }
@@ -39,11 +33,14 @@
     margin-top: 60px;
     color: white;
   }
+  .mobile-hero-cards {
+    margin-top: 30px;
+  }
   .hero-card-mobile {
     background-color: rgba(0,0,0,0.7);
     padding: 15px;
     color: white;
-    margin-top: 15px;
+    margin-top: 30px;
     width: 90%;
     margin: auto;
   }
@@ -165,6 +162,12 @@
     height: 75%;
     -webkit-filter: grayscale(100%);
     -webkit-filter: brightness(40%);
+  }
+  .active-testimonial-content {
+    display: block;
+  }
+  .inactive-testimonial-content {
+    display: none;
   }
   p {
     color: #ADADAD;
