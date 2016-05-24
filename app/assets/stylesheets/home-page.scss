@@ -178,6 +178,12 @@
   .testimonial-button {
     cursor: pointer;
   }
+
+  .testimonial-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .mobile-testimonials {
   background-color: #EEE;
