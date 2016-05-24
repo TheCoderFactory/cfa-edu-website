@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get "fast-track", to: "fast_track#index"
   get "fast-track/apply", to: "fast_track#apply"
+  get "fast-track/women-in-tech-scholarship", to: "fast_track#wit_scholarship_info"
+  get "fast-track/women-in-tech-scholarship/apply", to: "fast_track#wit_scholarship_apply"
 
   get "about", to: "pages#about"
   get "meet-our-alumni", to: "pages#alumni"
