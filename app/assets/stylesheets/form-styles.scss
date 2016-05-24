@@ -31,7 +31,7 @@ input[type="color"],
 input[type="file"],
 textarea,
 select {
-  width: 100%;
+  width: 100% !important;
   height: 40px;
   border-radius: 5px;
   color: #000;
@@ -146,12 +146,8 @@ body input[type="button"] {
 
 body .hs-button.primary:hover,
 body input[type="submit"]:hover,
-body input[type="button"]:hover {
-  
-}
+body input[type="button"]:hover {}
 
 body .hs-button.primary:focus,
 body input[type="submit"]:focus,
-body input[type="button"]:focus {
-  
-}
+body input[type="button"]:focus {}
