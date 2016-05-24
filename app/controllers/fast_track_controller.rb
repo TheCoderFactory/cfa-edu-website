@@ -1,0 +1,2 @@
+class FastTrackController < ApplicationController
+end
