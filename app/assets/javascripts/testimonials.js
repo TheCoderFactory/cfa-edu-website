@@ -5,6 +5,7 @@ $(document).on("page:change", function () {
 });
 
 function changeTestimonial(testimonial) {
+  if (currTestimonial === undefined) currTestimonial = 3;
   console.log(currTestimonial);
   if (testimonial > 5 || testimonial < 1) testimonial = 3;
   $("#testimonial-"+currTestimonial).removeClass('active-testimonial');
