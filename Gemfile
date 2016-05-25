@@ -12,7 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # app specific gems
 gem 'slim'
 gem 'bootstrap', '~> 4.0.0.alpha3'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'devise'
 
 group :development do
   gem 'web-console', '~> 2.0'
@@ -20,16 +21,16 @@ group :development do
 end
 
 group :test do
-  gem "faker", "~> 1.1.2"
-  gem "capybara", "~> 2.1.0"
-  gem "database_cleaner", "~> 1.0.1"
-  gem "launchy", "~> 2.3.0"
-  gem "selenium-webdriver", "~> 2.39.0"
+  gem 'faker', '~> 1.1.2'
+  gem 'capybara', '~> 2.1.0'
+  gem 'database_cleaner', '~> 1.0.1'
+  gem 'launchy', '~> 2.3.0'
+  gem 'selenium-webdriver', '~> 2.39.0'
 end
 
 group :development, :test do
-  gem "rspec-rails", "~> 2.14.0"
-  gem "factory_girl_rails", "~> 4.2.1"
+  gem 'rspec-rails', '~> 2.14.0'
+  gem 'factory_girl_rails', '~> 4.2.1'
   gem 'sqlite3'
   gem 'byebug'
 end
