@@ -14,6 +14,7 @@ gem 'slim'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'simple_form'
 
 group :development do
   gem 'web-console', '~> 2.0'

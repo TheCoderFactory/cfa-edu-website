@@ -1,6 +1,6 @@
 class PromoCodesController < ApplicationController
-  before_action :authenticate_admin!, only: ["index"]
-  layout "admin", only: ["index"]
+  before_action :authenticate_admin!
+  layout "admin"
 
   def index
     @promo_codes = PromoCode.all

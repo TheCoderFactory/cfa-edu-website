@@ -1,0 +1,16 @@
+= simple_form_for(@course) do |f|
+  .row
+    .form-group.input-field.col-md-6
+      = f.input :course_type, label: "First Name", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :name, label: "Last Name", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-12
+      = f.input :description, label: "Phone", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-12
+      = f.input :tagline, label: "Email Address", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-12
+      = f.input :price, label: "Email Address", input_html: {class: "form-control"}
+
+  .row
+    .col-md-12
+      = f.button :submit, "Register", class: "btn btn-success btn-block lead"

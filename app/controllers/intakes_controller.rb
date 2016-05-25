@@ -1,6 +1,6 @@
 class IntakesController < ApplicationController
-  before_action :authenticate_admin!, only: ["index"]
-  layout "admin", only: ["index"]
+  before_action :authenticate_admin!
+  layout "admin"
 
   def index
     @intakes = Intake.all
