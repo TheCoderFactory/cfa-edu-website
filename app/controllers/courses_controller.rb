@@ -1,9 +1,12 @@
 class CoursesController < ApplicationController
+  respond_to :html
   before_action :authenticate_admin!
   layout "admin"
 
   def index
-    @courses = Course.all
+    @workshop_courses = Course.where(course_type: "Workshop").paginate(:page => params[:page], :per_page => 5)
+    @corporate_courses = Course.where(course_type: "Corporate").paginate(:page => params[:page], :per_page => 5)
+    @kids_coding_courses = Course.where(course_type: "Kids Coding").paginate(:page => params[:page], :per_page => 5)
   end
 
   def show

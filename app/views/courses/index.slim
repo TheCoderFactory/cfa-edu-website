@@ -1,7 +1,120 @@
 .container
   .row
-    .first_type
+    .col-md-12
+      center
+        h2 Workshop Courses
 
-    .second_type
+        - if @workshop_courses.size == 0
+          h3 There are currently no workshop courses.
+          | Please check back later.
+        - else
+          table.highlight.bordered
+            thead
+              tr
+                th width="25%" Name
+                th width="25%" Price
+                th width="25%" Description
+                th Views
+            tbody
+              - @workshop_courses.each do |wc|
+                tr
+                  td #{wc.name}
+                  td #{wc.price}
+                  td #{wc.description}
+                  td
+                    = link_to intakes_path(course_id: wc.id)
+                      = fa_icon "bookmark", class: "fa-1x"
+                      | Intakes
+                  td
+                    = link_to edit_course_path(wc)
+                      = fa_icon "pencil", class: "fa-1x"
+                      |  Edit
+                  td
+                    = link_to wc, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
 
-      etc etc
+  .row
+    .col-md-12
+      center
+        = will_paginate @workshop_courses
+.container
+  .row
+    .col-md-12
+      center
+        h2 Corporate Courses
+
+        - if @corporate_courses.size == 0
+          h3 There are currently no corporate courses.
+          | Please check back later.
+        - else
+          table.highlight.bordered
+            thead
+              tr
+                th width="25%" Name
+                th width="25%" Price
+                th width="25%" Description
+                th Views
+            tbody
+              - @corporate_courses.each do |cc|
+                tr
+                  td #{cc.name}
+                  td #{cc.price}
+                  td #{cc.description}
+                  td
+                    = link_to intakes_path(cc)
+                      = fa_icon "bookmark", class: "fa-1x"
+                      | Intakes
+                  td
+                    = link_to edit_course_path(cc)
+                      = fa_icon "pencil", class: "fa-1x"
+                      |  Edit
+                  td
+                    = link_to cc, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
+
+  .row
+    .col-md-12
+      center
+        = will_paginate @corporate_courses
+.container
+  .row
+    .col-md-12
+      center
+        h2 Kids Coding Courses
+
+        - if @kids_coding_courses.size == 0
+          h3 There are currently no kids coding courses.
+          | Please check back later.
+        - else
+          table.highlight.bordered
+            thead
+              tr
+                th width="25%" Name
+                th width="25%" Price
+                th width="25%" Description
+                th Views
+            tbody
+              - @kids_coding_courses.each do |kcc|
+                tr
+                  td #{kcc.name}
+                  td #{kcc.price}
+                  td #{kcc.description}
+                  td
+                    = link_to intakes_path(kcc)
+                      = fa_icon "bookmark", class: "fa-1x"
+                      | Intakes
+                  td
+                    = link_to edit_course_path(kcc)
+                      = fa_icon "pencil", class: "fa-1x"
+                      |  Edit
+                  td
+                    = link_to kcc, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
+
+  .row
+    .col-md-12
+      center
+        = will_paginate @kids_coding_courses

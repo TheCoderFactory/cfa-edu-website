@@ -15,8 +15,10 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'simple_form'
+gem 'will_paginate'
 
 group :development do
+  gem 'quiet_assets'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end

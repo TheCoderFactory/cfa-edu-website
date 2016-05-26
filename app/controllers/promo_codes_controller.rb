@@ -1,9 +1,10 @@
 class PromoCodesController < ApplicationController
+  respond_to :html
   before_action :authenticate_admin!
   layout "admin"
 
   def index
-    @promo_codes = PromoCode.all
+    @promo_codes = PromoCode.all.paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
@@ -30,7 +31,7 @@ class PromoCodesController < ApplicationController
   def update
     @promo_code = PromoCode.find(params[:id])
     if @promo_code.update_attributes(promo_code_params)
-      redirect_to @promo_code
+      redirect_to promo_codes_path
     else
       respond_with @promo_code
     end

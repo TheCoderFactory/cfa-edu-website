@@ -1,7 +1,36 @@
 .container
   .row
-    .first_type
+    .col-md-12
+      center
+        h2 Promo Codes
 
-    .second_type
+        - if @promo_codes.size == 0
+          h3 There are currently no enquiries.
+          | Please check back later.
+        - else
+          table.highlight.bordered
+            thead
+              tr
+                th width="25%" Code
+                th width="25%" Percent Off
+                th width="25%" Notes
+                th Views
+            tbody
+              - @promo_codes.each do |pc|
+                tr
+                  td #{pc.code}
+                  td #{pc.percent}
+                  td #{pc.note}
+                  td
+                    = link_to edit_promo_code_path(pc)
+                      = fa_icon "pencil", class: "fa-1x"
+                      |  Edit
+                  td
+                    = link_to pc, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
 
-      etc etc
+  .row
+    .col-md-12
+      center
+        = will_paginate @promo_codes

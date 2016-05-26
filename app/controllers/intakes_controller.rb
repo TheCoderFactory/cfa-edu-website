@@ -1,9 +1,15 @@
 class IntakesController < ApplicationController
+  respond_to :html
   before_action :authenticate_admin!
   layout "admin"
 
   def index
-    @intakes = Intake.all
+    if params[:course_id]
+      @course = Course.find(params[:course_id])
+      @intakes = @course.intakes.paginate(:page => params[:page], :per_page => 10)
+    else
+      @courses = Course.all
+    end
   end
 
   def show
