@@ -11,10 +11,12 @@ Rails.application.routes.draw do
     delete  "admin/delete-account"  =>  "admins/registrations#destroy", as: :delete_admin_account
   end
 
-  resources :courses
-  resources :intakes
-  resources :bookings
-  resources :promo_codes
+  resources :courses, path: "admin/courses"
+  resources :intakes, path: "admin/intakes"
+  resources :bookings, path: "admin/bookings"
+  get "booking/new", to: "bookings#new"
+  post "booking", to: "bookings#create"
+  resources :promo_codes, path: "admin/promo-codes"
 
   get "admin/dashboard", to: "admin_dashboard#index"
 

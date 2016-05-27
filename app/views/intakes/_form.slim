@@ -1,7 +1,6 @@
 = simple_form_for(@intake) do |f|
   .row
-    / .form-group.input-field.col-md-6
-      / course
+    = f.hidden_field :course_id, value: @course.id
     .form-group.input-field.col-md-6
       = f.input :start, label: "Start Time", input_html: {class: "form-control"}
     .form-group.input-field.col-md-6
@@ -13,4 +12,4 @@
 
   .row
     .col-md-12
-      = f.button :submit, "Register", class: "btn btn-success btn-block lead"
+      = f.button :submit, "Save", class: "btn btn-success btn-block lead"

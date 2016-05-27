@@ -1,5 +1,5 @@
 class Course < ActiveRecord::Base
-  has_many :intakes
+  has_many :intakes, dependent: :restrict_with_error
 
   validates :course_type, :name, :description, :tagline, :price, presence: true
   validate :non_negative_price

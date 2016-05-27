@@ -1,0 +1,11 @@
+= simple_form_for(@booking) do |f|
+  .row
+    = f.hidden_field :intake_id, value: @intake.id
+    .form-group.input-field.col-md-6
+      = f.input :people_attending, label: "Amount Attending", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :total_cost, label: "Total Cost", input_html: {class: "form-control"}
+
+  .row
+    .col-md-12
+      = f.button :submit, "Save", class: "btn btn-success btn-block lead"

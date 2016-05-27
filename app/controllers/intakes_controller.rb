@@ -4,24 +4,23 @@ class IntakesController < ApplicationController
   layout "admin"
 
   def index
-    if params[:course_id]
-      @course = Course.find(params[:course_id])
-      @intakes = @course.intakes.paginate(:page => params[:page], :per_page => 10)
-    else
-      @courses = Course.all
-    end
+    # Show intakes through corresponding course
+    @courses = Course.all
   end
 
   def show
     @intake = Intake.find(params[:id])
+    @bookings = @intake.bookings.paginate(page: params[:page], per_page: 5)
   end
 
   def new
+    @course = Course.find(params[:course_id])
     @intake = Intake.new
   end
 
   def create
     @intake = Intake.new(intake_params)
+    @course = Course.find(intake_params[:course_id])
     if @intake.save
       redirect_to @intake
     else
@@ -31,10 +30,12 @@ class IntakesController < ApplicationController
 
   def edit
     @intake = Intake.find(params[:id])
+    @course = Course.find(@intake.course)
   end
 
   def update
     @intake = Intake.find(params[:id])
+    @course = Course.find(intake_params[:course_id])
     if @intake.update_attributes(intake_params)
       redirect_to @intake
     else
@@ -44,12 +45,12 @@ class IntakesController < ApplicationController
 
   def destroy
     @intake = Intake.find(params[:id])
-    @post.destroy
+    @intake.destroy
     redirect_to intakes_path
   end
 
   private
   def intake_params
-    params.require(:intake).permit(:course, :start, :finish, :location, :class_size)
+    params.require(:intake).permit(:course_id, :start, :finish, :location, :class_size)
   end
 end

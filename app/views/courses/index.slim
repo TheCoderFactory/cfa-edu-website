@@ -2,6 +2,7 @@
   .row
     .col-md-12
       center
+        = link_to "New Course", new_course_path
         h2 Workshop Courses
 
         - if @workshop_courses.size == 0
@@ -22,7 +23,7 @@
                   td #{wc.price}
                   td #{wc.description}
                   td
-                    = link_to intakes_path(course_id: wc.id)
+                    = link_to course_path(wc)
                       = fa_icon "bookmark", class: "fa-1x"
                       | Intakes
                   td

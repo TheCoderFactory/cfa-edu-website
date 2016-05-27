@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_admin!, only: ["index"]
-  layout "admin", only: ["index"]
+  before_action :authenticate_admin!, only: ["index", "show", "edit", "update", "destroy"]
+  layout "admin", only: ["index", "show", "edit", "update", "destroy"]
 
   def index
     @bookings = Booking.all
@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @intake = Intake.find(params[:intake_id])
     @booking = Booking.new
   end
 
@@ -25,10 +26,12 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @intake = @booking.intake
   end
 
   def update
     @booking = Booking.find(params[:id])
+    @intake = Intake.find(booking_params[:intake_id])
     if @booking.update_attributes(booking_params)
       redirect_to @booking
     else
@@ -38,12 +41,12 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
-    @post.destroy
+    @booking.destroy
     redirect_to bookings_path
   end
 
   private
   def booking_params
-    params.require(:booking).permit(:intake, :promo_code, :people_attending, :total_cost)
+    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost)
   end
 end
