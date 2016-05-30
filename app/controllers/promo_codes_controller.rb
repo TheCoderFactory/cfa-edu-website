@@ -7,10 +7,6 @@ class PromoCodesController < ApplicationController
     @promo_codes = PromoCode.all.paginate(:page => params[:page], :per_page => 5)
   end
 
-  def show
-    @promo_code = PromoCode.find(params[:id])
-  end
-
   def new
     @promo_code = PromoCode.new
   end
@@ -18,7 +14,7 @@ class PromoCodesController < ApplicationController
   def create
     @promo_code = PromoCode.new(promo_code_params)
     if @promo_code.save
-      redirect_to @promo_code
+      redirect_to promo_codes_path
     else
       respond_with @promo_code
     end
@@ -39,7 +35,7 @@ class PromoCodesController < ApplicationController
 
   def destroy
     @promo_code = PromoCode.find(params[:id])
-    @post.destroy
+    @promo_code.destroy
     redirect_to promo_codes_path
   end
 
