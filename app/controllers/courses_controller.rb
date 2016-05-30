@@ -4,7 +4,6 @@ class CoursesController < ApplicationController
   layout "admin"
 
   def index
-    @fail = true if params[:failed_delete]
     @workshop_courses = Course.where(course_type: "Workshop").paginate(:page => params[:page], :per_page => 5)
     @corporate_courses = Course.where(course_type: "Corporate").paginate(:page => params[:page], :per_page => 5)
     @kids_coding_courses = Course.where(course_type: "Kids Coding").paginate(:page => params[:page], :per_page => 5)

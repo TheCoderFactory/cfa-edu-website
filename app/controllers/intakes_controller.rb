@@ -30,12 +30,12 @@ class IntakesController < ApplicationController
 
   def edit
     @intake = Intake.find(params[:id])
-    @course = Course.find(@intake.course)
+    @course = @intake.course
   end
 
   def update
     @intake = Intake.find(params[:id])
-    @course = Course.find(intake_params[:course_id])
+    @course = @intake.course
     if @intake.update_attributes(intake_params)
       redirect_to @intake
     else
