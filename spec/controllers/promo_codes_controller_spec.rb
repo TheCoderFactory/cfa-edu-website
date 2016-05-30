@@ -81,14 +81,14 @@ describe PromoCodesController do
             post :create, promo_code: attributes_for(:promo_code)
           }.to change(PromoCode, :count).by(1)
         end
-        it "redirects to contacts#index" do
+        it "redirects to promo_codes#index" do
           post :create, promo_code: attributes_for(:promo_code)
           expect(response).to redirect_to promo_codes_path
         end
       end
 
       context "with invalid attributes" do
-        it "does not save the new contact in the database" do
+        it "does not save the new promo_code in the database" do
           sign_in
           expect{
             post :create, promo_code: attributes_for(:invalid_promo_code)
@@ -242,7 +242,7 @@ describe PromoCodesController do
       it "does not delete the promo code from the database" do
         expect {
           delete :destroy, id: @promo_code
-        }.to change(PromoCode, :count).by(0)
+        }.to_not change(PromoCode, :count)
       end
       it "redirects to the sign in page" do
         delete :destroy, id: @promo_code
