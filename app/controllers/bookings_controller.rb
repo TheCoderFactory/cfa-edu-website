@@ -1,13 +1,15 @@
 class BookingsController < ApplicationController
+  respond_to :html
   before_action :authenticate_admin!, only: ["index", "show", "edit", "update", "destroy"]
   layout "admin", only: ["index", "show", "edit", "update", "destroy"]
 
   def index
-    @bookings = Booking.all
+    @intakes = Intake.all
   end
 
   def show
     @booking = Booking.find(params[:id])
+    @payment = @booking.payment
   end
 
   def new
@@ -17,8 +19,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @intake = Intake.find(booking_params[:intake_id])
     if @booking.save
-      redirect_to @booking
+      redirect_to confirmation_path
     else
       respond_with @booking
     end
@@ -31,7 +34,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @intake = Intake.find(booking_params[:intake_id])
+    @intake = @booking.intake
     if @booking.update_attributes(booking_params)
       redirect_to @booking
     else

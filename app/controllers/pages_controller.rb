@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   def career_outcomes
   end
 
+  def confirmation
+  end
+
   def contact
   end
 

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "meet-our-alumni", to: "pages#alumni"
   get "career-outcomes", to: "pages#career_outcomes"
+  get "confirmation", to: "pages#confirmation"
   get "contact", to: "pages#contact"
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"

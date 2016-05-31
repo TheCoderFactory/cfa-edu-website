@@ -5,5 +5,9 @@ FactoryGirl.define do
     association :intake
     people_attending "2"
     total_cost "0.00"
+
+    factory :invalid_booking do
+      people_attending nil
+    end
   end
 end
