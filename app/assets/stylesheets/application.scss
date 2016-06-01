@@ -5,6 +5,7 @@
 @import "cta-styles";
 @import "home-page";
 @import "fast-track";
+@import "workshop";
 
 html, body {
   height: 100%;
@@ -108,4 +109,7 @@ a {
 }
 a:hover {
   color: white;
+}
+.img-circle {
+  border-radius: 50%;
 }
