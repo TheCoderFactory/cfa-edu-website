@@ -240,7 +240,21 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  .right-row {
+    line-height: 39px;
+    color: #000;
+  }
+  .left-row {
+    line-height: 25px;
+    color: #000;
+  }
+  .left-info {
+    color: #ADADAD;
+  }
   h3 {
+    color: #000;
+  }
+  h6 {
     color: #000;
   }
   .flex-row {
@@ -255,6 +269,9 @@
 .wit-scholarship {
   background-color: #EEE;
 
+  h3 {
+    color: #000;
+  }
   .left-wit {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -272,7 +289,8 @@
     margin-bottom: 20px;
   }
   .cta-row {
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-left: 0px;
   }
   .wit-alumni-top-border {
     border-style: solid;
@@ -280,14 +298,61 @@
     border-color: #EC5037;
     margin-bottom: 30px;
   }
+  .img-wit-alumni {
+    margin-left: 15px;
+  }
   .wit-alumni-quote {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 30px;
     color: #EC5037;
     margin-bottom: 5px;
   }
   .wit-quote-author {
     color: #000;
+  }
+  .wit-alumni-info {
+    text-align: right;
+    width: 75%;
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  .carrot {
+    color: #EC5037;
+  }
+}
+.partners {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h3 {
+    color: #000;
+  }
+  .row {
+    margin-top: 10px;
+  }
+  .more {
+    font-size: 18px;
+  }
+}
+.testimonials {
+  background-image: url(asset-path('tiledBG.jpg'));
+
+  h3 {
+    color: #FFF;
+    margin-bottom: 50px;
+  }
+  .img-testimonial {
+    width: 15%;
+    margin-right: 10px;
+  }
+  .testimonial-paragraph {
+    line-height: 40px;
+    font-size: 18px;
+    color: #FFF;
+  }
+  .cta-row {
+    margin-top: 50px;
   }
 }
 .fast-track-apply {
