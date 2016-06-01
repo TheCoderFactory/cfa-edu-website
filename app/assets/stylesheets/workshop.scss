@@ -1,0 +1,57 @@
+.workshop-hero {
+  background-image: url(asset-path("first_cohort_black.jpg"));
+  background-size: 100% 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .wrapper {
+    padding: 10px;
+  }
+  .bottom-boxes{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .up-more {
+    margin-top: -20px;
+  }
+  .top-boxes{
+    display: flex;
+    margin-bottom: -10px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .box{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+  }
+  .box-invisible{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+  }
+  .text{
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+.course-summaries {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
