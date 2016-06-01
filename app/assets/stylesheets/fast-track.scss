@@ -1,3 +1,360 @@
+.fast-track-hero {
+  background-image: url(asset-path('first_cohort.jpg'));
+  background-repeat: cover;
+  background-size: 100% 130%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #FFF;
+
+  hr {
+    color: #FFF;
+    background-color: #FFF;
+  }
+  .info-session-form-container {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .info-session-form {
+    vertical-align: middle;
+  }
+  .hero-container {
+    display: flex;
+  }
+  .hero-column {
+    padding: 15px;
+    flex: 1;
+  }
+  .hs_hs_persona > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_hs_persona > .input > select {
+    margin-top: 5px;
+  }
+  .hs_campus_preference > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_campus_preference > .input > select {
+    margin-top: 5px;
+  }
+  .hs_sydney_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_sydney_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+  .hs_melbourne_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_melbourne_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+}
+.second-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #EEE;
+  h5 {
+    color: #333;
+  }
+  p {
+    color: #ADADAD;
+  }
+}
+.who-is-this-for {
+  background-color: #FFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  p {
+    font-size: 12px;
+    color: #ADADAD;
+  }
+  h1 {
+    color: #333;
+  }
+  h5 {
+    font-size: 14px;
+    color: #333;
+  }
+  .group-container {
+    display: flex;
+  }
+  .right-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .gc-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .left-who-card {
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 15px;
+    background-color: #EEE;
+    flex-grow: 1;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: #EC5037;
+  }
+  .right-who-card {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 15px;
+    background-color: #EEE;
+    flex-grow: 1;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: #EC5037;
+  }
+  .bottom-who-card {
+    margin-top: 5px;
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: #EEE;
+    flex-grow: 1;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: #EC5037;
+  }
+  .alumni-card {
+    background-color: #333;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0px;
+  }
+  .alumni-image {
+    width: 100%;
+  }
+  .alumni-info {
+    background-color: #333;
+    height: 100%;
+    padding: 15px;
+  }
+}
+.why-coder-factory-academy {
+  /* background-color: #FFF; */
+}
+.download-course-guide {
+  padding: 20px;
+  background-color: #000;
+}
+.our-instructors {
+  background-color: #FFF;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  p {
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  h3 {
+    color: #333;
+  }
+  .img-instructor {
+    width: 40%;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 3px;
+  }
+  .teacher-name {
+    color: #EC5037;
+    font-size: 18px;
+  }
+  .teacher-title {
+    color: #333;
+  }
+}
+.course-breakdown {
+  padding: 300px;
+  background-image: url(asset-path('first_cohort_orange.jpg'));
+  background-size: 100% 100%;
+}
+.alumni-interview {
+  background-color: #FFF;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .quote-border {
+    border-style: solid;
+    border-width: 30px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .quote-text {
+    color: #EC5037;
+    font-size: 34px;
+    line-height: 30px;
+    b {
+      font-weight: 550;
+    }
+  }
+  .quote-name {
+    color: #000;
+    font-size: 14px;
+  }
+  .alumni-interview-name {
+    font-size: 24px;
+    color: #000;
+  }
+  .alumni-interview-heading {
+    color: #EC5037;
+  }
+}
+.infographic {
+  padding-bottom: 100px;
+}
+.what-youll-learn {
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #EEE;
+  background-color: #FFF;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .right-row {
+    line-height: 39px;
+    color: #000;
+  }
+  .left-row {
+    line-height: 25px;
+    color: #000;
+  }
+  .left-info {
+    color: #ADADAD;
+  }
+  h3 {
+    color: #000;
+  }
+  h6 {
+    color: #000;
+  }
+  .flex-row {
+    display: flex;
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.wit-scholarship {
+  background-color: #EEE;
+
+  h3 {
+    color: #000;
+  }
+  .left-wit {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .terms-text {
+    display: inline !important;
+    padding-left: 20px;
+  }
+  .title-border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 25%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .cta-row {
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+  .wit-alumni-top-border {
+    border-style: solid;
+    border-width: 25px 0px 0px 0px;
+    border-color: #EC5037;
+    margin-bottom: 30px;
+  }
+  .img-wit-alumni {
+    margin-left: 15px;
+  }
+  .wit-alumni-quote {
+    font-size: 28px;
+    line-height: 30px;
+    color: #EC5037;
+    margin-bottom: 5px;
+  }
+  .wit-quote-author {
+    color: #000;
+  }
+  .wit-alumni-info {
+    text-align: right;
+    width: 75%;
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  .carrot {
+    color: #EC5037;
+  }
+}
+.partners {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h3 {
+    color: #000;
+  }
+  .row {
+    margin-top: 10px;
+  }
+  .more {
+    font-size: 18px;
+  }
+}
+.testimonials {
+  background-image: url(asset-path('tiledBG.jpg'));
+
+  h3 {
+    color: #FFF;
+    margin-bottom: 50px;
+  }
+  .img-testimonial {
+    width: 15%;
+    margin-right: 10px;
+  }
+  .testimonial-paragraph {
+    line-height: 40px;
+    font-size: 18px;
+    color: #FFF;
+  }
+  .cta-row {
+    margin-top: 50px;
+  }
+}
 .fast-track-apply {
   background-color: #EEE;
   .hs_hs_persona > label {
