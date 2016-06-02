@@ -3,49 +3,63 @@
   @media only screen and (max-width: 767px) {
     background-image: url(asset-path('mobile-main-header-bg.jpg'));
   }
-  background-repeat: cover;
   background-size: 100% 100%;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  min-height: 60vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
   color: #FFF;
 
-  .options-container {
-    display: flex;
+  h1, h4, h3 {
+    margin-top: 10px;
   }
   .hero-btns {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .hero-cards {
-    margin-top: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 767px) {
+    .hero-cards {
+      margin-top: 70px;
+      flex-direction: column;
+    }
   }
   .hero-card {
-    width: 30% !important;
     background-color: rgba(0,0,0,0.7);
     background-size: 100%;
-    padding: 15px;
-    margin-top: 60px;
+    padding: 30px;
     color: white;
+    max-width: 33%;
   }
-  .hero-card-middle {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 30% !important;
-    background-color: rgba(0,0,0,0.7);
-    padding: 15px;
-    margin-top: 60px;
-    color: white;
+  @media only screen and (max-width: 767px) {
+    .hero-card {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
-  .mobile-hero-cards {
-    margin-top: 30px;
+  .img-hero-card {
+    margin-right: 20px;
   }
-  .hero-card-mobile {
-    background-color: rgba(0,0,0,0.7);
-    padding: 15px;
-    color: white;
-    margin-top: 30px;
-    width: 90%;
-    margin: auto;
+  @media only screen and (max-width: 767px) {
+    .img-hero-card {
+      max-width: 25%;
+    }
+  }
+  .hero-card-title {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @media only screen and (max-width: 767px) {
+    .hero-card-title {
+      font-size: 14px;
+    }
+  }
+  p {
+    margin-top: -10px;
+    margin-bottom: 0px;
   }
 }
 .press-logos {
