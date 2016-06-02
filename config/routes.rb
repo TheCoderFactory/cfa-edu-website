@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get "workshop", to: "workshop#index"
 
+  get "corporate", to: "corporate#index"
+
   get "about", to: "pages#about"
   get "meet-our-alumni", to: "pages#alumni"
   get "career-outcomes", to: "pages#career_outcomes"
