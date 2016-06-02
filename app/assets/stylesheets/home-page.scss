@@ -95,8 +95,14 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  .container {
+  .course-boxes {
     display: flex;
+    flex-direction: row;
+  }
+  @media only screen and (max-width: 767px) {
+    .course-boxes {
+      flex-direction: column;
+    }
   }
   .course-option-heading {
     width: 90%;
@@ -109,6 +115,12 @@
   .course-option-1, .course-option-2, .course-option-3 {
     padding-top: 200px;
   }
+  @media only screen and (max-width: 767px) {
+    .course-option-1, .course-option-2, .course-option-3 {
+      padding-top: 350px;
+      margin-bottom: 50px;
+    }
+  }
   .course-option-4 {
     padding-top: 100px;
 
@@ -120,6 +132,7 @@
 
       p {
         font-size: 14px;
+        color: #FFF;
       }
 
       hr {
@@ -129,7 +142,18 @@
         background-color: #FFF;
       }
     }
-
+  }
+  @media only screen and (max-width: 767px) {
+    .course-option-4 {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      h3 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 20px !important;
+      }
+    }
   }
   .course-option-1 {
     background-image: url(asset-path('foundOutMore1.jpg'));
@@ -148,6 +172,14 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
+  }
+  @media only screen and (max-width: 767px) {
+    h5 {
+      font-size: 26px;
+    }
+    .course-option-button {
+      font-size: 18px;
+    }
   }
 }
 .testimonials {
