@@ -1,0 +1,192 @@
+.kids-coding-hero {
+  background-image: url(asset-path("kids-coding-background.jpg"));
+  background-size: 100% 100%;
+}
+.kids-course-options {
+  background-color: #FFF;
+
+  h3 {
+    color: #000;
+  }
+  .wrapper {
+    padding: 10px;
+  }
+  .bottom-boxes{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .up-more {
+    margin-top: -20px;
+  }
+  .top-boxes{
+    display: flex;
+    margin-bottom: -10px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .box{
+    background-color: #EEE;
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+  }
+  .box-invisible{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+  }
+  .text{
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+.schools-info {
+  background-color: #FFF;
+
+  .schools-points {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .right-row {
+    line-height: 30px;
+    margin-right: 10px;
+  }
+  .img-schools-info-left {
+    display: inline;
+    margin-top: 70px;
+  }
+  .img-schools-info-right {
+    display: inline;
+  }
+}
+.kids-course-summaries {
+  background-color: #FFF;
+}
+.kids-sign-up-form {
+  background-color: #EC5037;
+}
+.teachers-course-summaries {
+  background-color: #FFF;
+}
+.kids-coding-organizations {
+  background-color: #FFF;
+
+  h5 {
+    color: #000;
+  }
+  .organizations-logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.schools-case-study {
+  background-color: #FFF;
+  h5 {
+    color: #000;
+  }
+}
+.out-of-school {
+  background-image: url(asset-path('first_cohort_orange.jpg'));
+  background-repeat: cover;
+  background-size: 100% 130%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #FFF;
+
+  hr {
+    color: #FFF;
+    background-color: #FFF;
+  }
+  .info-session-form-container {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .info-session-form {
+    vertical-align: middle;
+  }
+  .hero-container {
+    display: flex;
+  }
+  .hero-column {
+    padding: 15px;
+    flex: 1;
+  }
+  .hs_hs_persona > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_hs_persona > .input > select {
+    margin-top: 5px;
+  }
+  .hs_campus_preference > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_campus_preference > .input > select {
+    margin-top: 5px;
+  }
+  .hs_sydney_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_sydney_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+  .hs_melbourne_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_melbourne_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+}
+.kids-coding-q-and-a {
+  background-color: #FFF;
+  h5 {
+    color: #000;
+  }
+  .q-and-a-row {
+    display: flex;
+  }
+  .q-and-a-box {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    background-color: #EEE;
+  }
+  .question {
+    color: #000;
+  }
+}
