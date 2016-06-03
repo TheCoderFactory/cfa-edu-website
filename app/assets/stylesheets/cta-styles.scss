@@ -99,3 +99,8 @@
 .course-option-cta-3:hover {
 
 }
+@media only screen and (max-width: 767px) {
+  .course-option-cta-1 a, .course-option-cta-2 a, .course-option-cta-3 a {
+    font-size: 28px;
+  }
+}

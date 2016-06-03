@@ -94,6 +94,10 @@
   background-color: #333;
   padding-top: 50px;
   padding-bottom: 50px;
+  @media only screen and (max-width: 767px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 
   .course-boxes {
     display: flex;
@@ -117,8 +121,10 @@
   }
   @media only screen and (max-width: 767px) {
     .course-option-1, .course-option-2, .course-option-3 {
-      padding-top: 350px;
-      margin-bottom: 50px;
+      padding-top: 450px;
+    }
+    .course-option-1, .course-option-2, .course-option-3, .course-option-4 {
+      width: 100vw;
     }
   }
   .course-option-4 {
