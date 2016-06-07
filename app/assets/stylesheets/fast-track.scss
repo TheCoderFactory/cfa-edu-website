@@ -280,6 +280,11 @@
     display: inline !important;
     padding-left: 20px;
   }
+  @media only screen and (max-width: 767px) {
+    .terms-text {
+      font-size: 10px;
+    }
+  }
   .title-border {
     border-style: solid;
     border-width: 3px 0px 0px 0px;
@@ -301,6 +306,11 @@
   .img-wit-alumni {
     margin-left: 15px;
   }
+  @media only screen and (max-width: 767px) {
+    .img-wit-alumni {
+      width: 50%;
+    }
+  }
   .wit-alumni-quote {
     font-size: 28px;
     line-height: 30px;
@@ -315,6 +325,11 @@
     width: 75%;
     font-size: 12px;
     margin-bottom: 0px;
+  }
+  @media only screen and (max-width: 767px) {
+    .wit-alumni-info {
+      width: 100%;
+    }
   }
   .carrot {
     color: #EC5037;
