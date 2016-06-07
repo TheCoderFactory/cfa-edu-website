@@ -45,3 +45,38 @@
     color: #EC5037;
   }
 }
+.large-testimonials {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(asset-path('tiledBG.jpg'));
+
+  h3 {
+    color: #FFF;
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-width: 767px) {
+    h3 {
+      margin-bottom: 0px;
+      font-size: 26px;
+    }
+  }
+  .img-testimonial {
+    width: 15%;
+    margin-right: 15px;
+  }
+  @media only screen and (max-width: 767px) {
+    .img-testimonial {
+      width: 25%;
+      margin-top: 50px;
+    }
+  }
+  .testimonial-paragraph {
+    line-height: 40px;
+    font-size: 18px;
+    color: #FFF;
+  }
+  .cta-row {
+    margin-top: 50px;
+  }
+}
+
