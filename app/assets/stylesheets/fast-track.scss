@@ -189,7 +189,19 @@
   }
 }
 .why-coder-factory-academy {
-  /* background-color: #FFF; */
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  img {
+    padding-bottom: 15px;
+  }
+  h1 {
+    color: #000;
+  }
+  h5 {
+    color: #EC5037;
+  }
 }
 .download-course-guide {
   padding: 20px;
