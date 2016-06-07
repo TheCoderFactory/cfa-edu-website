@@ -32,13 +32,6 @@
   .info-session-form {
     vertical-align: middle;
   }
-  .hero-container {
-    display: flex;
-  }
-  .hero-column {
-    padding: 15px;
-    flex: 1;
-  }
   .hs_hs_persona > label {
     display: inline-block;
     text-align: left;
@@ -111,9 +104,21 @@
   }
 }
 .second-section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #EEE;
+  .header {
+    font-size: 18px;
+    color: #000;
+  }
+  img {
+    margin-right: 15px;
+  }
+  @media only screen and (max-width: 767px) {
+    img {
+      margin-bottom: 10px;
+    }
+  }
   h5 {
     color: #333;
   }
