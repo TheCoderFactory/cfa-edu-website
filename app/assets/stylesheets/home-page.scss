@@ -300,7 +300,7 @@
     margin-top: 5px;
   }
   .hs-button {
-    @extend .pull-right;
+    @extend .pull-left;
     @media only screen and (max-width: 767px) {
       float: none;
     }

@@ -80,28 +80,6 @@
   .hs_melbourne_info_night_dates > .input > select {
     margin-top: 5px;
   }
-  .hs-form {
-    width: 100%;
-    overflow: hidden;
-    .form-columns-2 {
-      width: 100%;
-      margin: 0px;
-      box-sizing: inherit;
-      max-width: 100%;
-    }
-    .form-columns-1 {
-      width: 100%;
-      margin: 0px;
-      box-sizing: inherit;
-      max-width: 100%;
-    }
-  }
-  .hs-button {
-    @extend .pull-right;
-    @media only screen and (max-width: 767px) {
-      float: none;
-    }
-  }
 }
 .second-section {
   padding-top: 50px;
@@ -204,8 +182,12 @@
   }
 }
 .download-course-guide {
-  padding: 20px;
+  padding: 50px;
   background-color: #000;
+  .form-box {
+    display: flex;
+    justify-content: center;
+  }
 }
 .our-instructors {
   background-color: #FFF;
