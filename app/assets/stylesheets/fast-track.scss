@@ -128,77 +128,64 @@
 }
 .who-is-this-for {
   background-color: #FFF;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  p {
-    font-size: 12px;
-    color: #ADADAD;
-  }
+  padding-top: 50px;
+  padding-bottom: 50px;
   h1 {
-    color: #333;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
   h5 {
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
+    color: #000;
   }
-  .group-container {
+  .first-box {
     display: flex;
+    justify-content: space-between;
   }
-  .right-column {
-    display: flex;
-    flex-direction: column;
-  }
-  .gc-right {
+  .first-column-1, .first-column-2 {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    justify-content: space-between;
   }
-  .left-who-card {
-    margin-right: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 15px;
-    background-color: #EEE;
-    flex-grow: 1;
-    border-style: solid;
-    border-width: 0px 3px 0px 0px;
-    border-color: #EC5037;
-  }
-  .right-who-card {
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 15px;
-    background-color: #EEE;
-    flex-grow: 1;
-    border-style: solid;
-    border-width: 0px 3px 0px 0px;
-    border-color: #EC5037;
-  }
-  .bottom-who-card {
-    margin-top: 5px;
-    padding: 15px;
-    margin-bottom: 5px;
-    background-color: #EEE;
-    flex-grow: 1;
-    border-style: solid;
-    border-width: 0px 3px 0px 0px;
-    border-color: #EC5037;
-  }
-  .alumni-card {
-    background-color: #333;
+  .first-column-1 {
+    flex: 1;
     margin-right: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 0px;
+    margin-bottom: 10px;
+    background-color: #333;
   }
-  .alumni-image {
-    width: 100%;
+  .first-column-2 {
+    flex: 2;
+  }
+  .second-row-1, .second-row-2, .second-row-3 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+  .third-column {
+    padding: 5px;
+    flex: 1;
+    background-color: #EEE;
+    margin-bottom: 10px;
+  }
+  .third-column {
+    margin-right: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: #EC5037;
   }
   .alumni-info {
-    background-color: #333;
-    height: 100%;
     padding: 15px;
+  }
+  .alumni-info > p {
+    color: #FFF;
+  }
+  .alumni-name {
+    color: #EC5037;
   }
 }
 .why-coder-factory-academy {
