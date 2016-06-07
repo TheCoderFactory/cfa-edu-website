@@ -188,121 +188,37 @@
     }
   }
 }
-.testimonials {
-  background-color: #EEE;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  .active-testimonial-content > a {
-    color: #000;
-    cursor: pointer;
-  }
-  .active-testimonial-content > a:hover {
-    color: #FFF;
-    text-decoration: none;
-  }
-  .testimonial-play {
-    vertical-align: middle;
-    color: #EC5037;
-  }
-  h3, h5 {
-    color: #333;
-  }
-  #testimonial-images {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 50%;
-  }
-  hr {
-    width: 2%;
-    height: 1px;
-  }
-  .active-testimonial {
-    width: 75%;
-    height: 75%;
-  }
-  .inactive-testimonial {
-    width: 50%;
-    height: 50%;
-    -webkit-filter: grayscale(100%);
-    -webkit-filter: brightness(40%);
-  }
-  .active-testimonial-content {
-    display: block;
-  }
-  .inactive-testimonial-content {
-    display: none;
-  }
-  p {
-    color: #ADADAD;
-  }
-  .quote {
-    width: 50%;
-  }
-  .testimonial-button {
-    cursor: pointer;
-  }
-  .testimonial-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.mobile-testimonials {
-  background-color: #EEE;
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-  h3, h5 {
-    color: #333;
-  }
-  #mobile-testimonial-images {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  hr {
-    width: 5%;
-    height: 1px;
-  }
-  .img-circle {
-    border-radius: 50%;
-  }
-  .mobile-active-testimonial {
-    display: block;
-  }
-  .mobile-inactive-testimonial {
-    display: none;
-  }
-  .mobile-testimonial-switch {
-    display: flex;
-    align-items: center;
-  }
-  p {
-    color: #ADADAD;
-  }
-  .testimonial-button {
-    cursor: pointer;
-  }
-}
 .infographic {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #FFF;
 }
-.upcoming_courses {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.upcoming-courses {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #EEE;
 
-  .container {
+  .upcoming-courses-container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-  p {
-    color: #EEE;
+  @media only screen and (max-width: 767px) {
+    .upcoming-courses-container {
+      flex-direction: column;
+    }
+    .upcoming-course {
+      width: 75%;
+    }
   }
-  .col-md-3 {
+  .upcoming-course {
     background-color: #333;
-    background-clip: content-box;
+    margin: 10px;
+  }
+  .course-header {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 150px;
   }
   .price-text {
     padding: 10px;
@@ -318,20 +234,7 @@
   }
   .teacher-name {
     font-size: 14px;
-    margin-top: 5px;
-  }
-  .course-1, .course-2, .course-3, .course-4 {
-    margin: auto;
-    background-color: #333;
-    flex: 1;
-  }
-  .course-1-image, .course-2-image, .course-3-image, .course-4-image {
-    background-image: url(asset-path('shortCoursesHeaderImage.jpg'));
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 200px;
-    padding: 10px;
+    color: #FFF;
   }
   .course-teacher-image {
     border-style: solid;
@@ -343,22 +246,19 @@
   }
   .course-info {
     margin-top: 20px;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
   }
-  .course {
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
-  }
-  .col-md-8 {
-    padding-left: 0px;
-  }
-  .course i {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  .upcoming-course-icon {
+    vertical-align: middle;
     color: #EC5037;
+    margin-right: 0px;
+    margin-left: 10px;
   }
-  .course p {
-    font-size: 15px;
+  .course-info p {
+    line-height: 30px;
+    color: #FFF;
   }
 }
 .business-details {
