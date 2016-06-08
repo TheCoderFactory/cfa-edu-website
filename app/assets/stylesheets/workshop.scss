@@ -3,7 +3,12 @@
   background-size: 100% 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 60vh;
 
+  hr {
+    color: black !important;
+    background-color: black;
+  }
   .wrapper {
     padding: 10px;
   }
