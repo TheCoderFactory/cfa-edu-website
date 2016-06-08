@@ -16,6 +16,8 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'will_paginate'
+gem 'country_select'
+gem 'stripe'
 
 group :development do
   gem 'quiet_assets'

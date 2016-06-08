@@ -1,11 +1,61 @@
-= simple_form_for(@booking) do |f|
+= simple_form_for(@booking), id: "payment-form" do |f|
   .row
-    = f.hidden_field :intake_id, value: @intake.id
+    .form-group.input-field.col-md-12
+      = f.association :intake, collection: @course.intakes, label_method: lambda { |intake| "#{intake.start}"}
     .form-group.input-field.col-md-6
-      = f.input :people_attending, label: "Amount Attending", input_html: {class: "form-control"}
+      = f.input :people_attending, collection: [1, 2, 3], selected: 1, label: "Amount Attending", input_html: {class: "form-control"}
     .form-group.input-field.col-md-6
-      = f.input :total_cost, label: "Total Cost", input_html: {class: "form-control"}
+      = f.input :firstname, label: "First Name", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :lastname, label: "Last Name", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :age, label: "Age", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :email, label: "Email", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :phone, label: "Phone", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :city, label: "City", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :country, label: "Country", selected: "AU", input_html: {class: "form-control"}
+
+
+
+    span.payment-errors
+    .form-row
+      label
+        span Card Number
+        input data-stripe="number" size="20" type="text" /
+    .form-row
+      label
+        span Expiration (MM/YY)
+        input data-stripe="exp_month" size="2" type="text" /
+        span /
+        input data-stripe="exp_year" size="2" type="text" /
+    .form-row
+      label
+        span CVC
+        input data-stripe="cvc" size="4" type="text" /
+
 
   .row
     .col-md-12
       = f.button :submit, "Save", class: "btn btn-success btn-block lead"
+
+script type="text/javascript" src="https://js.stripe.com/v2/"
+javascript:
+  Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+  $(function() {
+    var $form = $('#payment-form');
+      $form.submit(function(event) {
+        // Disable the submit button to prevent repeated clicks:
+      $form.find('.submit').prop('disabled', true);
+
+            // Request a token from Stripe:
+      Stripe.card.createToken($form, stripeResponseHandler);
+
+                // Prevent the form from being submitted:
+      return false;
+    });
+  });

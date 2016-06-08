@@ -14,4 +14,5 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require testimonials
+//= require stripe-payments
 //= require_tree .

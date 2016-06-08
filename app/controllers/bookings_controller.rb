@@ -13,13 +13,34 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @intake = Intake.find(params[:intake_id])
+    @course = Course.find(params[:course_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
     @intake = Intake.find(booking_params[:intake_id])
+    ################################################################
+    ################################################################
+    @amount = 500
+
+    customer = Stripe::Customer.create(
+      :email => params[:stripeEmail],
+      :source  => params[:stripeToken]
+    )
+
+    charge = Stripe::Charge.create(
+      :customer    => customer.id,
+      :amount      => @amount,
+      :description => 'Rails Stripe customer',
+      :currency    => 'usd'
+    )
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
+    ################################################################
+    ################################################################
     if @booking.save
       redirect_to confirmation_path
     else
@@ -50,6 +71,6 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost)
+    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :name, :email, :phone, :age, :city, :country)
   end
 end
