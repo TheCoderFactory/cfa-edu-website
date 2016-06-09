@@ -143,14 +143,35 @@
 }
 .schools-info {
   background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
+  @media only screen and (max-width: 767px) {
+    .centered {
+      text-align: center;
+    }
+    h5 {
+      margin-top: 20px;
+    }
+    .other-images {
+      margin-top: 30px;
+    }
+  }
+  h5 {
+    color: #000;
+  }
+  .text {
+    line-height: 40px;
+    color: #000;
+  }
   .schools-points {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 10px;
   }
-  .right-row {
-    line-height: 30px;
+  .right-row img {
     margin-right: 10px;
+    width: 20%;
   }
   .img-schools-info-left {
     display: inline;
