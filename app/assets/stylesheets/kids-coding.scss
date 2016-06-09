@@ -1,6 +1,23 @@
 .kids-coding-hero {
   background-image: url(asset-path("kids-coding-background.jpg"));
   background-size: 100% 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h2 {
+    width: 35%;
+    text-align: center;
+  }
+  p {
+    color: #FFF;
+  }
+  .quotee {
+    font-size: 14px;
+  }
 }
 .kids-course-options {
   background-color: #FFF;
