@@ -196,11 +196,19 @@
 }
 .corporate-q-and-a {
   background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
   h5 {
     color: #000;
+    padding-bottom: 20px;
   }
   .q-and-a-row {
     display: flex;
+  }
+  .q-and-a-row-mobile {
+    display: flex;
+    flex-direction: column;
   }
   .q-and-a-box {
     flex: 1;
