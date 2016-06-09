@@ -156,6 +156,8 @@
 }
 .corporate-partners {
   background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   h5 {
     color: #000;
@@ -164,6 +166,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  @media only screen and (max-width: 767px) {
+    .corporate-logo-container {
+      flex-direction: column;
+    }
   }
 }
 .telstra-promo {
