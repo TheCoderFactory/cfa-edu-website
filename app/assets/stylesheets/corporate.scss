@@ -8,6 +8,10 @@
   .wrapper {
     padding: 10px;
   }
+  h4 {
+    padding-top: 20px;
+    color: #000;
+  }
   .bottom-boxes{
     display: flex;
     margin: 0px;
@@ -221,8 +225,8 @@
   }
 }
 .latest-blog-posts {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #EEE;
 
   h5 {
