@@ -3,6 +3,7 @@
   background-size: 100% 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 60vh;
 
   .wrapper {
     padding: 10px;
@@ -29,7 +30,22 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    background-color: white;
+    background-color: #FFF;
+    border-radius: 5px 5px 0px 0px;;
+  }
+  @media only screen and (max-width: 767px) {
+    .box {
+      padding: 20px;
+      margin-top: 30px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    h3 {
+      font-size: 30px;
+    }
+  }
+  .bottom-boxes .box{
+    border-radius: 5px 5px;
   }
   .box-invisible{
     margin: 5px;
@@ -39,11 +55,42 @@
     flex: 1;
     padding: 10px;
   }
+  @media only screen and (max-width: 767px) {
+    h4 {
+      font-size: 28px;
+    }
+  }
   .text{
     padding: 10px;
     border-radius: 5px;
     flex-direction: column;
     flex: 1;
+  }
+  .cost-primary {
+    color: #EC5037;
+  }
+  .cost-secondary {
+    color: #38A9C7;
+  }
+  .border-orange {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    flex-direction: column;
+    flex: 1;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    flex-direction: column;
+    flex: 1;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 .demystify-summary {
