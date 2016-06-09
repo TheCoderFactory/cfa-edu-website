@@ -1,6 +1,6 @@
 function stripeResponseHandler(status, response) {
   // Grab the form:
-  var $form = $('#payment-form');
+  var $form = $('#payment_form');
 
   if (response.error) { // Problem!
 

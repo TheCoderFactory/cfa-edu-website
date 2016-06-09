@@ -19,21 +19,16 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @intake = Intake.find(booking_params[:intake_id])
+    # @intake = Intake.find(booking_params[:intake_id])
     ################################################################
     ################################################################
     @amount = 500
 
-    customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
-    )
-
     charge = Stripe::Charge.create(
-      :customer    => customer.id,
-      :amount      => @amount,
+      :source => params[:stripeToken],
+      :amount => @amount,
       :description => 'Rails Stripe customer',
-      :currency    => 'usd'
+      :currency => 'aud'
     )
 
   rescue Stripe::CardError => e
