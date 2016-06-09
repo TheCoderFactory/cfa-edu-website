@@ -26,9 +26,18 @@
 }
 .kids-course-options {
   background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   h3 {
     color: #000;
+  }
+  h4 {
+    color: #000;
+    margin-top: 10px;
+  }
+  .up-more {
+    margin-top: -10px;
   }
   .wrapper {
     padding: 10px;
@@ -39,9 +48,6 @@
     padding: 0px;
     flex-basis: 0;
   }
-  .up-more {
-    margin-top: -20px;
-  }
   .top-boxes{
     display: flex;
     margin-bottom: -10px;
@@ -49,13 +55,28 @@
     flex-basis: 0;
   }
   .box{
-    background-color: #EEE;
     margin: 5px;
     margin-top: 0px;
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 10px;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-radius: 5px;
+    border-color: #EEE;
+  }
+  .box-mobile{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-radius: 5px;
+    border-color: #EEE;
   }
   .box-invisible{
     margin: 5px;
@@ -64,12 +85,60 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-radius: 5px;
+    border-color: #FFF;
+  }
+  .top-boxes .box-middle {
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    border-width: 3px 3px 0px 3px;
+    border-radius: 5px 5px 0px 0px;
+    border-color: #EEE;
+  }
+  .bottom-boxes .box-middle {
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0px 3px 3px 3px;
+    border-radius: 0px 0px 5px 5px;
+    border-color: #EEE;
   }
   .text{
     padding: 10px;
     border-radius: 5px;
     flex-direction: column;
     flex: 1;
+  }
+  .border-orange {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    flex-direction: column;
+    flex: 1;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    flex-direction: column;
+    flex: 1;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 .schools-info {
