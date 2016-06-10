@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact"
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"
-  get "meet-our-instructors", to: "pages#instructors"
+  get "meet-your-instructors", to: "pages#instructors"
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
 end
