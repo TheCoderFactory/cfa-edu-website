@@ -283,6 +283,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  @media only screen and (max-width: 767px) {
+    p, h1, h2 {
+      text-align: center;
+    }
+  }
   p {
     color: #FFF;
   }
