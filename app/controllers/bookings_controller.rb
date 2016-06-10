@@ -19,10 +19,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # @intake = Intake.find(booking_params[:intake_id])
+    @intake = Intake.find(booking_params[:intake_id])
+    @course = @intake.course
     ################################################################
     ################################################################
-    @amount = 500
+    @amount = (@booking.total_cost*100).to_i
 
     charge = Stripe::Charge.create(
       :source => params[:stripeToken],
@@ -31,9 +32,6 @@ class BookingsController < ApplicationController
       :currency => 'aud'
     )
 
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_charge_path
     ################################################################
     ################################################################
     if @booking.save
@@ -41,6 +39,10 @@ class BookingsController < ApplicationController
     else
       respond_with @booking
     end
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_charge_path
   end
 
   def edit
@@ -66,6 +68,6 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :name, :email, :phone, :age, :city, :country)
+    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :firstname, :lastname, :email, :phone, :age, :city, :country)
   end
 end
