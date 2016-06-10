@@ -6,6 +6,10 @@
 @import "home-page";
 @import "fast-track";
 @import "admin";
+@import "workshop";
+@import "corporate";
+@import "kids-coding";
+@import "shared";
 
 html, body {
   height: 100%;
@@ -22,7 +26,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: #FFF;
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -109,4 +113,7 @@ a {
 }
 a:hover {
   color: white;
+}
+.img-circle {
+  border-radius: 50%;
 }

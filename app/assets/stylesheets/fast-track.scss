@@ -1,3 +1,355 @@
+.fast-track-hero {
+  background-image: url(asset-path('first_cohort.jpg'));
+  background-size: 100% 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #FFF;
+  min-height: 65vh;
+
+  h2, h1 {
+    margin-top: 10px;
+  }
+  hr {
+    color: #FFF;
+    opacity: 0.4;
+    background-color: #FFF;
+  }
+  .info-column p {
+    color: #FFF;
+  }
+  .info-column > p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .info-column > .statistics p {
+    opacity: 0.8;
+  }
+  .info-session-form-container {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .info-session-form {
+    vertical-align: middle;
+  }
+  .hs_hs_persona > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_hs_persona > .input > select {
+    margin-top: 5px;
+  }
+  .hs_campus_preference > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_campus_preference > .input > select {
+    margin-top: 5px;
+  }
+  .hs_sydney_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_sydney_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+  .hs_melbourne_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_melbourne_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+}
+.second-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #EEE;
+  .header {
+    font-size: 18px;
+    color: #000;
+  }
+  img {
+    margin-right: 15px;
+  }
+  @media only screen and (max-width: 767px) {
+    img {
+      margin-bottom: 10px;
+    }
+  }
+  h5 {
+    color: #333;
+  }
+  p {
+    color: #ADADAD;
+  }
+}
+.who-is-this-for {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h1 {
+    color: #000;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h5 {
+    font-size: 16px;
+    color: #000;
+  }
+  .first-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .first-column-1, .first-column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .first-column-1 {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+  }
+  .first-column-2 {
+    flex: 2;
+  }
+  .second-row-1, .second-row-2, .second-row-3 {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+  .third-column {
+    padding: 5px;
+    flex: 1;
+    background-color: #EEE;
+    margin-bottom: 10px;
+  }
+  .third-column {
+    margin-right: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0px 3px 0px 0px;
+    border-color: #EC5037;
+  }
+  .alumni-info {
+    padding: 15px;
+  }
+  .alumni-info > p {
+    color: #FFF;
+  }
+  .alumni-name {
+    color: #EC5037;
+  }
+}
+.why-coder-factory-academy {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  img {
+    padding-bottom: 15px;
+  }
+  h1 {
+    color: #000;
+  }
+  h5 {
+    color: #EC5037;
+  }
+}
+.download-course-guide {
+  padding: 50px;
+  background-color: #000;
+  .form-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+.our-instructors {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  p {
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  h3 {
+    color: #333;
+    padding-bottom: 10px;
+  }
+  .img-instructor {
+    width: 60%;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 3px;
+  }
+  @media only screen and (max-width: 767px) {
+    .img-instructor {
+      width: 30%;
+      margin: auto;
+    }
+  }
+  .teacher-name {
+    color: #EC5037;
+    font-size: 18px;
+  }
+  .teacher-title {
+    color: #333;
+  }
+  @media only screen and (max-width: 767px) {
+    .center {
+      text-align: center;
+    }
+  }
+}
+.course-breakdown {
+  padding: 300px;
+  background-image: url(asset-path('first_cohort_orange.jpg'));
+  background-size: 100% 100%;
+}
+.infographic {
+  padding-bottom: 100px;
+}
+.what-youll-learn {
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #EEE;
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .right-row {
+    line-height: 30px;
+    font-size: 12px;
+    color: #000;
+  }
+  .left-row {
+    line-height: 25px;
+    color: #000;
+  }
+  .left-info {
+    color: #ADADAD;
+  }
+  h3 {
+    color: #000;
+  }
+  h6 {
+    color: #000;
+  }
+  .right-column img {
+    width: 15%;
+    margin-right: 10px;
+  }
+}
+.wit-scholarship {
+  background-color: #EEE;
+
+  h3 {
+    color: #000;
+  }
+  .left-wit {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .terms-text {
+    display: inline !important;
+    padding-left: 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    .terms-text {
+      font-size: 10px;
+    }
+  }
+  .title-border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 25%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .cta-row {
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+  .wit-alumni-top-border {
+    border-style: solid;
+    border-width: 25px 0px 0px 0px;
+    border-color: #EC5037;
+    margin-bottom: 30px;
+  }
+  .img-wit-alumni {
+    margin-left: 15px;
+  }
+  @media only screen and (max-width: 767px) {
+    .img-wit-alumni {
+      width: 50%;
+    }
+  }
+  .wit-alumni-quote {
+    font-size: 28px;
+    line-height: 30px;
+    color: #EC5037;
+    margin-bottom: 5px;
+  }
+  .wit-quote-author {
+    color: #000;
+  }
+  .wit-alumni-info {
+    text-align: right;
+    width: 75%;
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  @media only screen and (max-width: 767px) {
+    .wit-alumni-info {
+      width: 100%;
+    }
+  }
+  .carrot {
+    color: #EC5037;
+  }
+}
+.partners {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h3 {
+    color: #000;
+  }
+  .row {
+    margin-top: 10px;
+  }
+  .more {
+    font-size: 18px;
+  }
+}
 .fast-track-apply {
   background-color: #EEE;
   .hs_hs_persona > label {
