@@ -1,29 +1,59 @@
-.who-is-this-for
+.who-is-this-for.hidden-sm-down
   .container
     center
       h1 WHO IS THIS FOR?
-    .row.group-container
-      .col-md-4.alumni-card
-        img.img-fluid.alumni-image src="#{asset_path 'shortCoursesHeaderImage.jpg'}"
-        .alumni-info
-          p "[Coder Factory] gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
-          p Daniel Dumycz Artist
-      .col-md-8.right-column
-        .row.group-container
-          .col-md-6.left-who-card
+    .first-box
+      .first-column-1
+        .alumni-card
+          img.img-fluid.alumni-image src="#{asset_path 'shortCoursesHeaderImage.jpg'}"
+          .alumni-info
+            p "[Coder Factory] gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
+            p
+              span.alumni-name Daniel Dumycz 
+              span Artist
+      .first-column-2
+        .second-row-1
+          .third-column
             h5 ENTREPENEURS
             p You have big bold ideas but need some foundations in tech to code your prototype and negotiate with the broad range of suppliers / developers / engineers that operate in the tech industry.
-          .col-md-6.right-who-card
+          .third-column
             h5 SCHOOL LEAVERS
             p You may be interested in Computer Science / Engineering but not yet ready to dive into a 4 year degree. Use the coding bootcamp model to quickly enter the industry and discover the various pathways open to you in carving out your tech career.
-        .row.group-container
-          .col-md-6.left-who-card
+        .second-row-2
+          .third-column
             h5 CAREER CHANGERS
             p You may be looking to swap careers into the rapidly expanding tech industry for many reasons - better pay, greater mental stimulation or just feel the need to innovate.
-          .col-md-6.right-who-card
+          .third-column
             h5 PROFFESSIONAL DEVELOPMENT
             p You may be in an industry you love but feel the need to create new products and innovations within your company. Learn the digital literacy required to transform your workplace and make the the competition irrelevant.
-        .row.gc-right
-          .col-md-12.bottom-who-card
+        .second-row-3
+          .third-column
             h5 PREREQUISITES
             p Just a willingness to learn, a passion for technology and high school completion.
+.who-is-this-for.hidden-md-up
+  .container
+    center
+      h1 WHO IS THIS FOR?
+      .first-column-1
+        .alumni-card
+          img.img-fluid.alumni-image src="#{asset_path 'shortCoursesHeaderImage.jpg'}"
+          .alumni-info
+            p "[Coder Factory] gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
+            p
+              span.alumni-name Daniel Dumycz 
+              span Artist
+      .third-column
+        h5 ENTREPENEURS
+        p You have big bold ideas but need some foundations in tech to code your prototype and negotiate with the broad range of suppliers / developers / engineers that operate in the tech industry.
+      .third-column
+        h5 SCHOOL LEAVERS
+        p You may be interested in Computer Science / Engineering but not yet ready to dive into a 4 year degree. Use the coding bootcamp model to quickly enter the industry and discover the various pathways open to you in carving out your tech career.
+      .third-column
+        h5 CAREER CHANGERS
+        p You may be looking to swap careers into the rapidly expanding tech industry for many reasons - better pay, greater mental stimulation or just feel the need to innovate.
+      .third-column
+        h5 PROFFESSIONAL DEVELOPMENT
+        p You may be in an industry you love but feel the need to create new products and innovations within your company. Learn the digital literacy required to transform your workplace and make the the competition irrelevant.
+      .third-column
+        h5 PREREQUISITES
+        p Just a willingness to learn, a passion for technology and high school completion.
