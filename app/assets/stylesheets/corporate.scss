@@ -158,46 +158,6 @@
     margin-left: -1em;
   }
 }
-.corporate-partners {
-  background-color: #FFF;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  h5 {
-    color: #000;
-  }
-  .corporate-logo-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  @media only screen and (max-width: 767px) {
-    .corporate-logo-container {
-      flex-direction: column;
-    }
-  }
-}
-.telstra-promo {
-  background-color: #FFF;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-style: solid;
-  border-width: 1px 0px 0px 0px;
-  border-color: #EEE;
-
-  .img-telstra {
-    width: 50%;
-  }
-  h5 {
-    color: #000;
-    font-size: 24px;
-  }
-  @media only screen and (max-width: 767px) {
-    .mobile-center {
-      text-align: center;
-    }
-  }
-}
 .corporate-q-and-a {
   background-color: #FFF;
   padding-top: 50px;
