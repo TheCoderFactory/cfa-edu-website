@@ -3,9 +3,14 @@
   background-size: 100% 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  min-height: 60vh;
 
   .wrapper {
     padding: 10px;
+  }
+  h4 {
+    padding-top: 20px;
+    color: #000;
   }
   .bottom-boxes{
     display: flex;
@@ -29,7 +34,22 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    background-color: white;
+    background-color: #FFF;
+    border-radius: 5px 5px 0px 0px;;
+  }
+  @media only screen and (max-width: 767px) {
+    .box {
+      padding: 20px;
+      margin-top: 30px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    h3 {
+      font-size: 30px;
+    }
+  }
+  .bottom-boxes .box{
+    border-radius: 5px 5px;
   }
   .box-invisible{
     margin: 5px;
@@ -39,55 +59,108 @@
     flex: 1;
     padding: 10px;
   }
+  @media only screen and (max-width: 767px) {
+    h4 {
+      font-size: 28px;
+    }
+  }
   .text{
     padding: 10px;
     border-radius: 5px;
     flex-direction: column;
     flex: 1;
   }
+  .cost-primary {
+    color: #EC5037;
+  }
+  .cost-secondary {
+    color: #38A9C7;
+  }
+  .border-orange {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    flex-direction: column;
+    flex: 1;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    flex-direction: column;
+    flex: 1;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 .demystify-summary {
   background-color: #FFF;
-}
-.corporate-partners {
-  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media only screen and (max-width: 767px) {
+    .col-md-6 {
+      text-align: center;
+    }
+    .hs-button {
+      margin-bottom: 10px;
+    }
+    input {
+      text-align: center;
+    }
+    .border {
+      text-align: center;
+    }
+  }
 
   h5 {
     color: #000;
   }
-  .corporate-logo-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .center-image {
+    vertical-align: middle;
   }
-}
-.telstra-promo {
-  background-color: #FFF;
-  h5 {
-    color: #000;
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
   }
-}
-.corporate-q-and-a {
-  background-color: #FFF;
-  h5 {
-    color: #000;
+  .border {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
-  .q-and-a-row {
-    display: flex;
+  .no-list-icons {
+    list-style: none;
+    padding: 0px;
+    color: #ADADAD;
+    font-size: 14px;
   }
-  .q-and-a-box {
-    flex: 1;
-    padding: 10px;
-    margin: 5px;
-    background-color: #EEE;
+  p {
+    margin-bottom: 0px;
   }
-  .question {
-    color: #000;
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
   }
 }
 .latest-blog-posts {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #EEE;
 
   h5 {
@@ -96,11 +169,22 @@
   .blog-post-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 767px) {
+    .blog-post-container {
+      flex-direction: column;
+    }
   }
   .blog-post-box {
     background-color: #333;
     width: 20%;
     margin: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    .blog-post-box {
+      width: 60%;
+    }
   }
   .img-blog-post-author {
     border-style: solid;
@@ -108,9 +192,22 @@
     border-width: 3px;
     width: 25%;
     height: 25%;
-    margin-top: -30px;
+    margin-top: -40px;
+  }
+  .written-by {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: #ADADAD;
+  }
+  .author-name {
+    font-size: 14px;
+    color: #FFF;
   }
   .post-details {
     padding: 20px;
+  }
+  h6 {
+    color: #FFF;
   }
 }

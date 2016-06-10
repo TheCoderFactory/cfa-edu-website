@@ -8,6 +8,7 @@
 @import "workshop";
 @import "corporate";
 @import "kids-coding";
+@import "shared";
 
 html, body {
   height: 100%;
@@ -24,7 +25,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: #FFF;
   position: fixed;
   width: 100%;
   z-index: 9999;
