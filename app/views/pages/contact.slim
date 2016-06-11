@@ -2,9 +2,8 @@
   .container
     .row
       .col-xs-12
-        center
-          h2
-            | #{fa_icon 'smile-o', class: 'fa-fg'} Get in touch
+        .here
+          h2 #{fa_icon 'smile-o', class: 'fa-fg'} Get in touch
           h4 We're happy to hear from you.
           /[if lte IE 8]
             script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"
@@ -15,50 +14,52 @@
               portalId: '2106109',
               formId: '528e7661-cc5a-4076-abe1-33dec87baa0c'
             });
-    .row
+    .row.campus-row
       .col-xs-12
         h2 Our Campuses
-        h4 Coder Factory Academy
-        .row
+        .border
+        h5 Coder Factory Academy
+        .row.campus-row
           .col-xs-12
             img.img-fluid src="#{asset_path 'ait-campus.jpg'}"
-          .col-md-6.col-xs-12
-            h6 Contact Details
-            p
-              | Phone:
-              a href="tel:+61292118399"  +61 2 9211 8399
-            p
-              | Email:
-              a href="mailto:info@coderfactory.com"  info@coderfactory.com
-            p Coder Factory Academy
-            p
-              | Level 2, 7 Kelly Street
-              br
-              | Ultimo, NSW 2007
-              a href="https://www.google.com.au/maps/place/AIT+-+Academy+of+Information+Technology/@-33.8817852,151.1930498,17z/data=!3m1!4b1!4m2!3m1!1s0x6b12ae292217df93:0x7f041156594ef4ef" target="_blank" title=("Map link")  Map link
-          .col-md-6.col-xs-12
+          .col-md-6.col-xs-12.campus-row
+            .here
+              h6 Contact Details
+              p
+                | Phone:
+                a href="tel:+61292118399"  +61 2 9211 8399
+              p
+                | Email:
+                a href="mailto:info@coderfactory.com"  info@coderfactory.com
+              p Coder Factory Academy
+              p
+                | Level 2, 7 Kelly Street
+                br
+                | Ultimo, NSW 2007
+                a href="https://www.google.com.au/maps/place/AIT+-+Academy+of+Information+Technology/@-33.8817852,151.1930498,17z/data=!3m1!4b1!4m2!3m1!1s0x6b12ae292217df93:0x7f041156594ef4ef" target="_blank" title=("Map link")  Map link
+          .col-md-6.col-xs-12.campus-row
             .embed-responsive.embed-responsive-21by9
               iframe.embed-responsive-item border="0" frameborder="0" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.3054962939036!2d151.19304981521051!3d-33.881785180652685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae292217df93%3A0x7f041156594ef4ef!2sAIT+-+Academy+of+Information+Technology!5e0!3m2!1sen!2sau!4v1450057463299" width="60%"
-        h4 Academy of Information Technology Campus, Melbourne
-        .row
+        h5 Academy of Information Technology Campus, Melbourne
+        .row.campus-row
           .col-xs-12
             img.img-fluid src="#{asset_path 'ait-campus-melb.jpg'}"
-          .col-md-6.col-xs-12
-            h6 Contact Details
-            p
-              | Phone:
-              a href="tel:+61 3 8372 0000"  +61 3 8372 0000
-            p
-              | Email:
-              a href="mailto:info@ait.nsw.edu.au"  info@ait.nsw.edu.au
-            p Academy of Information Technology
-            p
-              | Level 8, 120 Spencer Street,
-              br>/
-              | Melbourne, VIC 3000
-            p
-              a href="https://www.google.com.au/maps/place/AIT+-+Academy+of+Information+Technology/@-33.8817852,151.1930498,17z/data=!3m1!4b1!4m2!3m1!1s0x6b12ae292217df93:0x7f041156594ef4ef" target="_blank" title=("Map link")  Map link
-          .col-md-6.col-xs-12
+          .col-md-6.col-xs-12.campus-row
+            .here
+              h6 Contact Details
+              p
+                | Phone:
+                a href="tel:+61 3 8372 0000"  +61 3 8372 0000
+              p
+                | Email:
+                a href="mailto:info@ait.nsw.edu.au"  info@ait.nsw.edu.au
+              p Academy of Information Technology
+              p
+                | Level 8, 120 Spencer Street,
+                br
+                | Melbourne, VIC 3000
+                a href="https://www.google.com.au/maps/place/AIT+-+Academy+of+Information+Technology/@-33.8817852,151.1930498,17z/data=!3m1!4b1!4m2!3m1!1s0x6b12ae292217df93:0x7f041156594ef4ef" target="_blank" title=("Map link")  Map link
+          .col-md-6.col-xs-12.campus-row
             .embed-responsive.embed-responsive-21by9
                 iframe.embed-responsive-item allowfullscreen="" frameborder="0" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.798427305548!2d144.95197011571344!3d-37.81819017975151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4e3d01d97b%3A0x58d959fdecb7f84f!2s8%2F120+Spencer+St%2C+Melbourne+VIC+3000%2C+Australia!5e0!3m2!1sen!2sus!4v1457323118185" style="border:0" width="100%" 
 
