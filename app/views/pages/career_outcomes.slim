@@ -1,53 +1,91 @@
-.container
-  center
+.career-outcomes-page
+  .container
     h2 BECOME A JUNIOR DEVELOPER
-  h5 OUR PROCESS
-  .row
-    p.pull-left #{fa_stacked_icon "wrench inverse", base: "circle", class: "fa-5x"}<br>Learn in-demand skills
-    p Transform into a job-ready developer in only 24 weeks. Our expert instructors come direct from the industry to ensure our students gain the experience required to upskill or launch straight into a lucrative career. With access to VET FEE-HELP for eligible students, you can study now and not pay a cent until you land your first job as a developer.
-  .row
-    p.pull-left #{fa_stacked_icon "briefcase inverse", base: "circle", class: "fa-5x"}<br>Master full-stack development
-    p Master two web stacks instead of one! Get a leg-up by mastering Ruby on Rails and part of the MEAN stack (AngularJS & Node.js). Learn how to create a backend and frontend, create and manage a database, build APIs, and much more. Dive deep into HTML, CSS, JavaScript, and Bootstrap.
-  .row
-    p.pull-left #{fa_stacked_icon "pencil-square-o inverse", base: "circle", class: "fa-5x"}<br>Build a portfolio
-    p From practical programming skills to launching full-stack web apps, you’ll become an expert at solving any problem with code. Gain a competitive edge by also learning the computer science fundamentals employers want.
-  .row
-    p.pull-left #{fa_stacked_icon "comments inverse", base: "circle", class: "fa-5x"}<br>Gain internship experience
-    p Build a portfolio by working on real solutions for real companies in a collaborative, hands-on environment. Gain real-world experience as a developer. Each student participates in a one-month guaranteed, unpaid internship with one of our corporate partners, from local start-ups to large corporations.
-  .row
-    p.pull-left #{fa_stacked_icon "check inverse", base: "circle", class: "fa-5x"}<br>Land your dream job
-    p Graduate from the course as an entry-level developer with an average starting salary of $60k. Web developers in Australia give their jobs a 5/5 ‘Extremely Satisfied’ job satisfaction rating. Work your way up to a six-figure salary as a Senior Software Engineer, DevOps Engineer, Project Manager, or Software Architect in 2-5 years after graduating. Or choose between becoming the CTO of a start-up and living the digital nomad dream as a remote developer.
-  center
-    a.main-cta-btn href="/curriculum"  EXPLORE OUR CURRICULUM
-  h5 SUPPLY CAN’T KEEP UP WITH DEMAND
-  p Now is the perfect time to start a career as a web developer. There are almost 5 jobs for every 1 developer.
-  p It's safe to say that Australian companies do not want to see jobs going overseas, but if our graduates can't keep up with their Silicon Valley counterparts, then it's inevitable we'll see more entrepreneurs either starting their software companies in Silicon Valley or hiring the majority of their software developers outside Australia.
-  p In the US, there will be 1 MILLION more software developer jobs than computer science graduates by 2020. Computer programming jobs are growing at 2x the national average. In Australia, unis can’t churn out CS grads fast enough to meet industry demand.
-  p From startups to Fortune 100 companies, there is consistent demand for developers who write high-quality code, and experienced problem solvers who design creative solutions. Bottom line is: every company nowadays needs a developer like you!
-  center
-    h5 Countries where software engineers and developers are in demand
-    img.img-fluid src="#{asset_path 'developers_wanted_map.jpg'}"
-    p Source: <a href="http://www.michaelpage.co.uk/minisite/most-in-demand-professions/" target="_blank">Michael Page</a>
-  h5 YOUR SUCCESS IS OUR SUCCESS
-  p There is an insatiable demand for web developers around the globe. You don’t need to be an industry insider to realise that Australia is desperately seeking software developers. Salaries in the IT sector have never been better, and job ads become more plentiful each day. That’s why we promise to be by your side until you land your first job as a developer.
-  p Between a portfolio, internship experience, and skillset upon graduating, you’ll have more than enough to flaunt your development expertise to potential employers. But, our instructors also mentor students in the latest hiring process skills, interview coding challenges.
-  p In addition to our expert instructors, industry-leaders drop in to speak to and engage students, answer questions about the industry, and offer insights on pursuing employment opportunities.
-  p Our guidance doesn’t stop at the classroom. Access our network of the best developers, companies, and entrepreneurs in Australia, who are hungry for full-stack developers specialising in the in-demand programming languages and frameworks our course teaches.
-  center
-    img.img-fluid src="#{asset_path 'course_report.jpg'}"
-    p Source: <a href="https://www.coursereport.com/reports/2015-coding-bootcamp-job-placement-demographics-report" target="_blank">Course Report</a>
-  h5 BOOTCAMP GRADS vs COMPUTER SCIENCE GRADS
-  p Become an expert on what’s currently in-demand in the software development job market.
-  p Unlike a CS degree, bootcamps focus on real-world experience, and less on unnecessary theoretical jargon. Our course is faster and more cost-effective than university courses, especially with the option to access VET FEE-HELP.
-  p Australian universities are not producing workplace-ready engineers. Find comfort in knowing our intensive bootcamp course teaches the right languages, methodologies, processes, and problem solving concepts that the industry currently demands.
-  p Our project-based course is too applied, hands-on, and small-bite to fit easily into the traditional university curriculum. Working 40 hours a week in an immersive environment, bootcamp students cover a semester’s worth of material in only four days. Think of our program as a place where technology outruns education.
-  center
-    h3 WHY CHOOSE OUR GRADUATES?
-    h6 #{fa_stacked_icon "desktop inverse", base: "circle", class: "fa-5x"}<br>Development skills in the most in-demand web languages and frameworks
-    br
-    h6 #{fa_stacked_icon "fire inverse", base: "circle", class: "fa-5x"}<br>Motivated individuals with a love of technology
-    br
-    h6 #{fa_stacked_icon "users inverse", base: "circle", class: "fa-5x"}<br>A diverse talent pool for the most effective team
-    br/
-    a.main-cta-btn href="/partners"  JOIN OUR NETWORK
+    center.hidden-md-up
+      .border-primary
+    .border-primary.hidden-sm-down
+    h5 OUR PROCESS
+    center.hidden-md-up
+      .border-secondary
+    .border-secondary.hidden-sm-down
+    .process-boxes
+      .process-box-1
+        center
+          p #{fa_stacked_icon "wrench inverse", base: "circle", class: "fa-4x"}<br>Learn in-demand skills
+      .process-box-3
+        p Transform into a job-ready developer in only 24 weeks. Our expert instructors come direct from the industry to ensure our students gain the experience required to upskill or launch straight into a lucrative career. With access to VET FEE-HELP for eligible students, you can study now and not pay a cent until you land your first job as a developer.
+    .process-boxes
+      .process-box-1
+        center
+          p #{fa_stacked_icon "briefcase inverse", base: "circle", class: "fa-4x"}<br>Master full-stack development
+      .process-box-3
+        p Master two web stacks instead of one! Get a leg-up by mastering Ruby on Rails and part of the MEAN stack (AngularJS & Node.js). Learn how to create a backend and frontend, create and manage a database, build APIs, and much more. Dive deep into HTML, CSS, JavaScript, and Bootstrap.
+    .process-boxes
+      .process-box-1
+        center
+          p #{fa_stacked_icon "pencil-square-o inverse", base: "circle", class: "fa-4x"}<br>Build a portfolio
+      .process-box-3
+        p From practical programming skills to launching full-stack web apps, you’ll become an expert at solving any problem with code. Gain a competitive edge by also learning the computer science fundamentals employers want.
+    .process-boxes
+      .process-box-1
+        center
+          p #{fa_stacked_icon "comments inverse", base: "circle", class: "fa-4x"}<br>Gain internship experience
+      .process-box-3
+        p Build a portfolio by working on real solutions for real companies in a collaborative, hands-on environment. Gain real-world experience as a developer. Each student participates in a one-month guaranteed, unpaid internship with one of our corporate partners, from local start-ups to large corporations.
+    .process-boxes
+      .process-box-1
+        center
+          p #{fa_stacked_icon "check inverse", base: "circle", class: "fa-4x"}<br>Land your dream job
+      .process-box-3
+        p Graduate from the course as an entry-level developer with an average starting salary of $60k. Web developers in Australia give their jobs a 5/5 ‘Extremely Satisfied’ job satisfaction rating. Work your way up to a six-figure salary as a Senior Software Engineer, DevOps Engineer, Project Manager, or Software Architect in 2-5 years after graduating. Or choose between becoming the CTO of a start-up and living the digital nomad dream as a remote developer.
+    center
+      a.main-cta-btn href="/curriculum"  EXPLORE OUR CURRICULUM
+    h5 SUPPLY CAN’T KEEP UP WITH DEMAND
+    center.hidden-md-up
+      .border-secondary
+    .border-secondary.hidden-sm-down
+    p Now is the perfect time to start a career as a web developer. There are almost 5 jobs for every 1 developer.
+    p It's safe to say that Australian companies do not want to see jobs going overseas, but if our graduates can't keep up with their Silicon Valley counterparts, then it's inevitable we'll see more entrepreneurs either starting their software companies in Silicon Valley or hiring the majority of their software developers outside Australia.
+    p In the US, there will be 1 MILLION more software developer jobs than computer science graduates by 2020. Computer programming jobs are growing at 2x the national average. In Australia, unis can’t churn out CS grads fast enough to meet industry demand.
+    p From startups to Fortune 100 companies, there is consistent demand for developers who write high-quality code, and experienced problem solvers who design creative solutions. Bottom line is: every company nowadays needs a developer like you!
+    center
+      h5 Countries where software engineers and developers are in demand
+      img.img-fluid src="#{asset_path 'developers_wanted_map.jpg'}"
+      p Source: <a href="http://www.michaelpage.co.uk/minisite/most-in-demand-professions/" target="_blank">Michael Page</a>
+    h5 YOUR SUCCESS IS OUR SUCCESS
+    center.hidden-md-up
+      .border-secondary
+    .border-secondary.hidden-sm-down
+    p There is an insatiable demand for web developers around the globe. You don’t need to be an industry insider to realise that Australia is desperately seeking software developers. Salaries in the IT sector have never been better, and job ads become more plentiful each day. That’s why we promise to be by your side until you land your first job as a developer.
+    p Between a portfolio, internship experience, and skillset upon graduating, you’ll have more than enough to flaunt your development expertise to potential employers. But, our instructors also mentor students in the latest hiring process skills, interview coding challenges.
+    p In addition to our expert instructors, industry-leaders drop in to speak to and engage students, answer questions about the industry, and offer insights on pursuing employment opportunities.
+    p Our guidance doesn’t stop at the classroom. Access our network of the best developers, companies, and entrepreneurs in Australia, who are hungry for full-stack developers specialising in the in-demand programming languages and frameworks our course teaches.
+    center
+      img.img-fluid src="#{asset_path 'course_report.jpg'}"
+      p Source: <a href="https://www.coursereport.com/reports/2015-coding-bootcamp-job-placement-demographics-report" target="_blank">Course Report</a>
+    h5 BOOTCAMP GRADS vs COMPUTER SCIENCE GRADS
+    center.hidden-md-up
+      .border-secondary
+    .border-secondary.hidden-sm-down
+    p Become an expert on what’s currently in-demand in the software development job market.
+    p Unlike a CS degree, bootcamps focus on real-world experience, and less on unnecessary theoretical jargon. Our course is faster and more cost-effective than university courses, especially with the option to access VET FEE-HELP.
+    p Australian universities are not producing workplace-ready engineers. Find comfort in knowing our intensive bootcamp course teaches the right languages, methodologies, processes, and problem solving concepts that the industry currently demands.
+    p Our project-based course is too applied, hands-on, and small-bite to fit easily into the traditional university curriculum. Working 40 hours a week in an immersive environment, bootcamp students cover a semester’s worth of material in only four days. Think of our program as a place where technology outruns education.
+    center
+      br
+      br
+      h3 WHY CHOOSE OUR GRADUATES?
+      center.hidden-md-up
+        .border-primary
+      .border-primary.hidden-sm-down
+      h6 #{fa_stacked_icon "desktop inverse", base: "circle", class: "fa-5x"}
+      p Development skills in the most in-demand web languages and frameworks
+      br
+      h6 #{fa_stacked_icon "fire inverse", base: "circle", class: "fa-5x"}
+      p Motivated individuals with a love of technology
+      br
+      h6 #{fa_stacked_icon "users inverse", base: "circle", class: "fa-5x"}
+      p A diverse talent pool for the most effective team
+      br
+      a.main-cta-btn href="/partners"  JOIN OUR NETWORK
 
