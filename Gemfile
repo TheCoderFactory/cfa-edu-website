@@ -12,7 +12,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # app specific gems
 gem 'slim'
 gem 'bootstrap', '~> 4.0.0.alpha3'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'ckeditor_rails'
+gem 'will_paginate'
 
 group :development do
   gem 'web-console', '~> 2.0'

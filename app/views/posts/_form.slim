@@ -1,0 +1,25 @@
+= simple_form_for(@post) do |f|
+  .row
+    .form-group.input-field.col-md-12
+      = f.input :title
+    .form-group.input-field.col-md-12
+      label for="image" Opening Image
+      = f.file_field :image
+    .form-group.input-field.col-md-12
+      = f.input :lead
+    .form-group.input-field.col-md-12
+      = f.input :content, input_html: {class: "ckeditor"}
+    .form-group.input-field.col-md-12
+      = f.input :publish
+    .form-group.input-field.col-md-12
+      label for="published_date" Publish Date
+      = f.date_field :published_date
+
+  .row
+    .col-md-12
+      = f.button :submit, "Save"
+
+javascript:
+  $('.ckeditor').ckeditor({
+  });
+

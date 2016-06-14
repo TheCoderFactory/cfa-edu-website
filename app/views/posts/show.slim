@@ -1,0 +1,16 @@
+= content_for :title, @post.title + ' [@CoderFactory Blog]'
+= content_for :description, @post.title + ': ' + @post.lead
+= content_for :image, @post.image
+= content_for :tagline, @post.published_date.strftime('%d %B %Y')
+.show-blog-post
+  .container
+    .row
+      .col-xs-12
+        img src="#{@post.image_url}"
+        h5 #{@post.title}
+        .label-pill
+          = @post.published_date.strftime('%d %B %Y')
+        p
+          = @post.lead
+        = @post.content.html_safe
+
