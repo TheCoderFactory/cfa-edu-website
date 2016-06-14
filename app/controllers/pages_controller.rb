@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   def about
   end
 
-  def alumni
-  end
+  # def alumni
+  # end
 
   def career_outcomes
   end
