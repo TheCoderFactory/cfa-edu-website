@@ -1,0 +1,299 @@
+.about-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  h3 {
+    color: #000;
+  }
+  h4 {
+    color: #EC5037;
+    color: #000;
+  }
+  h5 {
+    color: #38A9C7;
+  }
+  h6 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 5px;
+  }
+  img {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    text-align: -webkit-center;
+    display: block;
+  }
+}
+.faq-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 5px;
+  }
+  .border-secondary {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 10%;
+    margin-top: 5px;
+  }
+  h3 {
+    color: #000;
+  }
+  h4 {
+    color: #000;
+  }
+  h5 {
+    color: #000;
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .panel {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #EEE;
+    border-radius: 5px;
+    background-color: #EEE;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+}
+.contact-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .here {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #EEE;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  h2 {
+    color: #000;
+  }
+  h4 {
+    color: #EC5037;
+  }
+  h5 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 10%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .campus-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  img {
+    height: 40%;
+  }
+}
+.privacy-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2, h5 {
+    color: #000;
+  }
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+  }
+  .border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 10%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+.instructors-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  h3 {
+    color: #000;
+  }
+  h4 {
+    color: #EC5037;
+    color: #000;
+  }
+  h5 {
+    color: #38A9C7;
+  }
+  h6 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 5px;
+  }
+  img {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    text-align: -webkit-center;
+    display: block;
+  }
+}
+.career-outcomes-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  h2, h3, h5 {
+    color: #000;
+  }
+  .process-boxes {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #EEE;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .process-box-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .process-box-1 p {
+    color: #38A9C7;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .process-box-3 {
+    flex: 3;
+    display: flex;
+    align-items: center;
+  }
+  .border-primary {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .border-secondary {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 10%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    .border-primary {
+      width: 50%;
+    }
+    .border-secondary {
+      width: 30%;
+    }
+  }
+}
+.alumni-page {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h5 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .alumni-boxes {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #EEE;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .alumni-box-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .alumni-box-3 {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .testimonial-play {
+    vertical-align: middle;
+    color: #EC5037;
+  }
+  img {
+    width: 50%;
+  }
+}

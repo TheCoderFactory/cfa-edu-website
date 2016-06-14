@@ -5,6 +5,11 @@
 @import "cta-styles";
 @import "home-page";
 @import "fast-track";
+@import "workshop";
+@import "corporate";
+@import "kids-coding";
+@import "misc-pages";
+@import "shared";
 
 html, body {
   height: 100%;
@@ -12,7 +17,7 @@ html, body {
 }
 
 body {
-  background-color: grey;
+  background-color: #FFF;
 }
 
 .wrapper {
@@ -21,7 +26,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: #FFF;
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -52,10 +57,17 @@ header {
     margin-top: 15px;
     border-color: #FFF transparent transparent transparent;
   }
+  button {
+    color: #38A9C7;
+  }
+  button:focus {
+    outline: 5px auto #38A9C7;
+  }
   @media only screen and (max-width: 767px) {
     li {
       float: none !important;
       margin-left: 0px !important;
+      display: flex;
     }
   }
 }
@@ -64,7 +76,7 @@ header {
   padding-top: 61px;
   padding-bottom: 500px;
   @media only screen and (max-width: 767px) {
-    padding-bottom: 750px;
+    padding-bottom: 800px;
   }
 }
 
@@ -78,7 +90,7 @@ header {
   padding-bottom: 50px;
   height: 500px;
   @media only screen and (max-width: 767px) {
-    height: 750px;
+    height: 800px;
   }
 
   ul {
@@ -101,4 +113,7 @@ a {
 }
 a:hover {
   color: white;
+}
+.img-circle {
+  border-radius: 50%;
 }

@@ -1,0 +1,134 @@
+.workshop-hero {
+  background-image: url(asset-path("first_cohort_black.jpg"));
+  background-size: 100% 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 60vh;
+
+  .border {
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: rgba(173, 173, 173, 0.3);
+  }
+  .wrapper {
+    padding: 10px;
+  }
+  .bottom-boxes{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .up-more {
+    margin-top: -20px;
+  }
+  .top-boxes{
+    display: flex;
+    margin-bottom: -10px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .box{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 5px 5px 0px 0px;;
+  }
+  @media only screen and (max-width: 767px) {
+    .box {
+      padding: 20px;
+      margin-top: 30px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    h3 {
+      font-size: 30px;
+    }
+  }
+  .bottom-boxes .box{
+    border-radius: 5px 5px;
+  }
+  .box-invisible{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+  }
+  .text{
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    flex: 1;
+  }
+  h4 {
+    color: #000;
+  }
+  @media only screen and (max-width: 767px) {
+    h4 {
+      font-size: 28px;
+    }
+  }
+  .cost-primary {
+    color: #EC5037;
+  }
+  .cost-secondary {
+    color: #38A9C7;
+  }
+}
+.course-summaries {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h5 {
+    color: #000;
+  }
+  .price-text {
+    color: #EC5037;
+  }
+  .border {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .no-list-icons {
+    list-style: none;
+    padding: 0px;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+  }
+  .course-summary {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media only screen and (max-width: 767px) {
+    img {
+      margin-bottom: 50px;
+    }
+  }
+}

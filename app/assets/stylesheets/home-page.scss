@@ -1,48 +1,65 @@
 .hero {
   background-image: url(asset-path('main-header-bg.jpg'));
-  background-repeat: cover;
+  @media only screen and (max-width: 767px) {
+    background-image: url(asset-path('mobile-main-header-bg.jpg'));
+  }
   background-size: 100% 100%;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  min-height: 60vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
   color: #FFF;
 
-  .options-container {
-    display: flex;
+  h1, h4, h3 {
+    margin-top: 10px;
   }
   .hero-btns {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .hero-cards {
-    margin-top: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 767px) {
+    .hero-cards {
+      margin-top: 70px;
+      flex-direction: column;
+    }
   }
   .hero-card {
-    width: 30% !important;
     background-color: rgba(0,0,0,0.7);
     background-size: 100%;
-    padding: 15px;
-    margin-top: 60px;
+    padding: 30px;
     color: white;
+    max-width: 33%;
   }
-  .hero-card-middle {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 30% !important;
-    background-color: rgba(0,0,0,0.7);
-    padding: 15px;
-    margin-top: 60px;
-    color: white;
+  @media only screen and (max-width: 767px) {
+    .hero-card {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
-  .mobile-hero-cards {
-    margin-top: 30px;
+  .img-hero-card {
+    margin-right: 20px;
   }
-  .hero-card-mobile {
-    background-color: rgba(0,0,0,0.7);
-    padding: 15px;
-    color: white;
-    margin-top: 30px;
-    width: 90%;
-    margin: auto;
+  @media only screen and (max-width: 767px) {
+    .img-hero-card {
+      max-width: 25%;
+    }
+  }
+  .hero-card-title {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @media only screen and (max-width: 767px) {
+    .hero-card-title {
+      font-size: 14px;
+    }
+  }
+  p {
+    margin-top: -10px;
+    margin-bottom: 0px;
   }
 }
 .press-logos {
@@ -77,9 +94,19 @@
   background-color: #333;
   padding-top: 50px;
   padding-bottom: 50px;
+  @media only screen and (max-width: 767px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 
-  .container {
+  .course-boxes {
     display: flex;
+    flex-direction: row;
+  }
+  @media only screen and (max-width: 767px) {
+    .course-boxes {
+      flex-direction: column;
+    }
   }
   .course-option-heading {
     width: 90%;
@@ -92,6 +119,14 @@
   .course-option-1, .course-option-2, .course-option-3 {
     padding-top: 200px;
   }
+  @media only screen and (max-width: 767px) {
+    .course-option-1, .course-option-2, .course-option-3 {
+      padding-top: 450px;
+    }
+    .course-option-1, .course-option-2, .course-option-3, .course-option-4 {
+      width: 100vw;
+    }
+  }
   .course-option-4 {
     padding-top: 100px;
 
@@ -103,6 +138,7 @@
 
       p {
         font-size: 14px;
+        color: #FFF;
       }
 
       hr {
@@ -112,7 +148,18 @@
         background-color: #FFF;
       }
     }
-
+  }
+  @media only screen and (max-width: 767px) {
+    .course-option-4 {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      h3 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 20px !important;
+      }
+    }
   }
   .course-option-1 {
     background-image: url(asset-path('foundOutMore1.jpg'));
@@ -132,113 +179,46 @@
     background-size: 100% 100%;
     background-position: center;
   }
-}
-.testimonials {
-  background-color: #EEE;
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-  h3, h5 {
-    color: #333;
-  }
-  #testimonial-images {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 50%;
-  }
-  hr {
-    width: 5%;
-    height: 1px;
-  }
-  .img-circle {
-    border-radius: 50%;
-  }
-  .active-testimonial {
-    width: 100%;
-    height: 100%;
-  }
-  .inactive-testimonial {
-    width: 75%;
-    height: 75%;
-    -webkit-filter: grayscale(100%);
-    -webkit-filter: brightness(40%);
-  }
-  .active-testimonial-content {
-    display: block;
-  }
-  .inactive-testimonial-content {
-    display: none;
-  }
-  p {
-    color: #ADADAD;
-  }
-  .quote {
-    width: 50%;
-  }
-  .testimonial-button {
-    cursor: pointer;
-  }
-
-  .testimonial-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.mobile-testimonials {
-  background-color: #EEE;
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-  h3, h5 {
-    color: #333;
-  }
-  #mobile-testimonial-images {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  hr {
-    width: 5%;
-    height: 1px;
-  }
-  .img-circle {
-    border-radius: 50%;
-  }
-  .mobile-active-testimonial {
-    display: block;
-  }
-  .mobile-inactive-testimonial {
-    display: none;
-  }
-  p {
-    color: #ADADAD;
-  }
-  .testimonial-button {
-    cursor: pointer;
+  @media only screen and (max-width: 767px) {
+    h5 {
+      font-size: 26px;
+    }
+    .course-option-button {
+      font-size: 18px;
+    }
   }
 }
 .infographic {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #FFF;
-  h1 {
-    color: #000;
-  }
 }
-.upcoming_courses {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.upcoming-courses {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #EEE;
 
-  .container {
+  .upcoming-courses-container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-  p {
-    color: #EEE;
+  @media only screen and (max-width: 767px) {
+    .upcoming-courses-container {
+      flex-direction: column;
+    }
+    .upcoming-course {
+      width: 75%;
+    }
   }
-  .col-md-3 {
+  .upcoming-course {
     background-color: #333;
-    background-clip: content-box;
+    margin: 10px;
+  }
+  .course-header {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 150px;
   }
   .price-text {
     padding: 10px;
@@ -254,20 +234,7 @@
   }
   .teacher-name {
     font-size: 14px;
-    margin-top: 5px;
-  }
-  .course-1, .course-2, .course-3, .course-4 {
-    margin: auto;
-    background-color: #333;
-    flex: 1;
-  }
-  .course-1-image, .course-2-image, .course-3-image, .course-4-image {
-    background-image: url(asset-path('shortCoursesHeaderImage.jpg'));
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 200px;
-    padding: 10px;
+    color: #FFF;
   }
   .course-teacher-image {
     border-style: solid;
@@ -279,72 +246,18 @@
   }
   .course-info {
     margin-top: 20px;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
   }
-  .course {
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
-  }
-  .col-md-8 {
-    padding-left: 0px;
-  }
-  .course i {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  .upcoming-course-icon {
+    vertical-align: middle;
     color: #EC5037;
-  }
-  .course p {
-    font-size: 15px;
-  }
-}
-.business-details {
-  background-color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  h5 {
-    color: #333;
-    margin-top: 25px;
-  }
-  .hs-form {
-    width: 100%;
-    .form-columns-2 {
-      width: 100%;
-      margin: 0px;
-      box-sizing: inherit;
-      max-width: 100%;
-    }
-  }
-  .hs_hs_persona > label {
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin-right: 0px;
     margin-left: 10px;
-    @extend .pull-left;
   }
-  .hs_hs_persona > .input > select {
-    margin-top: 5px;
-  }
-  .hs_campus_preference > label {
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_campus_preference > .input > select {
-    margin-top: 5px;
-  }
-  .hs-button {
-    @extend .pull-right;
-    @media only screen and (max-width: 767px) {
-      float: none;
-    }
-  }
-  @media only screen and (max-width: 767px) {
-    p, h5, .hs-button{
-      display: block;
-      text-align: -webkit-center !important;
-    }
+  .course-info p {
+    line-height: 30px;
+    color: #FFF;
   }
 }

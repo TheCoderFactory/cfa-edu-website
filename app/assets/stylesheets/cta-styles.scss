@@ -18,15 +18,15 @@
   padding: 10px;
 }
 .scd-cta-btn {
-  background-color: #FFF;
+  background-color: #38A9C7;
   border-radius: 5px;
-  color: #EC5037;
+  color: #FFF;
   font-size: 18px;
   padding: 20px;
 }
 .scd-cta-btn:hover {
-  background-color: #EC5037;
-  color: #FFF;
+  background-color: #FFF;
+  color: #38A9C7;
   text-decoration: none;
 }
 
@@ -98,4 +98,9 @@
 }
 .course-option-cta-3:hover {
 
+}
+@media only screen and (max-width: 767px) {
+  .course-option-cta-1 a, .course-option-cta-2 a, .course-option-cta-3 a {
+    font-size: 28px;
+  }
 }
