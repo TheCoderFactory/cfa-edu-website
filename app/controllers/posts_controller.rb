@@ -38,10 +38,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def import
+    Post.import params[:file]
+    redirect_to :back
   end
 
   private

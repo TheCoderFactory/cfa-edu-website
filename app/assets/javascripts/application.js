@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require ckeditor-jquery
 //= require testimonials
+//= require blog_sidebar
 //= require_tree .

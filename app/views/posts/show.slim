@@ -5,12 +5,33 @@
 .show-blog-post
   .container
     .row
-      .col-xs-12
-        img src="#{@post.image_url}"
-        h5 #{@post.title}
-        .label-pill
-          = @post.published_date.strftime('%d %B %Y')
-        p
-          = @post.lead
-        = @post.content.html_safe
+      .col-md-8.col-xs-12#left-column
+        img.img-fluid src="#{@post.image}"
+        .title-section
+          h5 #{@post.title}
+          .border-secondary
+          p
+            - if @post.author_image.nil?
+              img.img-circle.pull-left src="#{@post.author_image}"
+            - else
+              = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
+            span.label-pill.author
+              -if @post.author_name.nil?
+                | Coder Factory
+              - else
+                | #{@post.author_name}
+            br
+            span.label-pill.date #{@post.published_date.strftime('%d %B %Y')}
+        .content-section
+          p
+            b
+              = @post.lead
+          = @post.content.html_safe
+      .col-md-4.hidden-sm-down
+        .promos
+          .row
+            .box-1
+          .row
+            .box-2
+
 

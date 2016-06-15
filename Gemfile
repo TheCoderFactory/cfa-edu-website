@@ -18,6 +18,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'ckeditor_rails'
 gem 'will_paginate'
+gem 'friendly_id'
 
 group :development do
   gem 'web-console', '~> 2.0'

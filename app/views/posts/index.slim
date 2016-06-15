@@ -23,7 +23,7 @@ section#top-section
                 td
                   = fa_icon "check" if post.publish
                 td
-                  = post.published_date.strftime('%d %B %Y')
+                  = post.published_date.strftime('%d %B %Y') if post.published_date
                 td
                   = link_to post
                     | #{fa_icon "eye"} View
