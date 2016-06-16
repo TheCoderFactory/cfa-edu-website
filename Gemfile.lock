@@ -20,6 +20,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_link_to (1.0.3)
+      actionpack
     activejob (4.2.5.1)
       activesupport (= 4.2.5.1)
       globalid (>= 0.3.0)
@@ -226,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   bootstrap (~> 4.0.0.alpha3)
   byebug
   capybara (~> 2.1.0)
