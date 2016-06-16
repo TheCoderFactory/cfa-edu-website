@@ -112,10 +112,15 @@
     background-color: #38A9C7;
     color: #FFF;
     padding: 10px;
+    border-radius: 5px;
   }
   .read-more:hover {
     text-decoration: none;
     color: #38A9C7;
     background-color: #FFF;
+    border-style: solid;
+    border-color: #38A9C7;
+    border-width: 2px 2px 2px 2px;
+    padding: 8px;
   }
 }

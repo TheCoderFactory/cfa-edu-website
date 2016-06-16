@@ -13,8 +13,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.current_articles
-    current_date = Date.today
-    published?.where("published_date <= ?", current_date).reverse_chron_order
+    published?.reverse_chron_order
   end
 
   def self.reverse_chron_order
@@ -22,6 +21,12 @@ class Post < ActiveRecord::Base
   end
 
   def self.published?
-    where(publish: true)
+    current_date = Date.today
+    where(publish: true).where("published_date <= ?", current_date)
+  end
+
+  def is_published?
+    return true if publish && (published_date <= Date.today)
+    false
   end
 end

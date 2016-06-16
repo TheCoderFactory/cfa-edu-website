@@ -2,7 +2,8 @@
   .container
     .row
       .col-xs-12
-        img.img-fluid src="#{post.image}"
+        center
+          img.img-fluid src="#{post.image}"
         .title-section
           h2 #{post.title}
           .border-secondary
@@ -19,7 +20,7 @@
             br
             span.label-pill.date #{post.published_date.strftime('%d %B %Y')}
           .content-section
-            p
-              b
-                = post.lead
-            a.label-pill.read-more href="#{post_path(post)}" Read More
+            h5
+              = post.lead
+            br
+            a.read-more href="#{post_path(post)}" Read More

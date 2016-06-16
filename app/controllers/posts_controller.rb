@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   # before_action :authenticate_admin! , only: [:index, :new, :create, :edit, :update, :destroy]
+  before_action :set_post, only: [:show]
+  before_action :post_published?, only: [:show]
 
   def index
     @posts = Post.all.reverse_chron_order.paginate(page: params[:page], per_page: 10)
@@ -38,7 +40,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.friendly.find(params[:id])
   end
 
   def import
@@ -49,5 +50,13 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :lead, :content, :image, :publish, :published_date)
+  end
+
+  def set_post
+    @post = Post.friendly.find(params[:id])
+  end
+
+  def post_published?
+    redirect_to root_path unless @post.is_published?
   end
 end
