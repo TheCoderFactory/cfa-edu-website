@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
-  # mount_uploader :image, ImageUploader
-  # mount_uploader :author_image, ImageUploader
+  mount_uploader :image, ImageUploader
+  mount_uploader :author_image, ImageUploader
   friendly_id :title, use: :slugged
 
   def self.import(file)
