@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get "kids-coding", to: "kids_coding#index"
 
+  get "blog", to: "blog#index"
   resources :posts do
     collection { post :import }
   end

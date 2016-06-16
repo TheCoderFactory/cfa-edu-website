@@ -5,7 +5,7 @@ $(document).ready(function() {
     $window = $(window);
 
     $window.scroll(function (e) {
-      if ($window.scrollTop() > pos) {
+      if ($window.scrollTop() >= pos) {
         $this.css({
           position: 'absolute',
           top: pos
@@ -18,5 +18,5 @@ $(document).ready(function() {
       }
     });
   };
-  $('.promos').followTo($('#left-column').height() - $('.promos').height());
+  $('.promos').followTo($('#left-column').outerHeight(true) - $('.promos').outerHeight(true));
 });
