@@ -1,18 +1,18 @@
-/ = content_for :title, @post.title + ' [@CoderFactory Blog]'
-/ = content_for :description, @post.title + ': ' + @post.lead
-/ = content_for :image, @post.image
-/ = content_for :tagline, @post.published_date.strftime('%d %B %Y')
+= content_for :title, @post.title + ' [@CoderFactory Blog]'
+= content_for :description, @post.title + ': ' + @post.lead
+= content_for :image, @post.image_url
+= content_for :tagline, @post.published_date.strftime('%d %B %Y')
 .show-blog-post
   .container
     .row
       .col-md-8.col-xs-12#left-column
-        / img.img-fluid src="#{@post.image}"
+        img.img-fluid src="#{@post.image_url}"
         .title-section
           h5 #{@post.title}
           .border-secondary
           p
             - if @post.author_image.nil?
-              / img.img-circle.pull-left src="#{@post.author_image}"
+              img.img-circle.pull-left src="#{@post.author_image_url}"
             - else
               = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
             span.label-pill.author
