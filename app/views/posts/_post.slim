@@ -3,13 +3,13 @@
     .row
       .col-xs-12
         center
-          img.img-fluid src="#{post.image}"
+          / img.img-fluid src="#{post.image}"
         .title-section
           h2 #{post.title}
           .border-secondary
           p
             - if post.author_image.nil?
-              img.img-circle.pull-left src="#{post.author_image}"
+              / img.img-circle.pull-left src="#{post.author_image}"
             - else
               = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
             span.label-pill.author
