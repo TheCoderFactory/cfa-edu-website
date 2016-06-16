@@ -313,6 +313,9 @@
     margin-right: 5px;
     color: #FFF;
   }
+  .previous_page, .next_page {
+    text-transform: uppercase;
+  }
   a:hover {
     text-decoration: none;
     border-style: solid;
