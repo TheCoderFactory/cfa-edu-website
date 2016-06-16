@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # before_action :authenticate_admin! , only: [:index, :new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.paginate(page: params[:page], per_page: 10)
+    @posts = Post.all.reverse_chron_order.paginate(page: params[:page], per_page: 10)
   end
 
   def new
@@ -19,11 +19,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
       redirect_to @post
     else
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.destroy
     redirect_to posts_path
   end

@@ -11,4 +11,17 @@ class Post < ActiveRecord::Base
       post.save
     end
   end
+
+  def self.current_articles
+    current_date = Date.today
+    published?.where("published_date <= ?", current_date).reverse_chron_order
+  end
+
+  def self.reverse_chron_order
+    order(published_date: :desc)
+  end
+
+  def self.published?
+    where(publish: true)
+  end
 end
