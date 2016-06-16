@@ -8,7 +8,7 @@
       .col-md-8.col-xs-12#left-column
         img.img-fluid src="#{@post.image_url}"
         .title-section
-          h5 #{@post.title}
+          h2 #{@post.title}
           .border-secondary
           p
             - if @post.author_image.nil?
@@ -22,10 +22,10 @@
                 | #{@post.author_name}
             br
             span.label-pill.date #{@post.published_date.strftime('%d %B %Y')}
-        .content-section
-          p
-            b
-              = @post.lead
+            .content-section
+              h5
+                = @post.lead
+        .body-section
           = @post.content.html_safe
       .col-md-4.hidden-sm-down
         = render "shared/blog_sidebar"
