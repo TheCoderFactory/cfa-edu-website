@@ -1,0 +1,13 @@
+= content_for :title, 'Coder Factory Academy Blog'
+= content_for :description, 'Check out these great posts from our team relating to all things coding.'
+.blog
+  .container
+    .row
+      .col-md-8.col-xs-12#left-column
+        = render @posts
+        center
+          - if @posts.size == 0
+            h2 There are currently no blog posts. Please check back later.
+          = will_paginate @posts
+      .col-md-4.hidden-sm-down
+        = render "shared/blog_sidebar"

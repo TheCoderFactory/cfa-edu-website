@@ -292,3 +292,56 @@
     }
   }
 }
+.blog-sidebar {
+  .promos {
+    position: fixed;
+  }
+  .box-1 {
+    padding: 200px;
+    background-color: #38A9C7;
+    margin-bottom: 5px;
+  }
+  .box-2 {
+    padding: 200px;
+    background-color: #EEE;
+    margin-top: 5px;
+  }
+}
+.pagination {
+  a, em {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #FFF;
+  }
+  .previous_page, .next_page {
+    text-transform: uppercase;
+  }
+  a:hover {
+    text-decoration: none;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 2px 2px 2px 2px;
+    color: #EC5037;
+    background-color: #FFF;
+    padding: 3px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .previous_page, .next_page, a, em {
+    border-radius: 5px;
+    background-color: #EC5037;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .current, .disabled {
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 2px 2px 2px 2px;
+    color: #EC5037;
+    background-color: #FFF;
+    padding: 3px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
