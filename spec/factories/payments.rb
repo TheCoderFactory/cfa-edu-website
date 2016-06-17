@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :payment do
-    booking {FactoryGirl.build(:booking)}
+    association :booking
     amount "0.00"
   end
 end

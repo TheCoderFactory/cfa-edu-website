@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-12
+      h2 #{@course.name}
+      h4 #{@course.tagline}
+      p #{@course.description}
+      p Cost per person: #{@course.price}
+      br
+      h3 New Booking
+      = render "form"
+

@@ -1,0 +1,15 @@
+.container
+  .row
+    h2 #{@booking.intake.course.name}
+    h3 #{@booking.intake.start} - #{@booking.intake.finish}
+
+    h2 Booking Details
+    p #{@booking.promo_code}
+    p #{@booking.people_attending}
+    p #{@booking.total_cost}
+
+    h3 Payment Details
+    - if @booking.payment
+      p #{@booking.payment.amount}
+    - else
+      p Not payed

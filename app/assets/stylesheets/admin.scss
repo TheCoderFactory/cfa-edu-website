@@ -1,0 +1,25 @@
+.admin-sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #FFF;
+  ul {
+    padding: 0px;
+  }
+  li {
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .btn-admin-sidebar {
+    width: 70%;
+  }
+}
+.admin-content {
+  width: 80%;
+  height: 100%;
+  float: right;
+  left: 20%;
+  bottom: 0px;
+  position: fixed;
+  overflow: scroll;
+}
