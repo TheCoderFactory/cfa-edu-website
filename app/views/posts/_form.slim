@@ -9,6 +9,11 @@
       = f.input :lead
     .form-group.input-field.col-md-12
       = f.input :content, input_html: {class: "ckeditor"}
+    .form-group.input-field.col-md-6
+      = f.input :author_name
+    .form-group.input-field.col-md-6
+      label for="image" Author Image
+      = f.file_field :author_image
     .form-group.input-field.col-md-12
       = f.input :publish
     .form-group.input-field.col-md-12
