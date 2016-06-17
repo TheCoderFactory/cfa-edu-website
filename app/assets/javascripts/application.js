@@ -13,6 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require testimonials
 //= require stripe-payments
+//= require blog_sidebar
 //= require_tree .

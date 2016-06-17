@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   def about
   end
 
-  def alumni
-  end
+  # def alumni
+  # end
 
   def career_outcomes
   end
@@ -21,6 +21,9 @@ class PagesController < ApplicationController
   end
 
   def instructors
+  end
+
+  def partners
   end
 
   def privacy

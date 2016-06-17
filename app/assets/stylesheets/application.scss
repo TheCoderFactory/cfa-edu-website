@@ -9,6 +9,9 @@
 @import "workshop";
 @import "corporate";
 @import "kids-coding";
+@import "misc-pages";
+@import "blog";
+@import "post";
 @import "shared";
 
 html, body {
@@ -17,7 +20,7 @@ html, body {
 }
 
 body {
-  background-color: grey;
+  background-color: #FFF;
 }
 
 .wrapper {
@@ -31,12 +34,24 @@ header {
   width: 100%;
   z-index: 9999;
   top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   img {
     display: inline !important;
   }
   li.nav-item {
     margin-right: 10px;
+  }
+  a {
+    color: #000;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #38A9C7;
+  }
+  .active {
+    color: #38A9C7;
   }
   a.header-major-cta {
     background-color: #FFF;
@@ -48,13 +63,14 @@ header {
     padding-left: 25px;
     padding-right: 25px;
   }
-  li.active:after {
+  a.active:after {
     content: ' ';
     position: absolute;
     border: solid 10px transparent;
     border-top: solid 0px transparent;
     border-width: 10px;
-    margin-top: 15px;
+    margin-top: 55px;
+    margin-left: -20px;
     border-color: #FFF transparent transparent transparent;
   }
   button {
@@ -81,7 +97,7 @@ header {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #000;
   color: #FFF;
   position: absolute;
   bottom: 0;
@@ -95,10 +111,31 @@ header {
 
   ul {
     padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 20px;
   }
   li {
     list-style-type: none;
     color: #ADADAD;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .course-link {
+    color: #FFF;
+  }
+  .course-link:hover {
+    color: #38A9C7;
+    text-decoration: none;
+  }
+  .footer-page-link {
+    color: #ADADAD;
+  }
+  .footer-page-link:hover {
+    color: #38A9C7;
+    text-decoration: none;
   }
   input {
     margin: 0px;

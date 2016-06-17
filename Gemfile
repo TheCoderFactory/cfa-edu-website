@@ -18,6 +18,11 @@ gem 'simple_form'
 gem 'will_paginate'
 gem 'country_select'
 gem 'stripe'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'ckeditor_rails'
+gem 'friendly_id'
+gem 'active_link_to'
 
 group :development do
   gem 'quiet_assets'

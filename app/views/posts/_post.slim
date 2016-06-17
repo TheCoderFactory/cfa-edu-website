@@ -1,0 +1,26 @@
+.blog-post-partial
+  .container
+    .row
+      .col-xs-12
+        center
+          img.img-fluid src="#{post.image_url}"
+        .title-section
+          h2 #{post.title}
+          .border-secondary
+          p
+            - if post.author_image.nil?
+              img.img-circle.pull-left src="#{post.author_image_url}"
+            - else
+              = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
+            span.label-pill.author
+              -if post.author_name.nil?
+                | Coder Factory
+              - else
+                | #{post.author_name}
+            br
+            span.label-pill.date #{post.published_date.strftime('%d %B %Y')}
+          .content-section
+            h5
+              = post.lead
+            br
+            a.read-more href="#{post_path(post)}" READ MORE

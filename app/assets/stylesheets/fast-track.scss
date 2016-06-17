@@ -335,21 +335,6 @@
     color: #EC5037;
   }
 }
-.partners {
-  background-color: #FFF;
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  h3 {
-    color: #000;
-  }
-  .row {
-    margin-top: 10px;
-  }
-  .more {
-    font-size: 18px;
-  }
-}
 .fast-track-apply {
   background-color: #EEE;
   .hs_hs_persona > label {
@@ -483,5 +468,59 @@
   }
   .hs_how_did_you_hear_about_us > .input > input {
     margin-top: 5px;
+  }
+}
+.wit-scholarship-info {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1, h2, h3, h4, h5 {
+    color: #000;
+  }
+  .no-list-icons {
+    list-style: none;
+    padding: 0px;
+    font-size: 14px;
+  }
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+  }
+  b {
+    color: #38A9C7;
+  }
+  .border-orange {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 10%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (max-width: 767px) {
+    .border-orange {
+      width: 50%;
+    }
+    .border-blue {
+      width: 30%;
+    }
   }
 }

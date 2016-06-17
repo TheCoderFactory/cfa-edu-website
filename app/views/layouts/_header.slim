@@ -9,14 +9,14 @@ header
           img.img-fluid src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
         ul.nav.navbar-nav.pull-lg-right
           li.nav-item
-            a.nav-link href="/fast-track" FAST TRACK
+            = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link"
           li.nav-item
-            a.nav-link href="/corporate" CORPORATE
+            = active_link_to 'CORPORATE', "/corporate", class: "nav-link"
           li.nav-item
-            a.nav-link href="/workshop" WORKSHOP
+            = active_link_to 'WORKSHOP', "/workshop", class: "nav-link"
           li.nav-item
-            a.nav-link href="/kids-coding" KIDS CODING
+            = active_link_to 'KIDS CODING', "/kids-coding", class: "nav-link"
           li.nav-item
-            a.nav-link href="/contact" CONTACT
+            = active_link_to 'CONTACT', "/contact", class: "nav-link"
           li.nav-item
             a.nav-link.header-major-cta href="/fast-track/apply" APPLY

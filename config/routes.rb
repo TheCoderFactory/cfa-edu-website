@@ -31,14 +31,20 @@ Rails.application.routes.draw do
 
   get "kids-coding", to: "kids_coding#index"
 
+  get "blog", to: "blog#index"
+  resources :posts do
+    collection { post :import }
+  end
+
   get "about", to: "pages#about"
-  get "meet-our-alumni", to: "pages#alumni"
+  # get "meet-our-alumni", to: "pages#alumni"
   get "career-outcomes", to: "pages#career_outcomes"
   get "confirmation", to: "pages#confirmation"
   get "contact", to: "pages#contact"
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"
-  get "meet-our-instructors", to: "pages#instructors"
+  get "meet-your-instructors", to: "pages#instructors"
+  get "partners", to: "pages#partners"
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
 end

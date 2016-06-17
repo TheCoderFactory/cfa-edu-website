@@ -1,0 +1,124 @@
+.new-post {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  input[type="file"],
+  select {
+    margin-top: 0px;
+  }
+
+  .post_publish label {
+    padding-left: 10px;
+  }
+}
+.show-blog-post {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .title-section {
+    background-color: #EC5037;
+    overflow: hidden;
+    padding: 20px;
+  }
+  .title-section img {
+    width: 10%;
+    margin-right: 10px;
+  }
+  .title-section p {
+    line-height: 25px;
+  }
+  .content-section {
+    padding: 20px;
+  }
+  .author, .date {
+    color: #FFF;
+  }
+  .fa-stack {
+    margin-top: -10px;
+  }
+  .date {
+    background-color: #38A9C7;
+  }
+  .border-secondary {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  p {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+}
+.blog-post-partial {
+  padding-bottom: 50px;
+
+  .title-section {
+    background-color: #EC5037;
+    overflow: hidden;
+    padding: 20px;
+  }
+  .title-section img {
+    width: 10%;
+    margin-right: 10px;
+  }
+  .title-section p {
+    line-height: 25px;
+  }
+  .content-section {
+    padding: 20px;
+  }
+  .content-section p {
+    color: #FFF;
+  }
+  .author, .date {
+    color: #FFF;
+  }
+  .fa-stack {
+    margin-top: -10px;
+  }
+  .date {
+    background-color: #38A9C7;
+  }
+  .border-secondary {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  p {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+  .read-more {
+    background-color: #38A9C7;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .read-more:hover {
+    text-decoration: none;
+    color: #38A9C7;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: #38A9C7;
+    border-width: 2px 2px 2px 2px;
+    padding: 8px;
+  }
+}

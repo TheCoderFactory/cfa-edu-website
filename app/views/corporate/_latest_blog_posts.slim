@@ -3,27 +3,22 @@
     center
       h5 LATEST BLOG POSTS
     .blog-post-container
-      .blog-post-box
-        img.img-fluid src="#{asset_path 'shortCoursesHeaderImage.jpg'}"
-        .post-details
-          center
-            img.img-fluid.img-circle.img-blog-post-author src="#{asset_path 'pete.jpg'}"
-            p.written-by Written By
-            p.author-name Pete Argent
-            h6 Coding Kickstarter (FREE)
-      .blog-post-box
-        img.img-fluid src="#{asset_path 'shortCoursesHeaderImage.jpg'}"
-        .post-details
-          center
-            img.img-fluid.img-circle.img-blog-post-author src="#{asset_path 'pete.jpg'}"
-            p.written-by Written By
-            p.author-name Pete Argent
-            h6 Coding Kickstarter (FREE)
-      .blog-post-box
-        img.img-fluid src="#{asset_path 'shortCoursesHeaderImage.jpg'}"
-        .post-details
-          center
-            img.img-fluid.img-circle.img-blog-post-author src="#{asset_path 'pete.jpg'}"
-            p.written-by Written By
-            p.author-name Pete Argent
-            h6 Coding Kickstarter (FREE)
+      - @posts.each do |p|
+        .blog-post-box
+          a href="#{post_path(p)}"
+            img.img-fluid.post-image src="#{p.image_url}"
+          .post-details
+            center
+              - if p.author_image.nil?
+                img.img-circle.img-blog-post-author src="#{p.author_image_url}"
+              - else
+                = fa_stacked_icon "user inverse", base: "circle", class: "fa-2x unknown-blog-author"
+              p.written-by Written By
+              p.author-name
+                -if p.author_name.nil?
+                  | Coder Factory
+                - else
+                  | #{p.author_name}
+              a href="#{post_path(p)}"
+                h6 #{p.title}
+
