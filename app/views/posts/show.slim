@@ -1,18 +1,18 @@
 = content_for :title, @post.title + ' [@CoderFactory Blog]'
 = content_for :description, @post.title + ': ' + @post.lead
-= content_for :image, @post.image
+= content_for :image, @post.image_url
 = content_for :tagline, @post.published_date.strftime('%d %B %Y')
 .show-blog-post
   .container
     .row
       .col-md-8.col-xs-12#left-column
-        img.img-fluid src="#{@post.image}"
+        img.img-fluid src="#{@post.image_url}"
         .title-section
-          h5 #{@post.title}
+          h2 #{@post.title}
           .border-secondary
           p
             - if @post.author_image.nil?
-              img.img-circle.pull-left src="#{@post.author_image}"
+              img.img-circle.pull-left src="#{@post.author_image_url}"
             - else
               = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
             span.label-pill.author
@@ -22,10 +22,10 @@
                 | #{@post.author_name}
             br
             span.label-pill.date #{@post.published_date.strftime('%d %B %Y')}
-        .content-section
-          p
-            b
-              = @post.lead
+            .content-section
+              h5
+                = @post.lead
+        .body-section
           = @post.content.html_safe
       .col-md-4.hidden-sm-down
         = render "shared/blog_sidebar"

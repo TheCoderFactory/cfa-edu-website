@@ -20,6 +20,9 @@ class PagesController < ApplicationController
   def instructors
   end
 
+  def partners
+  end
+
   def privacy
   end
 

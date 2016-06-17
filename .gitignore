@@ -18,6 +18,3 @@
 
 # Ignore page styleguides
 app/assets/images/page-styleguides
-
-#Ignore cloudinary api keys
-config/cloudinary.yml

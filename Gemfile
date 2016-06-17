@@ -19,6 +19,7 @@ gem 'cloudinary'
 gem 'ckeditor_rails'
 gem 'will_paginate'
 gem 'friendly_id'
+gem 'active_link_to'
 
 group :development do
   gem 'web-console', '~> 2.0'
