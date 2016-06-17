@@ -1,6 +1,6 @@
 class Intake < ActiveRecord::Base
   belongs_to :course
-  has_many :bookings
+  has_many :bookings, dependent: :restrict_with_error
 
   validates :course, :start, :finish, :location, :class_size, presence: true
   validate :valid_finish

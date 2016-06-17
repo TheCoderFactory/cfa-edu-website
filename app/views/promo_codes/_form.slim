@@ -1,0 +1,12 @@
+= simple_form_for(@promo_code) do |f|
+  .row
+    .form-group.input-field.col-md-6
+      = f.input :code, label: "Code", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-6
+      = f.input :percent, label: "Percent Off", input_html: {class: "form-control"}
+    .form-group.input-field.col-md-12
+      = f.input :note, label: "Other Notes", input_html: {class: "form-control"}
+
+  .row
+    .col-md-12
+      = f.button :submit, "Register", class: "btn btn-success btn-block lead"

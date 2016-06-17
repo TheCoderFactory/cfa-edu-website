@@ -8,5 +8,9 @@ FactoryGirl.define do
     tagline "Free coding."
     slug "coding-kickstarter"
     price "0.00"
+
+    factory :invalid_course do
+      course_type nil
+    end
   end
 end

@@ -2,8 +2,12 @@
 
 FactoryGirl.define do
   factory :booking do
-    intake {FactoryGirl.build(:intake)}
+    association :intake
     people_attending "2"
     total_cost "0.00"
+
+    factory :invalid_booking do
+      people_attending nil
+    end
   end
 end

@@ -1,8 +1,11 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
   mount_uploader :image, ImageUploader
-  mount_uploader :author_image, ImageUploader
+  mount_uploader :author_image, AuthorImageUploader
   friendly_id :title, use: :slugged
+
+  validates :title, :lead, :content, :image, :published_date, presence: true
+  validates_inclusion_of :publish, in: [true, false]
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|

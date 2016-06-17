@@ -1,0 +1,51 @@
+.container
+  .row
+    .col-md-12
+      center
+        h2 #{@course.name}
+        = link_to "New Intake", new_intake_path(course_id: @course.id)
+
+        p #{@course.course_type}
+        p #{@course.name}
+        p #{@course.description}
+        p #{@course.tagline}
+        p #{@course.price}
+
+        h2 Intakes
+
+      - if @intakes.size == 0
+        h3 There are currently no intakes.
+        | Please check back later.
+      - else
+        table.highlight.bordered
+          thead
+            tr
+              th width="20%" Start
+              th width="20%" Finish
+              th width="20%" Location
+              th width="20%" Class Size
+              th Views
+          tbody
+            - @intakes.each do |i|
+              tr
+                td #{i.start}
+                td #{i.finish}
+                td #{i.location}
+                td #{i.class_size}
+                td
+                  = link_to intake_path(i)
+                    = fa_icon "eye", class: "fa-1x"
+                    | View
+                td
+                  = link_to edit_intake_path(i)
+                    = fa_icon "pencil", class: "fa-1x"
+                    |  Edit
+                td
+                  = link_to i, data: { confirm: "Are you sure?" }, method: :delete
+                    = fa_icon "trash", class: "fa-1x"
+                    |  Delete
+
+.row
+  .col-md-12
+    center
+      = will_paginate @intakes

@@ -1,0 +1,47 @@
+.container
+  .row
+    .col-md-12
+      center
+        h2 #{@intake.course.name}
+
+        p #{@intake.start}
+        p #{@intake.finish}
+        p #{@intake.location}
+        p #{@intake.class_size}
+
+        h2 Bookings
+
+        - if @bookings.size == 0
+          h3 There are currently no bookings.
+          | Please check back later.
+        - else
+          table.highlight.bordered
+            thead
+              tr
+                th width="25%" Promo Code
+                th width="25%" People Attending
+                th width="25%" Total Cost
+                th Views
+            tbody
+              - @bookings.each do |b|
+                tr
+                  td #{b.promo_code}
+                  td #{b.people_attending}
+                  td #{b.total_cost}
+                  td
+                    = link_to booking_path(b)
+                      = fa_icon "eye", class: "fa-1x"
+                      |  Show
+                  td
+                    = link_to edit_booking_path(b)
+                      = fa_icon "pencil", class: "fa-1x"
+                      | Edit
+                  td
+                    = link_to b, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
+
+  .row
+    .col-md-12
+      center
+        = will_paginate @bookings

@@ -1,0 +1,17 @@
+.admin-sidebar
+  center
+    ul
+      li
+        = link_to "Dashboard", admin_dashboard_path, class: "btn btn-primary btn-admin-sidebar"
+      li
+        = link_to "Courses", courses_path, class: "btn btn-primary btn-admin-sidebar"
+      li
+        = link_to "Intakes", intakes_path, class: "btn btn-primary btn-admin-sidebar"
+      li
+        = link_to "Bookings", bookings_path, class: "btn btn-primary btn-admin-sidebar"
+      li
+        = link_to "Promo Codes", promo_codes_path, class: "btn btn-primary btn-admin-sidebar"
+      li
+        = link_to "Logout", admin_session_path, class: "btn btn-primary btn-admin-sidebar"
+      li
+        = link_to "Home", root_path, class: "btn btn-primary btn-admin-sidebar"

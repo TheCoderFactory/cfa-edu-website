@@ -1,0 +1,43 @@
+- @intakes.each do |i|
+  .container
+    .row
+      .col-md-12
+        center
+          h2 #{i.course.name}
+          h3 Bookings for #{i.start}
+
+          - i_bookings = i.bookings.paginate(page: params[:page], per_page: 10)
+          - if i_bookings.size == 0
+            h3 There are currently no bookings.
+            | Please check back later.
+          - else
+            table.highlight.bordered
+              thead
+                tr
+                  th width="25%" Promo Code?
+                  th width="25%" People Attending
+                  th width="25%" Total Cost
+                  th Views
+              tbody
+                - i_bookings.each do |b|
+                  tr
+                    td #{b.promo_code.code if b.promo_code}
+                    td #{b.people_attending}
+                    td #{b.total_cost}
+                    td
+                      = link_to booking_path(b)
+                        = fa_icon "eye", class: "fa-1x"
+                        | Show
+                    td
+                      = link_to edit_booking_path(b)
+                        = fa_icon "pencil", class: "fa-1x"
+                        |  Edit
+                    td
+                      = link_to b, data: { confirm: "Are you sure?" }, method: :delete
+                        = fa_icon "trash", class: "fa-1x"
+                        |  Delete
+
+    .row
+      .col-md-12
+        center
+          = will_paginate i_bookings
