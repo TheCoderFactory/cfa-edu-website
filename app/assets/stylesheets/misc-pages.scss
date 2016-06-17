@@ -297,3 +297,32 @@
     width: 50%;
   }
 }
+.partners {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h5 {
+      color: #38A9C7;
+    }
+    .border {
+      padding: 2px;
+      width: 30%;
+      background-color: #EC5037;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    .partner-icons {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .become-a-sponsor a {
+      display: inline-block;
+    }
+    .partner-info {
+      padding: 10px;
+      border-style: solid;
+      border-radius: 5px;
+      border-width: 2px 2px 2px 2px;
+      border-color: #EEE;
+    }
+}

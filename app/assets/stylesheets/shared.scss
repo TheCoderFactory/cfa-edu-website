@@ -345,3 +345,22 @@
     padding-right: 18px;
   }
 }
+.partners-partial {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h3 {
+    color: #000;
+  }
+  .row {
+    margin-top: 10px;
+  }
+  .more {
+    color: #ADADAD;
+    font-size: 18px;
+  }
+  .more:hover {
+    color: #38A9C7;
+    text-decoration: none;
+  }
+}
