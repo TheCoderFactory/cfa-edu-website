@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_admin! , only: [:index, :new, :create, :edit, :update, :destroy]
-  before_action :set_post, only: [:show]
-  before_action :post_published?, only: [:show]
+  respond_to :html
+  before_action :authenticate_admin!, only: ["index", "new", "create", "edit", "update", "destroy"]
+  before_action :set_post, only: ["show"]
+  before_action :post_published?, only: ["show"]
+  layout "admin", only: ["index", "new", "create", "edit", "update", "destroy"]
 
   def index
     @posts = Post.all.reverse_chron_order.paginate(page: params[:page], per_page: 10)
+  end
+
+  def show
   end
 
   def new
@@ -29,7 +34,7 @@ class PostsController < ApplicationController
     if @post.update_attributes(post_params)
       redirect_to @post
     else
-      repsond_with @post
+      respond_with @post
     end
   end
 
@@ -37,9 +42,6 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
     @post.destroy
     redirect_to posts_path
-  end
-
-  def show
   end
 
   def import

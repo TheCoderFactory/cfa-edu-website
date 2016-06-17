@@ -18,3 +18,6 @@
 
 # Ignore page styleguides
 app/assets/images/page-styleguides
+
+# Ignore test images
+public/uploads

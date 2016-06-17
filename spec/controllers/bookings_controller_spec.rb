@@ -82,16 +82,16 @@ describe BookingsController do
 
   describe 'GET #new' do
     before :each do
-      @intake = create(:intake)
+      @course = create(:course)
     end
 
     it "assigns a new booking to @booking" do
-      get :new, intake_id: @intake
-      expect(assigns(:intake)).to eq(@intake)
+      get :new, course_id: @course
+      expect(assigns(:course)).to eq(@course)
       expect(assigns(:booking)).to be_a_new(Booking)
     end
     it "renders the :new template" do
-      get :new, intake_id: @intake
+      get :new, course_id: @course
       expect(response).to render_template :new
     end
   end
@@ -99,9 +99,14 @@ describe BookingsController do
   describe "POST #create" do
     before :each do
       @intake = create(:intake)
+      @course = @intake.course
     end
 
     context "with valid attributes" do
+      it "assigns the required course to @course" do
+        post :create, booking: attributes_for(:booking, intake_id: @intake)
+        expect(assigns(:course)).to eq @course
+      end
       it "assigns the required intake to @intake" do
         post :create, booking: attributes_for(:booking, intake_id: @intake)
         expect(assigns(:intake)).to eq @intake
@@ -118,6 +123,10 @@ describe BookingsController do
     end
 
     context "with invalid attributes" do
+      it "assigns the required course to @course" do
+        post :create, booking: attributes_for(:invalid_booking, intake_id: @intake)
+        expect(assigns(:course)).to eq @course
+      end
       it "assigns the required intake to @intake" do
         post :create, booking: attributes_for(:invalid_booking, intake_id: @intake)
         expect(assigns(:intake)).to eq @intake
