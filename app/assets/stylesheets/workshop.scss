@@ -83,7 +83,6 @@
 }
 .course-summaries {
   background-color: #FFF;
-  padding-top: 50px;
   padding-bottom: 50px;
 
   h5 {
@@ -125,6 +124,10 @@
   .course-summary {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .anchor {
+    padding: 1px;
+    margin-bottom: 60px;
   }
   @media only screen and (max-width: 767px) {
     img {

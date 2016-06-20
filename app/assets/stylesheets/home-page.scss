@@ -3,7 +3,7 @@
   @media only screen and (max-width: 767px) {
     background-image: url(asset-path('mobile-main-header-bg.jpg'));
   }
-  background-size: 100% 100%;
+  background-size: cover;
   min-height: 60vh;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -49,7 +49,7 @@
   }
   .hero-card-title {
     color: #FFF;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 28px;
   }
   @media only screen and (max-width: 767px) {
@@ -120,11 +120,15 @@
     padding-top: 200px;
   }
   @media only screen and (max-width: 767px) {
+    .course-option-heading {
+      padding-bottom: 200px;
+    }
     .course-option-1, .course-option-2, .course-option-3 {
-      padding-top: 450px;
+      padding-top: 250px;
     }
     .course-option-1, .course-option-2, .course-option-3, .course-option-4 {
       width: 100vw;
+      margin-top: 20px;
     }
   }
   .course-option-4 {
@@ -192,6 +196,10 @@
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #FFF;
+
+  a {
+    margin-top: 20px;
+  }
 }
 .upcoming-courses {
   padding-top: 50px;
@@ -214,6 +222,9 @@
   .upcoming-course {
     background-color: #333;
     margin: 10px;
+  }
+  h3 {
+    color: #000;
   }
   .course-header {
     padding-top: 15px;
