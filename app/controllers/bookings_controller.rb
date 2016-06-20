@@ -25,12 +25,12 @@ class BookingsController < ApplicationController
     ################################################################
     @amount = (@booking.total_cost*100).to_i
 
-    # charge = Stripe::Charge.create(
-      # :source => params[:stripeToken],
-      # :amount => @amount,
-      # :description => 'Rails Stripe customer',
-      # :currency => 'aud'
-    # )
+    charge = Stripe::Charge.create(
+      :source => params[:stripeToken],
+      :amount => @amount,
+      :description => 'Rails Stripe customer',
+      :currency => 'aud'
+    )
 
     ################################################################
     ################################################################

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "booking/new", to: "bookings#new"
   post "booking", to: "bookings#create"
   resources :promo_codes, path: "admin/promo-codes"
+  post "validate-promo-code", to: "promo_codes#validate_promo_code"
 
   get "admin/dashboard", to: "admin_dashboard#index"
 

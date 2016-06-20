@@ -6,6 +6,9 @@
       p #{@course.description}
       p Cost per person: #{@course.price}
       br
-      h3 New Booking
-      = render "form"
+      - if @course.available?
+        h3 New Booking
+        = render "new_form"
+      - else
+        h6 There are currently no intakes available for this course.
 

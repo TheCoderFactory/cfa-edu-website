@@ -41,11 +41,11 @@ Course.create(course_type: "Workshop", name: "Web App Builder", description: "Le
               Tried learning online?
               If you've tried learning online but keep hitting road blocks (or boredom), the Web App Developer PT course is the best way to learn coding. Meet other aspiring startup entrepreneurs who have taken action and realised that learning to code is going to change their future.", tagline: "Learn web app development in 12 weeks, while keeping your day job.", price: 2475.00)
 
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
+Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
+Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
+Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
+Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
 Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
 
 PromoCode.create(code: "test", percent: 10, note: "A test code.")

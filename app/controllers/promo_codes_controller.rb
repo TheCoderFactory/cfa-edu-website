@@ -1,6 +1,6 @@
 class PromoCodesController < ApplicationController
   respond_to :html
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, except: ["validate_promo_code"]
   layout "admin"
 
   def index
@@ -37,6 +37,15 @@ class PromoCodesController < ApplicationController
     @promo_code = PromoCode.find(params[:id])
     @promo_code.destroy
     redirect_to promo_codes_path
+  end
+
+  def validate_promo_code
+    @promo_code = PromoCode.where(code: params[:promocode]).first
+    if @promo_code
+      render json: { success: true, exists: true, percent: @promo_code.percent }
+    else
+      render json: { success: false, exists: false }
+    end
   end
 
   private
