@@ -40,7 +40,7 @@ class PromoCodesController < ApplicationController
   end
 
   def validate_promo_code
-    @promo_code = PromoCode.where(code: params[:promocode]).first
+    @promo_code = PromoCode.find_by(code: params[:promocode])
     if @promo_code
       render json: { success: true, exists: true, percent: @promo_code.percent }
     else

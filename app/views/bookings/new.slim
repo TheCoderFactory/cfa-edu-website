@@ -4,7 +4,7 @@
       h2 #{@course.name}
       h4 #{@course.tagline}
       p #{@course.description}
-      p Cost per person: #{@course.price}
+      p Cost per person: <span id="course-price">#{@course.price}</span>
       br
       - if @course.available?
         h3 New Booking
