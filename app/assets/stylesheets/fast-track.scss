@@ -1,6 +1,6 @@
 .fast-track-hero {
   background-image: url(asset-path('first_cohort.jpg'));
-  background-size: 100% 100%;
+  background-size: cover;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #FFF;
@@ -118,7 +118,7 @@
   }
   h5 {
     font-size: 16px;
-    color: #000;
+    color: #38A9C7;
   }
   .first-box {
     display: flex;
@@ -195,7 +195,7 @@
   padding-bottom: 50px;
   p {
     color: #ADADAD;
-    font-size: 14px;
+    font-size: 12px;
   }
   h3 {
     color: #333;
@@ -216,7 +216,6 @@
   }
   .teacher-name {
     color: #EC5037;
-    font-size: 18px;
   }
   .teacher-title {
     color: #333;
@@ -274,7 +273,6 @@
   }
   .left-wit {
     padding-top: 50px;
-    padding-bottom: 50px;
   }
   .terms-text {
     display: inline !important;
