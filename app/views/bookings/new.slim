@@ -1,11 +1,12 @@
-.container
-  .row
-    .col-md-12
-      h2 #{@course.name}
-      h4 #{@course.tagline}
-      p #{@course.description}
-      p Cost per person: <span id="course-price">#{@course.price}</span>
-      br
+.new-booking
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        h2 #{@course.name}
+        h4 #{@course.tagline}
+        p #{@course.description}
+        p Cost per person: <span id="course-price">#{@course.price}</span>
+        br
       - if @course.available?
         h3 New Booking
         = render "new_form"

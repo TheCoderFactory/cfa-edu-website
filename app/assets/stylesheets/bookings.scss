@@ -1,0 +1,25 @@
+.new-booking {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .exp-col-1 {
+    padding-right: 0px;
+    input {
+      text-align: center;
+    }
+  }
+  .exp-col-2 {
+    padding-right: 0px;
+    padding-left: 5px;
+    input {
+      text-align: center;
+    }
+  }
+  .cvc-col {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    input {
+      text-align: center;
+    }
+  }
+}
