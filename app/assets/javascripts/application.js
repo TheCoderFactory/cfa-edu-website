@@ -17,5 +17,4 @@
 //= require testimonials
 //= require stripe-payments
 //= require blog_sidebar
-//= require promo_code
 //= require_tree .
