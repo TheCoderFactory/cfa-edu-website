@@ -24,36 +24,39 @@ class BookingsController < ApplicationController
 
     @promo_code = PromoCode.find_by(code: booking_params[:promo_code])
     @booking.promo_code = @promo_code
-    @percent = 1
-    @percent -= @promo_code.percent*0.01 if @promo_code
 
-    ################################################################
-    ################################################################
+    percent = 1
+    percent -= @promo_code.percent*0.01 if @promo_code
     total_people = booking_params[:people_attending].to_i
-    @amount = get_total_amount @booking.total_cost, total_people, @percent
+    cost = @booking.total_cost
+
+    @amount = get_total_amount cost, total_people, percent
     @booking.total_cost = @amount
 
+    customer = Stripe::Customer.create(
+      :email => @booking.email,
+      :source  => params[:stripeToken]
+    )
     charge = Stripe::Charge.create(
-      :source => params[:stripeToken],
+      :customer => customer,
       :amount => @amount,
       :description => 'Rails Stripe customer',
       :currency => 'aud'
     )
 
-    @payment = Payment.new(amount: @amount, paid: charge.paid)
-    ################################################################
-    ################################################################
+    @payment = Payment.new(amount: @amount, paid: charge.paid, booking: @booking)
+
     if @payment.save && @booking.save
       redirect_to confirmation_path
     else
-      puts "LLLLL"
       puts @booking.errors.inspect
-      respond_with @booking
+      puts @payment.errors.inspect
+      render :new
     end
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to new_charge_path
+    render :new
   end
 
   def edit

@@ -11,9 +11,9 @@
         = f.input :people_attending, collection: [1, 2, 3], selected: 1, label: "Amount Attending"
     .row
       .form-group.input-field.col-md-2.col-md-offset-3.col-xs-12
-        = f.input :firstname, label: "First Name", label: false, placeholder: "First Name*"
+        = f.input :firstname, label: false, placeholder: "First Name*"
       .form-group.input-field.col-md-2.col-xs-12
-        = f.input :lastname, label: "Last Name", label: false, placeholder: "Last Name*"
+        = f.input :lastname, label: false, placeholder: "Last Name*"
       .form-group.input-field.col-md-2.col-xs-12
         = f.input :age, label: false, placeholder: "Age*"
     .row
@@ -30,39 +30,40 @@
     .row
       .col-md-6.col-md-offset-3.col-xs-12
         h6 ENTER PROMO CODE
-        p If you have a promo code, now is the time to enter it, if not, simply click next.
+        p If you have a promo code, now is the time to enter it, if not, simply leave the field blank and click validate to continue.
     .row
-      .col-md-4.col-md-offset-3.col-xs-12
+      .form-group.input-field.col-md-4.col-md-offset-3.col-xs-12
         = f.input :promo_code, placeholder: "Enter promo code...", label: false
-        a.main-cta-btn onclick="validatePromoCode()" VALIDATE
       .col-md-4.col-xs-12
         p.promo-code-status#promo-code-status No code entered.
-        p.promo-code-status Discount amount: <span id="discount-amount">0</span>%
   #section-3
     .row
       .col-md-6.col-md-offset-3.col-xs-12
         h6 CONFIRM DETAILS
       .col-md-3.col-md-offset-3.col-xs-12
-        p <b>Selected Intake:</b> <span id="selected-intake">21/1/2016</span>
-        p <b>Name:</b> <span id="name">Aaron Hook</span>
-        p <b>Age:</b> <span id="age">21</span>
+        p <b>Selected Intake:</b><br><span id="selected-intake"></span>
+        p <b>Name:</b><br><span id="name"></span>
+        p <b>Age:</b><br><span id="age"></span>
       .col-md-3.col-xs-12
-        p <b>Email:</b> <span id="email">aaron@coderfactory.com</span>
-        p <b>Phone:</b> <span id="phone">1111111111</span>
-        p <b>City:</b> <span id="city">Sydney</span>
-        p <b>Country:</b> <span id="country">Australia</span
+        p <b>Email:</b><br><span id="email"></span>
+        p <b>Phone:</b><br><span id="phone"></span>
+        p <b>City:</b><br><span id="city"></span>
+        p <b>Country:</b><br><span id="country"></span
     hr
     .row
       .col-md-6.col-md-offset-3.col-xs-12
         h6 PAYMENT DETAILS
       .col-md-2.col-md-offset-3.col-xs-12
-        p <b>Cost per person:</b> #{@course.price}
-        p <b>Amount Attending:</b> <span id="amount-attending">3</span>
-        p <b>Total price:</b> $900
+        p <b>Cost per person:</b><br>$<span id="per-person-cost"></span>
+        p <b>Amount Attending:</b><br><span id="amount-attending"></span>
+        p <b>Promo code:</b><br><span id="given-promo-code"></span>
+        p <b>Discount:</b><br><span id="promo-discount"></span>%
       .col-md-7.col-xs-12
         .row
           .form-group.col-md-7.col-xs-12
+            p <b>Total price:</b><br>$<span id="total-price"></span>
             p <b>Card Details:</b>
+            span.payment-errors
             input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
         .row
           .form-group.col-md-2.exp-col-1.col-xs-4
@@ -77,6 +78,7 @@
     .col-md-6.col-md-offset-3.col-xs-12
       a.scd-cta-btn.pull-left#prev-btn onclick="prevSection()" PREVIOUS
       a.scd-cta-btn.pull-right#next-btn onclick="nextSection()" NEXT
+      a.main-cta-btn.pull-right#validate-promo-btn onclick="validatePromoCode()" VALIDATE
       = f.button :submit, "BOOK NOW", class: "main-cta-btn pull-right", id: "submit-btn"
 
 script type="text/javascript" src="https://js.stripe.com/v2/"
