@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615062718) do
+ActiveRecord::Schema.define(version: 20160621031505) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -84,8 +84,9 @@ ActiveRecord::Schema.define(version: 20160615062718) do
   create_table "payments", force: :cascade do |t|
     t.integer  "booking_id"
     t.decimal  "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "paid",       default: false
   end
 
   create_table "posts", force: :cascade do |t|

@@ -18,12 +18,20 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(booking_params.except!(:promo_code))
     @intake = Intake.find(booking_params[:intake_id])
     @course = @intake.course
+
+    @promo_code = PromoCode.find_by(code: booking_params[:promo_code])
+    @booking.promo_code = @promo_code
+    @percent = 1
+    @percent -= @promo_code.percent*0.01 if @promo_code
+
     ################################################################
     ################################################################
-    @amount = (@booking.total_cost*100).to_i
+    total_people = booking_params[:people_attending].to_i
+    @amount = get_total_amount @booking.total_cost, total_people, @percent
+    @booking.total_cost = @amount
 
     charge = Stripe::Charge.create(
       :source => params[:stripeToken],
@@ -32,13 +40,14 @@ class BookingsController < ApplicationController
       :currency => 'aud'
     )
 
+    @payment = Payment.new(amount: @amount, paid: charge.paid)
     ################################################################
     ################################################################
-    if @booking.save
+    if @payment.save && @booking.save
       redirect_to confirmation_path
     else
-      # puts "LLLLL"
-      # puts @booking.errors.inspect
+      puts "LLLLL"
+      puts @booking.errors.inspect
       respond_with @booking
     end
 
@@ -71,5 +80,9 @@ class BookingsController < ApplicationController
   private
   def booking_params
     params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :firstname, :lastname, :email, :phone, :age, :city, :country)
+  end
+
+  def get_total_amount price, people_attending, percent
+    ((price*people_attending*percent)*100).to_i
   end
 end
