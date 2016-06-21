@@ -87,14 +87,36 @@ javascript:
 
   $(function() {
     var $form = $('#payment_form');
-      $form.submit(function(event) {
-        // Disable the submit button to prevent repeated clicks:
+    $form.submit(function(event) {
+      // Disable the submit button to prevent repeated clicks:
       $form.find('.submit').prop('disabled', true);
 
-        // Request a token from Stripe:
+      // Request a token from Stripe:
       Stripe.card.createToken($form, stripeResponseHandler);
 
-        // Prevent the form from being submitted:
+      // Prevent the form from being submitted:
       return false;
     });
   });
+
+  function validatePromoCode(){
+    $.ajax({
+      type: "POST",
+      url: "/validate-promo-code",
+      data: {promocode: $('#booking_promo_code').val()},
+      success: function(data){
+        if(data.success){
+          price = parseInt($('#course-price').text());
+          currentDiscount = data.percent;
+          $('#course-price').text(originalPrice*(1-currentDiscount*0.01));
+          $('#promo-code-status').text("Valid");
+          nextSection();
+        } else {
+          currentDiscount = 0;
+          $('#course-price').text(originalPrice);
+          $('#promo-code-status').text("Invalid.");
+        }
+      },
+      dataType: 'json'
+    });
+  }

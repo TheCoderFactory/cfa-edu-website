@@ -66,24 +66,24 @@ function showButtons() {
     $('#prev-btn').show();
   }
 }
-function validatePromoCode(){
-  $.ajax({
-    type: "POST",
-    url: "/validate-promo-code",
-    data: {promocode: $('#booking_promo_code').val()},
-    success: function(data){
-      if(data.success){
-        price = parseInt($('#course-price').text());
-        currentDiscount = data.percent;
-        $('#course-price').text(originalPrice*(1-currentDiscount*0.01));
-        $('#promo-code-status').text("Valid");
-        nextSection();
-      } else {
-        currentDiscount = 0;
-        $('#course-price').text(originalPrice);
-        $('#promo-code-status').text("Invalid.");
-      }
-    },
-    dataType: 'json'
-  });
-}
+// function validatePromoCode(){
+  // $.ajax({
+    // type: "POST",
+    // url: "/validate-promo-code",
+    // data: {promocode: $('#booking_promo_code').val()},
+    // success: function(data){
+      // if(data.success){
+        // price = parseInt($('#course-price').text());
+        // currentDiscount = data.percent;
+        // $('#course-price').text(originalPrice*(1-currentDiscount*0.01));
+        // $('#promo-code-status').text("Valid");
+        // nextSection();
+      // } else {
+        // currentDiscount = 0;
+        // $('#course-price').text(originalPrice);
+        // $('#promo-code-status').text("Invalid.");
+      // }
+    // },
+    // dataType: 'json'
+  // });
+// }
