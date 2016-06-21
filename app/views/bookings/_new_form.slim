@@ -103,7 +103,7 @@ javascript:
     console.log({promocode: $('#booking_promo_code').val()});
     $.ajax({
       type: "POST",
-      url: "/validate-promo-code",
+      url: "cfa-edu.herokuapp.com/validate-promo-code",
       data: {"promocode": $('#booking_promo_code').val()},
       success: function(data){
         if(data.success){
