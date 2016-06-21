@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var offset = $('.promos').offset().top;
+  if ($('.promos').length) var offset = $('.promos').offset().top;
   $.fn.followTo = function (pos) {
     var $this = this,
     $window = $(window);

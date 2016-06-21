@@ -1,0 +1,100 @@
+= simple_form_for(@booking, html: {id: :payment_form}) do |f|
+  = f.hidden_field :total_cost, value: @course.price
+  #section-1
+    .row
+      .col-md-9.col-md-offset-3.col-xs-12
+        h6 ENTER YOUR DETAILS + SELECT INTAKE
+    .row
+      .form-group.input-field.col-md-4.col-md-offset-3.col-xs-12
+        = f.association :intake, collection: @course.available_intakes, selected: @course.available_intakes.first, label_method: lambda { |intake| "#{intake.start.strftime('%d %B %Y')}"}
+      .form-group.input-field.col-md-2.col-xs-12
+        = f.input :people_attending, collection: [1, 2, 3], selected: 1, label: "Amount Attending"
+    .row
+      .form-group.input-field.col-md-2.col-md-offset-3.col-xs-12
+        = f.input :firstname, label: false, placeholder: "First Name*"
+      .form-group.input-field.col-md-2.col-xs-12
+        = f.input :lastname, label: false, placeholder: "Last Name*"
+      .form-group.input-field.col-md-2.col-xs-12
+        = f.input :age, label: false, placeholder: "Age*"
+    .row
+      .form-group.input-field.col-md-3.col-md-offset-3.col-xs-12
+        = f.input :email, label: false, placeholder: "Email*"
+      .form-group.input-field.col-md-3.col-xs-12
+        = f.input :phone, label: false, placeholder: "Phone*"
+    .row
+      .form-group.input-field.col-md-3.col-md-offset-3.col-xs-12
+        = f.input :city, label: false, placeholder: "City*"
+      .form-group.input-field.col-md-3.col-xs-12
+        = f.input :country, label: false, placeholder: "Country*", selected: "AU"
+  #section-2
+    .row
+      .col-md-6.col-md-offset-3.col-xs-12
+        h6 ENTER PROMO CODE
+        p If you have a promo code, now is the time to enter it, if not, simply leave the field blank and click validate to continue.
+    .row
+      .form-group.input-field.col-md-4.col-md-offset-3.col-xs-12
+        = f.input :promo_code, placeholder: "Enter promo code...", label: false
+      .col-md-4.col-xs-12
+        p.promo-code-status#promo-code-status No code entered.
+  #section-3
+    .row
+      .col-md-6.col-md-offset-3.col-xs-12
+        h6 CONFIRM DETAILS
+      .col-md-3.col-md-offset-3.col-xs-12
+        p <b>Selected Intake:</b><br><span id="selected-intake"></span>
+        p <b>Name:</b><br><span id="name"></span>
+        p <b>Age:</b><br><span id="age"></span>
+      .col-md-3.col-xs-12
+        p <b>Email:</b><br><span id="email"></span>
+        p <b>Phone:</b><br><span id="phone"></span>
+        p <b>City:</b><br><span id="city"></span>
+        p <b>Country:</b><br><span id="country"></span
+    hr
+    .row
+      .col-md-6.col-md-offset-3.col-xs-12
+        h6 PAYMENT DETAILS
+      .col-md-2.col-md-offset-3.col-xs-12
+        p <b>Cost per person:</b><br>$<span id="per-person-cost"></span>
+        p <b>Amount Attending:</b><br><span id="amount-attending"></span>
+        p <b>Promo code:</b><br><span id="given-promo-code"></span>
+        p <b>Discount:</b><br><span id="promo-discount"></span>%
+      .col-md-7.col-xs-12
+        .row
+          .form-group.col-md-7.col-xs-12
+            p <b>Total price:</b><br>$<span id="total-price"></span>
+            p <b>Card Details:</b>
+            span.payment-errors
+            input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
+        .row
+          .form-group.col-md-2.exp-col-1.col-xs-4
+            input.stripe-input data-stripe="exp_month" size="2" type="text" placeholder="MM"
+          .form-group.col-md-2.exp-col-2.col-xs-4
+            input.stripe-input data-stripe="exp_year" size="2" type="text" placeholder="YYYY"
+          .form-group.col-md-3.cvc-col.col-xs-4
+            input.stripe-input data-stripe="cvc" size="4" type="text" placeholder="CVC"
+
+
+  .row
+    .col-md-6.col-md-offset-3.col-xs-12
+      a.scd-cta-btn.pull-left#prev-btn onclick="prevSection()" PREVIOUS
+      a.scd-cta-btn.pull-right#next-btn onclick="nextSection()" NEXT
+      a.main-cta-btn.pull-right#validate-promo-btn onclick="validatePromoCode()" VALIDATE
+      = f.button :submit, "BOOK NOW", class: "main-cta-btn pull-right", id: "submit-btn"
+
+script type="text/javascript" src="https://js.stripe.com/v2/"
+javascript:
+  Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
+
+  $(function() {
+    var $form = $('#payment_form');
+      $form.submit(function(event) {
+        // Disable the submit button to prevent repeated clicks:
+      $form.find('.submit').prop('disabled', true);
+
+        // Request a token from Stripe:
+      Stripe.card.createToken($form, stripeResponseHandler);
+
+        // Prevent the form from being submitted:
+      return false;
+    });
+  });

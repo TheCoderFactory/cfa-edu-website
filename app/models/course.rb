@@ -9,4 +9,15 @@ class Course < ActiveRecord::Base
       errors.add(:price, "price cannot be negative")
     end
   end
+
+  def available?
+    return false if intakes.size == 0
+    return true
+  end
+
+  def available_intakes
+    av_intakes = []
+    intakes.each { |i| av_intakes << i if i.intake_available?}
+    return av_intakes
+  end
 end

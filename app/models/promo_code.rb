@@ -3,4 +3,8 @@ class PromoCode < ActiveRecord::Base
 
   validates :code, :percent, :note, presence: true
   validates :code, uniqueness: true
+
+  def to_s
+    code
+  end
 end

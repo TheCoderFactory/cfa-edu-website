@@ -1,11 +1,15 @@
-.container
-  .row
-    .col-md-12
-      h2 #{@course.name}
-      h4 #{@course.tagline}
-      p #{@course.description}
-      p Cost per person: #{@course.price}
-      br
-      h3 New Booking
-      = render "form"
+.new-booking
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h6 #{@course.name}
+        h4 #{@course.tagline}
+        p #{@course.description}
+        p Cost per person: $<span id="course-price">#{@course.price}</span>
+        br
+        - if @course.available?
+          h3 New Booking
+          = render "new_form"
+        - else
+          h6 There are currently no intakes available for this course.
 

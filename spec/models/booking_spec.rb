@@ -4,11 +4,18 @@ describe Booking do
   it "has a valid factory" do
     expect(FactoryGirl.build(:booking)).to be_valid
   end
-  it "is valid with intake, people_attending, total_cost" do
+  it "is valid with intake, people_attending, total_cost, fisrtname, lastname, email, phone, age, city, country" do
     booking = Booking.new(
       intake: FactoryGirl.build(:intake),
       people_attending: 2,
-      total_cost: 0.00)
+      total_cost: 0.00,
+      firstname: "Pete",
+      lastname: "Argent",
+      email: "test@coderfactory.com",
+      phone: "1111111111",
+      age: "33",
+      city: "Sydney",
+      country: "Australia")
     expect(booking).to be_valid
   end
   it "should belong to an intake" do

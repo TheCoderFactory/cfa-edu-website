@@ -2,6 +2,7 @@ class Payment < ActiveRecord::Base
   belongs_to :booking
 
   validates :booking, :amount, presence: true
+  validates_inclusion_of :paid, in: [true]
   validate :non_negative_amount, :amount_equals_booking_cost
 
   def non_negative_amount

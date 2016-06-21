@@ -3,12 +3,14 @@ class Booking < ActiveRecord::Base
   belongs_to :promo_code
   has_one :payment
 
-  validates :intake, :people_attending, :total_cost, presence: true
+  validates :intake, :people_attending, :total_cost,
+    :firstname, :lastname, :email, :phone, :age, :city, :country, presence: true
   validate :valid_total_cost, :non_negative_total_cost, :intake_not_full
 
   def valid_total_cost
+    promo_code ? percent = promo_code.percent : percent = 0
     if intake && total_cost && people_attending
-      if total_cost > intake.course.price*people_attending || total_cost < intake.course.price*people_attending
+      if total_cost > intake.course.price*people_attending*(100-percent)/100*100 || total_cost < intake.course.price*people_attending*(100-percent)/100*100
         errors.add(:total_cost, "total_cost must be equal to course.price*people_attending")
       end
     end

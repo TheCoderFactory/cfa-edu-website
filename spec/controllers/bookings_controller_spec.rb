@@ -97,6 +97,9 @@ describe BookingsController do
   end
 
   describe "POST #create" do
+    let(:stripe_helper) { StripeMock.create_test_helper }
+    before { StripeMock.start }
+    after { StripeMock.stop }
     before :each do
       @intake = create(:intake)
       @course = @intake.course

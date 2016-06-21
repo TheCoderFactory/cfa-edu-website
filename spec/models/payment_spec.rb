@@ -4,10 +4,11 @@ describe Payment do
   it "has a valid factory" do
     expect(FactoryGirl.build(:payment)).to be_valid
   end
-  it "is valid with booking, amount" do
+  it "is valid with booking, amount, paid" do
     payment = Payment.new(
       booking: FactoryGirl.build(:booking),
-      amount: 0.00)
+      amount: 0.00,
+      paid: true)
     expect(payment).to be_valid
   end
   it "should belong to an intake" do
