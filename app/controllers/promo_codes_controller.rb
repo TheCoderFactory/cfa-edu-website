@@ -40,6 +40,7 @@ class PromoCodesController < ApplicationController
   end
 
   def validate_promo_code
+    puts "Hit validate step"
     @promo_code = PromoCode.find_by(code: params[:promocode])
     if @promo_code || params[:promocode].empty?
       @promo_code ? percent = @promo_code.percent : percent = 0

@@ -100,10 +100,11 @@ javascript:
   });
 
   function validatePromoCode(){
+    console.log({promocode: $('#booking_promo_code').val()});
     $.ajax({
       type: "POST",
       url: "/validate-promo-code",
-      data: {promocode: $('#booking_promo_code').val()},
+      data: {"promocode": $('#booking_promo_code').val()},
       success: function(data){
         if(data.success){
           price = parseInt($('#course-price').text());
