@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :payment do
     association :booking
     amount "0.00"
+    paid true
   end
 end

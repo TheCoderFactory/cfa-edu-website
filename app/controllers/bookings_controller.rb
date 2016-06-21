@@ -33,24 +33,24 @@ class BookingsController < ApplicationController
     @amount = get_total_amount cost, total_people, percent
     @booking.total_cost = @amount
 
-    customer = Stripe::Customer.create(
-      :email => @booking.email,
-      :source  => params[:stripeToken]
-    )
-    charge = Stripe::Charge.create(
-      :customer => customer,
-      :amount => @amount,
-      :description => 'Rails Stripe customer',
-      :currency => 'aud'
-    )
+    if @amount > 50
+      customer = Stripe::Customer.create(
+        :email => @booking.email,
+        :source  => params[:stripeToken]
+      )
+      charge = Stripe::Charge.create(
+        :customer => customer,
+        :amount => @amount,
+        :description => 'Rails Stripe customer',
+        :currency => 'aud'
+      )
+    end
 
-    @payment = Payment.new(amount: @amount, paid: charge.paid, booking: @booking)
+    @payment = Payment.new(amount: @amount, paid: charge ? charge.paid : true , booking: @booking)
 
     if @payment.save && @booking.save
       redirect_to confirmation_path
     else
-      puts @booking.errors.inspect
-      puts @payment.errors.inspect
       render :new
     end
 

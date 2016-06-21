@@ -23,6 +23,7 @@ gem 'cloudinary'
 gem 'ckeditor_rails'
 gem 'friendly_id'
 gem 'active_link_to'
+gem 'stripe-ruby-mock', '~> 2.2.4', :require => 'stripe_mock'
 
 group :development do
   gem 'quiet_assets'
@@ -48,4 +49,3 @@ end
 group :production do
   gem 'pg'
 end
-

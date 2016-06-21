@@ -3,7 +3,8 @@ class Booking < ActiveRecord::Base
   belongs_to :promo_code
   has_one :payment
 
-  validates :intake, :people_attending, :total_cost, presence: true
+  validates :intake, :people_attending, :total_cost,
+    :firstname, :lastname, :email, :phone, :age, :city, :country, presence: true
   validate :valid_total_cost, :non_negative_total_cost, :intake_not_full
 
   def valid_total_cost
