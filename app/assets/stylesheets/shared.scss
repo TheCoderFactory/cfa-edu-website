@@ -109,12 +109,12 @@
     height: 1px;
   }
   .active-testimonial {
-    width: 75%;
-    height: 75%;
+    width: 95%;
+    height: 95%;
   }
   .inactive-testimonial {
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     -webkit-filter: grayscale(100%);
     -webkit-filter: brightness(40%);
   }
@@ -173,6 +173,18 @@
   }
   .testimonial-button {
     cursor: pointer;
+  }
+  .mobile-active-testimonial > a {
+    color: #000;
+    cursor: pointer;
+  }
+  .mobile-active-testimonial > a:hover {
+    color: #FFF;
+    text-decoration: none;
+  }
+  .testimonial-play {
+    vertical-align: middle;
+    color: #EC5037;
   }
 }
 .corporate-partners {
