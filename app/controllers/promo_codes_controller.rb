@@ -41,8 +41,9 @@ class PromoCodesController < ApplicationController
 
   def validate_promo_code
     puts "Hit validate step"
-    @promo_code = PromoCode.find_by(code: params[:promocode])
-    if @promo_code || params[:promocode].empty?
+    puts validation_params
+    @promo_code = PromoCode.find_by(code: validation_params[:promocode])
+    if @promo_code || validation_params[:promocode].empty?
       @promo_code ? percent = @promo_code.percent : percent = 0
       render json: { success: true, exists: true, percent: percent }
     else
@@ -53,5 +54,9 @@ class PromoCodesController < ApplicationController
   private
   def promo_code_params
     params.require(:promo_code).permit(:code, :percent, :note)
+  end
+
+  def validation_params
+    params.permit(:promocode)
   end
 end
