@@ -11,43 +11,31 @@
             .box-invisible
           .bottom-boxes
             .box
-              h4 CODING FOR BEGINNERS<br><span class="cost-secondary">$300</span>
-              p.text Whether you want to upskill or start fresh, our beginners course will prepare you to build, test, and deploy new apps. Learn the in-demand skills you need to build revolutionary technology.
-              .border
-              p.text Dive into the fundamentals of coding with Ruby on Rails, HTML, CSS, and Bootstrap.
-              a.scd-cta-btn href="#coding-for-beginners" FIND OUT MORE
+              h4 #{@coding_for_beginners.name.upcase}<br><span class="cost-secondary">#{@coding_for_beginners.get_price}</span>
+              p.text #{@coding_for_beginners.tagline}
+              a.scd-cta-btn href="##{@coding_for_beginners.slug}" FIND OUT MORE
             .box.extra
-              h4.up-more 12 WEEK COURSE<br><span class="cost-primary">$2475</span>
-              p.text The web app builder course is our part-time solution for entrepreneurs. Learn to build a viable web application in only 12 weeks... while keeping your day job.
-              .border
-              p.text Become a confident web application developer with full-stack skills, able to build anything you want using Ruby on Rails and more.
-              a.main-cta-btn href="#12-week-course" FIND OUT MORE
+              h4.up-more #{@twelve_week_course.name.upcase}<br><span class="cost-primary">#{@twelve_week_course.get_price}</span>
+              p.text #{@twelve_week_course.tagline}
+              a.main-cta-btn href="##{@twelve_week_course.slug}" FIND OUT MORE
             .box
-              h4 CODING KICKSTARTER<br><span class="cost-secondary">FREE</span>
-              p.text This FREE introduction to coding workshop gives you a sneak peek into computer programmer life (at no cost!) in an engaging, hands-on environment.
-              .border
-              p.text Learn to build a live application in only two hours, and conjure big ideas of what you could accomplish in a lifetime... or one of our other courses!
-              a.scd-cta-btn href="#coding-kickstarter" FIND OUT MORE
+              h4 #{@coding_kickstarter.name.upcase}<br><span class="cost-secondary">#{@coding_kickstarter.get_price}</span>
+              p.text #{@coding_kickstarter.tagline}
+              a.scd-cta-btn href="##{@coding_kickstarter.slug}" FIND OUT MORE
 .workshop-hero.hidden-md-up
   .container
     center
       h3 <b>CODING IS FUN</b>
       h3 START YOUR JOURNEY INTO CODE
       .box
-        h4.text.up-more 12 WEEK COURSE<br><span class="cost-primary">$2475</span>
-        p.text The web app builder course is our part-time solution for entrepreneurs. Learn to build a viable web application in only 12 weeks... while keeping your day job.
-        .border
-        p.text Become a confident web application developer with full-stack skills, able to build anything you want using Ruby on Rails and more.
-        a.main-cta-btn href="#12-week-course-m" FIND OUT MORE
+        h4.text.up-more #{@twelve_week_course.name.upcase}<br><span class="cost-primary">#{@twelve_week_course.get_price}</span>
+        p.text #{@twelve_week_course.tagline}
+        a.main-cta-btn href="##{@twelve_week_course.slug}-m" FIND OUT MORE
       .box
-        h4.text CODING FOR BEGINNERS<br><span class="cost-secondary">$300</span>
-        p.text Whether you want to upskill or start fresh, our beginners course will prepare you to build, test, and deploy new apps. Learn the in-demand skills you need to build revolutionary technology.
-        .border
-        p.text Dive into the fundamentals of coding with Ruby on Rails, HTML, CSS, and Bootstrap.
-        a.scd-cta-btn href="#coding-for-beginners-m" FIND OUT MORE
+        h4.text #{@coding_for_beginners.name.upcase}<br><span class="cost-secondary">#{@coding_for_beginners.get_price}</span>
+        p.text #{@coding_for_beginners.tagline}
+        a.scd-cta-btn href="##{@coding_for_beginners.slug}-m" FIND OUT MORE
       .box
-        h4.text CODING KICKSTARTER<br><span class="cost-secondary">FREE</span>
-        p.text This FREE introduction to coding workshop gives you a sneak peek into computer programmer life (at no cost!) in an engaging, hands-on environment.
-        .border
-        p.text Learn to build a live application in only two hours, and conjure big ideas of what you could accomplish in a lifetime... or one of our other courses!
-        a.scd-cta-btn href="#coding-kickstarter-m" FIND OUT MORE
+        h4.text #{@coding_kickstarter.name.upcase}<br><span class="cost-secondary">#{@coding_kickstarter.get_price}</span>
+        p.text #{@coding_kickstarter.tagline}
+        a.scd-cta-btn href="##{@coding_kickstarter.slug}-m" FIND OUT MORE

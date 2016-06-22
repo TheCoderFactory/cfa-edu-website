@@ -22,4 +22,12 @@ class Course < ActiveRecord::Base
     intakes.each { |i| av_intakes << i if i.intake_available?}
     return av_intakes
   end
+
+  def get_price
+    if course_type == "Workshop"
+      return "$#{price}" if price > 0.0
+      return "FREE"
+    end
+    return "$#{price}"
+  end
 end
