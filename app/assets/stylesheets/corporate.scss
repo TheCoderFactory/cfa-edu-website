@@ -80,8 +80,6 @@
     border-style: solid;
     border-width: 3px 0px 0px 0px;
     border-color: #EC5037;
-    flex-direction: column;
-    flex: 1;
     width: 35%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -90,8 +88,6 @@
     border-style: solid;
     border-width: 3px 0px 0px 0px;
     border-color: #38A9C7;
-    flex-direction: column;
-    flex: 1;
     width: 35%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -116,6 +112,9 @@
     }
   }
 
+  .anchor {
+    margin-bottom: 100px;
+  }
   h5 {
     color: #000;
   }
