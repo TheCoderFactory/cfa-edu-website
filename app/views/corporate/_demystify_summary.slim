@@ -1,125 +1,41 @@
 .demystify-summary.hidden-sm-down
   .container
-    .anchor#demystify-tech
-    .row.course-summary
-      .col-md-6
-        h5 DEMYSTIFY TECH
-        .border
-        p In brief:
-        ul.no-list-icons
-          li 3x Single Day Workshops
-          li Come up for an idea for an app
-          li Build the app for easy and fun
-        p Outcomes:
-        ul.dash-list-icons
-          li Participants are involved in building an app
-          li A greater understanding of building an app
-          li Participate in multiple workshops
-        br
-        a.main-cta-btn href="#" ENROL NOW
-      .col-md-6
-        img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
-    .anchor#transformer-package
-    .row.course-summary
-      .col-md-6
-        img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
-      .col-md-6
-        h5 TRANSFORMER
-        .border
-        p In brief:
-        ul.no-list-icons
-          li 3x Single Day Workshops
-          li Come up for an idea for an app
-          li Build the app for easy and fun
-        p Outcomes:
-        ul.dash-list-icons
-          li Participants are involved in building an app
-          li A greater understanding of building an app
-          li Participate in multiple workshops
-        br
-        a.main-cta-btn href="#" ENROL NOW
-    .anchor#intro-to-coding
-    .row.course-summary
-      .col-md-6
-        h5 INTRODUCTION TO CODING
-        .border
-        p In brief:
-        ul.no-list-icons
-          li 3x Single Day Workshops
-          li Come up for an idea for an app
-          li Build the app for easy and fun
-        p Outcomes:
-        ul.dash-list-icons
-          li Participants are involved in building an app
-          li A greater understanding of building an app
-          li Participate in multiple workshops
-        br
-        a.main-cta-btn href="#" ENROL NOW
-      .col-md-6
-        img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+    - @courses.each_with_index do |course, index|
+      - if index%2 == 0
+        .anchor id="#{course.slug}"
+        .row.course-summary
+          .col-md-6
+            h5 #{course.name.upcase}
+            .border
+            p #{course.description}
+            br
+            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+          .col-md-6
+            img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+      - else
+        .anchor id="#{course.slug}"
+        .row.course-summary
+          .col-md-6
+            img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+          .col-md-6
+            h5 #{course.name.upcase}
+            .border
+            p #{course.description}
+            br
+            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
 .demystify-summary.hidden-md-up
   .container
     center
-      .anchor#demystify-tech-m
-      .row.course-summary
-        .col-md-6
-          h5 DEMYSTIFY TECH
-          .border.hidden-sm-down
-          center.hidden-md-up
-            .border
-          p In brief:
-          ul.no-list-icons
-            li 3x Single Day Workshops
-            li Come up for an idea for an app
-            li Build the app for easy and fun
-          p Outcomes:
-          ul.dash-list-icons
-            li Participants are involved in building an app
-            li A greater understanding of building an app
-            li Participate in multiple workshops
-        .col-md-6
-          img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
-        br
-        a.main-cta-btn href="#" ENROL NOW
-      .anchor#transformer-package-m
-      .row.course-summary
-        .col-md-6
-          h5 TRANSFORMER
-          .border.hidden-sm-down
-          center.hidden-md-up
-            .border
-          p In brief:
-          ul.no-list-icons
-            li 3x Single Day Workshops
-            li Come up for an idea for an app
-            li Build the app for easy and fun
-          p Outcomes:
-          ul.dash-list-icons
-            li Participants are involved in building an app
-            li A greater understanding of building an app
-            li Participate in multiple workshops
-        .col-md-6
-          img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
-        br
-        a.main-cta-btn href="#" ENROL NOW
-      .anchor#intro-to-coding-m
-      .row.course-summary
-        .col-md-6
-          h5 INTRODUCTION TO CODING
-          .border.hidden-sm-down
-          center.hidden-md-up
-            .border
-          p In brief:
-          ul.no-list-icons
-            li 3x Single Day Workshops
-            li Come up for an idea for an app
-            li Build the app for easy and fun
-          p Outcomes:
-          ul.dash-list-icons
-            li Participants are involved in building an app
-            li A greater understanding of building an app
-            li Participate in multiple workshops
-        .col-md-6
-          img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
-        br
-        a.main-cta-btn href="#" ENROL NOW
+      - @courses.each do |course|
+        .anchor id="#{course.slug}-m"
+        .row.course-summary
+          .col-md-6
+            h5 #{course.name.upcase}
+            .border.hidden-sm-down
+            center.hidden-md-up
+              .border
+            p #{course.description}
+          .col-md-6
+            img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+          br
+          = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"

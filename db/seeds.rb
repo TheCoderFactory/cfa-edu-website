@@ -1,45 +1,30 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+####################################################
+#                Live Data                         #
+####################################################
 
-Course.create(course_type: "Workshop", name: "Coding Kickstarter (FREE)", description: "Two hour free workshop, Sundays, 2pm - 4pm
-              Learn how great Ruby on Rails is and why you should pick this cool language to get started on your coding journey.
-              Install Ruby on Rails on your own laptop and create your first web application.
-              One of the main barriers to getting started with Rails is setting up your laptop. This workshop will help you through this stage and allow you to start your coding journey with less pain.
-              You'll also build your first, simple web application so you can start to see how cool Ruby on Rails is - and we want to inspire you to continue to learn to code.
-              What will I learn?
-              The developer's toolkit.
-              Set up your 'development environment' and learn about open source tools.
-              Building your first web app:
-              Create! Learn! Build!
-              Learning resources and options:
-              Find out other great ways to continue your 'learn to code' journey.
-              Classroom options:
-              Hear about the other classroom learning options: workshops, part time courses and the Fast Track full time program.", tagline: "Coding is fun - and anyone can do it. Come along to this workshop and let us help you get started.", price: 0.00)
-course = Course.create(course_type: "Workshop", name: "Coding For Beginners", description: "The technology revolution
-              We are surrounded by technology and use it every day. And guess what? It's just beginning.
-              The tech revolution is just getting warmed up. There are so many ways that technology has yet to improve our lives. Whether it's a life saving gadget or a phone app that makes us laugh.
-              The future is coming fast
-              You can either stand by and watch it happen, or be a part of it and have the power to create a great life for yourself and those around you.
-              Learning to code is not rocket science. Anyone can do it. And it's FUN! Let your creativity flow and build cool technology that makes a difference in the world. Be a part of the future. Learn to code.
-              WHAT CAN I EXPECT?
-              As a class, we will set up your development environment as this is key to creating, testing and deploying new apps. We will teach you the skills to create new apps, and ways to speed up deployment using scaffolding.
-              This course will give you an understanding of Ruby gems that enable greater functionality for your app, and give you the skills needed to implement popular gems into your apps.
-              The course is a fun and interactive way of learning the fundamentals behind coding in Ruby on Rails", tagline: "Learning to code is not rocket science. Anyone can do it. And its FUN!", price: 300.00)
-Course.create(course_type: "Workshop", name: "Web App Builder", description: "Learn Fast
-              In just 12 weeks (six class hours per week), you will become a confident web application developer, able to build anything you want.
-              Full stack development
-              Ruby on Rails gives you full stack skills - front end, backend, databases, application design and deployment.
-              Build your own idea
-              You will have the opportunity to apply your new skills by building your own app idea in the final 4 weeks of the course.
-              Classes are fun and practical!
-              With a focus on hands-on coding in every class, you will have fun while you learn. We love our amazing students at Coder Factory, they are always smart and inspiring people to know.
-              Tried learning online?
-              If you've tried learning online but keep hitting road blocks (or boredom), the Web App Developer PT course is the best way to learn coding. Meet other aspiring startup entrepreneurs who have taken action and realised that learning to code is going to change their future.", tagline: "Learn web app development in 12 weeks, while keeping your day job.", price: 2475.00)
+# Short Courses
+course = Course.create(course_type: "Workshop", name: "Coding Kickstarter", tagline: "This FREE introduction to coding workshop gives you a sneak peek into computer programmer life (at no cost!) in an engaging, hands-on environment. Learn to build a live application in only two hours, and conjure big ideas of what you could accomplish in a lifetime... or one of our other courses!", description: "TODO", price: 0.0)
+Course.create(course_type: "Workshop", name: "12 Week Course", tagline: "The web app builder course is our part-time solution for entrepreneurs. Learn to build a viable web application in only 12 weeks... while keeping your day job. Become a confident web application developer with full-stack skills, able to build anything you want using Ruby on Rails and more.", description: "TODO", price: 0.0)
+Course.create(course_type: "Workshop", name: "Coding For Beginners", tagline: "Whether you want to upskill or start fresh, our beginners course will prepare you to build, test, and deploy new apps. Learn the in-demand skills you need to build revolutionary technology. Dive into the fundamentals of coding with Ruby on Rails, HTML, CSS, and Bootstrap.", description: "TODO", price: 0.0)
+Course.create(course_type: "Workshop", name: "Web Desgn For Beginners", tagline: "Every business either has a website - or needs a website. Knowing the basics of designing for the web helps you understand what is possible and can save you money. Perhaps you want to create a stylish web presence for yourself to showcase your achievements or a portfolio of your work. Sure, there are a lot of web applications out there that will help you do this but if you want to individualise it with your own style, you need to know HTML and CSS. HTML and CSS are the building blocks of the web and a great entry point into learning more about creating technology.", description: "TODO", price: 0.0)
+Course.create(course_type: "Workshop", name: "Javscript", tagline: "TODO", description: "TODO", price: 0.0)
+Course.create(course_type: "Workshop", name: "High School Coder", tagline: "Knowing how to code can help you understand technology better, give you more options when choosing your career, and could even help you earn money before you leave school. Be a part of the future. Learn to code.", description: "TODO", price: 0.0)
+Course.create(course_type: "Workshop", name: "Primary School Coder", tagline: "TODO", description: "TODO", price: 0.0)
+
+# Corporate courses
+Course.create(course_type: "Corporate", name: "Demystify Tech", tagline: "TODO", description: "TODO", price: 0.0)
+Course.create(course_type: "Corporate", name: "Transformer", tagline: "This deeper dive into coding is delivered over 1 month in 4 X 3 hour sessions. An actual business problem is identified and participants undertake a mini hackathon to create a solution and build a web application to resolve the issue. Face the challenge like a startup and use agile and lean startup practices to create a working product that your organisation can communicate across the company and beyond.", description: "TODO", price: 0.0)
+Course.create(course_type: "Corporate", name: "Introduction To Coding", tagline: "In one day participants are exposed to programming fundamentals and the possibilities of applying coding concepts to transform business processes. Get hands on and build a web application to stretch your mind with new approaches to problem solving and critical thinking.", description: "TODO", price: 0.0)
+
+# Schools courses
+Course.create(course_type: "Schools", name: "Coding And The Digital Curriculum", tagline: "This 1 day workshop helps participants to understand the software development process and recognise how emerging technology can assist in solving problems. We explore the new Digital Curriculum and how coding can be used to develop strategies to enhance cross curriculum activities.", description: "TODO", price: 0.0)
+Course.create(course_type: "Schools", name: "Student Deeper Dive", tagline: "This intensive program is delivered over a term in 2 hour sessions. An actual school or community problem is identified and you and your students undertake a mini hackathon to create a solution and build a web application to resolve the issue. Face the challenge like a technology startup and use design thinking and coding to create a working product that your school can promote across the faculty and beyond.", description: "TODO", price: 0.0)
+Course.create(course_type: "Schools", name: "Hands On Coding", tagline: "In this 1 day workshop participants are exposed to programming fundamentals and the possibilities of applying coding concepts to transform school challenges. Get hands on and build a web application to stretch your mind with new approaches to problem solving and critical thinking.", description: "TODO", price: 0.0)
+
+
+####################################################
+#                Test Data                         #
+####################################################
 
 Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
 Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 0)
