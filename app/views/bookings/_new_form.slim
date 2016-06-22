@@ -100,11 +100,13 @@ javascript:
   });
 
   function validatePromoCode(){
-    console.log({promocode: $('#booking_promo_code').val()});
+    obj = {"promocode": $('#booking_promo_code').val()}
+    console.log(obj);
+    console.log(JSON.stringify(obj));
     $.ajax({
-      type: "POST",
-      url: "cfa-edu.herokuapp.com/validate-promo-code",
-      data: {"promocode": $('#booking_promo_code').val()},
+      type: "GET",
+      url: "/validate-promo-code",
+      data: obj,
       success: function(data){
         if(data.success){
           price = parseInt($('#course-price').text());
