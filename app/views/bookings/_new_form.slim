@@ -98,28 +98,3 @@ javascript:
       return false;
     });
   });
-
-  function validatePromoCode(){
-    obj = {"promocode": $('#booking_promo_code').val()}
-    console.log(obj);
-    console.log(JSON.stringify(obj));
-    $.ajax({
-      type: "GET",
-      url: "/validate-promo-code",
-      data: obj,
-      success: function(data){
-        if(data.success){
-          price = parseInt($('#course-price').text());
-          currentDiscount = data.percent;
-          $('#course-price').text(originalPrice*(1-currentDiscount*0.01));
-          $('#promo-code-status').text("Valid");
-          nextSection();
-        } else {
-          currentDiscount = 0;
-          $('#course-price').text(originalPrice);
-          $('#promo-code-status').text("Invalid.");
-        }
-      },
-      dataType: 'json'
-    });
-  }
