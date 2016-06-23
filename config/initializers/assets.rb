@@ -11,3 +11,6 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( booking.js )
+Rails.application.config.assets.precompile += %w( dataTables.js )
+Rails.application.config.assets.precompile += %w( bootstrap-dataTables.js )
+
