@@ -14,13 +14,13 @@ class IntakesController < ApplicationController
   end
 
   def new
-    @course = Course.find(params[:course_id])
+    @course = Course.friendly.find(params[:course_id])
     @intake = Intake.new
   end
 
   def create
     @intake = Intake.new(intake_params)
-    @course = Course.find(intake_params[:course_id])
+    @course = Course.friendly.find(intake_params[:course_id])
     if @intake.save
       redirect_to @intake
     else

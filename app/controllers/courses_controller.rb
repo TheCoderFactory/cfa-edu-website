@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:id])
+    @course = Course.friendly.find(params[:id])
     @intakes = @course.intakes.paginate(page: params[:page], per_page: 5)
   end
 
@@ -28,11 +28,11 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    @course = Course.find(params[:id])
+    @course = Course.friendly.find(params[:id])
   end
 
   def update
-    @course = Course.find(params[:id])
+    @course = Course.friendly.find(params[:id])
     if @course.update_attributes(course_params)
       redirect_to @course
     else
@@ -41,7 +41,7 @@ class CoursesController < ApplicationController
   end
 
   def destroy
-    @course = Course.find(params[:id])
+    @course = Course.friendly.find(params[:id])
     @course.destroy
     redirect_to courses_path
   end

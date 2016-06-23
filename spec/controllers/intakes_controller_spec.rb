@@ -137,11 +137,11 @@ describe IntakesController do
         end
         it "saves the new intake in the database" do
           expect{
-            post :create, intake: attributes_for(:intake, course_id: @course)
+            post :create, intake: attributes_for(:intake, course_id: @course.id)
           }.to change(Intake, :count).by(1)
         end
         it "redirects to intakes#show" do
-          post :create, intake: attributes_for(:intake, course_id: @course)
+          post :create, intake: attributes_for(:intake, course_id: @course.id)
           expect(response).to redirect_to intake_path(assigns(:intake))
         end
       end

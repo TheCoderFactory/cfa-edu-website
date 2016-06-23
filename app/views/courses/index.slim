@@ -85,7 +85,7 @@
       center
         h2 Kids Coding Courses
 
-        - if @kids_coding_courses.size == 0
+        - if @schools_courses.size == 0
           h3 There are currently no kids coding courses.
           | Please check back later.
         - else
@@ -97,25 +97,25 @@
                 th width="25%" Description
                 th Views
             tbody
-              - @kids_coding_courses.each do |kcc|
+              - @schools_courses.each do |sc|
                 tr
-                  td #{kcc.name}
-                  td #{kcc.price}
-                  td #{kcc.description}
+                  td #{sc.name}
+                  td #{sc.price}
+                  td #{sc.description}
                   td
-                    = link_to intakes_path(kcc)
+                    = link_to intakes_path(sc)
                       = fa_icon "bookmark", class: "fa-1x"
                       | Intakes
                   td
-                    = link_to edit_course_path(kcc)
+                    = link_to edit_course_path(sc)
                       = fa_icon "pencil", class: "fa-1x"
                       |  Edit
                   td
-                    = link_to kcc, data: { confirm: "Are you sure?" }, method: :delete
+                    = link_to sc, data: { confirm: "Are you sure?" }, method: :delete
                       = fa_icon "trash", class: "fa-1x"
                       |  Delete
 
   .row
     .col-md-12
       center
-        = will_paginate @kids_coding_courses
+        = will_paginate @schools_courses

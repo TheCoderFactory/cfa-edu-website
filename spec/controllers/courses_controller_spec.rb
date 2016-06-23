@@ -10,11 +10,11 @@ describe CoursesController do
       it "populates arrays of workshop, corporate and kids coding courses" do
         course1 = create(:course, course_type: "Workshop")
         course2 = create(:course, course_type: "Corporate")
-        course3 = create(:course, course_type: "Kids Coding")
+        course3 = create(:course, course_type: "Schools")
         get :index
         expect(assigns(:workshop_courses)).to match_array([course1])
         expect(assigns(:corporate_courses)).to match_array([course2])
-        expect(assigns(:kids_coding_courses)).to match_array([course3])
+        expect(assigns(:schools_courses)).to match_array([course3])
       end
       it "renders the :index template" do
         get :index
@@ -30,11 +30,11 @@ describe CoursesController do
       it "does not populate any arrays of courses" do
         create(:course, course_type: "Workshop")
         create(:course, course_type: "Corporate")
-        create(:course, course_type: "Kids Coding")
+        create(:course, course_type: "Schools")
         get :index
         expect(assigns(:workshop_courses)).to be_nil
         expect(assigns(:corporate_courses)).to be_nil
-        expect(assigns(:kids_coding_courses)).to be_nil
+        expect(assigns(:schools_courses)).to be_nil
       end
       it "redirects to the sign in page" do
         get :index
