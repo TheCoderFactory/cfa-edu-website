@@ -397,6 +397,7 @@
   .upcoming-course {
     background-color: #333;
     margin: 10px;
+    width: 25%;
   }
   h3 {
     color: #000;
@@ -426,8 +427,13 @@
     border-style: solid;
     border-color: #FFF;
     border-width: 3px;
-    width: 25%;
-    height: 25%;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+  }
+  .fa-stack {
+    width: 60px;
+    height: 60px;
     margin-top: -30px;
   }
   .course-info {

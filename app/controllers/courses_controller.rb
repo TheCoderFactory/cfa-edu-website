@@ -4,9 +4,9 @@ class CoursesController < ApplicationController
   layout "admin"
 
   def index
-    @workshop_courses = Course.where(course_type: "Workshop") #.paginate(:page => params[:page], :per_page => 5)
-    @corporate_courses = Course.where(course_type: "Corporate").paginate(:page => params[:page], :per_page => 5)
-    @schools_courses = Course.where(course_type: "Schools").paginate(:page => params[:page], :per_page => 5)
+    @workshop_courses = Course.where(course_type: "Workshop")
+    @corporate_courses = Course.where(course_type: "Corporate")
+    @schools_courses = Course.where(course_type: "Schools")
   end
 
   def show
@@ -48,6 +48,6 @@ class CoursesController < ApplicationController
 
   private
   def course_params
-    params.require(:course).permit(:course_type, :name, :description, :tagline, :price)
+    params.require(:course).permit(:course_type, :name, :description, :tagline, :price, :course_image, :active)
   end
 end

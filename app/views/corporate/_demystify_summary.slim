@@ -7,9 +7,10 @@
           .col-md-6
             h5 #{course.name.upcase}
             .border
-            p #{course.description}
+            p #{course.description.html_safe}
             br
-            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+            - if course.active
+              = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
           .col-md-6
             img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
       - else
@@ -20,9 +21,10 @@
           .col-md-6
             h5 #{course.name.upcase}
             .border
-            p #{course.description}
+            p #{course.description.html_safe}
             br
-            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+            - if course.active
+              = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
 .demystify-summary.hidden-md-up
   .container
     center
@@ -34,8 +36,9 @@
             .border.hidden-sm-down
             center.hidden-md-up
               .border
-            p #{course.description}
+            p #{course.description.html_safe}
           .col-md-6
             img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
           br
-          = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+          - if course.active
+            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"

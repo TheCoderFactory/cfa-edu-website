@@ -9,9 +9,15 @@
             | <span class="pull-right price-text">#{intake.course_price}</span>
           .course-details
             center
-              img.img-fluid.img-circle.course-teacher-image src="#{asset_path 'pete.jpg'}"
+              - if intake.teacher_image_url
+                img.img-fluid.img-circle.course-teacher-image src="#{intake.teacher_image_url}"
+              - else
+                p #{fa_stacked_icon "user inverse", base: "circle", class: "fa-2x"}
               p.taught-by Taught By
-              p.teacher-name Pete Argent
+              - if intake.teacher_name
+                p.teacher-name #{intake.teacher_name}
+              - else
+                p.teacher-name Coder Factory
               h5 #{intake.course_name}
           .course-info
             p
