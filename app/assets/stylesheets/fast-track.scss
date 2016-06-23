@@ -339,7 +339,20 @@
   }
 }
 .fast-track-apply {
-  background-color: #EEE;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  h1 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 35%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
   .hs_hs_persona > label {
     display: inline-block;
     text-align: left;
@@ -525,5 +538,135 @@
     .border-blue {
       width: 30%;
     }
+  }
+}
+.wit-scholarship-apply {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  h1, h3 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 35%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .hs_hs_persona > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_hs_persona > .input > select {
+    margin-top: 5px;
+  }
+  .hs_campus_preference > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_campus_preference > .input > select {
+    margin-top: 5px;
+  }
+  .hs_age > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_age > .input > select {
+    margin-top: 5px;
+  }
+  .hs_sydney_intakes > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_sydney_intakes > .input > select {
+    margin-top: 5px;
+  }
+  .hs_melbourne_intakes > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_melbourne_intakes > .input > select {
+    margin-top: 5px;
+  }
+  .hs_mobilephone > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_mobilephone > .input > input {
+    margin-top: 5px;
+  }
+  .hs_reason_for_scholarship_application > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_reason_for_scholarship_application > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_why_women_in_tech_ > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_why_women_in_tech_ > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_women_in_tech_links > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_women_in_tech_links > .input > textarea {
+    margin-top: 5px;
+  }
+  .hs_women_in_tech_portfolio > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_women_in_tech_portfolio > .input > input {
+    margin-top: 5px;
+  }
+  .hs_women_in_tech_accepted_conditions {
+    margin-top: 10px;
+    @extend.pull-left;
   }
 }

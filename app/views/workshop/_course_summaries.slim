@@ -8,7 +8,7 @@
             h5 #{course.name.upcase} - <span class=.get_price-text">#{course.get_price}</span>
             .border
             p #{course.description}
-            = link_to "ENROL NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
           .col-md-6
             img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
       - else
@@ -20,7 +20,7 @@
             h5 #{course.name.upcase} - <span class=.get_price-text">#{course.get_price}</span>
             .border
             p #{course.description}
-            = link_to "ENROL NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
 
 .course-summaries.hidden-md-up
   .container
@@ -34,4 +34,4 @@
             p #{course.description}
             br
             img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
-            = link_to "ENROL NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+            = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
