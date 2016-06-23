@@ -1,51 +1,62 @@
 .container
   .row
     .col-md-12
+      h1 #{@course.name}
+      p
+        b Course Type:
+        br
+        | #{@course.course_type}
+      p
+        b Tagline:
+        br
+        | #{@course.tagline}
+      p
+        b Description:
+        br
+        | #{@course.description.html_safe}
+      p 
+        b Price:
+        br
+        | #{@course.get_price}
+
+      = link_to "New Intake", new_intake_path(course_id: @course.id), class: "scd-cta-btn"
+
       center
-        h2 #{@course.name}
-        = link_to "New Intake", new_intake_path(course_id: @course.id)
+        h1 Intakes
 
-        p #{@course.course_type}
-        p #{@course.name}
-        p #{@course.description}
-        p #{@course.tagline}
-        p #{@course.price}
-
-        h2 Intakes
-
-      - if @intakes.size == 0
-        h3 There are currently no intakes.
-        | Please check back later.
-      - else
-        table.highlight.bordered
-          thead
-            tr
-              th width="20%" Start
-              th width="20%" Finish
-              th width="20%" Location
-              th width="20%" Class Size
-              th Views
-          tbody
-            - @intakes.each do |i|
+        - if @intakes.size == 0
+          h6 There are currently no intakes.
+        - else
+          table.highlight.bordered#course-intakes-table
+            thead
               tr
-                td #{i.start}
-                td #{i.finish}
-                td #{i.location}
-                td #{i.class_size}
-                td
-                  = link_to intake_path(i)
-                    = fa_icon "eye", class: "fa-1x"
-                    | View
-                td
-                  = link_to edit_intake_path(i)
-                    = fa_icon "pencil", class: "fa-1x"
-                    |  Edit
-                td
-                  = link_to i, data: { confirm: "Are you sure?" }, method: :delete
-                    = fa_icon "trash", class: "fa-1x"
-                    |  Delete
-
-.row
-  .col-md-12
-    center
-      = will_paginate @intakes
+                th width="20%" Start
+                th width="20%" Finish
+                th width="20%" Location
+                th width="10%" Class Size
+                th width="10%" Views
+                th width="10%"
+                th width="10%"
+            tbody
+              - @intakes.each do |i|
+                tr
+                  td #{i.start_date + " - " + i.start_time}
+                  td #{i.finish_date + " - " + i.finish_time}
+                  td #{i.location}
+                  td #{i.class_size}
+                  td
+                    = link_to intake_path(i)
+                      = fa_icon "eye", class: "fa-1x"
+                      | View
+                  td
+                    = link_to edit_intake_path(i)
+                      = fa_icon "pencil", class: "fa-1x"
+                      |  Edit
+                  td
+                    = link_to i, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
+javascript:
+  $(document).ready(function(){
+    $('#course-intakes-table').DataTable();
+  });

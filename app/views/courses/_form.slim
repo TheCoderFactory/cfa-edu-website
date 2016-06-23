@@ -1,6 +1,7 @@
 = simple_form_for(@course) do |f|
   .row
     .form-group.input-field.col-md-6
+      label for="course_type" Course Type
       = f.select :course_type, ["Workshop", "Corporate", "Schools"]
     .form-group.input-field.col-md-6
       = f.input :name
@@ -18,4 +19,4 @@
 
   .row
     .col-md-12
-      = f.button :submit, "Save", class: "btn btn-success btn-block lead"
+      = f.button :submit, "Save", class: "main-cta-btn"

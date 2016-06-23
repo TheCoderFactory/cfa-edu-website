@@ -1,119 +1,50 @@
-.container
-  .row
-    .col-md-12
-      center
-        = link_to "New Course", new_course_path
-        h6 Workshop Courses
-
-        - if @workshop_courses.size == 0
-          h6 There are currently no workshop courses.
-          | Please check back later.
-        - else
-          table.highlight.bordered#workshop-table
-            thead
-              tr
-                th width="25%" Name
-                th width="25%" Price
-                th width="25%" Description
-                th Intakes
-                th Views
-                th
-            tbody
-              - @workshop_courses.each do |wc|
+.admin-courses-index
+  .container
+    .row
+      .col-md-12
+        = link_to "All Courses", courses_path, class: "main-cta-btn"
+        = link_to "Workshop Courses", courses_path(course_type: "Workshop"), class: "main-cta-btn"
+        = link_to "Corporate Courses", courses_path(course_type: "Corporate"), class: "main-cta-btn"
+        = link_to "Schools Courses", courses_path(course_type: "Schools"), class: "main-cta-btn"
+        br
+        = link_to "New Course", new_course_path, class: "scd-cta-btn"
+        center
+          h1 #{@course_type.upcase if @course_type} COURSES
+          - if @courses.size == 0
+            h6 There are currently no #{@course_type if @course_type} courses.
+              | Please check back later.
+          - else
+            table.highlight.bordered#course-table
+              thead
                 tr
-                  td #{wc.name}
-                  td #{wc.price}
-                  td #{wc.description}
-                  td
-                    = link_to course_path(wc)
-                      = fa_icon "bookmark", class: "fa-1x"
-                      |  Intakes
-                  td
-                    = link_to edit_course_path(wc)
-                      = fa_icon "pencil", class: "fa-1x"
-                      |  Edit
-                  td
-                    = link_to wc, data: { confirm: "Are you sure?" }, method: :delete
-                      = fa_icon "trash", class: "fa-1x"
-                      |  Delete
-.container
-  .row
-    .col-md-12
-      center
-        h6 Corporate Courses
-
-        - if @corporate_courses.size == 0
-          h6 There are currently no corporate courses.
-          | Please check back later.
-        - else
-          table.highlight.bordered#corporate-table
-            thead
-              tr
-                th width="25%" Name
-                th width="25%" Price
-                th width="25%" Description
-                th Intakes
-                th Views
-                th
-            tbody
-              - @corporate_courses.each do |cc|
-                tr
-                  td #{cc.name}
-                  td #{cc.price}
-                  td #{cc.description}
-                  td
-                    = link_to intakes_path(cc)
-                      = fa_icon "bookmark", class: "fa-1x"
-                      |  Intakes
-                  td
-                    = link_to edit_course_path(cc)
-                      = fa_icon "pencil", class: "fa-1x"
-                      |  Edit
-                  td
-                    = link_to cc, data: { confirm: "Are you sure?" }, method: :delete
-                      = fa_icon "trash", class: "fa-1x"
-                      |  Delete
-.container
-  .row
-    .col-md-12
-      center
-        h6 Schools Courses
-
-        - if @schools_courses.size == 0
-          h6 There are currently no kids coding courses.
-          | Please check back later.
-        - else
-          table.highlight.bordered#schools-table
-            thead
-              tr
-                th width="25%" Name
-                th width="25%" Price
-                th width="25%" Description
-                th Intakes
-                th Views
-                th
-            tbody
-              - @schools_courses.each do |sc|
-                tr
-                  td #{sc.name}
-                  td #{sc.price}
-                  td #{sc.description}
-                  td
-                    = link_to intakes_path(sc)
-                      = fa_icon "bookmark", class: "fa-1x"
-                      |  Intakes
-                  td
-                    = link_to edit_course_path(sc)
-                      = fa_icon "pencil", class: "fa-1x"
-                      |  Edit
-                  td
-                    = link_to sc, data: { confirm: "Are you sure?" }, method: :delete
-                      = fa_icon "trash", class: "fa-1x"
-                      |  Delete
+                  th width="30%" Name
+                  th width="10%" Price
+                  th width="15%" Course Type
+                  th width="10%" Active?
+                  th width="15%" Intakes
+                  th width="10%" Views
+                  th width="10%"
+              tbody
+                - @courses.each do |course|
+                  tr
+                    td #{course.name}
+                    td #{course.price}
+                    td #{course.course_type}
+                    td #{course.active}
+                    td
+                      = link_to course_path(course)
+                        = fa_icon "bookmark", class: "fa-1x"
+                        |  Intakes
+                    td
+                      = link_to edit_course_path(course)
+                        = fa_icon "pencil", class: "fa-1x"
+                        |  Edit
+                    td
+                      = link_to course, data: { confirm: "Are you sure?" }, method: :delete
+                        = fa_icon "trash", class: "fa-1x"
+                        |  Delete
 
 javascript:
   $(document).ready(function(){
-    $('#workshop-table').DataTable();
-    $('#corporate-table').DataTable();
-    $('#schools-table').DataTable();
+    $('#course-table').DataTable();
   });

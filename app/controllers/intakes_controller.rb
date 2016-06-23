@@ -4,13 +4,12 @@ class IntakesController < ApplicationController
   layout "admin"
 
   def index
-    # Show intakes through corresponding course
-    @courses = Course.all
+    @intakes = Intake.all
   end
 
   def show
     @intake = Intake.find(params[:id])
-    @bookings = @intake.bookings.paginate(page: params[:page], per_page: 5)
+    @bookings = @intake.bookings
   end
 
   def new

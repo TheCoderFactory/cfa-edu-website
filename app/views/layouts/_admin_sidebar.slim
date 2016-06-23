@@ -1,17 +1,22 @@
-.admin-sidebar
-  center
-    ul
-      li
-        = link_to "Dashboard", admin_dashboard_path, class: "btn btn-primary btn-admin-sidebar"
-      li
-        = link_to "Courses", courses_path, class: "btn btn-primary btn-admin-sidebar"
-      li
-        = link_to "Intakes", intakes_path, class: "btn btn-primary btn-admin-sidebar"
-      li
-        = link_to "Bookings", bookings_path, class: "btn btn-primary btn-admin-sidebar"
-      li
-        = link_to "Promo Codes", promo_codes_path, class: "btn btn-primary btn-admin-sidebar"
-      li
-        = link_to "Logout", admin_session_path, class: "btn btn-primary btn-admin-sidebar"
-      li
-        = link_to "Home", root_path, class: "btn btn-primary btn-admin-sidebar"
+header
+  nav.navbar
+    a.hidden-md-up href="/"
+      img.img-fluid src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
+    button.navbar-toggler.hidden-md-up.pull-right type="button" data-toggle="collapse" data-target="#globalNavbar" &#9776;
+    .container
+      .collapse.navbar-toggleable-sm#globalNavbar
+        a.hidden-sm-down href="/"
+          img.img-fluid src="#{asset_path 'cfa_logo_grey.png'}" alt="CFA Logo"
+        ul.nav.navbar-nav.pull-lg-right
+          li.nav-item
+            = active_link_to 'DASHBOARD', admin_dashboard_path, class: "nav-link"
+          li.nav-item
+            = active_link_to 'COURSES', courses_path, class: "nav-link"
+          li.nav-item
+            = active_link_to 'INTAKES', intakes_path, class: "nav-link"
+          li.nav-item
+            = active_link_to 'BOOKINGS', bookings_path, class: "nav-link"
+          li.nav-item
+            = active_link_to 'PROMO CODES', promo_codes_path, class: "nav-link"
+          li.nav-item
+            = active_link_to 'LOGOUT', admin_session_path, class: "nav-link"

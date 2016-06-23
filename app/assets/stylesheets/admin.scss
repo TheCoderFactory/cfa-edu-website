@@ -1,25 +1,59 @@
-.admin-sidebar {
-  width: 20%;
-  height: 100vh;
-  background-color: #FFF;
-  ul {
-    padding: 0px;
-  }
-  li {
-    list-style: none;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-  .btn-admin-sidebar {
-    width: 70%;
-  }
-}
 .admin-content {
-  width: 80%;
-  height: 100%;
-  float: right;
-  left: 20%;
-  bottom: 0px;
-  position: fixed;
-  overflow: scroll;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h1 {
+    color: #000;
+    margin-top: 20px;
+  }
+  .paginate_button {
+    background: none !important;
+    border: none !important;
+    padding: 0px !important;
+  }
+  .dataTables_wrapper {
+    margin-top: 30px;
+  }
+  .dataTables_length select {
+    margin-top: 0px;
+  }
+  .dataTables_filter input {
+    margin-top: 0px;
+  }
+  .main-cta-btn, .scd-cta-btn {
+    padding: 8px;
+    margin: 5px;
+  }
+  .main-cta-btn:hover, .scd-cta-btn:hover {
+    padding: 6px;
+  }
+  table {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #EEE;
+    border-radius: 5px;
+  }
+  .simple_form {
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    input[type="file"],
+    textarea,
+    select {
+      margin-top: 0px;
+    }
+  }
+  .input.boolean {
+    margin-left: 25px;
+  }
 }

@@ -33,4 +33,10 @@ class Intake < ActiveRecord::Base
   def start_time
     start.strftime("%I:%M %P").upcase
   end
+  def finish_date
+    finish.strftime('%d %B %Y')
+  end
+  def finish_time
+    finish.strftime("%I:%M %P").upcase
+  end
 end

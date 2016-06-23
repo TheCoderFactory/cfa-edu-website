@@ -4,14 +4,14 @@ class CoursesController < ApplicationController
   layout "admin"
 
   def index
-    @workshop_courses = Course.where(course_type: "Workshop")
-    @corporate_courses = Course.where(course_type: "Corporate")
-    @schools_courses = Course.where(course_type: "Schools")
+    @courses = Course.all
+    @course_type = params[:course_type] if params[:course_type]
+    @courses = Course.where(course_type: @course_type) if @course_type
   end
 
   def show
     @course = Course.friendly.find(params[:id])
-    @intakes = @course.intakes.paginate(page: params[:page], per_page: 5)
+    @intakes = @course.intakes
   end
 
   def new
