@@ -1,7 +1,7 @@
 .hero {
-  background-image: url(asset-path('main-header-bg.jpg'));
+  /* background-image: url(asset-path('people-working.jpg')); */
   @media only screen and (max-width: 767px) {
-    background-image: url(asset-path('mobile-main-header-bg.jpg'));
+    background-image: url(asset-path('people-working.jpg'));
   }
   background-size: cover;
   min-height: 60vh;
@@ -169,22 +169,19 @@
     }
   }
   .course-option-1 {
-    background-image: url(asset-path('foundOutMore1.jpg'));
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    /* background-image: url(asset-path('man-coding-1.jpg')); */
+    background-size: cover;
     background-position: bottom;
   }
   .course-option-2 {
-    background-image: url(asset-path('foundOutMore2.jpg'));
-    background-repeat: no-repeat;
+    /* background-image: url(asset-path('foundOutMore2.jpg')); */
     background-size: 100% 100%;
-    background-position: top;
+    background-position: bottom;
   }
   .course-option-3 {
-    background-image: url(asset-path('foundOutMore3.jpg'));
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
+    /* background-image: url(asset-path('kids-tablet.jpg')); */
+    background-size: cover;
+    background-position: top;
   }
   @media only screen and (max-width: 767px) {
     h5 {

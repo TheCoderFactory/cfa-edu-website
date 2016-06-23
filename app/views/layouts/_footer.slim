@@ -3,20 +3,25 @@
     .row
       .col-sm-12.col-md-4
         h2 OUR COURSES
-        h6 FAST TRACK
+        h6 BOOTCAMP
         ul
-          li.course-link Coding Kickstarter (FREE)
-          li.course-link Coding For Beginners
-          li.course-link Coding For Beginners
-        h6 PART TIME COURSES
+          li
+            a.course-link href="/fast-track" FAST TRACK
+        h6 SHORT COURSES
         ul
-          li.course-link Teach Kids To Code (FREE)
-        h6 BUSINESS / SCHOOLS
+          - @footer_short_courses.each do |course|
+            li
+              a.course-link href="/short-courses##{course.slug}" #{course.name.upcase}
+        h6 CORPORATE
         ul
-          li.course-link Teach Kids To Code (FREE)
-        h6 BEGINNER WORKSHOPS
+          - @footer_corporate_courses.each do |course|
+            li
+              a.course-link href="/corporate##{course.slug}" #{course.name.upcase}
+        h6 SCHOOLS
         ul
-          li.course-link Teach Kids To Code (FREE)
+          - @footer_schools_courses.each do |course|
+            li
+              a.course-link href="/kids-coding##{course.slug}" #{course.name.upcase}
       .col-md-4.hidden-sm-down
         h2 OUR COMPANY
         ul
@@ -46,7 +51,7 @@
         img.img-fluid src="#{asset_path 'cfa_logo_white.png'}" alt="CFA Logo"
         br
         br
-        p Phone: <a href="tel:+61292118399">+61 2 9211 8399</a><br>Email: <a href="mailto:info@coderfactory.com">info@coderfactory.com</a>
+        p Phone: <a href="tel:1300884095">1300 884 095</a><br>Email: <a href="mailto:info@coderfactory.com">info@coderfactory.com</a>
         p Coder Factory Academy<br>Level 2, 7 Kelly Street<br>Ultimo, NSW 2007
         br
 

@@ -32,7 +32,6 @@ body {
 
 a:hover {
   text-decoration: none;
-  color: #38A9C7 !important;
 }
 header {
   background-color: #FFF;
@@ -43,6 +42,10 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
 
+  a:hover {
+    text-decoration: none;
+    color: #38A9C7 !important;
+  }
   img {
     display: inline !important;
   }
@@ -95,7 +98,7 @@ header {
 }
 .content {
   padding-top: 61px;
-  padding-bottom: 500px;
+  padding-bottom: 800px;
   @media only screen and (max-width: 767px) {
     padding-bottom: 800px;
   }
@@ -109,7 +112,7 @@ header {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 500px;
+  height: 800px;
   @media only screen and (max-width: 767px) {
     height: 800px;
   }

@@ -1,6 +1,7 @@
 .workshop-hero {
-  background-image: url(asset-path("first_cohort_black.jpg"));
-  background-size: 100% 100%;
+  background-image: url(asset-path("short-courses-hero.jpg"));
+  background-size: cover;
+  background-position: middle left;
   padding-top: 50px;
   padding-bottom: 50px;
   min-height: 60vh;
