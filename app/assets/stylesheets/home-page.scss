@@ -1,8 +1,5 @@
 .hero {
-  /* background-image: url(asset-path('people-working.jpg')); */
-  @media only screen and (max-width: 767px) {
-    background-image: url(asset-path('people-working.jpg'));
-  }
+  background-image: url(asset-path('people-working.jpg'));
   background-size: cover;
   min-height: 60vh;
   padding-top: 50px;
@@ -169,17 +166,17 @@
     }
   }
   .course-option-1 {
-    /* background-image: url(asset-path('man-coding-1.jpg')); */
+    background-image: url(asset-path('man-coding-1.jpg'));
     background-size: cover;
     background-position: bottom;
   }
   .course-option-2 {
-    /* background-image: url(asset-path('foundOutMore2.jpg')); */
+    background-image: url(asset-path('foundOutMore2.jpg'));
     background-size: 100% 100%;
     background-position: bottom;
   }
   .course-option-3 {
-    /* background-image: url(asset-path('kids-tablet.jpg')); */
+    background-image: url(asset-path('kids-tablet.jpg'));
     background-size: cover;
     background-position: top;
   }

@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   layout "admin"
 
   def index
-    @workshop_courses = Course.where(course_type: "Workshop").paginate(:page => params[:page], :per_page => 5)
+    @workshop_courses = Course.where(course_type: "Workshop") #.paginate(:page => params[:page], :per_page => 5)
     @corporate_courses = Course.where(course_type: "Corporate").paginate(:page => params[:page], :per_page => 5)
     @schools_courses = Course.where(course_type: "Schools").paginate(:page => params[:page], :per_page => 5)
   end
