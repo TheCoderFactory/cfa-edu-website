@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "validate-promo-code", to: "promo_codes#validate_promo_code"
 
   get "admin/dashboard", to: "admin_dashboard#index"
-
+  get "admin", to: "admin_dashboard#index"
   get "fast-track", to: "fast_track#index"
   get "fast-track/apply", to: "fast_track#apply"
   get "fast-track/women-in-tech-scholarship", to: "fast_track#wit_scholarship_info"
