@@ -34,5 +34,6 @@ module CfaEduWebsite
         request_specs: false
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end
