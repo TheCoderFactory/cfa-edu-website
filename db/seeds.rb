@@ -26,11 +26,11 @@ Course.create(course_type: "Schools", name: "Hands On Coding", tagline: "In this
 #                Test Data                         #
 ####################################################
 
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
-Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+# Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+# Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+# Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+# Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+# Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
+# Intake.create(course: course, start: DateTime.now, finish: DateTime.now.tomorrow, location: "Coder Factory HQ", class_size: 10)
 
-PromoCode.create(code: "test", percent: 10, note: "A test code.")
+# PromoCode.create(code: "test", percent: 10, note: "A test code.")
