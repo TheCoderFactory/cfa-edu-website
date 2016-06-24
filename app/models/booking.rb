@@ -3,14 +3,17 @@ class Booking < ActiveRecord::Base
   belongs_to :promo_code
   has_one :payment
 
+  EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  validates :email, :format => EMAIL_REGEX
   validates :intake, :people_attending, :total_cost,
     :firstname, :lastname, :email, :phone, :age, :city, :country, presence: true
-  validate :valid_total_cost, :non_negative_total_cost, :intake_not_full
+  validate :valid_total_cost, :non_negative_total_cost
 
   def valid_total_cost
-    promo_code ? percent = promo_code.percent : percent = 0
+    percent = 1
+    percent -= promo_code.percent*0.01 if promo_code
     if intake && total_cost && people_attending
-      if total_cost > intake.course.price*people_attending*(100-percent)/100*100 || total_cost < intake.course.price*people_attending*(100-percent)/100*100
+      if total_cost > intake.course.price*people_attending*percent || total_cost < intake.course.price*people_attending*percent
         errors.add(:total_cost, "total_cost must be equal to course.price*people_attending")
       end
     end
@@ -19,15 +22,6 @@ class Booking < ActiveRecord::Base
     if total_cost && total_cost < 0.00
       errors.add(:total_cost, "total_cost cannot be negative")
     end
-  end
-  def intake_not_full
-    # if intake && people_attending
-      # total_attendees = 0
-      # intake.bookings.each { |b| total_attendees+=b.people_attending }
-      # if total_attendees+people_attending > intake.class_size
-        # errors.add(:intake, "intake full")
-      # end
-    # end
   end
 
   def paid?

@@ -3,7 +3,7 @@
     .row
       .col-md-10.col-md-offset-1
         .row
-          h2 #{@course.name.upcase} - <span class=.get_price-text">#{@course.get_price}</span>
+          h2 #{@course.name.upcase} - <span id="course-price">#{@course.get_price}</span>
           .col-md-6
             .border
             - if @course.course_image_url

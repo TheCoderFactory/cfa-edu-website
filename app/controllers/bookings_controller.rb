@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
     cost = @booking.total_cost
 
     @amount = get_total_amount cost, total_people, percent
-    @booking.total_cost = @amount
+    @booking.total_cost = @amount/100
 
     if @amount > 50
       customer = Stripe::Customer.create(
@@ -46,11 +46,13 @@ class BookingsController < ApplicationController
       )
     end
 
-    @payment = Payment.new(amount: @amount, paid: charge ? charge.paid : true , booking: @booking)
+    @payment = Payment.new(amount: @amount/100, paid: charge ? charge.paid : true , booking: @booking)
 
     if @payment.save && @booking.save
       redirect_to confirmation_path
     else
+      puts @booking.errors.inspect
+      puts @payment.errors.inspect
       render :new
     end
 

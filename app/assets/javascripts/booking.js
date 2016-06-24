@@ -1,12 +1,14 @@
 var originalPrice, currentDiscount, currentSection;
 $(document).ready(function() {
-  if (originalPrice === undefined) originalPrice = parseInt($('#course-price').text());
+  price = $('#course-price').text();
+  if (originalPrice === undefined) originalPrice = parseInt(price.replace(/[$]/, ""));
   currentSection = 1;
   currentDiscount = 0;
   $('#section-2').hide();
   $('#section-3').hide();
   $('#prev-btn').hide();
   $('#submit-btn').hide();
+  $('#next-btn').show();
   $('#validate-promo-btn').hide();
 });
 function nextSection() {
