@@ -20,7 +20,7 @@ gem 'country_select'
 gem 'stripe'
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'ckeditor'
+# gem 'ckeditor'
 gem 'friendly_id'
 gem 'active_link_to'
 gem 'stripe-ruby-mock', '~> 2.2.4', :require => 'stripe_mock'
@@ -52,4 +52,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
