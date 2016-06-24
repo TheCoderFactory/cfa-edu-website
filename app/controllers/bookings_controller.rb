@@ -46,7 +46,7 @@ class BookingsController < ApplicationController
       )
     end
 
-    @payment = Payment.new(amount: @amount, paid: charge ? charge.paid : true , booking: @booking)
+    @payment = Payment.new(amount: @amount/100, paid: charge ? charge.paid : true , booking: @booking)
 
     if @payment.save && @booking.save
       redirect_to confirmation_path
@@ -88,6 +88,6 @@ class BookingsController < ApplicationController
   end
 
   def get_total_amount price, people_attending, percent
-    (price*people_attending*percent).to_i
+    ((price*people_attending*percent)*100).to_i
   end
 end
