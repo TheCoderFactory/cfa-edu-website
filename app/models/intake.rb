@@ -3,7 +3,7 @@ class Intake < ActiveRecord::Base
   has_many :bookings, dependent: :restrict_with_error
   mount_uploader :teacher_image, TeacherImageUploader
 
-  validates :course, :start, :finish, :location, :class_size, presence: true
+  validates :course, :start, :finish, :location, :days, presence: true
   validate :valid_finish
 
   def valid_finish
