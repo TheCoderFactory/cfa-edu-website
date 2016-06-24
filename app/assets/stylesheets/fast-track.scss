@@ -188,6 +188,15 @@
   .form-box {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  .form-2 {
+    flex: 2;
+    margin-right: 10px;
+  }
+  .form-1 {
+    flex: 1;
+    margin-left: 10px;
   }
 }
 .our-instructors {
