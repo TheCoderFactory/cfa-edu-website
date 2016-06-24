@@ -5,33 +5,9 @@
   padding-top: 50px;
   padding-bottom: 50px;
   min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  h2 {
-    width: 35%;
-    text-align: center;
-  }
-  @media only screen and (max-width: 767px) {
-    h2 {
-      width: 70%;
-    }
-  }
-  p {
-    color: #FFF;
-  }
-  .quotee {
-    font-size: 14px;
-  }
-}
-.kids-course-options {
-  background-color: #FFF;
-  padding-top: 50px;
-  padding-bottom: 50px;
 
   h3 {
-    color: #000;
+    color: #FFF;
   }
   h4 {
     color: #000;
@@ -62,10 +38,8 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    border-style: solid;
-    border-width: 3px 3px 3px 3px;
     border-radius: 5px;
-    border-color: #EEE;
+    background-color: #FFF;
   }
   .box-mobile{
     margin: 5px;
@@ -74,10 +48,8 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    border-style: solid;
-    border-width: 3px 3px 3px 3px;
     border-radius: 5px;
-    border-color: #EEE;
+    background-color: #FFF;
   }
   .box-invisible{
     margin: 5px;
@@ -86,10 +58,7 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    border-style: solid;
-    border-width: 3px 3px 3px 3px;
     border-radius: 5px;
-    border-color: #FFF;
   }
   .top-boxes .box-middle {
     margin: 5px;
@@ -98,10 +67,8 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    border-style: solid;
-    border-width: 3px 3px 0px 3px;
     border-radius: 5px 5px 0px 0px;
-    border-color: #EEE;
+    background-color: #FFF;
   }
   .bottom-boxes .box-middle {
     margin: 5px;
@@ -110,10 +77,8 @@
     flex-direction: column;
     flex: 1;
     padding: 10px;
-    border-style: solid;
-    border-width: 0px 3px 3px 3px;
     border-radius: 0px 0px 5px 5px;
-    border-color: #EEE;
+    background-color: #FFF;
   }
   .text{
     padding: 10px;
