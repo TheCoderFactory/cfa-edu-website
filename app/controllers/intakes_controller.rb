@@ -50,6 +50,6 @@ class IntakesController < ApplicationController
 
   private
   def intake_params
-    params.require(:intake).permit(:course_id, :start, :finish, :location, :class_size, :teacher_name, :teacher_image)
+    params.require(:intake).permit(:course_id, :start, :finish, :location, :teacher_name, :teacher_image, :days)
   end
 end
