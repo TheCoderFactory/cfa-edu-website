@@ -13,5 +13,10 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
-//= require ckeditor-jquery
+//= require ckeditor/init
+//= require moment
+//= require bootstrap-datetimepicker
+//= require testimonials
+//= require stripe-payments
+//= require blog_sidebar
 //= require_tree .

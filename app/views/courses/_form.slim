@@ -8,7 +8,7 @@
     .form-group.input-field.col-md-12
       = f.input :tagline
     .form-group.input-field.col-md-12
-      = f.input :description, input_html: {class: "ckeditor"}
+      = f.cktext_area :description
     .form-group.input-field.col-md-12
       = f.input :price
     .form-group.input-field.col-md-12
@@ -20,7 +20,3 @@
   .row
     .col-md-12
       = f.button :submit, "Save", class: "main-cta-btn"
-
-javascript:
-  $('.ckeditor').ckeditor();
-
