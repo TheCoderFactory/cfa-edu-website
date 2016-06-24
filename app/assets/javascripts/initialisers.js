@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $('.ckeditor').ckeditor();
   $('#start-datetimepicker').datetimepicker({
     format: "DD/MM/YYYY hh:mm A"
   });
