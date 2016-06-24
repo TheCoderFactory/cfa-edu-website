@@ -50,6 +50,11 @@ GEM
     bootstrap (4.0.0.alpha3)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bootstrap-glyphicons (0.0.1)
+      railties (>= 3.0)
+      sass (>= 3.2)
+    bootstrap3-datetimepicker-rails (4.17.37)
+      momentjs-rails (>= 2.8.1)
     builder (3.2.2)
     byebug (9.0.5)
     capybara (2.1.0)
@@ -141,6 +146,8 @@ GEM
     mimemagic (0.3.1)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    momentjs-rails (2.11.1)
+      railties (>= 3.1)
     multi_json (1.12.1)
     netrc (0.11.0)
     nokogiri (1.6.8)
@@ -270,6 +277,8 @@ PLATFORMS
 DEPENDENCIES
   active_link_to
   bootstrap (~> 4.0.0.alpha3)
+  bootstrap-glyphicons
+  bootstrap3-datetimepicker-rails (~> 4.17.37)
   byebug
   capybara (~> 2.1.0)
   carrierwave
@@ -286,6 +295,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy (~> 2.3.0)
+  momentjs-rails (>= 2.9.0)
   pg
   quiet_assets
   rails (= 4.2.5.1)

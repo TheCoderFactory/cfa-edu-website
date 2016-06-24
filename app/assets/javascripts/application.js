@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
+//= require bootstrap
 //= require jquery_ujs
 //= require ckeditor-jquery
+//= require moment
+//= require bootstrap-datetimepicker
 //= require testimonials
 //= require stripe-payments
 //= require blog_sidebar

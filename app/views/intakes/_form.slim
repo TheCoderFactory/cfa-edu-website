@@ -2,9 +2,11 @@
   .row
     = f.hidden_field :course_id, value: @course.id
     .form-group.input-field.col-md-6
-      = f.input :start
+      label for="start" Start Date/Time
+      = f.text_field :start, id: "start-datetimepicker"
     .form-group.input-field.col-md-6
-      = f.input :finish
+      label for="finish" Finish Date/Time
+      = f.text_field :finish, id: "finish-datetimepicker"
     .form-group.input-field.col-md-12
       = f.input :location
     .form-group.input-field.col-md-12
@@ -12,8 +14,26 @@
     .form-group.input-field.col-md-12
       = f.input :teacher_name
     .form-group.input-field.col-md-12
+      label for="teacher_image" Teacher Image
       = f.file_field :teacher_image
 
   .row
     .col-md-12
       = f.button :submit, "Save", class: "btn btn-success btn-block lead"
+
+javascript:
+  $(function () {
+    $('#start-datetimepicker').datetimepicker({
+      format: "DD/MM/YYYY hh:mm A"
+    });
+    $('#finish-datetimepicker').datetimepicker({
+      useCurrent: false, //Important! See issue #1075
+      format: "DD/MM/YYYY hh:mm A"
+    });
+    $("#start-datetimepicker").on("dp.change", function (e) {
+      $('#finish-datetimepicker').data("DateTimePicker").minDate(e.date);
+    });
+    $("#finish-datetimepicker").on("dp.change", function (e) {
+      $('#start-datetimepicker').data("DateTimePicker").maxDate(e.date);
+    });
+  });

@@ -24,6 +24,9 @@ gem 'ckeditor_rails'
 gem 'friendly_id'
 gem 'active_link_to'
 gem 'stripe-ruby-mock', '~> 2.2.4', :require => 'stripe_mock'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+gem 'bootstrap-glyphicons'
 
 group :development do
   gem 'quiet_assets'
