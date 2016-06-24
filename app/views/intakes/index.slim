@@ -15,7 +15,7 @@
                   th width="15%" Start
                   th width="15%" Finish
                   th width="10%" Location
-                  th width="10%" Class Size
+                  th width="10%" Days
                   th width="10%" Views
                   th width="10%"
                   th width="10%"
@@ -26,7 +26,7 @@
                     td #{intake.start_date + " - " + intake.start_time}
                     td #{intake.finish_date + " - " + intake.finish_time}
                     td #{intake.location}
-                    td #{intake.class_size}
+                    td #{intake.days}
                     td
                       = link_to intake_path(intake)
                         = fa_icon "eye", class: "fa-1x"
