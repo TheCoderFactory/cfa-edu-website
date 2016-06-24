@@ -2,14 +2,28 @@
   .container
     .row
       .col-md-10.col-md-offset-1
-        h6 #{@course.name}
-        h4 #{@course.tagline}
-        p #{@course.description}
-        p Cost per person: $<span id="course-price">#{@course.price}</span>
+        .row
+          h2 #{@course.name.upcase} - <span class=.get_price-text">#{@course.get_price}</span>
+          .col-md-6
+            .border
+            - if @course.course_image_url
+              img.img-fluid src="#{@course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
+            br
+            p #{@course.tagline}
+          .col-md-6.hidden-sm-down
+            br
+            = @course.description.html_safe
         br
-        - if @course.available?
-          h3 New Booking
-          = render "new_form"
+        - if @course.course_type == "Workshop"
+          - if @course.available?
+            h3 New Booking
+            = render "new_form"
+          - else
+            center
+              h6 There are currently no intakes available for this course.
         - else
-          h6 There are currently no intakes available for this course.
+          h3 REGISTER YOUR INTEREST
 

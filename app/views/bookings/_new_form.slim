@@ -49,29 +49,30 @@
         p <b>Phone:</b><br><span id="phone"></span>
         p <b>City:</b><br><span id="city"></span>
         p <b>Country:</b><br><span id="country"></span
-    hr
-    .row
-      .col-md-6.col-md-offset-3.col-xs-12
-        h6 PAYMENT DETAILS
-      .col-md-2.col-md-offset-3.col-xs-12
-        p <b>Cost per person:</b><br>$<span id="per-person-cost"></span>
-        p <b>Amount Attending:</b><br><span id="amount-attending"></span>
-        p <b>Promo code:</b><br><span id="given-promo-code"></span>
-        p <b>Discount:</b><br><span id="promo-discount"></span>%
-      .col-md-7.col-xs-12
-        .row
-          .form-group.col-md-7.col-xs-12
-            p <b>Total price:</b><br>$<span id="total-price"></span>
-            p <b>Card Details:</b>
-            span.payment-errors
-            input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
-        .row
-          .form-group.col-md-2.exp-col-1.col-xs-4
-            input.stripe-input data-stripe="exp_month" size="2" type="text" placeholder="MM"
-          .form-group.col-md-2.exp-col-2.col-xs-4
-            input.stripe-input data-stripe="exp_year" size="2" type="text" placeholder="YYYY"
-          .form-group.col-md-3.cvc-col.col-xs-4
-            input.stripe-input data-stripe="cvc" size="4" type="text" placeholder="CVC"
+    - if @course.price > 0.0
+      hr
+      .row
+        .col-md-6.col-md-offset-3.col-xs-12
+          h6 PAYMENT DETAILS
+        .col-md-2.col-md-offset-3.col-xs-12
+          p <b>Cost per person:</b><br>$<span id="per-person-cost"></span>
+          p <b>Amount Attending:</b><br><span id="amount-attending"></span>
+          p <b>Promo code:</b><br><span id="given-promo-code"></span>
+          p <b>Discount:</b><br><span id="promo-discount"></span>%
+        .col-md-7.col-xs-12
+          .row
+            .form-group.col-md-7.col-xs-12
+              p <b>Total price:</b><br>$<span id="total-price"></span>
+              p <b>Card Details:</b>
+              span.payment-errors
+              input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
+          .row
+            .form-group.col-md-2.exp-col-1.col-xs-4
+              input.stripe-input data-stripe="exp_month" size="2" type="text" placeholder="MM"
+            .form-group.col-md-2.exp-col-2.col-xs-4
+              input.stripe-input data-stripe="exp_year" size="2" type="text" placeholder="YYYY"
+            .form-group.col-md-3.cvc-col.col-xs-4
+              input.stripe-input data-stripe="cvc" size="4" type="text" placeholder="CVC"
 
 
   .row

@@ -2,6 +2,17 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  h2 {
+    color: #000;
+  }
+  .border {
+    border-color: #EC5037;
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
   .exp-col-1 {
     padding-right: 0px;
     input {
