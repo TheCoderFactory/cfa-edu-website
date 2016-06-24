@@ -343,3 +343,27 @@
       padding: 10px;
     }
 }
+.confirmation-page {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1, h3 {
+    color: #000;
+  }
+  .border-orange {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 40%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+}

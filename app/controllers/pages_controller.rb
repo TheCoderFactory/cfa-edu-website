@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def confirmation
+    @type = params[:type]
   end
 
   def contact
