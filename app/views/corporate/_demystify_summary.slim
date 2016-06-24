@@ -12,12 +12,20 @@
             - if course.active
               = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
           .col-md-6
-            img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+            - if course.course_image_url
+              img.img-fluid src="#{course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
       - else
         .anchor id="#{course.slug}"
         .row.course-summary
           .col-md-6
-            img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+            - if course.course_image_url
+              img.img-fluid src="#{course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
           .col-md-6
             h5 #{course.name.upcase}
             .border
@@ -38,7 +46,11 @@
               .border
             p #{course.description.html_safe}
           .col-md-6
-            img.img-fluid src="#{asset_path 'testimonial-vid.jpg'}"
+            - if course.course_image_url
+              img.img-fluid src="#{course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
           br
           - if course.active
             = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
