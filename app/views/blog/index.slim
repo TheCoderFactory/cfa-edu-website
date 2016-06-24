@@ -8,6 +8,6 @@
         center
           - if @posts.size == 0
             h2 There are currently no blog posts. Please check back later.
-          = will_paginate @posts
       .col-md-4.hidden-sm-down
         = render "shared/blog_sidebar"
+      = will_paginate @posts
