@@ -1,42 +1,66 @@
 .container
   .row
     .col-md-12
+      h1 #{@intake.course_name}
+      p
+        b Start:
+        br
+        | #{@intake.start_date + " - " + @intake.start_time}
+      p
+        b Finish:
+        br
+        | #{@intake.finish_date + " - " + @intake.finish_time}
+      p
+        b Location:
+        br
+        | #{@intake.location}
+      p 
+        b Class Size:
+        br
+        | #{@intake.class_size}
+      p
+        b Teacher:
+        - if @intake.teacher_image_url
+          img.img-fluid.img-circle src="#{@intake.teacher_image_url}"
+        - if @intake.teacher_name
+          #{@intake.teacher_name}
+
       center
-        h2 #{@intake.course.name}
-
-        p #{@intake.start}
-        p #{@intake.finish}
-        p #{@intake.location}
-        p #{@intake.class_size}
-
-        h2 Bookings
+        h1 Bookings
 
         - if @bookings.size == 0
-          h3 There are currently no bookings.
-          | Please check back later.
+          h6 There are currently no bookings.
         - else
-          table.highlight.bordered
+          table.highlight.bordered#intake-bookings-table
             thead
               tr
-                th width="25%" Promo Code
-                th width="25%" People Attending
-                th width="25%" Total Cost
-                th Views
+                th width="20%" Name
+                th width="20%" Paid
+                th width="20%" Promo Code
+                th width="10%" People Attending
+                th width="10%" Views
+                th width="10%"
+                th width="10%"
             tbody
-              - @bookings.each do |b|
+              - @bookings.each do |booking|
                 tr
-                  td #{b.promo_code}
-                  td #{b.people_attending}
-                  td #{b.total_cost}
+                  td #{booking.firstname + " " + booking.lastname}
+                  td #{booking.paid?}
+                  td #{booking.promo_code ? booking.promo_code.name : "No promo code"}
+                  td #{booking.people_attending}
                   td
-                    = link_to booking_path(b)
+                    = link_to booking_path(booking)
                       = fa_icon "eye", class: "fa-1x"
-                      |  Show
+                      | View
                   td
-                    = link_to edit_booking_path(b)
+                    = link_to edit_booking_path(booking)
                       = fa_icon "pencil", class: "fa-1x"
-                      | Edit
+                      |  Edit
                   td
-                    = link_to b, data: { confirm: "Are you sure?" }, method: :delete
+                    = link_to booking, data: { confirm: "Are you sure?" }, method: :delete
                       = fa_icon "trash", class: "fa-1x"
                       |  Delete
+javascript:
+  $(document).ready(function(){
+    $('#intake-bookings-table').DataTable();
+  });

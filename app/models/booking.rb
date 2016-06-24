@@ -29,4 +29,8 @@ class Booking < ActiveRecord::Base
       end
     end
   end
+
+  def paid?
+    payment.paid
+  end
 end

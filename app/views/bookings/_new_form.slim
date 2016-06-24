@@ -82,20 +82,21 @@
       a.main-cta-btn.pull-right#validate-promo-btn onclick="validatePromoCode()" VALIDATE
       = f.button :submit, "BOOK NOW", class: "main-cta-btn pull-right", id: "submit-btn"
 
-script type="text/javascript" src="https://js.stripe.com/v2/"
-javascript:
-  Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
+- if @course.price > 0.0
+  script type="text/javascript" src="https://js.stripe.com/v2/"
+  javascript:
+    Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
 
-  $(function() {
-    var $form = $('#payment_form');
-    $form.submit(function(event) {
-      // Disable the submit button to prevent repeated clicks:
-      $form.find('.submit').prop('disabled', true);
+    $(function() {
+      var $form = $('#payment_form');
+      $form.submit(function(event) {
+        // Disable the submit button to prevent repeated clicks:
+        $form.find('.submit').prop('disabled', true);
 
-      // Request a token from Stripe:
-      Stripe.card.createToken($form, stripeResponseHandler);
+        // Request a token from Stripe:
+        Stripe.card.createToken($form, stripeResponseHandler);
 
-      // Prevent the form from being submitted:
-      return false;
+        // Prevent the form from being submitted:
+        return false;
+      });
     });
-  });
