@@ -11,15 +11,21 @@
             .box-invisible
           .bottom-boxes
             .box
-              h4 #{@coding_for_beginners.name.upcase}<br><span class="cost-secondary">#{@coding_for_beginners.get_price}</span>
+              h4 #{@coding_for_beginners.name.upcase}
+              .border-secondary
+              h5.cost-secondary #{@coding_for_beginners.get_price}
               p.text #{@coding_for_beginners.tagline}
               a.scd-cta-btn href="##{@coding_for_beginners.slug}" FIND OUT MORE
             .box.extra
-              h4.up-more #{@twelve_week_course.name.upcase}<br><span class="cost-primary">#{@twelve_week_course.get_price}</span>
+              h4.up-more #{@twelve_week_course.name.upcase}
+              .border-primary
+              h5.cost-primary #{@twelve_week_course.get_price}
               p.text #{@twelve_week_course.tagline}
               a.main-cta-btn href="##{@twelve_week_course.slug}" FIND OUT MORE
             .box
-              h4 #{@coding_kickstarter.name.upcase}<br><span class="cost-secondary">#{@coding_kickstarter.get_price}</span>
+              h4 #{@coding_kickstarter.name.upcase}
+              .border-secondary
+              h5.cost-secondary #{@coding_kickstarter.get_price}
               p.text #{@coding_kickstarter.tagline}
               a.scd-cta-btn href="##{@coding_kickstarter.slug}" FIND OUT MORE
 .workshop-hero.hidden-md-up
