@@ -6,6 +6,9 @@
 
 /* Descriptions (targets class applied to Help Text divs) */
 .hs-field-desc {}
+.hs-form fieldset {
+  max-width: 700px !important;
+}
 
 /* Labels (selects field labels and error messages) */
 label {}
