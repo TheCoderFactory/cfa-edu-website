@@ -86,6 +86,6 @@ class BookingsController < ApplicationController
   end
 
   def get_total_amount price, people_attending, percent
-    ((price*people_attending*percent)*100).to_i
+    (price*people_attending*percent).to_i
   end
 end
