@@ -3,10 +3,10 @@
     = f.hidden_field :course_id, value: @course.id
     .form-group.input-field.col-md-6
       label for="start" Start Date/Time
-      = f.text_field :start, id: "start-datetimepicker"
+      = f.input :start, id: "start-datetimepicker"
     .form-group.input-field.col-md-6
       label for="finish" Finish Date/Time
-      = f.text_field :finish, id: "finish-datetimepicker"
+      = f.input :finish, id: "finish-datetimepicker"
     .form-group.input-field.col-md-12
       = f.input :location
     .form-group.input-field.col-md-12
