@@ -70,6 +70,8 @@ class BookingsController < ApplicationController
     if @booking.update_attributes(booking_params)
       redirect_to @booking
     else
+      puts @booking.errors.inspect
+      puts @payment.errors.inspect
       respond_with @booking
     end
   end
