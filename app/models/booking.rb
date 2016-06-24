@@ -21,13 +21,13 @@ class Booking < ActiveRecord::Base
     end
   end
   def intake_not_full
-    if intake && people_attending
-      total_attendees = 0
-      intake.bookings.each { |b| total_attendees+=b.people_attending }
-      if total_attendees+people_attending > intake.class_size
-        errors.add(:intake, "intake full")
-      end
-    end
+    # if intake && people_attending
+      # total_attendees = 0
+      # intake.bookings.each { |b| total_attendees+=b.people_attending }
+      # if total_attendees+people_attending > intake.class_size
+        # errors.add(:intake, "intake full")
+      # end
+    # end
   end
 
   def paid?

@@ -16,10 +16,11 @@ class Intake < ActiveRecord::Base
     order(start: :desc)
   end
   def intake_available?
-    total_attendees = 0
-    bookings.each { |b| total_attendees+=b.people_attending }
-    return true if total_attendees < class_size
-    return false
+    # total_attendees = 0
+    # bookings.each { |b| total_attendees+=b.people_attending }
+    # return true if total_attendees < class_size
+    # return false
+    true
   end
   def course_price
     course.get_price
