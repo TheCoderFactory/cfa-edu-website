@@ -10,7 +10,7 @@
           .course-details
             center
               - if intake.teacher_image_url
-                img.img-fluid.img-circle.course-teacher-image src="#{intake.teacher_image_url}"
+                img.img-fluid.img-circle.course-teacher-image src="#{intake.teacher_image_url}" alt="#{intake.teacher_name if intake.teacher_name}"
               - else
                 p #{fa_stacked_icon "user inverse", base: "circle", class: "fa-2x"}
               p.taught-by Taught By
