@@ -13,9 +13,9 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
-//= require ckeditor-jquery
 //= require moment
 //= require bootstrap-datetimepicker
+//= require ckeditor-jquery
 //= require testimonials
 //= require stripe-payments
 //= require blog_sidebar
