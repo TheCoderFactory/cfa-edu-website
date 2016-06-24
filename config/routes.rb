@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
-
   root "home#index"
   devise_for :admins, skip: [:sessions, :passwords, :registrations]
 

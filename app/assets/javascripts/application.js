@@ -13,7 +13,6 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
-//= require ckeditor/init
 //= require moment
 //= require bootstrap-datetimepicker
 //= require testimonials
