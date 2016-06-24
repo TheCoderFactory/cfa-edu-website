@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
-  # mount_uploader :image, ImageUploader
-  # mount_uploader :author_image, AuthorImageUploader
+  mount_uploader :image, ImageUploader
+  mount_uploader :author_image, AuthorImageUploader
   friendly_id :title, use: :slugged
 
   validates :title, :lead, :content, :image, :published_date, presence: true
