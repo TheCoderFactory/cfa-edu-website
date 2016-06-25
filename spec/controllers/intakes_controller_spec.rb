@@ -7,11 +7,11 @@ describe IntakesController do
         sign_in
       end
 
-      it "populates an array of courses" do
-        course1 = create(:course, course_type: "Workshop")
-        course2 = create(:course, course_type: "Corporate")
+      it "populates an array of intakes" do
+        intake1 = create(:intake)
+        intake2 = create(:intake)
         get :index
-        expect(assigns(:courses)).to match_array([course1, course2])
+        expect(assigns(:intakes)).to match_array([intake1, intake2])
       end
       it "renders the :index template" do
         get :index
@@ -227,7 +227,7 @@ describe IntakesController do
   describe 'PATCH #update' do
     before :each do
       @course = create(:course)
-      @intake = create(:intake, location: 'Coder Factory Headq', class_size: 20, course: @course)
+      @intake = create(:intake, location: 'Coder Factory Headq', days: "Mondays", course: @course)
     end
 
     context "with a valid user signed in" do
@@ -261,10 +261,10 @@ describe IntakesController do
           expect(assigns(:course)).to eq(@course)
         end
         it "does not change the @intake's attributes" do
-          patch :update, id: @intake, intake: attributes_for(:intake, location: "AIT Headq", class_size: nil)
+          patch :update, id: @intake, intake: attributes_for(:intake, location: "AIT Headq", days: nil)
           @intake.reload
           expect(@intake.location).to_not eq("AIT Headq")
-          expect(@intake.class_size).to eq(20)
+          expect(@intake.days).to eq("Mondays")
         end
         it "re-renders the #edit template" do
           patch :update, id: @intake, intake: attributes_for(:invalid_intake)

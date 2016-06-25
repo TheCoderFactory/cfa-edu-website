@@ -7,14 +7,34 @@ describe CoursesController do
         sign_in
       end
 
-      it "populates arrays of workshop, corporate and kids coding courses" do
+      # populates an arroy of course based on certain params
+      it "populates an array of all courses if no course_type params provided" do
         course1 = create(:course, course_type: "Workshop")
         course2 = create(:course, course_type: "Corporate")
         course3 = create(:course, course_type: "Schools")
         get :index
-        expect(assigns(:workshop_courses)).to match_array([course1])
-        expect(assigns(:corporate_courses)).to match_array([course2])
-        expect(assigns(:schools_courses)).to match_array([course3])
+        expect(assigns(:courses)).to match_array([course1, course2, course3])
+      end
+      it "populates an array of workshop only courses course_type=workshop param provided" do
+        course = create(:course, course_type: "Workshop")
+        create(:course, course_type: "Corporate")
+        create(:course, course_type: "Schools")
+        get :index, course_type: "Workshop"
+        expect(assigns(:courses)).to match_array([course])
+      end
+      it "populates an array of corporate only courses course_type=corporate param provided" do
+        create(:course, course_type: "Workshop")
+        course = create(:course, course_type: "Corporate")
+        create(:course, course_type: "Schools")
+        get :index, course_type: "Corporate"
+        expect(assigns(:courses)).to match_array([course])
+      end
+      it "populates an array of schools only courses course_type=schools param provided" do
+        create(:course, course_type: "Workshop")
+        create(:course, course_type: "Corporate")
+        course = create(:course, course_type: "Schools")
+        get :index, course_type: "Schools"
+        expect(assigns(:courses)).to match_array([course])
       end
       it "renders the :index template" do
         get :index

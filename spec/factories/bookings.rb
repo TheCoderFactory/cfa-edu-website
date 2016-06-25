@@ -11,7 +11,7 @@ FactoryGirl.define do
     phone "1111111111"
     age "33"
     city "Sydney"
-    country "Australia"
+    country "AU"
 
     factory :invalid_booking do
       people_attending nil

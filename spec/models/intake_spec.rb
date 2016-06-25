@@ -4,13 +4,13 @@ describe Intake do
   it "has a valid factory" do
     expect(FactoryGirl.build(:intake)).to be_valid
   end
-  it "is valid with course, start, finish, location, class_size" do
+  it "is valid with course, start, finish, location, days" do
     intake = Intake.new(
       course: FactoryGirl.build(:course),
       start: DateTime.now,
       finish: DateTime.now.tomorrow,
       location: "Coder Factory",
-      class_size: 20)
+      days: "Sundays")
     expect(intake).to be_valid
   end
   it "should belong to a course" do
@@ -33,8 +33,8 @@ describe Intake do
   it "is not valid without a location"  do
     expect(Intake.new(location: nil)).to have(1).errors_on(:location)
   end
-  it "is not valid without a class_size" do
-    expect(Intake.new(class_size: nil)).to have(1).errors_on(:class_size)
+  it "is not valid without days" do
+    expect(Intake.new(days: nil)).to have(1).errors_on(:days)
   end
   it "should not have a finish date before a start date" do
     intake = Intake.new(
@@ -42,7 +42,7 @@ describe Intake do
       start: DateTime.now.tomorrow,
       finish: DateTime.now,
       location: "Coder Factory",
-      class_size: 20)
+      days: "Sundays")
     expect(intake).to have(1).errors_on(:finish)
   end
 end

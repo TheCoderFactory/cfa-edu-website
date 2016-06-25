@@ -26,17 +26,6 @@ describe Booking do
     t = Booking.reflect_on_association(:promo_code)
     t.macro.should == :belongs_to
   end
-  it "is not valid if an intake is full" do
-    intake = FactoryGirl.build(:intake)
-    10.times do
-      intake.bookings << FactoryGirl.build(:booking)
-    end
-    booking = Booking.new(
-      intake: intake,
-      people_attending: 2,
-      total_cost: 0.00)
-    expect(booking).to have(1).errors_on(:intake)
-  end
   it "should have one payment" do
     t = Booking.reflect_on_association(:payment)
     t.macro.should == :has_one
