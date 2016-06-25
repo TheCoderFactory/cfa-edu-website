@@ -12,8 +12,8 @@ class Intake < ActiveRecord::Base
     end
   end
 
-  def self.reverse_chron_order
-    order(start: :desc)
+  def self.chron_order
+    order(start: :asc)
   end
   def intake_available?
     # total_attendees = 0
