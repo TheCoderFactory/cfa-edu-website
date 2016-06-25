@@ -15,13 +15,6 @@ class Intake < ActiveRecord::Base
   def self.chron_order
     order(start: :asc)
   end
-  def intake_available?
-    # total_attendees = 0
-    # bookings.each { |b| total_attendees+=b.people_attending }
-    # return true if total_attendees < class_size
-    # return false
-    true
-  end
   def course_price
     course.get_price
   end
@@ -39,5 +32,8 @@ class Intake < ActiveRecord::Base
   end
   def finish_time
     finish.strftime("%I:%M %P").upcase
+  end
+  def course_image
+    return course.course_image_url if course.course_image_url
   end
 end

@@ -409,7 +409,6 @@
   .upcoming-courses-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
   }
   @media only screen and (max-width: 767px) {
     .upcoming-courses-container {
@@ -431,6 +430,7 @@
     padding-top: 15px;
     padding-right: 15px;
     padding-bottom: 150px;
+    background-size: contain;
   }
   .price-text {
     padding: 10px;
@@ -476,5 +476,8 @@
   .course-info p {
     line-height: 30px;
     color: #FFF;
+  }
+  .days-text {
+    line-height: 16px !important;
   }
 }

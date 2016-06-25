@@ -5,7 +5,7 @@
     .upcoming-courses-container
       - @intakes.each do |intake|
         .upcoming-course
-          .course-header style="background-image: url(#{asset_path 'shortCoursesHeaderImage.jpg'})"
+          .course-header style="background-image: url(#{intake.course_image})"
             | <span class="pull-right price-text">#{intake.course_price}</span>
           .course-details
             center
@@ -20,12 +20,14 @@
                 p.teacher-name Coder Factory
               h5 #{intake.course_name}
           .course-info
-            p
+            p.days-text
               | #{fa_icon 'calendar', class: 'fa-2x fa-fw pull-left upcoming-course-icon'}
-              span #{intake.start_date}
+              span #{intake.start_date} - #{intake.finish_date}
+              br
+              span #{intake.days}
             p
               | #{fa_icon 'clock-o', class: 'fa-2x fa-fw pull-left upcoming-course-icon'}
-              span #{intake.start_time}
+              span #{intake.start_time} - #{intake.finish_time}
             p
               | #{fa_icon 'map-marker', class: 'fa-2x fa-fw pull-left upcoming-course-icon'}
               span #{intake.location}
