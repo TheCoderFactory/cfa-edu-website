@@ -27,4 +27,10 @@ class Booking < ActiveRecord::Base
   def paid?
     payment.paid
   end
+  def course_name
+    intake.course_name
+  end
+  def amount_paid
+    payment.amount
+  end
 end

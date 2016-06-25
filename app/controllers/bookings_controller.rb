@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   layout "admin", only: ["index", "show", "edit", "update", "destroy"]
 
   def index
-    @intakes = Intake.all
+    @bookings = Booking.all
   end
 
   def show
