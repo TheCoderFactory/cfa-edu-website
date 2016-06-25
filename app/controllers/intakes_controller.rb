@@ -13,7 +13,8 @@ class IntakesController < ApplicationController
   end
 
   def new
-    @course = Course.friendly.find(params[:course_id])
+    @course = Course.friendly.find(params[:course_id]) if params[:course_id]
+    @courses = Course.all
     @intake = Intake.new
   end
 

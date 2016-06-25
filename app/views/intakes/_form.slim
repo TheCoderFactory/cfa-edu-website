@@ -1,6 +1,10 @@
 = simple_form_for(@intake) do |f|
   .row
-    = f.hidden_field :course_id, value: @course.id
+    - if @course
+      = f.hidden_field :course_id, value: @course.id
+    - else
+      .form-group.input_field.col-md-12
+        = f.association :course, collection: @courses, selected: @courses.first, label_method: lambda { |course| "#{course.name}" }
     .form-group.input-field.col-md-6
       label for="start" Start Date/Time
       = f.input :start, id: "start-datetimepicker"
