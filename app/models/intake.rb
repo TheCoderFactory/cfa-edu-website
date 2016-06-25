@@ -4,6 +4,7 @@ class Intake < ActiveRecord::Base
   mount_uploader :teacher_image, TeacherImageUploader
 
   validates :course, :start, :finish, :location, :days, presence: true
+  validates_inclusion_of :status, in: ["Active", "Cancelled", "Full"]
   validate :valid_finish
 
   def valid_finish
@@ -12,6 +13,12 @@ class Intake < ActiveRecord::Base
     end
   end
 
+  def self.future_intakes
+    where("start >= ?", Date.today)
+  end
+  def self.active_intakes
+    where(status: "Active")
+  end
   def self.chron_order
     order(start: :asc)
   end
