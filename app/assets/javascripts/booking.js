@@ -35,11 +35,15 @@ function nextSection() {
   var per_person_cost = originalPrice;
   var given_promo_code = $('#booking_promo_code').val();
   var discount = currentDiscount;
-  var total_price = originalPrice*people_attending*(1-discount*0.01);
+  var total_price = (originalPrice*people_attending*(1-discount*0.01)).toFixed(2);
+  var gst = (total_price*0.1).toFixed(2);
+  var total_gst_price = (parseFloat(total_price)+parseFloat(gst)).toFixed(2);
   $('#per-person-cost').text(per_person_cost);
   $('#given-promo-code').text(given_promo_code);
   $('#promo-discount').text(discount);
   $('#total-price').text(total_price);
+  $('#gst').text(gst);
+  $('#total-gst-price').text(total_gst_price);
   showButtons();
 }
 function prevSection() {

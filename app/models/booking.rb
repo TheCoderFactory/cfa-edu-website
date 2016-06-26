@@ -13,8 +13,11 @@ class Booking < ActiveRecord::Base
     percent = 1
     percent -= promo_code.percent*0.01 if promo_code
     if intake && total_cost && people_attending
-      if total_cost > intake.course.price*people_attending*percent || total_cost < intake.course.price*people_attending*percent
-        errors.add(:total_cost, "total_cost must be equal to course.price*people_attending")
+      amount = intake.course.price*people_attending*percent*100
+      # include gst
+      amount+=amount/10
+      if total_cost > amount || total_cost < amount
+        errors.add(:total_cost, "total_cost must be equal to course.price*people_attending + gst")
       end
     end
   end
