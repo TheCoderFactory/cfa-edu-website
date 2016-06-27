@@ -23,16 +23,13 @@ class Course < ActiveRecord::Base
   end
 
   def get_price
-    if course_type == "Workshop"
-      if (price > 0.0)
-        if price%1 == 0
-          return "$#{price.to_i} + GST"
-        else
-          return "$#{price} + GST"
-        end
+    if (price > 0.0)
+      if price%1 == 0
+        return "$#{price.to_i} + GST"
+      else
+        return "$#{price} + GST"
       end
-      return "FREE"
     end
-    return "$#{price} + GST"
+    return "FREE"
   end
 end
