@@ -8,7 +8,7 @@
     .form-group.input-field.col-md-12
       = f.input :lead
     .form-group.input-field.col-md-12
-      = f.input :content, input_html: {class: "ckeditor"}
+      = f.input :content, as: :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} }
     .form-group.input-field.col-md-6
       = f.input :author_name
     .form-group.input-field.col-md-6
@@ -23,8 +23,4 @@
   .row
     .col-md-12
       = f.button :submit, "Save"
-
-javascript:
-  $('.ckeditor').ckeditor({
-  });
 
