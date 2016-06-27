@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require ckeditor/init
-//= require bootstrap
 //= require moment
+//= require bootstrap
 //= require bootstrap-datetimepicker
 //= require testimonials
 //= require stripe-payments
