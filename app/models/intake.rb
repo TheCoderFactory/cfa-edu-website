@@ -29,13 +29,13 @@ class Intake < ActiveRecord::Base
     course.name
   end
   def start_date
-    start.strftime('%d %B %Y')
+    start.strftime('%d %b %Y')
   end
   def start_time
     start.strftime("%I:%M %P").upcase
   end
   def finish_date
-    finish.strftime('%d %B %Y')
+    finish.strftime('%d %b %Y')
   end
   def finish_time
     finish.strftime("%I:%M %P").upcase
