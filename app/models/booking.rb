@@ -36,4 +36,28 @@ class Booking < ActiveRecord::Base
   def amount_paid
     payment.amount
   end
+  def cost_in_dollars
+    total_cost/100
+  end
+  def course_location
+    intake.location
+  end
+  def start_date
+    intake.start_date
+  end
+  def finish_date
+    intake.finish_date
+  end
+  def start_time
+    intake.start_time
+  end
+  def finish_time
+    intake.finish_time
+  end
+  def days
+    intake.days
+  end
+  def send_emails
+    SendBookingEmailJob.perform_async(self.id)
+  end
 end

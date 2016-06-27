@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>New Booking.</h1>
+
+    <p>
+    You have received a new booking for: <%= @booking.course_name %>
+    </p>
+
+    <p>
+    <strong>Intake:</strong>
+    <%= @booking.intake.start_date %>
+    </p>
+
+    <p>
+    <strong>Name:</strong>
+    <%= @booking.firstname %> <%= @booking.lastname %>
+    </p>
+
+    <p>
+    <strong>Email:</strong>
+    <%= @booking.email %>
+    </p>
+
+    <p>
+    <strong>Phone:</strong>
+    <%= @booking.phone %>
+    </p>
+
+    <p>
+    <strong>Age:</strong>
+    <%= @booking.age %>
+    </p>
+
+    <p>
+    <strong>City:</strong>
+    <%= @booking.city %>
+    </p>
+
+    <p>
+    <strong>Country:</strong>
+    <%= @booking.country %>
+    </p>
+
+    <p>
+    <strong>Promo code?</strong>
+    <%= @booking.promo_code ? @booking.promo_code : "No Promo Code" %>
+    </p>
+
+    <p>
+    <strong>People Attending:</strong>
+    <%= @booking.people_attending %>
+    </p>
+
+    <p>
+    <strong>Total Cost:</strong>
+    <%= @booking.cost_in_dollars %>
+    </p>
+  </body>
+</html>
