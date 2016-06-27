@@ -4,9 +4,8 @@
       h5 LATEST BLOG POSTS
     .blog-post-container
       - @posts.each do |p|
-        .blog-post-box
-          a href="#{post_path(p)}"
-            img.img-fluid.post-image src="#{p.image_url}"
+        a.blog-post-box href="#{post_path(p)}"
+          img.img-fluid.post-image src="#{p.image_url}"
           .post-details
             center
               - if p.author_image.nil?
@@ -19,6 +18,5 @@
                   | Coder Factory
                 - else
                   | #{p.author_name}
-              a href="#{post_path(p)}"
-                h6 #{p.title}
+              h6 #{p.title}
 
