@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :courses, path: "admin/courses"
-  delete "courses/:id", to: "courses#destroy", as: :delete_course
   resources :intakes, path: "admin/intakes"
   resources :bookings, path: "admin/bookings"
   get "booking/new", to: "bookings#new"
