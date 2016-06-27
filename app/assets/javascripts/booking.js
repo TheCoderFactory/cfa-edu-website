@@ -35,9 +35,9 @@ function nextSection() {
   var per_person_cost = originalPrice;
   var given_promo_code = $('#booking_promo_code').val();
   var discount = currentDiscount;
-  var total_price = (originalPrice*people_attending*(1-discount*0.01)).toFixed(2);
-  var gst = (total_price*0.1).toFixed(2);
-  var total_gst_price = (parseFloat(total_price)+parseFloat(gst)).toFixed(2);
+  var gst = (originalPrice*people_attending*0.1).toFixed(2);
+  var total_price = ((originalPrice*people_attending)).toFixed(2);
+  var total_gst_price = ((parseFloat(total_price)+parseFloat(gst))*(1-discount*0.01)).toFixed(2);
   $('#per-person-cost').text(per_person_cost);
   $('#given-promo-code').text(given_promo_code);
   $('#promo-discount').text(discount);

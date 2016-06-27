@@ -31,8 +31,6 @@ class BookingsController < ApplicationController
     cost = @booking.total_cost
 
     @amount = get_total_amount cost, total_people, percent
-    # add gst
-    @amount+=(@amount/10)
     @booking.total_cost = @amount
 
     if @amount > 50
@@ -91,6 +89,9 @@ class BookingsController < ApplicationController
   end
 
   def get_total_amount price, people_attending, percent
-    ((price*people_attending*percent)*100).to_i
+    total = price*people_attending
+    total+=(total/10)
+    total*=percent
+    return (total*100).to_i
   end
 end
