@@ -17,6 +17,7 @@
 //= require moment
 //= require bootstrap
 //= require bootstrap-datetimepicker
+//= require pickers
 //= require testimonials
 //= require stripe-payments
 //= require blog_sidebar

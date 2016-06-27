@@ -6,11 +6,9 @@
       .form-group.input_field.col-md-12
         = f.association :course, collection: @courses, selected: @courses.first, label_method: lambda { |course| "#{course.name}" }
     .form-group.input-field.col-md-6
-      label for="start" Start Date/Time
-      = f.text_field :start, id: "start-datetimepicker"
+      = f.input :start, as: :datetime_picker, input_html: {data: {date_options: {format: 'DD/MM/YYYY hh:mm A'}}}
     .form-group.input-field.col-md-6
-      label for="finish" Finish Date/Time
-      = f.text_field :finish, id: "finish-datetimepicker"
+      = f.input :finish, as: :datetime_picker, input_html: {data: {date_options: {format: 'DD/MM/YYYY hh:mm A'}}}
     .form-group.input-field.col-md-12
       = f.input :location
     .form-group.input-field.col-md-12
@@ -26,17 +24,3 @@
   .row
     .col-md-12
       = f.button :submit, "Save", class: "btn btn-success btn-block lead"
-javascript:
-  $('#start-datetimepicker').datetimepicker({
-    format: "DD/MM/YYYY hh:mm A"
-  });
-  $('#finish-datetimepicker').datetimepicker({
-    useCurrent: false, //Important! See issue #1075
-    format: "DD/MM/YYYY hh:mm A"
-  });
-  $("#start-datetimepicker").on("dp.change", function (e) {
-    $('#finish-datetimepicker').data("DateTimePicker").minDate(e.date);
-  });
-  $("#finish-datetimepicker").on("dp.change", function (e) {
-    $('#start-datetimepicker').data("DateTimePicker").maxDate(e.date);
-  });

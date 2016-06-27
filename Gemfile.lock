@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: 36d21cec5da7f5b214925804f60e63c61c747023
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (4.7.16)
+      momentjs-rails (>= 2.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -53,8 +62,6 @@ GEM
     bootstrap-glyphicons (0.0.1)
       railties (>= 3.0)
       sass (>= 3.2)
-    bootstrap3-datetimepicker-rails (4.17.37)
-      momentjs-rails (>= 2.8.1)
     builder (3.2.2)
     byebug (9.0.5)
     capybara (2.1.0)
@@ -300,7 +307,6 @@ DEPENDENCIES
   active_link_to
   bootstrap (~> 4.0.0.alpha3)
   bootstrap-glyphicons
-  bootstrap3-datetimepicker-rails (~> 4.17.37)
   byebug
   capybara (~> 2.1.0)
   carrierwave
@@ -309,6 +315,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   country_select
   database_cleaner (~> 1.0.1)
+  datetimepicker-rails!
   devise
   factory_girl_rails (~> 4.2.1)
   faker (~> 1.1.2)
