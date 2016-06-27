@@ -91,4 +91,7 @@ Rails.application.configure do
     :domain         => 'email.coderfactoryacademy.edu.au',
     :authentication => :plain
   }
+
+  config.middleware.use Rack::SslEnforcer
+
 end
