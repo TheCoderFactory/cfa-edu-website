@@ -40,7 +40,7 @@
                         = fa_icon "pencil", class: "fa-1x"
                         |  Edit
                     td
-                      = button_to course, data: { confirm: "Are you sure?" }, method: :delete
+                      = link_to delete_course_path(course), data: { confirm: "Are you sure?" }, method: :delete
                         = fa_icon "trash", class: "fa-1x"
                         |  Delete
 
