@@ -7,10 +7,10 @@
         = f.association :course, collection: @courses, selected: @courses.first, label_method: lambda { |course| "#{course.name}" }
     .form-group.input-field.col-md-6
       label for="start" Start Date/Time
-      = f.input :start, id: "start-datetimepicker"
+      = f.text_field :start, id: "start-datetimepicker"
     .form-group.input-field.col-md-6
       label for="finish" Finish Date/Time
-      = f.input :finish, id: "finish-datetimepicker"
+      = f.text_field :finish, id: "finish-datetimepicker"
     .form-group.input-field.col-md-12
       = f.input :location
     .form-group.input-field.col-md-12
