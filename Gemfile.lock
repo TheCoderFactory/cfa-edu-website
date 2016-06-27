@@ -162,8 +162,10 @@ GEM
     rack-canonical-host (0.1.0)
       addressable
       rack (~> 1.0)
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-zippy (3.0.1)
     rails (4.2.5.1)
       actionmailer (= 4.2.5.1)
       actionpack (= 4.2.5.1)
@@ -309,6 +311,8 @@ DEPENDENCIES
   pg
   quiet_assets
   rack-canonical-host
+  rack-ssl-enforcer
+  rack-zippy (= 3.0.1)
   rails (= 4.2.5.1)
   rails_12factor
   rspec-rails (~> 2.14.0)

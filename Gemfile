@@ -30,6 +30,8 @@ gem 'bootstrap-glyphicons'
 gem 'non-stupid-digest-assets', '~> 1.0.4'
 gem 'sucker_punch', '~> 2.0'
 gem 'rack-canonical-host'
+gem 'rack-zippy', '3.0.1'
+gem 'rack-ssl-enforcer'
 
 group :development do
   gem 'quiet_assets'
