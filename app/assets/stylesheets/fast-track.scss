@@ -336,8 +336,12 @@
     margin-bottom: 0px;
   }
   @media only screen and (max-width: 767px) {
+    .wit-name {
+      font-size: 12px;
+    }
     .wit-alumni-info {
       width: 100%;
+      font-size: 11px;
     }
   }
   .carrot {
