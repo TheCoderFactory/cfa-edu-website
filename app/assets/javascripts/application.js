@@ -21,4 +21,5 @@
 //= require testimonials
 //= require stripe-payments
 //= require blog_sidebar
+//= require close-modal
 //= require_tree .

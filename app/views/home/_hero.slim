@@ -7,7 +7,8 @@
     h3 Code yourself a new future!
     .hero-btns
       a.main-cta-btn href="/fast-track" LEARN MORE
-      a.hero-video-btn target="_blank" href="https://www.youtube.com/watch?v=DtyaIrnJrqQ" #{fa_icon 'play', class: 'fa-1x'} Watch Video
+      / a.hero-video-btn target="_blank" href="https://www.youtube.com/watch?v=DtyaIrnJrqQ" #{fa_icon 'play', class: 'fa-1x'} Watch Video
+      a.hero-video-btn data-toggle="modal" data-target="#myModal" #{fa_icon 'play', class: 'fa-1x'} Watch Video
     .hero-cards
       .hero-card
         = fa_icon "globe", class: "fa-5x pull-left"
@@ -30,3 +31,13 @@
           br
           span
             a href="/fast-track" FIND OUT HOW
+
+  #myModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+    .modal-dialog role="document" 
+      .modal-content
+        .modal-header
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span aria-hidden="true"  ×
+        .modal-body
+          .embed-responsive.embed-responsive-4by3
+            iframe.embed-responsive-item allowfullscreen="" frameborder="0" height="360" mozallowfullscreen="" src="https://player.vimeo.com/video/150737851?title=0&byline=0&portrait=0" webkitallowfullscreen="" width="640" 

@@ -59,6 +59,20 @@
     margin-top: -10px;
     margin-bottom: 0px;
   }
+  .modal {
+    margin-top: 100px;
+
+    .close {
+      color: #FFF;
+    }
+  }
+  .modal-body {
+    padding: 0px;
+  }
+  .modal-header {
+    background-color: #000;
+    border: none;
+  }
 }
 .press-logos {
   background-color: #EEE;
