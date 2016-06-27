@@ -38,7 +38,7 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-  get "about", to: "pages#about"
+  get "about-coder-factory-academy", to: "pages#about"
   # get "meet-our-alumni", to: "pages#alumni"
   get "career-outcomes", to: "pages#career_outcomes"
   get "confirmation", to: "pages#confirmation"
@@ -49,4 +49,13 @@ Rails.application.routes.draw do
   get "partners", to: "pages#partners"
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
+
+  # routes to be redirected
+  get "/information-sessions/new", to: redirect("/fast-track")
+  get "/women-in-tech", to: redirect("/fast-track/women-in-tech-scholarship")
+  get "/coding-courses", to: redirect("/short-courses")
+  get "/coding-workshops-for-business-and-schools", to: redirect("/corporate")
+  get "/community", to: redirect("/")
+  get "/learn-to-code", to: redirect("/short-courses")
+  match "/learn-to-code/:id", to: redirect("/short-courses"), via: :get
 end

@@ -29,6 +29,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'bootstrap-glyphicons'
 gem 'non-stupid-digest-assets', '~> 1.0.4'
 gem 'sucker_punch', '~> 2.0'
+gem 'rack-canonical-host'
 
 group :development do
   gem 'quiet_assets'
