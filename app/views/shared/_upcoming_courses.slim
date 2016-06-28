@@ -4,7 +4,7 @@
       h3 UPCOMING SHORT COURSES
     .upcoming-courses-container
       - @intakes.each do |intake|
-        .upcoming-course
+        a.upcoming-course href="/booking/new?course_id=#{intake.course.slug}"
           .course-header style="background-image: url(#{intake.course_image})"
             | <span class="pull-right price-text">#{intake.course_price}</span>
           .course-details
