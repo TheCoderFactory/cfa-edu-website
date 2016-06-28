@@ -3,6 +3,8 @@ doctype html
 html
   head
     title Coder Factory Academy
+    title #{content_for?(:title) ? yield(:title) : 'Board the Fast Track to an exciting career in tech @ Coder Factory Academy'}
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops.'}"
     link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    'application', media: 'all'
