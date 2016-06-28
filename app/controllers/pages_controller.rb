@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def confirmation
     @type = params[:type]
+    @type ||= "booking"
   end
 
   def contact
