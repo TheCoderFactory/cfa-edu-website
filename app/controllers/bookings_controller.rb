@@ -28,7 +28,7 @@ class BookingsController < ApplicationController
     percent = 1
     percent -= @promo_code.percent*0.01 if @promo_code
     total_people = booking_params[:people_attending].to_i
-    cost = @booking.total_cost
+    cost = @course.price
 
     @amount = get_total_amount cost, total_people, percent
     @booking.total_cost = @amount
