@@ -34,6 +34,7 @@ gem 'rack-canonical-host'
 gem 'rack-zippy', '3.0.1'
 gem 'rack-ssl-enforcer'
 gem 'jquery-ui-rails'
+gem 'traceroute'
 
 group :development do
   gem 'quiet_assets'
