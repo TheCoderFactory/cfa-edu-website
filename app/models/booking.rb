@@ -38,7 +38,7 @@ class Booking < ActiveRecord::Base
     payment.amount
   end
   def cost_in_dollars
-    total_cost/100
+    return "$#{total_cost/100}"
   end
   def course_location
     intake.location
