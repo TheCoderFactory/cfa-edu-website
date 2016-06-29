@@ -3,7 +3,8 @@
     .row
       .col-xs-12
         center
-          img.img-fluid src="#{post.image_url}"
+          a href="#{post_path(post)}"
+            img.img-fluid src="#{post.image_url}"
         .title-section
           h2 #{post.title}
           .border-secondary
