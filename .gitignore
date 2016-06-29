@@ -21,3 +21,6 @@ app/assets/images/page-styleguides
 
 # Ignore test images
 public/uploads
+
+# Ignore tmp folder
+tmp/

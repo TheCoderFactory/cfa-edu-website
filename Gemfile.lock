@@ -63,6 +63,9 @@ GEM
       railties (>= 3.0)
       sass (>= 3.2)
     builder (3.2.2)
+    bullet (5.0.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.9.0)
     byebug (9.0.5)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -298,6 +301,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unicode_utils (1.4.0)
+    uniform_notifier (1.9.0)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -317,6 +321,7 @@ DEPENDENCIES
   active_link_to
   bootstrap (~> 4.0.0.alpha3)
   bootstrap-glyphicons
+  bullet
   byebug
   capybara (~> 2.1.0)
   carrierwave
