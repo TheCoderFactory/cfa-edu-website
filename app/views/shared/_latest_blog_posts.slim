@@ -8,7 +8,7 @@
           img.img-fluid.post-image src="#{p.image_url}"
           .post-details
             center
-              - if p.author_image.nil?
+              - if p.author_image_url
                 img.img-circle.img-blog-post-author src="#{p.author_image_url}"
               - else
                 = fa_stacked_icon "user inverse", base: "circle", class: "fa-2x unknown-blog-author"
