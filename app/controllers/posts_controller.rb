@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   respond_to :html
   before_action :authenticate_admin!, only: ["index", "new", "create", "edit", "update", "destroy"]
   before_action :set_post, only: ["show"]
-  before_action :post_published?, only: ["show"]
+  before_action :show_post?, only: ["show"]
   layout "admin", only: ["index", "new", "create", "edit", "update", "destroy"]
 
   def index
@@ -58,7 +58,7 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
   end
 
-  def post_published?
-    redirect_to root_path unless @post.is_published?
+  def show_post?
+    redirect_to root_path unless @post.is_published? || admin_signed_in?
   end
 end
