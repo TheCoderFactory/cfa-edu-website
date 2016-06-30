@@ -10,7 +10,7 @@
             p #{course.description.html_safe}
             - if course.active
               br
-              = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+              = link_to "BOOK NOW", booking_new_path(course_type: "learn-to-code", course_id: course.slug), class: "main-cta-btn"
           .col-md-6
             - if course.course_image_url
               img.img-fluid src="#{course.course_image_url}"
@@ -32,7 +32,7 @@
             p #{course.description.html_safe}
             - if course.active
               br
-              = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+              = link_to "BOOK NOW", booking_new_path(course_type: "learn-to-code", course_id: course.slug), class: "main-cta-btn"
 
 .course-summaries.hidden-md-up
   .container
@@ -52,4 +52,4 @@
                 p #{fa_icon "picture-o", class: "fa-5x"}
             - if course.active
               br
-              = link_to "BOOK NOW", booking_new_path(course_id: course.slug), class: "main-cta-btn"
+              = link_to "BOOK NOW", booking_new_path(course_type: "learn-to-code", course_id: course.slug), class: "main-cta-btn"

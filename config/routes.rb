@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
   resources :bookings, path: "admin/bookings"
-  get "booking/new", to: "bookings#new"
+  get ":course_type/:course_id", to: "bookings#new", as: :booking_new
   post "booking", to: "bookings#create"
   resources :promo_codes, path: "admin/promo-codes"
   get "validate-promo-code", to: "promo_codes#validate_promo_code"
