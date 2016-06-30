@@ -5,7 +5,7 @@
         .anchor id="#{course.slug}"
         .row.course-summary
           .col-md-6
-            h5 #{course.name.upcase}
+            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
             .border
             p #{course.description.html_safe}
             br
@@ -28,7 +28,7 @@
               center
                 p #{fa_icon "picture-o", class: "fa-5x"}
           .col-md-6
-            h5 #{course.name.upcase}
+            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
             .border
             p #{course.description.html_safe}
             br
@@ -42,7 +42,7 @@
         .anchor id="#{course.slug}-m"
         .row.course-summary
           .col-md-6
-            h5 #{course.name.upcase}
+            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
             .border.hidden-sm-down
             center.hidden-md-up
               .border
