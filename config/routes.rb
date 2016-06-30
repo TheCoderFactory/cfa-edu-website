@@ -51,6 +51,8 @@ Rails.application.routes.draw do
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
 
+  get ":course_type/:course_id", to: "bookings#new", as: :booking_new
+
   # routes to be redirected
   get "/information-sessions/new", to: redirect("/fast-track")
   get "/women-in-tech", to: redirect("/fast-track/women-in-tech-scholarship")
@@ -61,6 +63,4 @@ Rails.application.routes.draw do
   match "/learn-to-code/:id", to: redirect("/short-courses"), via: :get
 
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
-
-  get ":course_type/:course_id", to: "bookings#new", as: :booking_new
 end
