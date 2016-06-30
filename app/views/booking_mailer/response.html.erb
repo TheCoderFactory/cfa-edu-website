@@ -196,7 +196,8 @@ a, a:hover {
                 <% unless @booking.start_date == @booking.finish_date %>
                   - <%= @booking.finish_date %>
                 <% end %></p>
-              <p>Times: <%= @booking.start_time %> - <%= @booking.finish_time %></p>
+            <p>Times: <%= @booking.start_time %> - <%= @booking.finish_time %></p>
+            <p>Places Booked: <%= @booking.people_attending %>
         </td>
 
       </tr>
