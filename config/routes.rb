@@ -60,4 +60,7 @@ Rails.application.routes.draw do
   get "/community", to: redirect("/")
   get "/learn-to-code", to: redirect("/short-courses")
   match "/learn-to-code/:id", to: redirect("/short-courses"), via: :get
+
+  get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
+
 end

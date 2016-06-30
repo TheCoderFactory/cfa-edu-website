@@ -1,0 +1,52 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% @static_urls.each do |static| %>
+    <url>
+      <loc><%= static %></loc>
+      <lastmod>
+        <%= @last_updated.strftime('%Y-%m-%d') %>
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  <% end %>
+  <% @posts.each do |post| %>
+    <url>
+      <loc><%= show_post_url(post) %></loc>
+      <lastmod>
+        <%= post.published_date.strftime('%Y-%m-%d') %>
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  <% end %>
+  <% @short_courses.each do |course| %>
+    <url>
+      <loc><%= booking_new_url(course_type: "learn-to-code", course_id: course.slug) %></loc>
+      <lastmod>
+        <%= course.updated_at.strftime('%Y-%m-%d') %>
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  <% end %>
+  <% @corporate_courses.each do |course| %>
+    <url>
+      <loc><%= booking_new_url(course_type: "corporate-courses", course_id: course.slug) %></loc>
+      <lastmod>
+        <%= course.updated_at.strftime('%Y-%m-%d') %>
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  <% end %>
+  <% @schools_courses.each do |course| %>
+    <url>
+      <loc><%= booking_new_url(course_type: "kids-coding-courses", course_id: course.slug) %></loc>
+      <lastmod>
+        <%= course.updated_at.strftime('%Y-%m-%d') %>
+      </lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+    </url>
+  <% end %>
+</urlset>
