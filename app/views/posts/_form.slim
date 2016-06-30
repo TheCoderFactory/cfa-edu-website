@@ -17,10 +17,9 @@
     .form-group.input-field.col-md-12
       = f.input :publish
     .form-group.input-field.col-md-12
-      label for="published_date" Publish Date
-      = f.date_field :published_date
+      = f.input :published_date, as: :date_picker
 
   .row
     .col-md-12
-      = f.button :submit, "Save"
+      = f.button :submit, "Save", class: "main-cta-btn"
 

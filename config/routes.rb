@@ -35,9 +35,10 @@ Rails.application.routes.draw do
   get "kids-coding", to: "kids_coding#index"
 
   get "blog", to: "blog#index"
-  resources :posts do
+  resources :posts, path: "admin/posts", except: [:show] do
     collection { post :import }
   end
+  get "/posts/:id", to: "posts#show", as: :show_post
 
   get "about-coder-factory-academy", to: "pages#about"
   # get "meet-our-alumni", to: "pages#alumni"

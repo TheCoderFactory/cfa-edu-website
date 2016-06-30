@@ -1,6 +1,9 @@
 .admin-content {
   padding-top: 50px;
   padding-bottom: 50px;
+  a:hover {
+    color: #ADADAD;
+  }
   h1 {
     color: #000;
     margin-top: 20px;
@@ -22,6 +25,7 @@
   .main-cta-btn, .scd-cta-btn {
     padding: 8px;
     margin: 5px;
+    height: auto;
   }
   .main-cta-btn:hover, .scd-cta-btn:hover {
     padding: 6px;
@@ -60,5 +64,11 @@
 .promo-codes-index {
   h2 {
     color: #000;
+  }
+}
+.admin-posts-index {
+  input[type="file"] {
+    height: auto;
+    margin: 5px;
   }
 }

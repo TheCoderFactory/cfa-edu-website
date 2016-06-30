@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   layout "admin", only: ["index", "new", "create", "edit", "update", "destroy"]
 
   def index
-    @posts = Post.all.reverse_chron_order.paginate(page: params[:page], per_page: 10)
+    @posts = Post.all.reverse_chron_order
   end
 
   def show
