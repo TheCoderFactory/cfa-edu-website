@@ -4,7 +4,7 @@
       h5 LATEST BLOG POSTS
     .blog-post-container
       - @posts.each do |p|
-        a.blog-post-box href="#{post_path(p)}"
+        a.blog-post-box href="#{show_post_path(p)}"
           img.img-fluid.post-image src="#{p.image_url}"
           .post-details
             center
