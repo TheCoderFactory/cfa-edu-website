@@ -705,3 +705,38 @@
     margin-bottom: 10px;
   }
 }
+.curriculum {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1, h2 {
+    color: #000;
+  }
+  .border-orange {
+    border: solid 1px #EC5037;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 40%;
+  }
+  .border-blue {
+    border: solid 1px #38A9C7;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 52%;
+  }
+  .bordered-section {
+    border: solid 1px #EEE;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  table {
+    color: #ADADAD;
+  }
+  img {
+    width: 50%;
+  }
+  .modal {
+    margin-top: 100px;
+  }
+}

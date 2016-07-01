@@ -16,6 +16,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def curriculum
+  end
+
   def faq
   end
 

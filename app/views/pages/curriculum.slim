@@ -1,0 +1,221 @@
+.curriculum
+  .container
+    .row
+      .col-xs-12
+        h1 Fast Track Coding Boot Camp
+        .border-orange
+        h2 Diploma in Software Development ICT50715
+        .border-blue
+        h6 #{fa_icon "info-circle", class: "fa-1x"} COURSE INFO
+        .bordered-section
+          p
+            strong Study mode:
+            br
+            |  In class
+          p
+            table.table.table-striped.table-hover.table-sm
+              thead
+                tr
+                  th width="33%"  Course Intakes
+                  th width="33%"
+                    center Campus
+                  th width="33%"
+                    center Census Dates
+              tbody
+                tr
+                  td August 1st
+                  td
+                    center Sydney
+                  td
+                    center
+                      a.modal-trigger data-toggle="modal" data-target="#augModal"  View
+                tr
+                  td September 12th
+                  td
+                    center Melbourne
+                  td
+                    center
+                      a.modal-trigger data-toggle="modal" data-target="#septModal"  View
+          p
+            strong Course duration:
+            br
+            |  23 weeks, 40 contact hours/week
+          p
+            strong Qualification:
+            br
+            |  Diploma of Software Development ICT50715
+          p
+            strong Nationally recognised qualification:
+            br
+            |  Yes
+          p
+            strong Awarded by:
+            br
+            |  Academy of Information Technology (RTO: 90511), of which Coder Factory Academy is a division.
+          p
+            strong Payment options:
+            br
+            | Instalment payments
+      center
+        .col-xs-6
+          img.img-fluid src="#{asset_path 'nrt.png'}"
+        .col-xs-6
+          img.img-fluid src="#{asset_path 'aqf.png'}"
+    .row
+      .col-xs-12
+        h6 #{fa_icon "users", class: "fa-1x"} WHO IS THIS FOR
+        .bordered-section
+          p
+            b Career changers
+            br
+            | You may be looking to swap careers into the rapidly expanding tech industry for many reasons- better pay, greater mental stimulation or just feel the need to innovate!
+          p
+            b Entrepreneurs
+            br
+            | You have big bold ideas but need some foundations in tech to code your prototype and negotiate with the broad range of suppliers/developers/engineers that operate in the tech industry.
+          p
+            b Professional Development
+            br
+            | You may be in an industry you love but feel the need to create new products and innovations within your company. Learn the Digital literacy required to transform your workplace and make the competition irrelevant.
+          p
+            b School leavers
+            br
+            | You may be interested in Computer Science/Engineering but not yet ready to dive into a 4 year degree. Use the coding Boot Camp model to gain the skills you need to quickly enter the industry and discover the various pathways open to you in carving out your tech career.
+    .row
+      .col-xs-12
+        h6 #{fa_icon "book", class: "fa-1x"} PREREQUISITES
+        .bordered-section
+          p
+            | Just a willingness to learn, a passion for technology and high school completion.
+    .row
+      .col-xs-12
+        h6 #{fa_icon "key", class: "fa-1x"} KEY LEARNING OUTCOMES
+        .bordered-section
+          p Logic/critical thinking
+          p Full stack web development
+          p Databases
+          p Development of web applications
+          p Integration of third party applications
+          p Cloud based deployment
+          p Mobile technology application fundamentals
+          p Project management applications
+          p Interview skills
+    .row
+      .col-xs-12
+        h6 #{fa_icon "code", class: "fa-1x"} COURSE SUBJECTS
+        .bordered-section
+          p Identify and manage the implementation of current industry specific technologies ICTICT514
+          p Validate an application design against specifications ICTPRG520
+          p Contribute to copyright, ethics and privacy in an ICT environment ICTICT418
+          p Establish and maintain client user liaison ICTSAS502
+          p Apply testing techniques for software development ICTPRG529
+          p Review developed software ICTPRG515
+          p Build advanced user interface ICTPRG505
+          p Computer programming logic and problem solving/critical thinking
+          p The internet and how it works
+          p HTML
+          p CSS
+          p The IT industry
+          p Javascript
+          p Bootstrap
+          p Web development tools
+          p Hosting
+          p Project 1A: Building a static site
+          p Forms
+          p Project 1B: Building a static site with forms
+          p Apply intermediate programming skills in another language ICTPRG418
+          p Ruby
+          p Rails
+          p Manage a Project using software management tools ICTPRG502
+          p Databases- relational/non relational
+          p Apply intermediate/advanced object oriented language skills ICTPRG527/ICTPRG501
+          p MVC
+          p APIs
+          p Pre Processors- SASS/LESS
+          p Apply advanced programming skills in another language ICTPRG523
+          p Node frameworks
+          p Express
+          p Project 2- Dynamic site with social network
+          p Angular
+          p Ajax
+          p IOS/Android app integration
+          p System security
+          p Debugging  Monitoring applications ICTPRG503
+          p Project 3- Real Time web app
+          p Deplay an application to a production environment ICTPRG504
+          p Apply Software development methodologies ICTICT403
+          p Gather data to identify business opportunities ICTICT509
+          p Employer testing environments
+          p Interview techniques
+  #augModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+    .modal-dialog.modal-lg role="document" 
+      .modal-content
+        .modal-header
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span aria-hidden="true"  ×
+          h4#myModalLabel.modal-title AUGUST CENSUS DATES
+        .modal-body
+          table.table.table-striped.table-hover
+            thead
+              tr
+                th Term
+                th Start date
+                th Census date
+                th End Date
+            tbody
+              tr
+                th Term 1
+                td 1st August 2016
+                td 8th August 2016
+                td 2nd September 2016
+              tr
+                th Term 2
+                td 12th September 2016
+                td 19th September 2016
+                td 14th October 2016
+              tr
+                th Term 3
+                td 24th October 2016
+                td 31st October 2016
+                td 25th November 2016
+              tr
+                th Term 4
+                td 5th December 2016
+                td 12th December 2016
+                td 20th January 2017
+  #septModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+    .modal-dialog.modal-lg role="document" 
+      .modal-content
+        .modal-header
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span aria-hidden="true"  ×
+          h4#myModalLabel.modal-title SEPTEMBER CENSUS DATES
+        .modal-body
+          table.table.table-striped.table-hover
+            thead
+              tr
+                th Term
+                th Start date
+                th Census date
+                th End Date
+            tbody
+              tr
+                th Term 1
+                td 12th September 2016
+                td 19th September 2016
+                td 14th October 2016
+              tr
+                th Term 2
+                td 24th October 2016
+                td 31st October 2016
+                td 25th November 2016
+              tr
+                th Term 3
+                td 5th December 2016
+                td 12th December 2016
+                td 20th January 2016
+              tr
+                th Term 4
+                td 30th January 2017
+                td 6th February 2017
+                td 3rd March 2018

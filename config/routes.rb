@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   get "career-outcomes", to: "pages#career_outcomes"
   get "confirmation", to: "pages#confirmation"
   get "contact", to: "pages#contact"
+  get "curriculum", to: "pages#curriculum"
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"
   get "meet-your-instructors", to: "pages#instructors"
