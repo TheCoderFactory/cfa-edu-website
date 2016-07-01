@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to show_post_path(@post)
     else
       respond_with @post
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
-      redirect_to @post
+      redirect_to show_post_path(@post)
     else
       respond_with @post
     end
