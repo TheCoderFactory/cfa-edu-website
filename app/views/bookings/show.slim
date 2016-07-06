@@ -1,15 +1,44 @@
-.container
-  .row
-    h2 #{@booking.intake.course.name}
-    h3 #{@booking.intake.start} - #{@booking.intake.finish}
+.booking-details
+  .container
+    .row
+      center
+        .col-xs-12
+          h2 #{@booking.course_name}
+          h6 #{@booking.start_date} - #{@booking.finish_date}
+          p
+            b Time:
+            |  #{@booking.start_time} - #{@booking.finish_time}
 
-    h2 Booking Details
-    p #{@booking.promo_code}
-    p #{@booking.people_attending}
-    p #{@booking.total_cost}
-
-    h3 Payment Details
-    - if @booking.payment
-      p #{@booking.payment.amount}
-    - else
-      p Not payed
+          h2 Booking Details
+        .col-xs-6
+          p
+            b Name:
+            |  #{@booking.firstname} #{@booking.lastname}
+          p
+            b Email:
+            |  #{@booking.email}
+          p
+            b Phone:
+            |  #{@booking.phone}
+          p
+            b Age:
+            |  #{@booking.age}
+          p
+            b City:
+            |  #{@booking.city}
+          p
+            b Country:
+            |  #{@booking.country}
+        .col-xs-6
+          p
+            b Promo code:
+            |  #{@booking.promo_code ? @booking.promo_code : "No Code"}
+          p
+            b People attending:
+            |  #{@booking.people_attending}
+          p
+            b Total Cost:
+            |  #{@booking.cost_in_dollars}
+          p
+            b Paid?
+            |  #{@booking.paid?}
