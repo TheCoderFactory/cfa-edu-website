@@ -46,7 +46,7 @@
                 tr
                   td #{booking.firstname + " " + booking.lastname}
                   td #{booking.paid?}
-                  td #{booking.promo_code ? booking.promo_code.name : "No promo code"}
+                  td #{booking.promo_code ? booking.promo_code.code : "No promo code"}
                   td #{booking.people_attending}
                   td
                     = link_to booking_path(booking)

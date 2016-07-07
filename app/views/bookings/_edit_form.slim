@@ -1,0 +1,24 @@
+= simple_form_for(@booking, html: {id: :payment_form}) do |f|
+  .row
+    .form-group.input-field.col-xs-9
+      = f.association :intake, collection: @intakes, selected: @booking.intake, label_method: lambda { |intake| "#{intake.course_name} - #{intake.start_date}, #{intake.location}"}
+    .form-group.input-field.col-xs-3
+      = f.input :people_attending, collection: [1, 2, 3], selected: @booking.people_attending, label: "Amount Attending"
+  .row
+    .form-group.input-field.col-xs-5
+      = f.input :firstname, label: false, placeholder: "First Name*"
+    .form-group.input-field.col-xs-5
+      = f.input :lastname, label: false, placeholder: "Last Name*"
+    .form-group.input-field.col-xs-2
+      = f.input :age, label: false, placeholder: "Age*"
+  .row
+    .form-group.input-field.col-xs-12
+      = f.input :email, label: false, placeholder: "Email*"
+    .form-group.input-field.col-xs-12
+      = f.input :phone, label: false, placeholder: "Phone*"
+  .row
+    .form-group.input-field.col-xs-6
+      = f.input :city, label: false, placeholder: "City*"
+    .form-group.input-field.col-xs-6
+      = f.input :country, label: false, placeholder: "Country*", selected: "AU"
+  = f.button :submit, "SUBMIT", class: "main-cta-btn pull-right"
