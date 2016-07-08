@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   get "information-toolkit", to: "pages#information_toolkit"
   get "meet-your-instructors", to: "pages#instructors"
   get "partners", to: "pages#partners"
+  get "payment-options", to: "pages#payment_options"
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
 

@@ -31,6 +31,9 @@ class PagesController < ApplicationController
   def partners
   end
 
+  def payment_options
+  end
+
   def privacy
   end
 
