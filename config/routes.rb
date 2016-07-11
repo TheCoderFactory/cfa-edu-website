@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
   resources :bookings, path: "admin/bookings"
-  get "booking/new", to: "bookings#new"
   post "booking", to: "bookings#create"
   resources :promo_codes, path: "admin/promo-codes"
   get "validate-promo-code", to: "promo_codes#validate_promo_code"
@@ -35,21 +34,26 @@ Rails.application.routes.draw do
   get "kids-coding", to: "kids_coding#index"
 
   get "blog", to: "blog#index"
-  resources :posts do
+  resources :posts, path: "admin/posts", except: [:show] do
     collection { post :import }
   end
+  get "/posts/:id", to: "posts#show", as: :show_post
 
   get "about-coder-factory-academy", to: "pages#about"
   # get "meet-our-alumni", to: "pages#alumni"
   get "career-outcomes", to: "pages#career_outcomes"
   get "confirmation", to: "pages#confirmation"
   get "contact", to: "pages#contact"
+  get "curriculum", to: "pages#curriculum"
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"
   get "meet-your-instructors", to: "pages#instructors"
   get "partners", to: "pages#partners"
+  get "payment-options", to: "pages#payment_options"
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
+
+  get ":course_type/:course_id", to: "bookings#new", as: :booking_new
 
   # routes to be redirected
   get "/information-sessions/new", to: redirect("/fast-track")
@@ -59,4 +63,6 @@ Rails.application.routes.draw do
   get "/community", to: redirect("/")
   get "/learn-to-code", to: redirect("/short-courses")
   match "/learn-to-code/:id", to: redirect("/short-courses"), via: :get
+
+  get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
 end

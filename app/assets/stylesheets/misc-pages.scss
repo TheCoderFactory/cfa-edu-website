@@ -367,3 +367,39 @@
     padding-bottom: 15px;
   }
 }
+.payment-options {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1, h2, h3 {
+    color: #000;
+  }
+  .border-primary {
+    border: solid 1px #EC5037;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  a:hover {
+    color: #EEE;
+  }
+  .border-secondary {
+    border: solid 1px #38A9C7;
+    width: 30%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+  }
+}

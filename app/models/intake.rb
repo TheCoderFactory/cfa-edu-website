@@ -43,4 +43,7 @@ class Intake < ActiveRecord::Base
   def course_image
     return course.course_image_url if course.course_image_url
   end
+  def course_type
+    course.course_type
+  end
 end

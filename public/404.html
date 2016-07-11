@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <title>The page you were looking for doesn't exist (404)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <style>
+      a {
+        color: #38A9C7;
+      }
+      a:hover {
+        color: #ADADAD;
+        text-decoration: none;
+      }
+    </style>
+  </head>
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
-
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  <body style="padding-bottom: 50px; padding-top: 50px;">
+    <!-- This file lives in public/404.html -->
+    <div class="container" style="border: solid 2px #EEE; border-radius: 5px; padding: 10px;">
+      <div class="row">
+        <center>
+          <img src="https://res.cloudinary.com/coder-factory/image/upload/v1467262470/cfa_logo_grey_jhb1cz.png" alt="Coder Factory" class="responsive-img">
+          <p>Woops! This page doesn't exist.</p>
+          <p>You may have mistyped the address or the page may have moved.</p>
+          <p>Perhaps you can find what you're looking for here:</p>
+        </center>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <h5>COURSES</h5>
+          <div style="border-style: solid; border-width: 2px 0px 0px 0px; border-color: #EC5037; width: 30%; margin-top: 5px; margin-bottom: 15px;"></div>
+          <ul style="list-style-type: none; padding:0; margin:0;">
+            <li><a href="/fast-track">Fast Track Coding Bootcamp</a></li>
+            <li><a href="/short-courses">Short Courses</a></li>
+            <li><a href="/corporate">Corporate Courses</a></li>
+            <li><a href="/kids-coding">Schools Courses</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <h5>COMPANY</h5>
+          <div style="border-style: solid; border-width: 2px 0px 0px 0px; border-color: #EC5037; width: 30%; margin-top: 5px; margin-bottom: 15px;"></div>
+          <ul style="list-style-type: none; padding:0; margin:0;">
+            <li><a href="/about-coder-factory-academy">About</a></li>
+            <li><a href="https://drive.google.com/a/coderfactory.com/folderview?id=0B7WtFCI0RKBcWTNGWGtxRzk5U3M&usp=drive_web#" target="_blank">Information Toolkit</a></li>
+            <li><a href="/faq">FAQ's</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a>
+          </ul>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <h5>COMMUNITY</h5>
+          <div style="border-style: solid; border-width: 2px 0px 0px 0px; border-color: #EC5037; width: 30%; margin-top: 5px; margin-bottom: 15px;"></div>
+          <ul style="list-style-type: none; padding:0; margin:0;">
+            <li><a href="/meet-your-instructors">Meet Your Instructors</a></li>
+            <li><a href="/career-outcomes">Career Outcomes</a></li>
+            <li><a href="fast-track/women-in-tech-scholarship">Women In Tech Scholarship</a></li>
+            <li><a href="fast-track/australian-innovation-scholarship">Australian Innovation Scholarship</a></li>
+            <li><a href="https://vimeo.com/coderfactory/videos">Video Archive</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <p>If you need to get in touch with us about a problem you're having with our site, please contact <a href="mailto:pete@coderfactory.com">pete@coderfactory.com</a></p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+  </body>
 </html>

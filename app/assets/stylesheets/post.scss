@@ -29,6 +29,12 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  .post-title {
+    color: #FFF;
+  }
+  .body-section p {
+    color: #373A3C !important;
+  }
   .title-section {
     background-color: #EC5037;
     overflow: hidden;
@@ -63,6 +69,9 @@
   }
   p {
     font-family: 'Montserrat', sans-serif !important;
+  }
+  h1, h2, h3, h4 {
+    color: #ADADAD !important;
   }
 }
 .blog-post-partial {

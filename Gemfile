@@ -34,11 +34,13 @@ gem 'rack-canonical-host'
 gem 'rack-zippy', '3.0.1'
 gem 'rack-ssl-enforcer'
 gem 'jquery-ui-rails'
+gem 'traceroute'
 
 group :development do
   gem 'quiet_assets'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem "bullet"
 end
 
 group :test do
@@ -47,6 +49,7 @@ group :test do
   gem 'database_cleaner', '~> 1.0.1'
   gem 'launchy', '~> 2.3.0'
   gem 'selenium-webdriver', '~> 2.39.0'
+  gem "codeclimate-test-reporter"
 end
 
 group :development, :test do

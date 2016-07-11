@@ -7,11 +7,11 @@ describe BookingsController do
         sign_in
       end
 
-      it "populates an array of intakes" do
-        intake1 = create(:intake)
-        intake2 = create(:intake)
+      it "populates an array of bookings" do
+        booking1 = create(:booking)
+        booking2 = create(:booking)
         get :index
-        expect(assigns(:intakes)).to match_array([intake1, intake2])
+        expect(assigns(:bookings)).to match_array([booking1, booking2])
       end
       it "renders the :index template" do
         get :index

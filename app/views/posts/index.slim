@@ -1,44 +1,48 @@
-section#top-section
+.admin-posts-index
   .container
     .row
-      .col-xs-12
-        h2 Your Posts
-        = link_to 'New Post', new_post_path
-        h6 Import a CSV File
-        = form_tag import_posts_path, multipart: true do
-          = file_field_tag :file
-          = submit_tag "Import CSV"
-        table
-          thead
-            tr
-              th width="45%" Title
-              th width="15%" Published?
-              th width="20%" Publish Date
-              th Views
-          tbody
-            - @posts.each do |post|
-              tr
-                td
-                  = post.title
-                td
-                  = fa_icon "check" if post.publish
-                td
-                  = post.published_date.strftime('%d %B %Y') if post.published_date
-                td
-                  = link_to post
-                    | #{fa_icon "eye"} View
-                td
-                  = link_to edit_post_path(post)
-                    | #{fa_icon "pencil"} Edit
-                td
-                  = link_to post, method: :delete, data: { confirm: 'Are you sure?' }
-                    | #{fa_icon "trash-o"} Delete
-        - if @posts.size == 0
-          center
-            h3
-              | You currently have no posts.
-              br
-              |  Fix this using the "New Post" button located above.
-    .row
-      center
-        = will_paginate @posts
+      .col-md-12
+        .row
+          = form_tag import_posts_path, multipart: true do
+            .col-md-3
+              = file_field_tag :file
+            = submit_tag "Import CSV", class: "main-cta-btn"
+        = link_to 'New Post', new_post_path, class: "scd-cta-btn"
+        center
+          h1 BLOG POSTS
+          - if @posts.size == 0
+            h6 There are currently no posts.
+              | Please check back later.
+          - else
+            table.highlight.bordered#post-table
+              thead
+                tr
+                  th width="45%" Title
+                  th width="10%" Published?
+                  th width="15%" Publish Date
+                  th Views
+                  th
+                  th
+              tbody
+                - @posts.each do |post|
+                  tr
+                    td
+                      = post.title
+                    td
+                      = fa_icon "check" if post.publish
+                    td
+                      = post.published_date.strftime('%d %B %Y') if post.published_date
+                    td
+                      = link_to show_post_path(post)
+                        | #{fa_icon "eye"} View
+                    td
+                      = link_to edit_post_path(post)
+                        | #{fa_icon "pencil"} Edit
+                    td
+                      = link_to post, method: :delete, data: { confirm: 'Are you sure?' }
+                        | #{fa_icon "trash-o"} Delete
+
+javascript:
+  $(document).ready(function(){
+    $('#post-table').DataTable();
+  });

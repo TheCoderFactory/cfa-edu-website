@@ -4,7 +4,7 @@ class PromoCodesController < ApplicationController
   layout "admin"
 
   def index
-    @promo_codes = PromoCode.all.paginate(:page => params[:page], :per_page => 5)
+    @promo_codes = PromoCode.all
   end
 
   def new

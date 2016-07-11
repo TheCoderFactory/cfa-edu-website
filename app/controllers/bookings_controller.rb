@@ -64,15 +64,16 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
-    @intake = @booking.intake
+    @intakes = Intake.all
   end
 
   def update
     @booking = Booking.find(params[:id])
-    @intake = @booking.intake
+    @intakes = Intake.all
     if @booking.update_attributes(booking_params)
       redirect_to @booking
     else
+      puts @booking.errors.inspect
       respond_with @booking
     end
   end

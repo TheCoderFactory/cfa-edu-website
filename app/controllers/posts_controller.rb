@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   respond_to :html
   before_action :authenticate_admin!, only: ["index", "new", "create", "edit", "update", "destroy"]
   before_action :set_post, only: ["show"]
-  before_action :post_published?, only: ["show"]
+  before_action :show_post?, only: ["show"]
   layout "admin", only: ["index", "new", "create", "edit", "update", "destroy"]
 
   def index
-    @posts = Post.all.reverse_chron_order.paginate(page: params[:page], per_page: 10)
+    @posts = Post.all.reverse_chron_order
   end
 
   def show
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to show_post_path(@post)
     else
       respond_with @post
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
-      redirect_to @post
+      redirect_to show_post_path(@post)
     else
       respond_with @post
     end
@@ -58,7 +58,7 @@ class PostsController < ApplicationController
     @post = Post.friendly.find(params[:id])
   end
 
-  def post_published?
-    redirect_to root_path unless @post.is_published?
+  def show_post?
+    redirect_to root_path unless @post.is_published? || admin_signed_in?
   end
 end

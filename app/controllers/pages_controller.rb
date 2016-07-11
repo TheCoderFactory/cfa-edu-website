@@ -16,6 +16,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def curriculum
+  end
+
   def faq
   end
 
@@ -26,6 +29,9 @@ class PagesController < ApplicationController
   end
 
   def partners
+  end
+
+  def payment_options
   end
 
   def privacy

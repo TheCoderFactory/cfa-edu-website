@@ -7,7 +7,7 @@ class Booking < ActiveRecord::Base
   validates :email, :format => EMAIL_REGEX
   validates :intake, :people_attending, :total_cost,
     :firstname, :lastname, :email, :phone, :age, :city, :country, presence: true
-  validate :valid_total_cost, :non_negative_total_cost
+  validate :valid_total_cost, :non_negative_total_cost, on: :create
 
   def valid_total_cost
     percent = 1
@@ -38,7 +38,7 @@ class Booking < ActiveRecord::Base
     payment.amount
   end
   def cost_in_dollars
-    total_cost/100
+    return "$#{total_cost/100}"
   end
   def course_location
     intake.location
