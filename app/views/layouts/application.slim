@@ -2,7 +2,6 @@
 doctype html
 html
   head
-    title Coder Factory Academy
     title #{content_for?(:title) ? yield(:title) : 'Board the Fast Track to an exciting career in tech @ Coder Factory Academy'}
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops.'}"
     meta property="og:url" content="#{content_for?(:url) ? yield(:url) : request.original_url}"
@@ -34,4 +33,3 @@ body
     .content
       = yield
     = render "layouts/footer"
-
