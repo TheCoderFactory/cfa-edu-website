@@ -12,12 +12,12 @@ html
     link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-    = javascript_include_tag 'booking'
-    = javascript_include_tag 'blog_sidebar'
-    = javascript_include_tag 'close-modal'
-    = javascript_include_tag 'main'
-    = javascript_include_tag 'modernizr'
+    = javascript_include_tag 'application', async: true, cache: true
+    = javascript_include_tag 'booking', async: true, cache: true
+    = javascript_include_tag 'blog_sidebar', async: true, cache: true
+    = javascript_include_tag 'close-modal', async: true, cache: true
+    = javascript_include_tag 'main', async: true, cache: true
+    = javascript_include_tag 'modernizr', async: true, cache: true
     = csrf_meta_tags
 
     = render 'layouts/favicon_links'
