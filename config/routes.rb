@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "fast-track/women-in-tech-scholarship", to: "fast_track#wit_scholarship_info"
   get "fast-track/women-in-tech-scholarship/apply", to: "fast_track#wit_scholarship_apply"
   get "fast-track/australian-innovation-scholarship", to: "fast_track#australian_innovation_scholarship"
+  get "fast-track/australian-innovation-scholarship/apply", to: "fast_track#australian_innovation_scholarship_apply"
 
   get "short-courses", to: "workshop#index"
 

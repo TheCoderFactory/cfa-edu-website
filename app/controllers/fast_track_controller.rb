@@ -11,6 +11,9 @@ class FastTrackController < ApplicationController
   def wit_scholarship_apply
   end
 
-  def autralian_innovation_scholarship
+  def australian_innovation_scholarship
+  end
+
+  def australian_innovation_scholarship_apply
   end
 end
