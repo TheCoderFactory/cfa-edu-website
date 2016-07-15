@@ -9,6 +9,11 @@ html
     meta property="og:title" content="#{content_for?(:title) ? yield(:title) : 'Coder Factory Academy'}"
     meta property="og:description" content="#{content_for(:description) ? yield(:description) : ''}"
     meta property="og:image" content="#{content_for(:image) ? yield(:image) : ''}"
+    meta name="twitter:card" content="summary_large_image"
+    meta name="twitter:site" content="@thecoderfactory"
+    meta name="twitter:title" content="#{content_for(:twitter_title) ? yield(:twitter_title) : 'Coder Factory Academy'}"
+    meta name="twitter:description" content="#{content_for(:twitter_description) ? yield(:twitter_description) : ''}"
+    meta name="twitter:image" content="#{content_for(:twitter_image) ? yield(:twitter_image) : ''}"
     link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag    'application', media: 'all'

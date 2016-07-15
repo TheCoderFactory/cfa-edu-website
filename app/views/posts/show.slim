@@ -3,6 +3,9 @@
 = content_for :title, @post.title
 = content_for :description, @post.lead
 = content_for :image, @post.image_url
+= content_for :twitter_title, @post.title
+= content_for :twitter_description, @post.lead
+= content_for :twitter_image, @post.image_url
 .show-blog-post
   .container
     .row
