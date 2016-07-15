@@ -9,8 +9,14 @@ class Post < ActiveRecord::Base
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
-      post = Post.create row.to_hash.except!("user_id", "id", "impressions_count")
-      post.image = row.to_hash["image"]
+      post_hash = row.to_hash
+      post = Post.find_by(id: post_hash["id"])
+      if post
+        post.update_attributes(post_hash)
+      else
+        post = Post.create(post_hash.except!("user_id", "id", "impressions_count"))
+        post.image = post_hash["image"]
+      end
       post.save
     end
   end
