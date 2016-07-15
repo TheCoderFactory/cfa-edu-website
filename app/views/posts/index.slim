@@ -7,6 +7,7 @@
             .col-md-3
               = file_field_tag :file
             = submit_tag "Import CSV", class: "main-cta-btn"
+            = link_to 'Export CSV', posts_path(format: "csv"), class: "main-cta-btn"
         = link_to 'New Post', new_post_path, class: "scd-cta-btn"
         center
           h1 BLOG POSTS

@@ -15,6 +15,15 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |post|
+        csv << post.attributes.values_at(*column_names)
+      end
+    end
+  end
+
   def self.current_articles
     published?.reverse_chron_order
   end

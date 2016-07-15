@@ -7,6 +7,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.reverse_chron_order
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @posts.to_csv}
+    end
   end
 
   def show
