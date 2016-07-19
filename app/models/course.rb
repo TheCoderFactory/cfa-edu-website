@@ -17,6 +17,10 @@ class Course < ActiveRecord::Base
     end
   end
 
+  def active_intakes
+    intakes.where(status: "Active")
+  end
+
   def available?
     return false if intakes.size == 0
     return true
