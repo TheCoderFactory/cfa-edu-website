@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
   resources :bookings, path: "admin/bookings"
-  post "booking", to: "bookings#create"
   resources :promo_codes, path: "admin/promo-codes"
   get "validate-promo-code", to: "promo_codes#validate_promo_code"
 
@@ -55,6 +54,9 @@ Rails.application.routes.draw do
   get "video-archive", to: "pages#video_archive"
 
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
+  post "booking", to: "bookings#create"
+  post "admin/bookings/:booking_id", to: "bookings#create"
+
 
   # routes to be redirected
   get "/information-sessions/new", to: redirect("/fast-track")

@@ -1,4 +1,4 @@
-= simple_form_for(@booking, html: {id: :payment_form}) do |f|
+= simple_form_for(@booking, controller: :bookings, method: :post, html: {id: :payment_form}) do |f|
   #section-1
     .row
       .col-md-9.col-md-offset-3.col-xs-12
