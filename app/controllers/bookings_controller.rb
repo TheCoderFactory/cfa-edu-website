@@ -51,7 +51,7 @@ class BookingsController < ApplicationController
       @payment = Payment.new(amount: @amount, paid: charge ? charge.paid : true , booking: @booking)
       if @payment.save
         @booking.update_attributes({payment: @payment})
-        # @booking.send_emails
+        @booking.send_emails
         redirect_to confirmation_path
       else
         @booking.errors.inspect
