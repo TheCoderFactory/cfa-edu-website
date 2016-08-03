@@ -2,6 +2,8 @@
   .container
     .row
       .col-md-12
+        = link_to "All Intakes", intakes_path, class: "main-cta-btn"
+        = link_to "Future Intakes", intakes_path(future: true), class: "main-cta-btn"
         = link_to "New Intake", new_intake_path, class: "scd-cta-btn"
         center
           h1 INTAKES
@@ -23,8 +25,8 @@
                 - @intakes.each do |intake|
                   tr
                     td #{intake.course_name}
-                    td #{intake.start_date + " - " + intake.start_time}
-                    td #{intake.finish_date + " - " + intake.finish_time}
+                    td #{intake.start.strftime("%l:%M %b %e, %y")}
+                    td #{intake.finish.strftime("%l:%M %b %e, %y")}
                     td #{intake.location}
                     td #{intake.days}
                     td
@@ -42,5 +44,6 @@
 
 javascript:
   $(document).ready(function(){
+    $.fn.dataTable.moment( 'HH:mm MMM D, YY' );
     $('#intake-table').DataTable();
   });

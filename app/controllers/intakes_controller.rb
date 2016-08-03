@@ -5,6 +5,7 @@ class IntakesController < ApplicationController
 
   def index
     @intakes = Intake.all
+    @intakes = Intake.where("start >= ?", DateTime.now) if params[:future]
   end
 
   def show
