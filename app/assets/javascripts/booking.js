@@ -10,6 +10,10 @@ $(document).ready(function() {
   $('#submit-btn').hide();
   $('#next-btn').show();
   $('#validate-promo-btn').hide();
+  $("#booking_intake_id").on("change",function() {
+    var intake_id = this.value;
+    getIntakeDetails(intake_id);
+  });
 });
 function nextSection() {
   $('#section-'+currentSection).hide();
@@ -88,6 +92,26 @@ function validatePromoCode(){
         currentDiscount = 0;
         $('#course-price').text(originalPrice);
         $('#promo-code-status').text("Invalid.");
+      }
+    },
+    dataType: 'json'
+  });
+}
+function getIntakeDetails(id){
+  $.ajax({
+    type: "GET",
+    url: "/intake-details",
+    data: {intake_id: id},
+    success: function(data){
+      if(data.success){
+        console.log(data)
+        $('#promo-code-status').text("Valid");
+        $('#course-start-date').text(data.start_date);
+        $('#course-finish-date').text(data.finish_date);
+        $('#course-start-time').text(data.start_time);
+        $('#course-finish-time').text(data.finish_time);
+      } else {
+        console.log("Something went wrong. Please contact website administration with error code 'ERR727'");
       }
     },
     dataType: 'json'

@@ -50,8 +50,21 @@ class IntakesController < ApplicationController
     redirect_to intakes_path
   end
 
+  def intake_details
+    @intake = Intake.find(intake_id_param[:intake_id])
+    if @intake
+      render json: { success: true, exists: true, start_date: @intake.start_date, finish_date: @intake.finish_date, start_time: @intake.start_time, finish_time: @intake.finish_time }
+    else
+      render json: { success: false, exists: false }
+    end
+  end
+
   private
   def intake_params
     params.require(:intake).permit(:course_id, :start, :finish, :location, :teacher_name, :teacher_image, :days, :status)
+  end
+
+  def intake_id_param
+    params.permit(:intake_id)
   end
 end

@@ -47,7 +47,17 @@
         p <b>Email:</b><br><span id="email"></span>
         p <b>Phone:</b><br><span id="phone"></span>
         p <b>City:</b><br><span id="city"></span>
-        p <b>Country:</b><br><span id="country"></span
+        p <b>Country:</b><br><span id="country"></span>
+    .row
+      .col-md-6.col-md-offset-3.col-xs-12
+        h6 COURSE DETAILS
+        p <b>Course Name:</b><br><span id="course-name">#{@course.name}</span>
+      .col-md-3.col-md-offset-3.col-xs-12
+        p <b>Start Date:</b><br><span id="course-start-date">#{@course.active_intakes.first.start_date}</span>
+        p <b>Finish Date:</b><br><span id="course-finish-date">#{@course.active_intakes.first.finish_date}</span>
+      .col-md-3.col-xs-12
+        p <b>Start Time:</b><br><span id="course-start-time">#{@course.active_intakes.first.start_time}</span>
+        p <b>Finish Time:</b><br><span id="course-finish-time">#{@course.active_intakes.first.finish_time}</span>
     - if @course.price > 0.0
       hr
       .row
