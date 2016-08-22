@@ -48,8 +48,8 @@ function nextSection() {
   $('#total-price').text(total_price);
   $('#gst').text(gst);
   $('#total-gst-price').text(total_gst_price);
-  var intake_id = $("#booking_intake_id").val();
-  getIntakeDetails(intake_id);
+  // var intake_id = $("#booking_intake_id").val();
+  // getIntakeDetails(intake_id);
   showButtons();
 }
 function prevSection() {
