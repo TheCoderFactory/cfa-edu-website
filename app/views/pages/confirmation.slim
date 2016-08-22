@@ -1,3 +1,5 @@
+- content_for :conversion_code do
+  = render "/layouts/fb_conversion_code.html.erb" if @type == "fast track application"
 .confirmation-page
   center
     h1 THANK YOU FOR YOUR #{@type.upcase}.
