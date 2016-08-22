@@ -1,6 +1,6 @@
 class IntakesController < ApplicationController
   respond_to :html
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, except: ["intake_details"]
   layout "admin"
 
   def index
