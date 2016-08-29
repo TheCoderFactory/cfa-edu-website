@@ -194,7 +194,7 @@ a, a:hover {
           font-family: sans-serif;" class="paragraph">
             <b style="color: #333333;">Course Details</b><br/>
             <p>Course: <%= @booking.course_name %></p>
-            <p>Location: <%= @booking.course_location %></p>
+            <p>Location: <a href="https://www.coderfactoryacademy.edu.au/contact"><%= @booking.course_location %></a></p>
             <p>Dates: <%= @booking.days %>: <%= @booking.start_date %>
                 <% unless @booking.start_date == @booking.finish_date %>
                   - <%= @booking.finish_date %>
