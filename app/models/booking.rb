@@ -61,4 +61,13 @@ class Booking < ActiveRecord::Base
   def send_emails
     SendBookingEmailJob.perform_async(self.id)
   end
+
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |booking|
+        csv << booking.attributes.values_at(*column_names)
+      end
+    end
+  end
 end

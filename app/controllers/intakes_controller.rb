@@ -11,6 +11,11 @@ class IntakesController < ApplicationController
   def show
     @intake = Intake.find(params[:id])
     @bookings = @intake.bookings
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @bookings.to_csv}
+    end
   end
 
   def new

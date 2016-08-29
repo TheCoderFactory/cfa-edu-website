@@ -14,12 +14,13 @@
               thead
                 tr
                   th width="20%" Course
-                  th width="15%" Start
-                  th width="15%" Finish
+                  th width="10%" Start
+                  th width="10%" Finish
                   th width="10%" Location
                   th width="10%" Days
-                  th width="10%" Views
-                  th width="10%"
+                  th width="7%" Views
+                  th width="7%"
+                  th width="7%"
                   th width="10%"
               tbody
                 - @intakes.each do |intake|
@@ -33,6 +34,10 @@
                       = link_to intake_path(intake)
                         = fa_icon "eye", class: "fa-1x"
                         |  Show
+                    td
+                      = link_to intake_path(intake, format: "csv")
+                        = fa_icon "pencil-square-o"
+                        |  CSV
                     td
                       = link_to edit_intake_path(intake)
                         = fa_icon "pencil", class: "fa-1x"
