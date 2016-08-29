@@ -48,6 +48,8 @@ function nextSection() {
   $('#total-price').text(total_price);
   $('#gst').text(gst);
   $('#total-gst-price').text(total_gst_price);
+  var intake_id = $("#booking_intake_id").val();
+  getIntakeDetails(intake_id);
   showButtons();
 }
 function prevSection() {
@@ -104,7 +106,6 @@ function getIntakeDetails(id){
     data: {intake_id: id},
     success: function(data){
       if(data.success){
-        console.log(data)
         $('#promo-code-status').text("Valid");
         $('#course-start-date').text(data.start_date);
         $('#course-finish-date').text(data.finish_date);
