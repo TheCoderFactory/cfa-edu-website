@@ -27,7 +27,6 @@ class FastTrackPaymentsController < ApplicationController
       @fast_track_payment.amount = @amount
       @fast_track_payment.paid = @paid
       if @fast_track_payment.save
-        puts "here"
         if !@amount.nil?
           customer = Stripe::Customer.create(
             :email => fast_track_payment_params[:email],
@@ -53,7 +52,6 @@ class FastTrackPaymentsController < ApplicationController
           render :new
         end
       else
-        puts "here"
         puts @fast_track_payment.errors.inspect
         respond_with @fast_track_payment
       end
