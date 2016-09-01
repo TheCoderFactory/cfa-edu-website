@@ -24,6 +24,8 @@
           h6 Payment Details
           .border-sec
           span.payment-errors
+          - flash.each do |key, value|
+            = content_tag :div, value, class: "alert alert-#{key}", role: "alert"
           .col-md-12
             input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
         .row

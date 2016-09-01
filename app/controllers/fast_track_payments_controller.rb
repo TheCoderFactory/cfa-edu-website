@@ -19,42 +19,47 @@ class FastTrackPaymentsController < ApplicationController
   end
 
   def create
-    @payment_type = fast_track_payment_params[:pay_type]
-
-    @amount = payment_amount @payment_type
-
-    if !@amount.nil?
-      customer = Stripe::Customer.create(
-        :email => fast_track_payment_params[:email],
-        :source  => params[:stripeToken]
-      )
-      puts fast_track_payment_params[:student_id]
-      customer.metadata = {
-        student_id: fast_track_payment_params[:student_id],
-        payment_type: @payment_type
-      }
-      customer.save
-      charge = Stripe::Charge.create(
-        :customer => customer,
-        :amount => @amount,
-        :description => 'Rails Stripe customer',
-        :currency => 'aud'
-      )
-      @paid = charge ? charge.paid : false
+      @payment_type = fast_track_payment_params[:pay_type]
+      @student_id = fast_track_payment_params[:student_id]
+      @amount = payment_amount @payment_type
       @fast_track_payment = FastTrackPayment.create(fast_track_payment_params)
+      @paid = false
       @fast_track_payment.amount = @amount
       @fast_track_payment.paid = @paid
       if @fast_track_payment.save
-        redirect_to confirmation_path(type: "fast track invoice payment")
+        puts "here"
+        if !@amount.nil?
+          customer = Stripe::Customer.create(
+            :email => fast_track_payment_params[:email],
+            :source  => params[:stripeToken]
+          )
+          puts fast_track_payment_params[:student_id]
+          customer.metadata = {
+            student_id: fast_track_payment_params[:student_id],
+            payment_type: @payment_type
+          }
+          customer.save
+          charge = Stripe::Charge.create(
+            :customer => customer,
+            :amount => @amount,
+            :description => 'Rails Stripe customer',
+            :currency => 'aud'
+          )
+          @paid = charge ? charge.paid : false
+          @fast_track_payment.paid = @paid
+          @fast_track_payment.save
+          redirect_to confirmation_path(type: "fast track invoice payment")
+        else
+          render :new
+        end
       else
+        puts "here"
+        puts @fast_track_payment.errors.inspect
         respond_with @fast_track_payment
       end
-    else
-      render :new
-    end
   rescue Stripe::CardError => e
-    flash[:error] = e.message
-    @booking.delete
+    flash[:danger] = e.message
+    @fast_track_payment.delete
     render :new
   end
 
