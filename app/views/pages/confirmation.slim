@@ -5,6 +5,9 @@
   center
     h1 THANK YOU FOR YOUR #{@type.upcase}.
     .border-orange
-    h3 AN EMAIL HAS BEEN SENT TO THE EMAIL YOU HAVE PROVIDED.
-    .border-blue
-    h3 WE WILL BE IN TOUCH SHORTLY.
+    - unless @type.upcase == "FAST TRACK INVOICE PAYMENT"
+      h3 AN EMAIL HAS BEEN SENT TO THE EMAIL YOU HAVE PROVIDED.
+      .border-blue
+      h3 WE WILL BE IN TOUCH SHORTLY.
+    - else
+      h3 A RECEIPT WILL BE SENT TO THE EMAIL YOU SPECIFIED.
