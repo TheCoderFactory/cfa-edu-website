@@ -1,0 +1,63 @@
+.new-fast-track-payment {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1, h6 {
+    color: #000;
+  }
+  .border {
+    border-color: #EC5037;
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .border-sec {
+    border-color: #38A9C7;
+    border-width: 2px 0px 0px 0px;
+    border-style: solid;
+    width: 25%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .stripe-input {
+    margin-top: 10px !important;
+  }
+  .scd-cta-btn, .main-cta-btn {
+    padding: 5px 10px 5px 10px !important;
+  }
+  .scd-cta-btn:hover, .main-cta-btn:hover {
+    padding: 3px 8px 3px 8px !important;
+  }
+  .main-cta-btn {
+    height: auto;
+    margin-top: 0px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  input[type="file"],
+  textarea,
+  select {
+    margin-top: 0px;
+  }
+  #payment_form {
+    padding: 20px;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #EEE;
+    border-radius: 5px;
+  }
+}

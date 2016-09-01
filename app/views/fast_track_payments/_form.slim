@@ -1,0 +1,58 @@
+= simple_form_for(@fast_track_payment, url: ftpay_path, html: {id: :payment_form}) do |f|
+  = f.hidden_field(:pay_type, value: @payment_type)
+  = f.hidden_field(:student_id, value: @student_id)
+  .row
+    .col-md-4.col-md-offset-4
+      .row
+        h1 style="color: black" Fast Track Payment
+        .border
+        h6.pull-left style="color: black" Amount: #{number_to_currency @amount.to_f/100}
+        h6.pull-right style="color: black" Student Id: #{@student_id}
+      br
+      .row
+        h6 Personal Details
+        .border-sec
+        .form-group.input-field.col-md-6
+          = f.input :first_name, label: false, placeholder: "First Name*"
+        .form-group.input-field.col-md-6
+          = f.input :last_name, label: false, placeholder: "Last Name*"
+        .form-group.input-field.col-md-12
+          = f.input :email, label: false, placeholder: "Email*"
+      - unless admin_signed_in?
+        br
+        .row
+          h6 Payment Details
+          .border-sec
+          span.payment-errors
+          .col-md-12
+            input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
+        .row
+          .col-md-3.col-xs-4
+            input.stripe-input data-stripe="exp_month" size="2" type="text" placeholder="MM"
+          .col-md-3.col-xs-4
+            input.stripe-input data-stripe="exp_year" size="2" type="text" placeholder="YYYY"
+          .col-md-6.col-xs-4
+            input.stripe-input data-stripe="cvc" size="4" type="text" placeholder="CVC"
+    .row
+      .col-md-4.col-md-offset-4.col-xs-12
+        br
+        = f.button :submit, "PAY NOW", class: "main-cta-btn"
+
+- unless admin_signed_in?
+  script type="text/javascript" src="https://js.stripe.com/v2/"
+  javascript:
+    Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
+
+    $(function() {
+      var $form = $('#payment_form');
+      $form.submit(function(event) {
+        // Disable the submit button to prevent repeated clicks:
+        $form.find('.submit').prop('disabled', true);
+
+        // Request a token from Stripe:
+        Stripe.card.createToken($form, stripeResponseHandler);
+
+        // Prevent the form from being submitted:
+        return false;
+      });
+    });
