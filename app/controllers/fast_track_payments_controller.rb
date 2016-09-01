@@ -7,6 +7,10 @@ class FastTrackPaymentsController < ApplicationController
     @fast_track_payments = FastTrackPayment.all
   end
 
+  def show
+    @fast_track_payment = FastTrackPayment.find(params[:id])
+  end
+
   def new
     @fast_track_payment = FastTrackPayment.new
     @payment_type = params[:pay_type]
