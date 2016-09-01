@@ -19,42 +19,27 @@ class FastTrackPaymentsController < ApplicationController
   end
 
   def create
-      @payment_type = fast_track_payment_params[:pay_type]
-      @student_id = fast_track_payment_params[:student_id]
-      @amount = payment_amount @payment_type
-      @fast_track_payment = FastTrackPayment.create(fast_track_payment_params)
-      @paid = false
-      @fast_track_payment.amount = @amount
-      @fast_track_payment.paid = @paid
-      if @fast_track_payment.save
-        if !@amount.nil?
-          customer = Stripe::Customer.create(
-            :email => fast_track_payment_params[:email],
-            :source  => params[:stripeToken]
-          )
-          puts fast_track_payment_params[:student_id]
-          customer.metadata = {
-            student_id: fast_track_payment_params[:student_id],
-            payment_type: @payment_type
-          }
-          customer.save
-          charge = Stripe::Charge.create(
-            :customer => customer,
-            :amount => @amount,
-            :description => 'Rails Stripe customer',
-            :currency => 'aud'
-          )
-          @paid = charge ? charge.paid : false
-          @fast_track_payment.paid = @paid
-          @fast_track_payment.save
-          redirect_to confirmation_path(type: "fast track invoice payment")
-        else
-          render :new
-        end
+    @payment_type = fast_track_payment_params[:pay_type]
+    @student_id = fast_track_payment_params[:student_id]
+    @amount = payment_amount @payment_type
+    @fast_track_payment = FastTrackPayment.create(fast_track_payment_params)
+    @fast_track_payment.update_attributes({amount: @amount, paid: false})
+    if @fast_track_payment.save
+      if !@amount.nil?
+        customer = Stripe::Customer.create(
+          :email => fast_track_payment_params[:email],
+          :metadata => {student_id: @student_id, payment_type: @payment_type},
+          :source  => params[:stripeToken]
+        )
+        charge = create_charge customer, @amount
+        @fast_track_payment.update_attribute(:paid, charge.paid)
+        redirect_to confirmation_path(type: "fast track invoice payment")
       else
-        puts @fast_track_payment.errors.inspect
-        respond_with @fast_track_payment
+        render :new
       end
+    else
+      respond_with @fast_track_payment
+    end
   rescue Stripe::CardError => e
     flash[:danger] = e.message
     @fast_track_payment.delete
@@ -99,5 +84,14 @@ class FastTrackPaymentsController < ApplicationController
     else
       return nil
     end
+  end
+  def create_charge customer, amount
+    charge = Stripe::Charge.create(
+      :customer => customer,
+      :amount => amount,
+      :description => 'Rails Stripe customer',
+      :currency => 'aud'
+    )
+    return charge
   end
 end
