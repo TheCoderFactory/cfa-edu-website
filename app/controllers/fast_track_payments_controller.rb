@@ -78,9 +78,11 @@ class FastTrackPaymentsController < ApplicationController
     when "domestic"
       return 292500
     when "international"
-      return 323850
-    when "wit"
+      return 323700
+    when "wit-dom"
       return 98500
+    when "wit-int"
+      return 124750
     else
       return nil
     end
