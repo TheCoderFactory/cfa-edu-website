@@ -1,0 +1,41 @@
+.promo-codes-index
+  .container
+    .row
+      .col-md-12
+        center
+          h2 FAST TRACK PAYMENTS
+          - if @fast_track_payments.size == 0
+            h3 There are currently no payments.
+            | Please check back later.
+          - else
+            table.highlight.bordered#fast-track-payment-table
+              thead
+                tr
+                  th width="15%" Name
+                  th width="15%" Student ID
+                  th width="15%" Type
+                  th width="15%" Amount
+                  th width="15%" Paid
+                  th Views
+                  th
+              tbody
+                - @fast_track_payments.each do |ftp|
+                  tr
+                    td #{ftp.first_name + " " + ftp.last_name}
+                    td #{ftp.student_id}
+                    td #{ftp.pay_type}
+                    td #{number_to_currency ftp.amount/100}
+                    td #{ftp.paid}
+                    td
+                      = link_to edit_fast_track_payment_path(ftp)
+                        = fa_icon "pencil", class: "fa-1x"
+                        |  Edit
+                    td
+                      = link_to ftp, data: { confirm: "Are you sure?" }, method: :delete
+                        = fa_icon "trash", class: "fa-1x"
+                        |  Delete
+
+javascript:
+  $(document).ready(function(){
+    $('#fast-track-payment-table').DataTable();
+  });

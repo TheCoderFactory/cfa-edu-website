@@ -1,0 +1,26 @@
+.fast-track-payment-details
+  .container
+    .row
+      center
+        h1 FAST TRACK INVOICE PAYMENT
+        br
+        .col-xs-6
+          p
+            b Name:
+            |  #{@fast_track_payment.first_name} #{@fast_track_payment.last_name}
+          p
+            b Email:
+            |  #{@fast_track_payment.email}
+          p
+            b Student ID:
+            |  #{@fast_track_payment.student_id}
+        .col-xs-6
+          p
+            b Payment Type:
+            |  #{@fast_track_payment.pay_type}
+          p
+            b Total Cost:
+            |  #{number_to_currency @fast_track_payment.amount.to_f/100}
+          p
+            b Paid?
+            |  #{@fast_track_payment.paid?}

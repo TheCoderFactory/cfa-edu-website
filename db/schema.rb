@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160627204831) do
+ActiveRecord::Schema.define(version: 20160830231456) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20160627204831) do
     t.integer  "promo_code_id"
     t.integer  "people_attending"
     t.decimal  "total_cost"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "firstname"
     t.string   "lastname"
     t.string   "email"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20160627204831) do
     t.string   "age"
     t.string   "city"
     t.string   "country"
+    t.string   "business_name",    default: "N/A"
+    t.string   "business_address", default: "N/A"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -74,6 +76,18 @@ ActiveRecord::Schema.define(version: 20160627204831) do
     t.datetime "updated_at",   null: false
     t.string   "course_image"
     t.boolean  "active"
+  end
+
+  create_table "fast_track_payments", force: :cascade do |t|
+    t.decimal  "amount"
+    t.boolean  "paid",       default: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "pay_type"
+    t.string   "student_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -128,6 +142,17 @@ ActiveRecord::Schema.define(version: 20160627204831) do
     t.string   "code"
     t.integer  "percent"
     t.string   "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string   "name"
+    t.string   "prev_role"
+    t.string   "image"
+    t.string   "quote"
+    t.string   "vid_link"
+    t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

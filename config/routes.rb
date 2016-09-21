@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   resources :bookings, path: "admin/bookings"
   resources :promo_codes, path: "admin/promo-codes"
   get "validate-promo-code", to: "promo_codes#validate_promo_code"
+  resources :fast_track_payments, path: "admin/fast-track-payments", :except => [:new, :create]
+  get "ftpay/:pay_type", to: "fast_track_payments#new"
+  post "ftpay", to: "fast_track_payments#create"
 
   get "admin/dashboard", to: "admin_dashboard#index"
   get "admin", to: "admin_dashboard#index"
