@@ -22,7 +22,7 @@ class Course < ActiveRecord::Base
   end
 
   def available?
-    return false if intakes.size == 0
+    return false if active_intakes.size == 0
     return true
   end
 
