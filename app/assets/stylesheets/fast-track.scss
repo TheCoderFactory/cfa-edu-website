@@ -380,6 +380,28 @@
   .hs_hs_persona > .input > select {
     margin-top: 5px;
   }
+  .hs_country_of_passport > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_country_of_passport > .input > select {
+    margin-top: 5px;
+  }
+  .hs_your_passport_country_requires_you_work_with_an_immigration_agent_to_enrol_in_this_course_ > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+  .hs_your_passport_country_requires_you_work_with_an_immigration_agent_to_enrol_in_this_course_ > .input > select {
+    margin-top: 5px;
+  }
   .hs_campus_preference > label {
     display: inline-block;
     text-align: left;
