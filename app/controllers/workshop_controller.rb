@@ -4,6 +4,6 @@ class WorkshopController < ApplicationController
     @course2 = Course.find_by(name: "Web App Builder")
     @course3 = Course.find_by(name: "Coding Kickstarter")
     @courses = Course.where(course_type: "Workshop")
-    @intakes = Intake.all.future_intakes.chron_order.first(4)
+    @intakes = Intake.all.future_intakes.active_intakes.chron_order.first(4)
   end
 end
