@@ -36,6 +36,7 @@ gem 'rack-ssl-enforcer'
 gem 'jquery-ui-rails'
 gem 'traceroute'
 gem 'puma'
+gem 'chartkick'
 
 group :development do
   gem 'quiet_assets'

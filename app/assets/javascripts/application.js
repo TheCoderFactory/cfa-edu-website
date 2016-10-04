@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require Chart.bundle
+//= require chartkick
 //= require moment
 //= require bootstrap
 //= require bootstrap-datetimepicker

@@ -2,6 +2,7 @@ class Booking < ActiveRecord::Base
   belongs_to :intake
   belongs_to :promo_code
   has_one :payment
+  attr_accessor :course_name
 
   EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, :format => EMAIL_REGEX
@@ -30,6 +31,9 @@ class Booking < ActiveRecord::Base
 
   def paid?
     payment.paid
+  end
+  def self.course_name
+    intake.course_name
   end
   def course_name
     intake.course_name
