@@ -79,6 +79,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    chartkick (2.1.1)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     ckeditor (4.1.6)
@@ -326,6 +327,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.1.0)
   carrierwave
+  chartkick
   ckeditor
   cloudinary
   codeclimate-test-reporter
@@ -371,4 +373,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
