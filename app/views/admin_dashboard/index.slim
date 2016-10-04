@@ -1,1 +1,24 @@
-p dashboard
+.dashboard
+  .row
+    .col-md-10.col-md-offset-1
+      .row
+        .col-md-6
+          br
+          table.table.table-bordered
+            thead
+              tr
+                th width="50%"
+                  = Date.today.strftime('%B')
+                th width="50%"
+                  = (Date.today + 1.month).strftime('%B')
+            tbody
+              - @upcoming_intakes.each_with_index do |intakes|
+                tr
+                  td = intakes[0]
+                  td = intakes[1]
+        .col-md-6
+          = pie_chart @pie_bookings
+      br
+      .row
+        .col-md-12
+          = line_chart @bookings.group(:created_at).count
