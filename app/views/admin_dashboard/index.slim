@@ -16,8 +16,16 @@
             tbody
               - @upcoming_intakes.each_with_index do |intakes|
                 tr
-                  td = intakes[0]
-                  td = intakes[1]
+                  td
+                    - if intakes[0]
+                      | #{intakes[0].location+', '+intakes[0].course_name}<br>
+                      | #{intakes[0].start_date}<br>
+                      | Bookings: #{intakes[0].bookings.count}
+                  td
+                    - if intakes[1]
+                      | #{intakes[1].location+', '+intakes[1].course_name}<br>
+                      | #{intakes[1].start_date}<br>
+                      | Bookings: #{intakes[1].bookings.count}
         .col-md-6
           .row
             .col-md-6

@@ -5,9 +5,8 @@ class AdminDashboardController < ApplicationController
 
   def index
     this_month = Intake.all.order(start: :asc).reject{ |i| i.start.month != DateTime.now.month }
-    this_month.map! {|i| i.course_name+','+i.start_date }
+    this_month = Intake.first(4)
     next_month = Intake.all.order(start: :asc).reject{ |i| i.start.month != (DateTime.now + 1.month).month }
-    next_month.map! {|i| i.course_name+','+i.start_date }
     @upcoming_intakes = this_month.zip(next_month)
     bookings = Booking.where("created_at >= ?", Date.today-30.days)
     @booking_count = Hash[(30.days.ago.to_date..Date.today).map{ |date| date.strftime("%b %d %Y") }.collect{|v| [v, 0]}]
