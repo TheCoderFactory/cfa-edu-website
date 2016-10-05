@@ -1,7 +1,7 @@
 = simple_form_for(@booking, html: {id: :payment_form}) do |f|
   .row
     .form-group.input-field.col-xs-9
-      = f.association :intake, collection: @intakes, selected: @booking.intake, label_method: lambda { |intake| "#{intake.course_name} - #{intake.start_date}, #{intake.location}"}
+      = f.association :intake, collection: @intakes, selected: @booking.intake_id, label_method: lambda { |intake| "#{intake.course_name} - #{intake.start_date}, #{intake.location}"}
     .form-group.input-field.col-xs-3
       = f.input :people_attending, collection: [1, 2, 3], selected: @booking.people_attending, label: "Amount Attending"
   .row
