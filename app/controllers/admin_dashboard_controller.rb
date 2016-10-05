@@ -11,11 +11,7 @@ class AdminDashboardController < ApplicationController
     @upcoming_intakes = this_month.zip(next_month)
     bookings = Booking.where("created_at >= ?", Date.today-30.days)
     @booking_count = Hash[(30.days.ago.to_date..Date.today).map{ |date| date.strftime("%b %d %Y") }.collect{|v| [v, 0]}]
-    puts "______________________"
-    puts @booking_count.inspect
-    puts bookings.map{|b| b.start_date}.inspect
-    ptus "______________________"
-    bookings.each {|b| @booking_count[b.start_date]+=1}
+    bookings.each {|b| @booking_count[b.created_at.strftime("%b %d %Y")]+=1}
     @pie_bookings = bookings.inject(Hash.new(0)) { |hash, i|  hash[i.course_name]+=1; hash }
   end
 end
