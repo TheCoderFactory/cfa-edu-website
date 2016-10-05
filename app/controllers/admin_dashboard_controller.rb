@@ -14,7 +14,7 @@ class AdminDashboardController < ApplicationController
     bookings.each {|b| @booking_count[b.created_at.strftime("%b %d %Y")]+=1}
     @booking_count = @booking_count.inject([]) {|arr, v| arr << v}
     puts @booking_count.inspect
-    @syd_pie_bookings = bookings.inject(Hash.new(0)) { |hash, i|  hash[i.course_name]+=1 if i.location.inlcude?("sydeny"); hash }
-    @mel_pie_bookings = bookings.inject(Hash.new(0)) { |hash, i|  hash[i.course_name]+=1 if i.location.inlcude?("melbourne"); hash }
+    @syd_pie_bookings = bookings.inject(Hash.new(0)) { |hash, i|  hash[i.course_name]+=1 if i.course_location.inlcude?("Sydeny"); hash }
+    @mel_pie_bookings = bookings.inject(Hash.new(0)) { |hash, i|  hash[i.course_name]+=1 if i.course_location.inlcude?("Melbourne"); hash }
   end
 end
