@@ -33,4 +33,5 @@
         .col-md-12
           h3 Bookings: Past Month
           br
-          = column_chart @booking_count
+          = column_chart @booking_hash
+          p Total Bookings: #{@booking_count}
