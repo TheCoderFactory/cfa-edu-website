@@ -31,6 +31,14 @@
     color: white;
     max-width: 33%;
   }
+  .hero-card-link {
+    color: #38A9C7;
+  }
+  .hero-card:hover {
+    .hero-card-link {
+      color: #FFF;
+    }
+  }
   @media only screen and (max-width: 767px) {
     .hero-card {
       max-width: 100%;

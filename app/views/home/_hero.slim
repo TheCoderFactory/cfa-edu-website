@@ -10,27 +10,30 @@
       / a.hero-video-btn target="_blank" href="https://www.youtube.com/watch?v=DtyaIrnJrqQ" #{fa_icon 'play', class: 'fa-1x'} Watch Video
       a.hero-video-btn data-toggle="modal" data-target="#myModal" #{fa_icon 'play', class: 'fa-1x'} Watch Video
     .hero-cards
-      .hero-card
+      a.hero-card href="/fast-track"
         = fa_icon "globe", class: "fa-5x pull-left"
         p
           span.hero-card-title I WANT TO WORK FROM ANYWHERE
           br
           span
-            a href="/fast-track" FIND OUT HOW
-      .hero-card
+            br
+            p.hero-card-link FIND OUT HOW
+      a.hero-card href="/fast-track"
         = fa_icon "building", class: "fa-5x pull-left"
         p
           span.hero-card-title I WANT TO WORK FOR THE TOP TECH COMPANIES
           br
           span
-            a href="/fast-track" FIND OUT HOW
-      .hero-card
+            br
+            p.hero-card-link FIND OUT HOW
+      a.hero-card href="/fast-track"
         = fa_icon "paper-plane", class: "fa-5x pull-left"
         p
           span.hero-card-title I WANT TO BUILD MY OWN STARTUP
           br
           span
-            a href="/fast-track" FIND OUT HOW
+            br
+            p.hero-card-link FIND OUT HOW
 
   #myModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
     .modal-dialog role="document" 
