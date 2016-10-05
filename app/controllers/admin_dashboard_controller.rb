@@ -5,7 +5,6 @@ class AdminDashboardController < ApplicationController
 
   def index
     this_month = Intake.all.order(start: :asc).reject{ |i| i.start.month != DateTime.now.month }
-    this_month = Intake.first(4)
     next_month = Intake.all.order(start: :asc).reject{ |i| i.start.month != (DateTime.now + 1.month).month }
     @upcoming_intakes = this_month.zip(next_month)
     bookings = Booking.where("created_at >= ?", Date.today-30.days)
