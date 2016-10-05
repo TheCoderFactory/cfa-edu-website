@@ -12,7 +12,7 @@ class AdminDashboardController < ApplicationController
     bookings = Booking.where("created_at >= ?", Date.today-30.days)
     @booking_count = Hash[(30.days.ago.to_date..Date.today).map{ |date| date.strftime("%b %d %Y") }.collect{|v| [v, 0]}]
     bookings.each {|b| @booking_count[b.created_at.strftime("%b %d %Y")]+=1}
-    puts @booking_count.inspect
+    @booking_count = @booking_count.inject([]) {|arr, v| arr << v}
     @pie_bookings = bookings.inject(Hash.new(0)) { |hash, i|  hash[i.course_name]+=1; hash }
   end
 end
