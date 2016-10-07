@@ -1,0 +1,52 @@
+.row
+  .col-md-8.col-md-offset-3
+      h6 Payment Details
+      p <b>Course Price:</b> #{number_to_currency(@booking.intake.course.price)}
+      p <b>GST (+10%):</b> +#{number_to_currency(@gst)}
+      p <b>Promo code #{"(#{@promo_code ? @promo_code.code : "N/A"})"}:</b> -#{number_to_currency(@discount)}
+      p <b>Total cost:</b> =#{number_to_currency(@amount)}
+  - if @amount > 0
+    .col-md-8.col-md-offset-3.col-xs-12
+      span.payment-errors
+      .row
+        .form-group.col-md-7.col-xs-12
+          input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
+      .row
+        .form-group.col-md-2.exp-col-1.col-xs-4
+          input.stripe-input data-stripe="exp_month" size="2" type="text" placeholder="MM"
+        .form-group.col-md-2.exp-col-2.col-xs-4
+          input.stripe-input data-stripe="exp_year" size="2" type="text" placeholder="YYYY"
+        .form-group.col-md-3.cvc-col.col-xs-4
+          input.stripe-input data-stripe="cvc" size="4" type="text" placeholder="CVC"
+    script type="text/javascript" src="https://js.stripe.com/v2/"
+    javascript:
+      Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
+
+      $(function() {
+        var $form = $('#payment_form');
+        var submitActor = null;
+        var $submitActors = $form.find('input[type=submit]');
+        $form.submit(function(event) {
+          if (null === submitActor) {
+            // If no actor is explicitly clicked, the browser will
+            // automatically choose the first in source-order
+            // so we do the same here
+            submitActor = $submitActors[0];
+          }
+          // Disable the submit button to prevent repeated clicks:
+          $form.find('.submit').prop('disabled', true);
+          console.log(submitActor.name);
+
+          if (submitActor.name === "pay_button") {
+            // Request a token from Stripe:
+            Stripe.card.createToken($form, stripeResponseHandler);
+
+            // Prevent the form from being submitted:
+            return false;
+          }
+
+        });
+        $submitActors.click(function(event) {
+          submitActor = this;
+        });
+      });
