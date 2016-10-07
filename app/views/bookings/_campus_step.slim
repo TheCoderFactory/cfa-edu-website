@@ -1,0 +1,24 @@
+.row
+  .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
+    = label_tag "Choose your campus"
+    = select_tag :campus, options_for_select(["Sydney", "Melbourne"], selected: session[:campus])
+.row
+  .syd-intakes
+    - if @syd_intakes.size > 0
+      .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
+        = label_tag "Sydney Intakes"
+        = select_tag :syd_intake, options_for_select(@syd_intakes.collect{|i| ["#{i.days}, #{i.start_date} (#{i.start_time} - #{i.finish_time}), End: #{i.finish_date}", i.id]}, (@booking.intake.id if @booking.intake))
+    - else
+      center
+        h6 There are currently no intakes for Sydney.
+        br
+.row
+  .mel-intakes
+    - if @mel_intakes.size > 0
+      .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
+        = label_tag "Melbournes Intakes"
+        = select_tag :mel_intake, options_for_select(@mel_intakes.collect{|i| ["#{i.days}, #{i.start_date} (#{i.start_time} - #{i.finish_time}), End: #{i.finish_date}", i.id]}, (@booking.intake.id if @booking.intake))
+    - else
+      center
+        h6 There are currently no intakes for Melbourne.
+        br
