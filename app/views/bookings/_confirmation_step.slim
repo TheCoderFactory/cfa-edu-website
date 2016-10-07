@@ -1,0 +1,27 @@
+.row
+  h1 Confirm the details
+  br
+  .col-md-4.col-md-offset-2.col-xs-12
+    h6 Personal Details
+    p <b>First name:</b> #{@booking.firstname}
+    p <b>Last name:</b> #{@booking.lastname}
+    p <b>Age:</b> #{@booking.age}
+    p <b>Email:</b> #{@booking.email}
+    p <b>Phone:</b> #{@booking.phone}
+    p <b>City:</b> #{@booking.city}
+    p <b>Country:</b> #{@booking.country}
+  .col-md-4.col-xs-12
+    h6 Course Details
+    p <b>Course:</b> #{@booking.course_name}
+    p <b>Location:</b> #{@booking.course_location}
+    p <b>Intake:</b> #{@booking.days}, #{@booking.start_date}, End: #{@booking.finish_date}
+    p <b>Start:</b> #{@booking.start_date}
+    p <b>Finish:</b> #{@booking.finish_date}
+    p <b>Time:</b> #{@booking.start_time} - #{@booking.finish_time}
+    p <b>Price:</b> #{@booking.intake.course.get_price}
+    br
+- if @course.price > 0
+  .row
+    .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
+      = label_tag 'label', "Have a promo code? Enter it here"
+      = text_field_tag :promo_code, nil, placeholder: "Promo Code", value: session[:promo_code]
