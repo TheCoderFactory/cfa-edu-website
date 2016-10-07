@@ -48,7 +48,7 @@ class BookingsController < ApplicationController
       if params[:back_button]
         @booking.previous_step
       elsif params[:confirm_button]
-        @booking.save if @booking.all_valid?
+        @booking.save; @booking.send_emails if @booking.all_valid?
       elsif @booking.campus_step?
         @booking.next_step if @booking.intake
       elsif @booking.last_step?
