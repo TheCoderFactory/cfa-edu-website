@@ -18,11 +18,11 @@ class Course < ActiveRecord::Base
   end
 
   def active_syd_intakes
-    active_intakes.where("location LIKE ?", "%sydney%")
+    active_intakes.where("location LIKE ?", "%Sydney%")
   end
 
   def active_mel_intakes
-    active_intakes.where("location LIKE ?", "%melbourne%")
+    active_intakes.where("location LIKE ?", "%Melbourne%")
   end
 
   def active_intakes
