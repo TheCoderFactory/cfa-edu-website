@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   get "video-archive", to: "pages#video_archive"
 
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
-  post "booking", to: "bookings#create"
+  post ":course_type/:course_id", to: "bookings#create", as: :create_booking
   post "admin/bookings/:booking_id", to: "bookings#create"
 
 
