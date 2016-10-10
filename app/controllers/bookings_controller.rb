@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    @cbookings = Booking.where(cancelled: true)
   end
 
   def show
@@ -126,7 +127,7 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :firstname, :lastname, :email, :phone, :age, :city, :country)
+    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :firstname, :lastname, :email, :phone, :age, :city, :country, :cancelled)
   end
 
   def get_amount booking

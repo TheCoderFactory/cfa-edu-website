@@ -39,8 +39,48 @@
                       = link_to booking, data: { confirm: "Are you sure?" }, method: :delete
                         = fa_icon "trash", class: "fa-1x"
                         |  Delete
+        hr
+        br
+        hr
+        center
+          h1 CANCELLED BOOKINGS
+          - if @cbookings.size == 0
+            h6 There are currently no cancelled bookings.
+          - else
+            table.highlight.bordered#cbooking-table
+              thead
+                tr
+                  th width="20%" Course
+                  th width="15%" Email
+                  th width="10%" Attendees
+                  th width="15%" Amount Paid
+                  th width="10%" Paid?
+                  th width="10%" Views
+                  th width="10%"
+                  th width="10%"
+              tbody
+                - @cbookings.each do |cbooking|
+                  tr
+                    td #{cbooking.course_name}
+                    td #{cbooking.email}
+                    td #{cbooking.people_attending}
+                    td #{cbooking.cost_in_dollars}
+                    td #{cbooking.paid?}
+                    td
+                      = link_to booking_path(cbooking)
+                        = fa_icon "eye", class: "fa-1x"
+                        |  Show
+                    td
+                      = link_to edit_booking_path(cbooking)
+                        = fa_icon "pencil", class: "fa-1x"
+                        |  Edit
+                    td
+                      = link_to cbooking, data: { confirm: "Are you sure?" }, method: :delete
+                        = fa_icon "trash", class: "fa-1x"
+                        |  Delete
 
 javascript:
   $(document).ready(function(){
     $('#booking-table').DataTable();
+    $('#cbooking-table').DataTable();
   });
