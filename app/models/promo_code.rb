@@ -7,7 +7,7 @@ class PromoCode < ActiveRecord::Base
   validates_presence_of :number_of_uses, if: lambda {|o| o.code_type == "Number of Uses"}
   validates :code, uniqueness: true
 
-  after_create :schedule_deactivate_code_job
+  after_save :schedule_deactivate_code_job, on: :create
 
   def to_s
     code
@@ -15,7 +15,7 @@ class PromoCode < ActiveRecord::Base
 
   def schedule_deactivate_code_job
     if code_type == "Expiry Date" && expiry_date
-      time = ((expiry_date - Date.today)*24*60*60).to_i
+      time = ((expiry_date-Date.today)*24*60*60).to_i
       DeactivateCodeJob.perform_in(time, id)
     end
   end
