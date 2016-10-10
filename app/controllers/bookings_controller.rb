@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
     session[:booking_step] = session[:campus] = session[:promo_code] = session[:intake] = nil
     puts session.inspect
     @course = Course.friendly.find(params[:course_id])
+    @syd_intakes, @mel_intakes = @course.active_syd_intakes, @course.active_mel_intakes
     @booking = Booking.new(session[:booking_params])
   end
 
