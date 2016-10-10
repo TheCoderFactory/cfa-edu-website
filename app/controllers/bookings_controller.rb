@@ -79,6 +79,7 @@ class BookingsController < ApplicationController
     if @booking.new_record?
       render :new
     else
+      @booking.update_promo_code
       session[:booking_params] = nil
       session[:booking_step] = session[:campus] = session[:promo_code] = session[:intake] = nil
       redirect_to confirmation_path
