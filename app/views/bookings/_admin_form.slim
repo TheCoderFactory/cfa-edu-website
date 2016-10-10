@@ -21,4 +21,7 @@
       = f.input :city, label: false, placeholder: "City*"
     .form-group.input-field.col-xs-6
       = f.input :country, label: false, placeholder: "Country*", selected: "AU"
+  .row
+    .form-group.input-field
+      = f.input :cancelled, label: "Cancelled?"
   = f.button :submit, "SUBMIT", class: "main-cta-btn pull-right"
