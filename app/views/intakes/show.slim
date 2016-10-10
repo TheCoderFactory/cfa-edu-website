@@ -25,13 +25,15 @@
         - if @intake.teacher_name
           #{@intake.teacher_name}
 
-      center
-        h1 Bookings
 
-        - if @bookings.size == 0
-          h6 There are currently no bookings.
+      = link_to "New Booking", admin_bookings_new_path(intake_id: @intake.id), class: "main-cta-btn"
+      center
+        h1 Active Bookings
+
+        - if @active_bookings.size == 0
+          h6 There are currently no active bookings.
         - else
-          table.highlight.bordered#intake-bookings-table
+          table.highlight.bordered#active-intake-bookings-table
             thead
               tr
                 th width="20%" Name
@@ -42,7 +44,45 @@
                 th width="10%"
                 th width="10%"
             tbody
-              - @bookings.each do |booking|
+              - @active_bookings.each do |booking|
+                tr
+                  td #{booking.firstname + " " + booking.lastname}
+                  td #{booking.paid?}
+                  td #{booking.promo_code ? booking.promo_code.code : "No promo code"}
+                  td #{booking.people_attending}
+                  td
+                    = link_to booking_path(booking)
+                      = fa_icon "eye", class: "fa-1x"
+                      | View
+                  td
+                    = link_to edit_booking_path(booking)
+                      = fa_icon "pencil", class: "fa-1x"
+                      |  Edit
+                  td
+                    = link_to booking, data: { confirm: "Are you sure?" }, method: :delete
+                      = fa_icon "trash", class: "fa-1x"
+                      |  Delete
+      hr
+      br
+      hr
+      center
+        h1 Cancelled Bookings
+
+        - if @cancelled_bookings.size == 0
+          h6 There are currently no cancelled bookings.
+        - else
+          table.highlight.bordered#cancelled-intake-bookings-table
+            thead
+              tr
+                th width="20%" Name
+                th width="20%" Paid
+                th width="20%" Promo Code
+                th width="10%" People Attending
+                th width="10%" Views
+                th width="10%"
+                th width="10%"
+            tbody
+              - @cancelled_bookings.each do |booking|
                 tr
                   td #{booking.firstname + " " + booking.lastname}
                   td #{booking.paid?}
@@ -62,5 +102,6 @@
                       |  Delete
 javascript:
   $(document).ready(function(){
-    $('#intake-bookings-table').DataTable();
+    $('#active-intake-bookings-table').DataTable();
+    $('#cancelled-intake-bookings-table').DataTable();
   });

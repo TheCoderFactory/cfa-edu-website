@@ -11,6 +11,8 @@ class IntakesController < ApplicationController
   def show
     @intake = Intake.find(params[:id])
     @bookings = @intake.bookings
+    @active_bookings = @intake.bookings.where(cancelled: false)
+    @cancelled_bookings = @intake.bookings.where(cancelled: true)
 
     respond_to do |format|
       format.html

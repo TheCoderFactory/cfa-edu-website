@@ -1,10 +1,11 @@
 class BookingsController < ApplicationController
   respond_to :html
-  before_action :authenticate_admin!, only: ["index", "show", "edit", "update", "destroy"]
-  layout "admin", only: ["index", "show", "edit", "update", "destroy"]
+  before_action :authenticate_admin!, only: ["index", "show", "admin_new", "admin_create", "edit", "update", "destroy"]
+  layout "admin", only: ["index", "show", "admin_new", "admin_create", "edit", "update", "destroy"]
 
   def index
     @bookings = Booking.all
+    @cbookings = Booking.where(cancelled: true)
   end
 
   def show
@@ -84,6 +85,24 @@ class BookingsController < ApplicationController
     end
   end
 
+  def admin_new
+    @booking = Booking.new
+    @booking.intake_id = params[:intake_id] if params[:intake_id]
+    @intakes = Intake.all
+  end
+
+  def admin_create
+    @booking = Booking.new(booking_params)
+    @intakes = Intake.all
+    if @booking.save
+      @booking.send_emails
+      redirect_to @booking
+    else
+      puts @booking.errors.inspect
+      render :new
+    end
+  end
+
   def edit
     @booking = Booking.find(params[:id])
     @intakes = Intake.all
@@ -96,7 +115,7 @@ class BookingsController < ApplicationController
       redirect_to @booking
     else
       puts @booking.errors.inspect
-      respond_with @booking
+      render :edit
     end
   end
 
@@ -108,7 +127,7 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :firstname, :lastname, :email, :phone, :age, :city, :country)
+    params.require(:booking).permit(:intake_id, :promo_code, :people_attending, :total_cost, :firstname, :lastname, :email, :phone, :age, :city, :country, :cancelled)
   end
 
   def get_amount booking

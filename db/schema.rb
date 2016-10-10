@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006034344) do
+ActiveRecord::Schema.define(version: 20161010023216) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20161006034344) do
     t.string   "country"
     t.string   "business_name",    default: "N/A"
     t.string   "business_address", default: "N/A"
+    t.boolean  "cancelled",        default: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
