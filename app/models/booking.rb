@@ -6,7 +6,7 @@ class Booking < ActiveRecord::Base
   attr_writer :current_step
 
   EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-  validates :email, :format => EMAIL_REGEX
+  validates :email, :format => EMAIL_REGEX, if: lambda {|o| o.current_step == "personal_details"}
   validates_presence_of :firstname, :lastname, :email, :phone,:age, :city, :country,
     if: lambda {|o| o.current_step == "personal_details"}
   validates_presence_of :intake, if: lambda {|o| o.current_step == "campus"}
@@ -89,7 +89,7 @@ class Booking < ActiveRecord::Base
     @current_step || steps.first
   end
   def steps
-    %w[personal_details campus confirmation payment]
+    %w[campus personal_details confirmation payment]
   end
   def next_step
     self.current_step = steps[steps.index(current_step)+1]
