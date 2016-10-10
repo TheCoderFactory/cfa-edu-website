@@ -4,7 +4,7 @@ class IntakesController < ApplicationController
   layout "admin"
 
   def index
-    @intakes = Intake.all
+    @intakes = Intake.all.includes(:course)
     @intakes = Intake.where("start >= ?", DateTime.now) if params[:future]
   end
 
@@ -16,7 +16,7 @@ class IntakesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.csv { send_data @bookings.to_csv}
+      format.csv { send_data @bookings.to_csv }
     end
   end
 

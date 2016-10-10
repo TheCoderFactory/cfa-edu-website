@@ -4,8 +4,8 @@ class BookingsController < ApplicationController
   layout "admin", only: ["index", "show", "admin_new", "admin_create", "edit", "update", "destroy"]
 
   def index
-    @bookings = Booking.all
-    @cbookings = Booking.where(cancelled: true)
+    @bookings = Booking.all.includes(:intake => :course).includes(:payment)
+    @cbookings = Booking.where(cancelled: true).includes(:intake => :course).includes(:payment)
   end
 
   def show
