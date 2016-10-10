@@ -18,15 +18,15 @@ class Course < ActiveRecord::Base
   end
 
   def active_syd_intakes
-    active_intakes.where("location LIKE ?", "%Sydney%")
+    active_intakes.where("location LIKE ?", "%Sydney%").order(start: :asc)
   end
 
   def active_mel_intakes
-    active_intakes.where("location LIKE ?", "%Melbourne%")
+    active_intakes.where("location LIKE ?", "%Melbourne%").order(start: :asc)
   end
 
   def active_intakes
-    intakes.where(status: "Active")
+    intakes.where.not(status: "Cancelled")
   end
 
   def available?

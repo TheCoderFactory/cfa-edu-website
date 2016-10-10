@@ -9,11 +9,17 @@ class Booking < ActiveRecord::Base
   validates :email, :format => EMAIL_REGEX
   validates_presence_of :firstname, :lastname, :email, :phone,:age, :city, :country,
     if: lambda {|o| o.current_step == "personal_details"}
-  validates_presence_of :intake, if: lambda {|o| o.current_step == "intake"}
-  validate :valid_promo_code, on: :create, if: lambda {|o| o.current_step == "intake"}
+  validates_presence_of :intake, if: lambda {|o| o.current_step == "campus"}
+  validate :active_intake, on: :create, if: lambda {|o| o.current_step == "campus"}
+  validate :valid_promo_code, on: :create, if: lambda {|o| o.current_step == "confirmation"}
   validates_presence_of :total_cost, if: lambda {|o| o.current_step == "payment"}
   validate :valid_total_cost, :non_negative_total_cost, on: :create, if: lambda {|o| o.current_step == "payment"}
 
+  def active_intake
+    if intake && !intake.active?
+      errors.add(:intake, "can't select a full intake")
+    end
+  end
   def valid_promo_code
     promo_code.valid_code if promo_code
   end

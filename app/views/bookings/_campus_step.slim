@@ -7,7 +7,7 @@
     - if @syd_intakes.size > 0
       .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
         = label_tag "Sydney Intakes"
-        = select_tag :syd_intake, options_for_select(@syd_intakes.collect{|i| ["#{i.days}, #{i.start_date} (#{i.start_time} - #{i.finish_time}), End: #{i.finish_date}", i.id]}, (@booking.intake.id if @booking.intake))
+        = select_tag :syd_intake, options_for_select(@syd_intakes.collect{|i| [i.get_dates, i.id]}, (@booking.intake.id if @booking.intake))
     - else
       center
         h6 There are currently no intakes for Sydney.
@@ -17,7 +17,7 @@
     - if @mel_intakes.size > 0
       .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
         = label_tag "Melbournes Intakes"
-        = select_tag :mel_intake, options_for_select(@mel_intakes.collect{|i| ["#{i.days}, #{i.start_date} (#{i.start_time} - #{i.finish_time}), End: #{i.finish_date}", i.id]}, (@booking.intake.id if @booking.intake))
+        = select_tag :mel_intake, options_for_select(@mel_intakes.collect{|i| [i.get_dates, i.id]}, (@booking.intake.id if @booking.intake))
     - else
       center
         h6 There are currently no intakes for Melbourne.
