@@ -4,7 +4,7 @@ class Intake < ActiveRecord::Base
   mount_uploader :teacher_image, TeacherImageUploader
 
   validates :course, :start, :finish, :location, :days, presence: true
-  validates_inclusion_of :status, in: ["Active", "Cancelled", "Full"]
+  validates_inclusion_of :status, in: ["Active", "Cancelled", "Full", "Finished"]
   validate :valid_finish
 
   def valid_finish
