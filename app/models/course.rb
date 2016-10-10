@@ -26,7 +26,7 @@ class Course < ActiveRecord::Base
   end
 
   def active_intakes
-    intakes.where(status: "Active")
+    intakes.where.not(status: "Cancelled")
   end
 
   def available?
