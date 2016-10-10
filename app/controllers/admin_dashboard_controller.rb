@@ -4,10 +4,11 @@ class AdminDashboardController < ApplicationController
   layout "admin"
 
   def index
-    this_month = Intake.all.order(start: :asc).reject{ |i| i.start.month != DateTime.now.month }
-    next_month = Intake.all.order(start: :asc).reject{ |i| i.start.month != (DateTime.now + 1.month).month }
+    intakes = Intake.all.includes(:course).order(start: :asc)
+    this_month = intakes.reject{ |i| i.start.month != DateTime.now.month }
+    next_month = intakes.reject{ |i| i.start.month != (DateTime.now + 1.month).month }
     @upcoming_intakes = this_month.zip(next_month)
-    bookings = Booking.where("created_at >= ?", Date.today-30.days)
+    bookings = Booking.where("created_at >= ?", Date.today-30.days).includes(:intake)
     @booking_count = Hash[(30.days.ago.to_date..Date.today).map{ |date| date.strftime("%b %d %Y") }.collect{|v| [v, 0]}]
     bookings.each {|b| @booking_count[b.created_at.strftime("%b %d %Y")]+=1}
     @booking_hash = @booking_count.inject([]) {|arr, v| arr << v}
