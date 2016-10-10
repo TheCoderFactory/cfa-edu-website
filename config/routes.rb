@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
   get "intake-details", to: "intakes#intake_details"
-  resources :bookings, path: "admin/bookings"
+  get "admin/bookings/new", to: "bookings#admin_new"
+  post "admin/bookings", to: "bookings#admin_create"
+  resources :bookings, path: "admin/bookings", except: [:new, :create]
   resources :promo_codes, path: "admin/promo-codes"
   get "validate-promo-code", to: "promo_codes#validate_promo_code"
   resources :fast_track_payments, path: "admin/fast-track-payments", :except => [:new, :create]
@@ -59,7 +61,6 @@ Rails.application.routes.draw do
 
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
   post ":course_type/:course_id", to: "bookings#create", as: :create_booking
-  post "admin/bookings/:booking_id", to: "bookings#create"
 
 
   # routes to be redirected

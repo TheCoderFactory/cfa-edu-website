@@ -25,6 +25,8 @@
         - if @intake.teacher_name
           #{@intake.teacher_name}
 
+
+      = link_to "New Booking", admin_bookings_new_path(intake_id: @intake.id), class: "main-cta-btn"
       center
         h1 Bookings
 
