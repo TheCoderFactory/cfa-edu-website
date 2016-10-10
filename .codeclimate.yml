@@ -37,3 +37,5 @@ exclude_paths:
 - db/
 - spec/
 - vendor/
+- app/assets/javascripts/modernizr.js
+- app/assets/javascripts/dataTables.js
