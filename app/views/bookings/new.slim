@@ -18,7 +18,7 @@
             = @course.description.html_safe
         br
         - if @course.course_type == "Workshop"
-          = simple_form_for(@booking, controller: :bookings, method: :post, html: {id: :payment_form}) do |f|
+          = simple_form_for(@booking, url: create_booking_path("learn-to-code", @course.slug), html: {id: :payment_form}) do |f|
             = hidden_field_tag :course_id, @course.slug
             = render "#{@booking.current_step}_step", :f => f
             .row

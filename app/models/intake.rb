@@ -17,10 +17,13 @@ class Intake < ActiveRecord::Base
     where("start >= ?", Date.today)
   end
   def self.active_intakes
-    where(status: "Active")
+    where.not(status: "Cancelled")
   end
   def self.chron_order
     order(start: :asc)
+  end
+  def active?
+    status == "Active"
   end
   def course_price
     course.get_price
@@ -45,5 +48,8 @@ class Intake < ActiveRecord::Base
   end
   def course_type
     course.course_type
+  end
+  def get_dates
+    "#{"~"+status.upcase+"~" if status == "Full"} #{days}, #{start_date} (#{start_time} - #{finish_time}), End: #{finish_date}"
   end
 end
