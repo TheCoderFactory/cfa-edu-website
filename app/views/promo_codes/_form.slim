@@ -4,6 +4,14 @@
       = f.input :code
     .form-group.input-field.col-md-6
       = f.input :percent
+    .form-group.input-field.col-md-6
+      = f.input :code_type, collection: ["Expiry Date", "Number of Uses"], selected: @promo_code.code_type
+    .expiry-date
+      .form-group.iput-field.col-md-6
+        = f.input :expiry_date, as: :date_picker
+    .number-of-uses
+      .form-group.iput-field.col-md-6
+        = f.input :number_of_uses
     .form-group.input-field.col-md-12
       = f.input :note
 

@@ -51,7 +51,7 @@ class PromoCodesController < ApplicationController
 
   private
   def promo_code_params
-    params.require(:promo_code).permit(:code, :percent, :note)
+    params.require(:promo_code).permit(:code, :percent, :note, :code_type, :expiry_date, :number_of_uses)
   end
 
   def validation_params

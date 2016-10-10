@@ -21,7 +21,9 @@ class Booking < ActiveRecord::Base
     end
   end
   def valid_promo_code
-    promo_code.valid_code if promo_code
+    if promo_code && !promo_code.valid_code
+      errors.add(:promo_code, "not a valid code")
+    end
   end
   def valid_total_cost
     percent = 1
@@ -113,6 +115,13 @@ class Booking < ActiveRecord::Base
     steps.all? do |step|
       self.current_step = step
       valid?
+    end
+  end
+
+  def update_promo_code
+    if promo_code && promo_code.code_type == "Number of Uses"
+      promo_code.update_attribute(:number_of_uses, promo_code.number_of_uses-1)
+      promo_code.update_attribute(:valid_code, false) if promo_code.number_of_uses <= 0
     end
   end
 end
