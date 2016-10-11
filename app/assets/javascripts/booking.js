@@ -2,19 +2,24 @@ $(document).ready(function() {
   var selected_campus = $('#campus').find(":selected").text();
   var syd_intakes = $('.syd-intakes');
   var mel_intakes = $('.mel-intakes');
-  if (selected_campus === "Sydney") {
-    mel_intakes.hide();
+  choose_selected(mel_intakes, syd_intakes, "#campus", "Sydney");
+});
+
+function choose_selected(opt1, opt2, id, value) {
+  selected = $(id).find(":selected").text();
+  if (selected === value) {
+    opt1.hide();
   } else {
-    syd_intakes.hide();
+    opt2.hide();
   }
-  $("#campus").on("change",function() {
-    var change_campus = this.value;
-    if (change_campus === "Sydney") {
-      mel_intakes.hide();
-      syd_intakes.show();
+  $(id).on("change",function() {
+    var change_selected = this.value;
+    if (change_selected === value) {
+      opt1.hide();
+      opt2.show();
     } else {
-      mel_intakes.show();
-      syd_intakes.hide();
+      opt1.show();
+      opt2.hide();
     }
   });
-});
+}
