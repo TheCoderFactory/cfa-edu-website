@@ -23,6 +23,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    flash[:danger] = []
     @course = Course.friendly.find(params["course_id"])
 
     session[:booking_params].deep_merge!(params[:booking]) if params[:booking]
@@ -46,11 +47,13 @@ class BookingsController < ApplicationController
     @booking.total_cost = @amount
 
     @booking.current_step = session[:booking_step]
-    if @booking.valid?
-      if params[:back_button]
-        @booking.previous_step
-      elsif params[:confirm_button]
-        @booking.save; @booking.send_emails if @booking.all_valid?
+    valid_code = true
+    (flash[:danger] << "Not a valid promo code"; valid_code = false) if !params[:promo_code].blank? && @promo_code.nil? && !params[:back_button]
+    if params[:back_button]
+      @booking.previous_step
+    elsif @booking.valid?
+      if params[:confirm_button]
+        (@booking.save; @booking.send_emails) if @booking.all_valid?
       elsif @booking.campus_step?
         @booking.next_step if @booking.intake
       elsif @booking.last_step?
@@ -66,17 +69,20 @@ class BookingsController < ApplicationController
                 end
               end
             rescue Stripe::CardError => e
-              flash[:error] = e.message
+              flash[:danger] << e.message
               raise ActiveRecord::Rollback
             end
           end
         end
-      else
+      elsif valid_code
         @booking.next_step
       end
-      session[:booking_step] = @booking.current_step
     end
+    session[:booking_step] = @booking.current_step
     if @booking.new_record?
+      @booking.errors.each do |k, v|
+        flash[:danger] << "#{k.capitalize} #{v}"
+      end
       render :new
     else
       @booking.update_promo_code

@@ -20,6 +20,10 @@
         - if @course.course_type == "Workshop"
           = simple_form_for(@booking, url: create_booking_path("learn-to-code", @course.slug), html: {id: :payment_form}) do |f|
             = hidden_field_tag :course_id, @course.slug
+            - if flash[:danger]
+              - flash[:danger].each do |value|
+                = content_tag :div, (content_tag :center, value), class: "alert alert-danger", role: "alert"
+              -flash[:danger] = nil
             = render "#{@booking.current_step}_step", :f => f
             .row
               .col-md-8.col-md-offset-2
