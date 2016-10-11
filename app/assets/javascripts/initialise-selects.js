@@ -1,8 +1,10 @@
 $(document).ready(function() {
-  var selected_campus = $('#campus').find(":selected").text();
   var syd_intakes = $('.syd-intakes');
   var mel_intakes = $('.mel-intakes');
+  var expiry_date = $('.expiry-date');
+  var number_of_uses = $('.number-of-uses');
   choose_selected(mel_intakes, syd_intakes, "#campus", "Sydney");
+  choose_selected(number_of_uses, expiry_date, "#promo_code_code_type", "Expiry Date");
 });
 
 function choose_selected(opt1, opt2, id, value) {
