@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.3.0"
 
 gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
@@ -43,6 +44,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem "bullet"
+  gem 'derailed_benchmarks'
+  gem 'stackprof'
 end
 
 group :test do
