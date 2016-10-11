@@ -164,6 +164,12 @@
   .mobile-inactive-testimonial {
     display: none;
   }
+  .mobile-active-testimonial-content {
+    display: block;
+  }
+  .mobile-inactive-testimonial-content {
+    display: none;
+  }
   .mobile-testimonial-switch {
     display: flex;
     align-items: center;
