@@ -1,7 +1,7 @@
-var currTestimonial, mCurrentTestimonial;
+var currTestimonial = 3;
+var mCurrentTestimonial = 3;
 
 function changeTestimonial(testimonial) {
-  if (currTestimonial === undefined) currTestimonial = 3;
   if (testimonial > 5 || testimonial < 1) testimonial = 3;
   switchTestimonial("#testimonial-"+currTestimonial, "inactive");
   switchTestimonial("#testimonial-"+testimonial, "active");
@@ -9,7 +9,6 @@ function changeTestimonial(testimonial) {
 }
 
 function changeMobileTestimonial(testimonial) {
-  if (mCurrentTestimonial === undefined) mCurrentTestimonial = 3;
   if (testimonial > 5 || testimonial < 1) mCurrentTestimonial = 3;
   switchTestimonial("#mobile-testimonial-"+mCurrentTestimonial, "inactive", "mobile-");
   switchTestimonial("#mobile-testimonial-"+testimonial, "active", "mobile-");
@@ -17,8 +16,6 @@ function changeMobileTestimonial(testimonial) {
 }
 
 function nextTestimonial(direction, mobile) {
-  if (currTestimonial === undefined) currTestimonial = 3;
-  if (mCurrentTestimonial === undefined) mCurrentTestimonial = 3;
   var t = (mobile ? mCurrentTestimonial : currTestimonial);
   var fun = (mobile ? changeMobileTestimonial : changeTestimonial);
   if (direction === "left") {
