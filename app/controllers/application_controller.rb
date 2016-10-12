@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_footer_course_lists
 
-  def after_sign_in_path_for(resource_or_scope)
+  def after_sign_in_path_for(_resource_or_scope)
     admin_dashboard_path
   end
-  def after_sign_out_path_for(resource_or_scope)
+  def after_sign_out_path_for(_resource_or_scope)
     root_path
   end
 
