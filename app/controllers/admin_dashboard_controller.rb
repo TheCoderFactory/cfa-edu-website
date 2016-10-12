@@ -19,6 +19,6 @@ class AdminDashboardController < ApplicationController
 
   private
   def reduce_bookings bookings, str
-    bookings.inject(Hash.new(0) { |hash, i| hash[i.course_name]+=1 if i.course_location.include?(str); hash })
+    bookings.inject(Hash.new(0)) { |hash, i| hash[i.course_name]+=1 if i.course_location.include?(str); hash }
   end
 end
