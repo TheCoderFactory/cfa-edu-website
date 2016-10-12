@@ -19,4 +19,4 @@ function stripeResponseHandler(status, response) {
     // Submit the form:
     $form.get(0).submit();
   }
-};
+}
