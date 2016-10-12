@@ -27,15 +27,17 @@ class Booking < ActiveRecord::Base
     end
   end
   def valid_total_cost
-    percent = 1
-    percent -= promo_code.percent*0.01 if promo_code
-    if intake && total_cost && people_attending
-      cost = intake.course.price
-      # include gst
-      cost+=(cost/10)
-      cost*=percent*100
-      if total_cost > cost || total_cost < cost
-        errors.add(:total_cost, "total_cost must be equal to course.price*people_attending + gst")
+    if promo_code
+      percent = 1
+      percent -= promo_code.percent*0.01
+      if intake && total_cost && people_attending
+        cost = intake.course.price
+        # include gst
+        cost+=(cost/10)
+        cost*=percent*100
+        if total_cost != cost
+          errors.add(:total_cost, "total_cost must be equal to course.price*people_attending + gst")
+        end
       end
     end
   end
