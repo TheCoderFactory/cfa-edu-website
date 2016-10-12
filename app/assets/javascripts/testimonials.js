@@ -22,13 +22,11 @@ function nextTestimonial(direction, mobile) {
   var t = (mobile ? mCurrentTestimonial : currTestimonial);
   var fun = (mobile ? changeMobileTestimonial : changeTestimonial);
   if (direction === "left") {
-    if (t === 1) fun(5);
-    else fun(t-1);
-  } else if (direction === "right") {
-    if (t === 5) fun(1);
-    else fun(t+1);
+    if (t === 1) t=6;
+    fun(t-1);
   } else {
-    fun(3);
+    if (t === 5) t=0;
+    fun(t+1);
   }
 }
 
