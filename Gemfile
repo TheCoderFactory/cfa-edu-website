@@ -27,7 +27,7 @@ gem 'friendly_id'
 gem 'active_link_to'
 gem 'stripe-ruby-mock', '~> 2.2.4', :require => 'stripe_mock'
 gem 'momentjs-rails', '>= 2.9.0'
-gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'datetimepicker-rails', git: 'https://github.com/zpaulovics/datetimepicker-rails.git', branch: 'master', submodules: true
 gem 'bootstrap-glyphicons'
 gem 'non-stupid-digest-assets', '~> 1.0.4'
 gem 'sucker_punch', '~> 2.0'
