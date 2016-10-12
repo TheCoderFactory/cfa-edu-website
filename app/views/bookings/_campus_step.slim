@@ -16,7 +16,7 @@
   .mel-intakes
     - if @mel_intakes.size > 0
       .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
-        = label_tag "Melbournes Intakes"
+        = label_tag "Melbourne Intakes"
         = select_tag :mel_intake, options_for_select(@mel_intakes.collect{|i| [i.get_dates, i.id]}, (@booking.intake.id if @booking.intake))
     - else
       center
