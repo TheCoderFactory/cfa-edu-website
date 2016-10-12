@@ -3,7 +3,7 @@ var currTestimonial, mCurrentTestimonial;
 function changeTestimonial(testimonial) {
   if (currTestimonial === undefined) currTestimonial = 3;
   if (testimonial > 5 || testimonial < 1) testimonial = 3;
-  switchTestimonial("#testimonial-"+currTestimonial, "remove");
+  switchTestimonial("#testimonial-"+currTestimonial, "inactive");
   switchTestimonial("#testimonial-"+testimonial, "active");
   currTestimonial = testimonial;
 }
@@ -16,29 +16,19 @@ function changeMobileTestimonial(testimonial) {
   mCurrentTestimonial = testimonial;
 }
 
-function nextTestimonial(direction) {
+function nextTestimonial(direction, mobile) {
   if (currTestimonial === undefined) currTestimonial = 3;
-  if (direction === "left") {
-    if (currTestimonial === 1) changeTestimonial(5);
-    else changeTestimonial(currTestimonial-1);
-  } else if (direction === "right") {
-    if (currTestimonial === 5) changeTestimonial(1);
-    else changeTestimonial(currTestimonial+1);
-  } else {
-    changeTestimonial(3);
-  }
-}
-
-function mobileNextTestimonial(direction) {
   if (mCurrentTestimonial === undefined) mCurrentTestimonial = 3;
+  var t = (mobile ? mCurrentTestimonial : currTestimonial);
+  var fun = (mobile ? changeMobileTestimonial : changeTestimonial);
   if (direction === "left") {
-    if (mCurrentTestimonial === 1) changeMobileTestimonial(5);
-    else changeMobileTestimonial(mCurrentTestimonial-1);
+    if (t === 1) fun(5);
+    else fun(t-1);
   } else if (direction === "right") {
-    if (mCurrentTestimonial === 5) changeMobileTestimonial(1);
-    else changeMobileTestimonial(mCurrentTestimonial+1);
+    if (t === 5) fun(1);
+    else fun(t+1);
   } else {
-    changeMobileTestimonial(3);
+    fun(3);
   }
 }
 
@@ -46,7 +36,6 @@ function switchTestimonial(t, status, mobile) {
   if (mobile === undefined) mobile = "";
   var add = (status === "active" ? "active-testimonial" : "inactive-testimonial" )
   var remove = (status === "active" ? "inactive-testimonial" : "active-testimonial")
-  console.log(t);
   $(t).removeClass(mobile+remove);
   $(t).addClass(mobile+add);
   $(t+"-content").removeClass(mobile+remove+"-content");
