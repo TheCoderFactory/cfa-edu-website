@@ -7,7 +7,12 @@ class AdminDashboardController < ApplicationController
     intakes = Intake.all.includes(:course).order(start: :asc)
     this_month = intakes.reject{ |i| i.start.month != DateTime.now.month }
     next_month = intakes.reject{ |i| i.start.month != (DateTime.now + 1.month).month }
-    @upcoming_intakes = this_month.zip(next_month)
+    if this_month.length >= next_month.length
+      @upcoming_intakes = this_month.zip(next_month)
+    else
+      @upcoming_intakes = next_month.zip(this_month)
+      @upcoming_intakes.each {|v| v[0], v[1] = v[1], v[0]}
+    end
     bookings = Booking.where("created_at >= ?", Date.today-30.days).includes(:intake)
     @booking_count = Hash[(30.days.ago.to_date..Date.today).map{ |date| date.strftime("%b %d %Y") }.collect{|v| [v, 0]}]
     bookings.each {|b| @booking_count[b.created_at.strftime("%b %d %Y")]+=1}
