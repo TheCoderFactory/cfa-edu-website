@@ -13,7 +13,7 @@
             .box
               h4 #{@course3.name.upcase}
               .border-blue
-              p.text #{@course3.tagline}
+              p.text #{@course3.tagline.html_safe}
               a.scd-cta-btn href="##{@course3.slug}" FIND OUT MORE
             .box
               h4.up-more #{@course1.name.upcase}
