@@ -13,8 +13,9 @@ class Booking < ActiveRecord::Base
   validates_presence_of :intake, if: lambda {|o| o.current_step == "campus"}
   validate :active_intake, on: :create, if: lambda {|o| o.current_step == "campus"}
   validate :valid_promo_code, on: :create, if: lambda {|o| o.current_step == "confirmation"}
-  validates_presence_of :total_cost, if: lambda {|o| o.current_step == "payment"}
-  validate :valid_total_cost, :non_negative_total_cost, on: :create, if: lambda {|o| o.current_step == "payment"}
+  validate :valid_total_cost, :non_negative_total_cost, :valid_payment, :valid_total_cost, on: :create, if: lambda {|o| o.current_step == "payment"}
+
+  after_save :update_promo_code, on: :create
 
   def active_intake
     if intake && !intake.active?
@@ -22,9 +23,15 @@ class Booking < ActiveRecord::Base
     end
   end
   def valid_promo_code
-    if promo_code && !promo_code.valid_code
-      errors.add(:promo_code, "not a valid code")
+    if !discount_code.blank? && promo_code.nil?
+      self.promo_code = PromoCode.find_by(code: discount_code)
+      if promo_code.nil?
+        errors.add(:promo_code, "not a valid code")
+      elsif !promo_code.valid_code
+        errors.add(:promo_code, "is no longer valid.")
+      end
     end
+    set_cost
   end
   def valid_total_cost
     if promo_code
@@ -45,6 +52,24 @@ class Booking < ActiveRecord::Base
     if total_cost && total_cost < 0.00
       errors.add(:total_cost, "total_cost cannot be negative")
     end
+  end
+  def valid_payment
+    set_cost
+    if !payment && stripe_token
+      customer = Stripe::Customer.create(
+        :email => email,
+        :source  => stripe_token
+      )
+      charge = Stripe::Charge.create(
+        :customer => customer,
+        :amount => (total_cost*100).to_i,
+        :description => "#{course_name} Booking",
+        :currency => "aud"
+      )
+      self.payment = Payment.create(amount: total_cost, paid: charge.paid, booking: self)
+    end
+  rescue Stripe::CardError => e
+    errors.add(:payment, e.message)
   end
 
   def paid?
@@ -117,5 +142,15 @@ class Booking < ActiveRecord::Base
       promo_code.update_attribute(:number_of_uses, promo_code.number_of_uses-1)
       promo_code.update_attribute(:valid_code, false) if promo_code.number_of_uses <= 0
     end
+  end
+  def set_cost
+    self.promo_code = PromoCode.find_by(code: discount_code)
+    cost, percent = 0, 1
+    percent -= promo_code.percent*0.01 if promo_code
+    cost = intake.course.price if intake
+    self.gst = cost*0.1
+    cost+=gst
+    self.total_cost = cost*percent
+    self.discount = cost-total_cost
   end
 end
