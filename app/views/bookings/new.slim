@@ -1,7 +1,7 @@
 .new-booking
   .container
     .row
-      .col-md-10.col-md-offset-1
+      .col-md-10.offset-md-1
         .row
           h2 #{@course.name.upcase} - <span id="course-price">#{@course.get_price}</span>
           .col-md-6
@@ -26,7 +26,7 @@
               -flash[:danger] = nil
             = render "#{@booking.current_step}_step", :f => f
             .row
-              .col-md-8.col-md-offset-2
+              .col-md-8.offset-md-2
                 = f.submit "Back", class: "main-cta-btn", name: "back_button" unless @booking.first_step?
                 - if @booking.confirmation_step? && @course.price == 0 || @booking.last_step? && @booking.total_cost == 0
                   = f.submit "Confirm Booking", class: "main-cta-btn pull-right", name: "confirm_button"
