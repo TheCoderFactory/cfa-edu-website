@@ -58,7 +58,7 @@
     .container#mobile-testimonial-images
       .row.mobile-testimonial-switch
         .col-xs-3
-          a.testimonial-button onclick="mobileNextTestimonial('left')"
+          a.testimonial-button onclick="nextTestimonial('left', true)"
             img.img-fluid src="#{asset_path 'left-arrow.png'}" alt="Left-arrow"
         .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-1
           img.img-fluid.img-circle src="#{asset_path 'alumni/AnnaCrop.jpg'}" alt="Anna Testimonial"
@@ -71,7 +71,7 @@
         .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-5
           img.img-fluid.img-circle src="#{asset_path 'alumni/SamCrop.jpg'}" alt="Sam Testimonial"
         .col-xs-3
-          a.testimonial-button onclick="mobileNextTestimonial('right')"
+          a.testimonial-button onclick="nextTestimonial('right', true)"
             img.img-fluid src="#{asset_path 'right-arrow.png'}" alt="Right-arrow"
     .container.mobile-inactive-testimonial#mobile-testimonial-1-content
       h5 Anna Robson

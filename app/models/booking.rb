@@ -1,4 +1,5 @@
 class Booking < ActiveRecord::Base
+  include CsvModel
   belongs_to :intake
   belongs_to :promo_code
   has_one :payment
@@ -26,15 +27,17 @@ class Booking < ActiveRecord::Base
     end
   end
   def valid_total_cost
-    percent = 1
-    percent -= promo_code.percent*0.01 if promo_code
-    if intake && total_cost && people_attending
-      cost = intake.course.price
-      # include gst
-      cost+=(cost/10)
-      cost*=percent*100
-      if total_cost > cost || total_cost < cost
-        errors.add(:total_cost, "total_cost must be equal to course.price*people_attending + gst")
+    if promo_code
+      percent = 1
+      percent -= promo_code.percent*0.01
+      if intake && total_cost && people_attending
+        cost = intake.course.price
+        # include gst
+        cost+=(cost/10)
+        cost*=percent*100
+        if total_cost != cost
+          errors.add(:total_cost, "total_cost must be equal to course.price*people_attending + gst")
+        end
       end
     end
   end
@@ -76,15 +79,6 @@ class Booking < ActiveRecord::Base
   end
   def send_emails
     SendBookingEmailJob.perform_async(self.id)
-  end
-
-  def self.to_csv(options = {})
-    CSV.generate(options) do |csv|
-      csv << column_names
-      all.each do |booking|
-        csv << booking.attributes.values_at(*column_names)
-      end
-    end
   end
 
   def current_step

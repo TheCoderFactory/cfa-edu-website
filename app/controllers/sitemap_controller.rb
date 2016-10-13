@@ -12,7 +12,6 @@ class SitemapController < ApplicationController
       fast_track_apply_url,
       fast_track_women_in_tech_scholarship_url,
       fast_track_women_in_tech_scholarship_apply_url,
-      fast_track_australian_innovation_scholarship_url,
       short_courses_url,
       corporate_url,
       kids_coding_url,

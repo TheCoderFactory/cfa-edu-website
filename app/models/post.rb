@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
+  include CsvModel
   mount_uploader :image, ImageUploader
   mount_uploader :author_image, AuthorImageUploader
   friendly_id :title, use: :slugged
@@ -18,15 +19,6 @@ class Post < ActiveRecord::Base
         post.image = post_hash["image"]
       end
       post.save
-    end
-  end
-
-  def self.to_csv(options = {})
-    CSV.generate(options) do |csv|
-      csv << column_names
-      all.each do |post|
-        csv << post.attributes.values_at(*column_names)
-      end
     end
   end
 
