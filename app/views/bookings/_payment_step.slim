@@ -2,10 +2,10 @@
   .col-md-8.col-md-offset-3
       h6 Payment Details
       p <b>Course Price:</b> #{number_to_currency(@booking.intake.course.price)}
-      p <b>GST (+10%):</b> +#{number_to_currency(@gst)}
-      p <b>Promo code #{"(#{@promo_code ? @promo_code.code : "N/A"})"}:</b> -#{number_to_currency(@discount)}
-      p <b>Total cost:</b> =#{number_to_currency(@amount)}
-  - if @amount > 0
+      p <b>GST (+10%):</b> +#{number_to_currency(@booking.gst)}
+      p <b>Promo code #{"(#{@booking.promo_code ? @booking.promo_code.code : "N/A"})"}:</b> -#{number_to_currency(@booking.discount)}
+      p <b>Total cost:</b> =#{number_to_currency(@booking.total_cost)}
+  - if @booking.total_cost > 0
     .col-md-8.col-md-offset-3.col-xs-12
       span.payment-errors
       .row

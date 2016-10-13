@@ -23,5 +23,4 @@
 - if @course.price > 0
   .row
     .form-group.input-field.col-md-8.col-md-offset-2.col-xs-12
-      = label_tag 'label', "Have a promo code? Enter it here"
-      = text_field_tag :promo_code, nil, placeholder: "Promo Code", value: session[:promo_code]
+      = f.input :discount_code, placeholder: "Promo Code", label: "Have a promo code? Enter it here"
