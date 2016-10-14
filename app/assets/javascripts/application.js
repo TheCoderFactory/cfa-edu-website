@@ -20,6 +20,7 @@
 //= require ckeditor/plugins/codesnippet/plugin
 //= require ckeditor/config
 //= require moment
+//= require tether
 //= require bootstrap
 //= require bootstrap-datetimepicker
 //= require pickers
@@ -27,4 +28,4 @@
 //= require stripe-payments
 //= require blog_sidebar
 //= require close-modal
-//= require_tree .
+//= require_directory .
