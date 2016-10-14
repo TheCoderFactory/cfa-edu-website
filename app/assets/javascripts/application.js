@@ -15,6 +15,10 @@
 //= require jquery-ui
 //= require Chart.bundle
 //= require chartkick
+//= require ckeditor/init
+//= require ckeditor/plugins/widget/plugin
+//= require ckeditor/plugins/codesnippet/plugin
+//= require ckeditor/config
 //= require moment
 //= require bootstrap
 //= require bootstrap-datetimepicker
