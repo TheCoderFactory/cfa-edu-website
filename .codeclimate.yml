@@ -40,3 +40,4 @@ exclude_paths:
 - app/assets/javascripts/modernizr.js
 - app/assets/javascripts/dataTables.js
 - app/assets/javascripts/main.js
+- app/assets/javascripts/ckeditor
