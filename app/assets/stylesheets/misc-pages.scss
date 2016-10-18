@@ -403,13 +403,15 @@
     margin-left: -1em;
   }
 }
-
 .col-centered {
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center 
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
 }
