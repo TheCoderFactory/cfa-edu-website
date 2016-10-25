@@ -32,12 +32,16 @@
 }
 .scd-cta-btn:hover {
   background-color: #FFF;
-  color: #38A9C7;
+  color: #38A9C7 !important;
   text-decoration: none;
   border-style: solid;
   border-color: #38A9C7;
   border-width: 2px 2px 2px 2px;
   padding: 18px;
+}
+.scd-cta-btn:focus {
+  color: #FFF;
+  text-decoration: none;
 }
 
 .hero-video-btn {
