@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"
   get "meet-your-instructors", to: "pages#instructors"
+  get "mentors", to: "pages#mentors"
   get "partners", to: "pages#partners"
   get "payment-options", to: "pages#payment_options"
   get "privacy", to: "pages#privacy"
