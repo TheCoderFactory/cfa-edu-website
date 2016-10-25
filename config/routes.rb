@@ -60,7 +60,6 @@ Rails.application.routes.draw do
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
   get "women-in-tech", to: "pages#women_in_tech"
-  get "mentors", to: "pages#mentors"
 
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
   post ":course_type/:course_id", to: "bookings#create", as: :create_booking
