@@ -318,6 +318,48 @@
     width: 50%;
   }
 }
+.mentors {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1 {
+    color: black;
+  }
+
+  h3 {
+    color: #EC5037;
+  }
+
+  h5 {
+    color: #EC5037;
+  }
+
+  .border {
+    padding: 2px;
+    width: 30%;
+    background-color: #EC5037;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .img-mentors {
+    width: 100%;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 3px;
+  }  
+  @media only screen and (max-width: 767px) {
+    .img-mentors {
+      width: 30%;
+      margin: auto;
+    }
+  }
+}
+
+.women-in-tech {
+
+}
+
 .partners {
     padding-top: 50px;
     padding-bottom: 50px;
