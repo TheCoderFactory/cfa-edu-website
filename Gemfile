@@ -38,6 +38,7 @@ gem 'jquery-ui-rails'
 gem 'traceroute'
 gem 'puma'
 gem 'chartkick'
+gem 'rails-assets-tether', '>= 1.1.0'
 
 group :development do
   gem 'quiet_assets'

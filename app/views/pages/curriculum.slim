@@ -4,7 +4,7 @@
       .col-xs-12
         h1 Fast Track Coding Boot Camp
         .border-orange
-        h2 Diploma in Software Development ICT50715
+        h6 Diploma in Software Development ICT50715
         .border-blue
         h6 #{fa_icon "info-circle", class: "fa-1x"} COURSE INFO
         .bordered-section
@@ -23,19 +23,19 @@
                     center Census Dates
               tbody
                 tr
-                  td August 1st
+                  td February 13
                   td
                     center Sydney
                   td
                     center
-                      a.modal-trigger data-toggle="modal" data-target="#augModal"  View
+                      a.modal-trigger data-toggle="modal" data-target="#courseDatesModal"  View
                 tr
-                  td September 12th
+                  td February 13
                   td
                     center Melbourne
                   td
                     center
-                      a.modal-trigger data-toggle="modal" data-target="#septModal"  View
+                      a.modal-trigger data-toggle="modal" data-target="#courseDatesModal"  View
           p
             strong Course duration:
             br
@@ -53,13 +53,19 @@
             br
             |  Academy of Information Technology (RTO: 90511), of which Coder Factory Academy is a division.
           p
-            strong Cost:
+            strong Domestic cost:
             br
-            |  $19,700
+            |  $17,000
+          p
+            strong International cost:
+            br
+            |  $22,000
           p
             strong Payment options:
             br
-            | Instalment payments
+            | Installment payments
+            br
+            | #{link_to 'VET Student Loans', 'https://docs.education.gov.au/node/41951'}
       center
         .col-xs-6
           img.img-fluid src="#{asset_path 'nrt.png'}"
@@ -67,30 +73,222 @@
           img.img-fluid src="#{asset_path 'aqf.png'}"
     .row
       .col-xs-12
-        h6 #{fa_icon "users", class: "fa-1x"} WHO IS THIS FOR
-        .bordered-section
-          p
-            b Career changers
-            br
-            | You may be looking to swap careers into the rapidly expanding tech industry for many reasons- better pay, greater mental stimulation or just feel the need to innovate!
-          p
-            b Entrepreneurs
-            br
-            | You have big bold ideas but need some foundations in tech to code your prototype and negotiate with the broad range of suppliers/developers/engineers that operate in the tech industry.
-          p
-            b Professional Development
-            br
-            | You may be in an industry you love but feel the need to create new products and innovations within your company. Learn the Digital literacy required to transform your workplace and make the competition irrelevant.
-          p
-            b School leavers
-            br
-            | You may be interested in Computer Science/Engineering but not yet ready to dive into a 4 year degree. Use the coding Boot Camp model to gain the skills you need to quickly enter the industry and discover the various pathways open to you in carving out your tech career.
-    .row
-      .col-xs-12
         h6 #{fa_icon "book", class: "fa-1x"} PREREQUISITES
         .bordered-section
           p
             | Just a willingness to learn, a passion for technology and high school completion.
+    .row
+      .col-xs-12
+        h1 CURRICULUM
+        br
+        h6 #{fa_icon "code", class: "fa-1x"} TERM ONE
+        .bordered-section
+          br
+            .row.row-centered
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseDevTools" aria-expanded="false" data-toggle="collapse" href="#collapseDevTools"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} DEVELOPMENT TOOLS
+                #collapseDevTools.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li GitHub
+                      li Sublime Text
+                      li Heroku & AWS
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseProfessional" aria-expanded="false" data-toggle="collapse" href="#collapseProfessional"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} PROFESSIONAL SKILLS
+                  #collapseProfessional.collapse
+                    .card.card-block
+                      ul.no-list-icons
+                        li Pair programming
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseCompSciOne" aria-expanded="false" data-toggle="collapse" href="#collapseCompSciOne"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} COMPUTER SCIENCE
+                #collapseCompSciOne.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li file access, read/write
+                      li getters & setters
+                      li web infrastructure
+                      li programming language theory
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseUX" aria-expanded="false" data-toggle="collapse" href="#collapseUX"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} USER EXPERIENCE
+                  #collapseUX.collapse
+                    .card.card-block
+                      ul.no-list-icons
+                        li user stories
+                        li design theory
+
+                        li wireframing
+                        li responsive design
+                        li and more
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseHTML" aria-expanded="false" data-toggle="collapse" href="#collapseHTML"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} HTML
+                  #collapseHTML.collapse
+                    .card.card-block
+                      ul.no-list-icons
+                        li layout
+                        li styles
+                        li classes
+                        li attributes
+                        li formatting
+                        li and more
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseCSS" aria-expanded="false" data-toggle="collapse" href="#collapseCSS"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} CSS
+                  #collapseCSS.collapse
+                    .card.card-block
+                      ul.no-list-icons
+                        li box model
+                        li selectors
+                        li position
+                        li classes
+                        li media queries
+                        li flexbox
+                        li units
+                        li floats
+                        li counters
+                        li precompilers
+                        li libraries
+                        li and more
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseRuby" aria-expanded="false" data-toggle="collapse" href="#collapseRuby"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} RUBY
+                #collapseRuby.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li MVC
+                      li blocks
+                      li classes
+                      li control statements
+                      li inheritance
+                      li methods
+                      li models
+                      li scope
+                      li and more
+
+
+    .row
+      .col-xs-12
+        h6 #{fa_icon "code", class: "fa-1x"} TERM TWO
+        .bordered-section
+          br
+            .row.row-centered
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseDevToolsTwo" aria-expanded="false" data-toggle="collapse" href="#collapseDevToolsTwo"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} DEVELOPMENT TOOLS
+                #collapseDevToolsTwo.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li bower
+                      li gul.no-list-iconsp
+
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseProfessionalTwo" aria-expanded="false" data-toggle="collapse" href="#collapseProfessionalTwo"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} PROFESSIONAL SKILLS
+                  #collapseProfessionalTwo.collapse
+                    .card.card-block
+                      ul.no-list-icons
+                        li test driven development
+                        li payment processors
+                        li source control & release cycle
+                        li application design process
+                        li agile development
+                        li testing code quality with metrics
+                        li debugging & logging
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseCompSciTwo" aria-expanded="false" data-toggle="collapse" href="#collapseCompSciTwo"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} COMPUTER SCIENCE
+                #collapseCompSciTwo.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li database schema design
+                      li data structures & algorithms
+                      li discrete maths
+                      li optimisation
+                      li information security
+                      li apis
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseRails" aria-expanded="false" data-toggle="collapse" href="#collapseRails"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} RUBY ON RAILS
+                  #collapseRails.collapse
+                    .card.card-block
+                      ul.no-list-icons
+                        li controllers
+                        li routes
+                        li views
+                        li forms
+                        li authentication
+                        li authorisation
+                        li and more
+    .row
+      .col-xs-12
+        h6 #{fa_icon "code", class: "fa-1x"} TERM THREE
+        .bordered-section
+          br
+            .row.row-centered
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseProfSkills" aria-expanded="false" data-toggle="collapse" href="#collapseProfSkills"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} JOB SEARCH PREP
+                #collapseProfSkills.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li mock interviews
+                      li programming tests
+                      li whiteboarding
+                      li resumes
+                      li telling your story
+                      li and more
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseCompSciThree" aria-expanded="false" data-toggle="collapse" href="#collapseCompSciThree"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} COMPUTER SCIENCE
+                #collapseCompSciThree.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li computer networks
+                      li software design patterns
+                      li distributed computing
+                      li human computer interaction
+                      li and more
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseJavaScript" aria-expanded="false" data-toggle="collapse" href="#collapseJavaScript"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} JAVASCRIPT
+                #collapseJavaScript.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li asynchronous jobs
+                      li NodeJS
+                      li Express
+                      li Angul.no-list-iconsarJS
+                      li Jasmine
+                      li and more
+    .row
+      .col-xs-12
+        h6 #{fa_icon "code", class: "fa-1x"} TERM FOUR
+        .bordered-section
+          br
+            .row.row-centered
+              .col-md-4
+                p
+                  a.scd-cta-btn.btn-block aria-controls="collapseInternship" aria-expanded="false" data-toggle="collapse" href="#collapseInternship"
+                    | #{fa_icon "arrow-circle-right", class: "fa-1x"} INTERNSHIP
+                #collapseInternship.collapse
+                  .card.card-block
+                    ul.no-list-icons
+                      li working in a real development team environment
+                      li real world use of developer tools and methodologies.
+
     .row
       .col-xs-12
         h6 #{fa_icon "key", class: "fa-1x"} KEY LEARNING OUTCOMES
@@ -106,58 +304,47 @@
           p Interview skills
     .row
       .col-xs-12
-        h6 #{fa_icon "code", class: "fa-1x"} COURSE SUBJECTS
+        h6 #{fa_icon "code", class: "fa-1x"} VET OUTCOMES
         .bordered-section
-          p Identify and manage the implementation of current industry specific technologies ICTICT514
-          p Validate an application design against specifications ICTPRG520
-          p Contribute to copyright, ethics and privacy in an ICT environment ICTICT418
-          p Establish and maintain client user liaison ICTSAS502
-          p Apply testing techniques for software development ICTPRG529
-          p Review developed software ICTPRG515
-          p Build advanced user interface ICTPRG505
-          p Computer programming logic and problem solving/critical thinking
-          p The internet and how it works
-          p HTML
-          p CSS
-          p The IT industry
-          p Javascript
-          p Bootstrap
-          p Web development tools
-          p Hosting
-          p Project 1A: Building a static site
-          p Forms
-          p Project 1B: Building a static site with forms
-          p Apply intermediate programming skills in another language ICTPRG418
-          p Ruby
-          p Rails
-          p Manage a Project using software management tools ICTPRG502
-          p Databases- relational/non relational
-          p Apply intermediate/advanced object oriented language skills ICTPRG527/ICTPRG501
-          p MVC
-          p APIs
-          p Pre Processors- SASS/LESS
-          p Apply advanced programming skills in another language ICTPRG523
-          p Node frameworks
-          p Express
-          p Project 2- Dynamic site with social network
-          p Angular
-          p Ajax
-          p IOS/Android app integration
-          p System security
-          p Debugging  Monitoring applications ICTPRG503
-          p Project 3- Real Time web app
-          p Deplay an application to a production environment ICTPRG504
-          p Apply Software development methodologies ICTICT403
-          p Gather data to identify business opportunities ICTICT509
-          p Employer testing environments
-          p Interview techniques
-  #augModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
-    .modal-dialog.modal-lg role="document" 
+          p
+            b ICTICT514
+            |: Identify and manage the implementation of current industry specific technologies
+
+          p ICTPRG520 - Validate an application design against specifications
+
+          p ICTICT418 - Contribute to copyright, ethics and privacy in an ICT environment
+
+          p ICTSAS502 - Establish and maintain client user liaison
+
+          p ICTPRG529 - Apply testing techniques for software development
+
+          p ICTPRG515 - Review developed software
+
+          p ICTPRG505 - Build advanced user interface
+
+          p ICTPRG418 - Apply intermediate programming skills in another language
+
+          p ICTPRG527/ICTPRG501 - Apply intermediate/advanced object oriented language skills
+
+          p ICTPRG502 - Manage a Project using software management tools
+
+          p ICTPRG523 - Apply advanced programming skills in another language
+
+          p ICTPRG503 - Debugging and Monitoring applications
+
+          p ICTPRG504 - Deplay an application to a production environment
+
+          p ICTICT403 - Apply Software development methodologies
+
+          p ICTICT509 - Gather data to identify business opportunities
+
+  #courseDatesModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+    .modal-dialog.modal-lg role="document"
       .modal-content
         .modal-header
-          button.close aria-label="Close" data-dismiss="modal" type="button" 
+          button.close aria-label="Close" data-dismiss="modal" type="button"
             span aria-hidden="true"  ×
-          h4#myModalLabel.modal-title AUGUST CENSUS DATES
+          h4#myModalLabel.modal-title FEBRUARY CENSUS DATES
         .modal-body
           table.table.table-striped.table-hover
             thead
@@ -169,57 +356,21 @@
             tbody
               tr
                 th Term 1
-                td 1st August 2016
-                td 8th August 2016
-                td 2nd September 2016
+                td 13 Feb 2017
+                td 20 Feb 2017
+                td 17 Mar 2017
               tr
                 th Term 2
-                td 12th September 2016
-                td 19th September 2016
-                td 14th October 2016
+                td 27 Mar 2017
+                td 3 Apr 2017
+                td 28 Apr 2017
               tr
                 th Term 3
-                td 24th October 2016
-                td 31st October 2016
-                td 25th November 2016
+                td 8 May 2017
+                td 15 May 2017
+                td 9 Jun 2017
               tr
                 th Term 4
-                td 5th December 2016
-                td 12th December 2016
-                td 20th January 2017
-  #septModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
-    .modal-dialog.modal-lg role="document" 
-      .modal-content
-        .modal-header
-          button.close aria-label="Close" data-dismiss="modal" type="button" 
-            span aria-hidden="true"  ×
-          h4#myModalLabel.modal-title SEPTEMBER CENSUS DATES
-        .modal-body
-          table.table.table-striped.table-hover
-            thead
-              tr
-                th Term
-                th Start date
-                th Census date
-                th End Date
-            tbody
-              tr
-                th Term 1
-                td 12th September 2016
-                td 19th September 2016
-                td 14th October 2016
-              tr
-                th Term 2
-                td 24th October 2016
-                td 31st October 2016
-                td 25th November 2016
-              tr
-                th Term 3
-                td 5th December 2016
-                td 12th December 2016
-                td 20th January 2016
-              tr
-                th Term 4
-                td 30th January 2017
-                td 6th February 2017
-                td 3rd March 2017
+                td 19 Jun 2017
+                td 26 Jun 2017
+                td 21 Jul 2017
