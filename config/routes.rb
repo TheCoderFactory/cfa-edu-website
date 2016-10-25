@@ -74,5 +74,7 @@ Rails.application.routes.draw do
   get "/learn-to-code", to: redirect("/short-courses")
   match "/learn-to-code/:id", to: redirect("/short-courses"), via: :get
 
+  get "/posts/posts/how-to-prepare-for-the-futureofwork", to: redirect("/posts/posts/how-to-prepare-for-the-future-of-work")
+
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
 end
