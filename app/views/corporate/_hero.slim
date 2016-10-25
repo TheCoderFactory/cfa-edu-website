@@ -2,8 +2,8 @@
   .container
     .row
       center
-        h3 <b>BUILD YOUR BUSINESS</b>
-        h3 STRENGTHEN YOUR TEAMS BY LEARNING HOW TO CODE
+        h3 <b>TRANSFORM YOUR BUSINESS</b>
+        h3 EMPOWER YOUR TEAMS BY LEARNING HOW TO CODE
         .wrapper
           .top-boxes
             .box-invisible
@@ -13,7 +13,7 @@
             .box
               h4 #{@course3.name.upcase}
               .border-blue
-              p.text #{@course3.tagline}
+              p.text #{@course3.tagline.html_safe}
               a.scd-cta-btn href="##{@course3.slug}" FIND OUT MORE
             .box
               h4.up-more #{@course1.name.upcase}
@@ -28,8 +28,8 @@
 .corporate-hero.hidden-md-up
   .container
     center
-      h3 <b>CODING IS FUN</b>
-      h3 START YOUR JOURNEY INTO CODE
+      h3 <b>TRANSFORM YOUR BUSINESS</b>
+      h3 EMPOWER YOUR TEAMS BY LEARNING HOW TO CODE
       .box
         h4 #{@course1.name.upcase}
         .border-orange
