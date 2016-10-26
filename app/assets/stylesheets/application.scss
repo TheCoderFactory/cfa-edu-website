@@ -62,6 +62,11 @@ header {
       font-size: 16px;
     }
   }
+  @media (min-width:641px) {
+    .nav-link {
+      font-size: 14px;
+    }
+  }
   a {
     color: #000;
   }
