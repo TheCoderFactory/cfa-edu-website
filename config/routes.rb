@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   get "video-archive", to: "pages#video_archive"
   get "women-in-tech", to: "pages#women_in_tech"
 
+
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
   post ":course_type/:course_id", to: "bookings#create", as: :create_booking
 
@@ -75,7 +76,7 @@ Rails.application.routes.draw do
   get "/learn-to-code", to: redirect("/short-courses")
   match "/learn-to-code/:id", to: redirect("/short-courses"), via: :get
 
-  get "/posts/posts/how-to-prepare-for-the-futureofwork", to: redirect("/posts/posts/how-to-prepare-for-the-future-of-work")
+  get "/posts/how-to-prepare-for-the-futureofwork", to: redirect("/posts/how-to-prepare-for-the-future-of-work")
 
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
 end
