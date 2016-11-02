@@ -27,7 +27,7 @@ h6 {
 }
 p {
   color: #ADADAD;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -49,12 +49,108 @@ p {
     padding: 5px;
   }
   h5 {
-    font-size: 15px;
+    font-size: 12px;
     padding: 5px;
   }
   h6 {
   }
   a {
     font-size: 11px;
+  }
+}
+
+.header {
+  alertHeader {
+    background-color: #EC5037;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 9999;
+
+    h5 {
+      color:white;
+    }
+
+    a {
+      color: #333;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+  }
+
+  header {
+    background-color: #FFF;
+    position: fixed;
+    width: 100%;
+    top:30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 9999;
+
+    a:hover {
+      text-decoration: none;
+      color: #38A9C7 !important;
+    }
+    img {
+      display: inline !important;
+    }
+    @media only screen and (max-width: 767px) {
+      .nav-link {
+      }
+    }
+    @media (min-width:641px) {
+      .nav-link {
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+    a {
+      color: #000;
+    }
+    .active {
+      color: #38A9C7;
+    }
+    a.header-major-cta {
+      color: #EC5037 !important;
+      border: 2px solid #EC5037;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    nav-item {
+    }
+    a.active:after {
+      content: ' ';
+      position: absolute;
+      border: solid 10px transparent;
+      border-top: solid 0px transparent;
+      border-width: 10px;
+      margin-top: 55px;
+      margin-left: -20px;
+      border-color: #FFF transparent transparent transparent;
+    }
+    button {
+      color: #38A9C7;
+    }
+    button:focus {
+      outline: 5px auto #38A9C7;
+    }
+    @media only screen and (max-width: 767px) {
+      li {
+        float: none !important;
+        margin-left: 0px !important;
+        display: flex;
+        vertical-align: middle;
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
   }
 }
