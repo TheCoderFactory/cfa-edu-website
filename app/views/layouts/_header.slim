@@ -1,11 +1,11 @@
 .header
-  alertHeader
-    center 
-      h5 
-        NEXT NEXT BOOTCAMP COURSE STARTS: 13TH FEBRUARY 2017 | 
-        a.nav-link.header-major-cta href="/fast-track/apply"  NOW ENROLLING
-  header
-    nav.navbar
+  #alert-header 
+    nav.navbar-fixed-top
+    h5 
+      NEXT NEXT BOOTCAMP COURSE STARTS: 13TH FEBRUARY 2017 | 
+      a.nav-link.header-major-cta href="/fast-track/apply"  NOW ENROLLING
+  #header
+    nav.navbar-default
       a.hidden-md-up href="/"
         img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
       button.navbar-toggler.hidden-md-up.pull-right type="button" data-toggle="collapse" data-target="#globalNavbar" &#9776;
@@ -14,15 +14,16 @@
           a.hidden-sm-down href="/"
             img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
           ul.nav.navbar-nav.pull-lg-right
-            li.nav-item
-              = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link"
-            li.nav-item
-              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link"
-            li.nav-item
-              = active_link_to 'CORPORATE', "/corporate", class: "nav-link"
-            li.nav-item
-              = active_link_to 'SCHOOLS', "/kids-coding", class: "nav-link"
-            li.nav-item
-              = active_link_to 'CONTACT', "/contact", class: "nav-link"
-            li.nav-item
-              a.nav-link.header-major-cta href="/fast-track/apply" APPLY
+            center
+              li.nav-item
+                = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link"
+              li.nav-item
+                = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link"
+              li.nav-item
+                = active_link_to 'CORPORATE', "/corporate", class: "nav-link"
+              li.nav-item
+                = active_link_to 'SCHOOLS', "/kids-coding", class: "nav-link"
+              li.nav-item
+                = active_link_to 'CONTACT', "/contact", class: "nav-link"
+              li.nav-item
+                a.nav-link.header-major-cta href="/fast-track/apply" APPLY
