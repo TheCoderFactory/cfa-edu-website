@@ -1,0 +1,351 @@
+.kids-coding-hero {
+  background-image: url(asset-path("schools-hero.jpg"));
+  background-size: cover;
+  background-position: top;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 60vh;
+
+  h3 {
+    color: #FFF;
+  }
+  h4 {
+    color: #000;
+    margin-top: 10px;
+  }
+  .up-more {
+    margin-top: -10px;
+  }
+  .wrapper {
+    padding: 10px;
+  }
+  .bottom-boxes{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .top-boxes{
+    display: flex;
+    margin-bottom: -10px;
+    padding: 0px;
+    flex-basis: 0;
+  }
+  .box{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FFF;
+  }
+  .box-mobile{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FFF;
+  }
+  .box-invisible{
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .top-boxes .box-middle {
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #FFF;
+  }
+  .bottom-boxes .box-middle {
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #FFF;
+  }
+  .text{
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    flex: 1;
+  }
+  .border-orange {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.schools-info {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media only screen and (max-width: 767px) {
+    .centered {
+      text-align: center;
+    }
+    h5 {
+      margin-top: 20px;
+    }
+    .other-images {
+      margin-top: 30px;
+    }
+  }
+  h5 {
+    color: #000;
+  }
+  .text {
+    line-height: 40px;
+    color: #000;
+  }
+  .schools-points {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .right-row img {
+    margin-right: 10px;
+    width: 20%;
+  }
+  .img-schools-info-left {
+    display: inline;
+    margin-top: 70px;
+  }
+  .img-schools-info-right {
+    display: inline;
+  }
+}
+.schools-course-summaries {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .anchor {
+    padding: 1px;
+    margin-bottom: 60px;
+  }
+  h3, h5 {
+    color: #000;
+  }
+  .price-text {
+    color: #EC5037;
+  }
+  .course-summary {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .border {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .no-list-icons {
+    list-style: none;
+    padding: 0px;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+.kids-sign-up-form {
+  background-color: #000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .hs-button {
+    @extend .pull-left;
+  }
+}
+.kids-course-summaries {
+  background-color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h5 {
+    color: #000;
+  }
+  .border {
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .no-list-icons {
+    list-style: none;
+    padding: 0px;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  .dash-list-icons {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    color: #ADADAD;
+    font-size: 14px;
+  }
+  .dash-list-icons > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+.out-of-school {
+  background-image: url(asset-path('first_cohort_orange.jpg'));
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #FFF;
+
+  hr {
+    color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    p, h1, h2 {
+      text-align: center;
+    }
+  }
+  p {
+    color: #FFF;
+  }
+  h4 {
+    color: #000;
+  }
+  .info-session-form-container {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  .info-session-form {
+    vertical-align: middle;
+  }
+  .hero-container {
+    display: flex;
+  }
+  .hero-column {
+    padding: 15px;
+    flex: 1;
+  }
+  .hs_hs_persona > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_hs_persona > .input > select {
+    margin-top: 5px;
+  }
+  .hs_campus_preference > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_campus_preference > .input > select {
+    margin-top: 5px;
+  }
+  .hs_sydney_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_sydney_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+  .hs_melbourne_info_night_dates > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    color: #333;
+    @extend .pull-left;
+  }
+  .hs_melbourne_info_night_dates > .input > select {
+    margin-top: 5px;
+  }
+}
+.kids-coding-q-and-a {
+  background-color: #FFF;
+  h5 {
+    color: #000;
+  }
+  .q-and-a-row {
+    display: flex;
+  }
+  .q-and-a-box {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    background-color: #EEE;
+  }
+  .question {
+    color: #000;
+  }
+}

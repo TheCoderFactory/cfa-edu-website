@@ -1,0 +1,48 @@
+.kids-coding-hero.hidden-sm-down
+  .container
+    .row
+      center
+        h3 <b>POWER OF TECH</b>
+        h3 TECHNOLOGY EDUCATION FOR SCHOOLS
+        .wrapper
+          .top-boxes
+            .box-invisible
+            .box-middle
+            .box-invisible
+          .bottom-boxes
+            .box
+              h4 #{@coding_and_the_digital_curriculum.name.upcase}
+              .border-blue
+              p.text #{@coding_and_the_digital_curriculum.tagline}
+              a.scd-cta-btn href="##{@coding_and_the_digital_curriculum.slug}" FIND OUT MORE
+            .box-middle.extra
+              h4 #{@student_deeper_dive.name.upcase}
+              .border-orange
+              p.text #{@student_deeper_dive.tagline}
+              a.main-cta-btn href="##{@student_deeper_dive.slug}" FIND OUT MORE
+            .box
+              h4 #{@hands_on_coding.name.upcase}
+              .border-blue
+              p.text #{@hands_on_coding.tagline}
+              a.scd-cta-btn href="##{@hands_on_coding.slug}" FIND OUT MORE
+.kids-coding-hero.hidden-md-up
+  .container
+    center
+      .box-mobile
+        img.img-fluid src="#{asset_path 'circle-arrow-orange.png'}"
+        h4 #{@student_deeper_dive.name.upcase}
+        .border-orange
+        p.text #{@student_deeper_dive.tagline}
+        a.main-cta-btn href="##{@student_deeper_dive.slug}-m" FIND OUT MORE
+      .box-mobile
+        img.img-fluid src="#{asset_path 'circle-arrow-orange.png'}"
+        h4 #{@coding_and_the_digital_curriculum.name.upcase}
+        .border-blue
+        p.text #{@coding_and_the_digital_curriculum.tagline}
+        a.scd-cta-btn href="##{@coding_and_the_digital_curriculum.slug}-m" FIND OUT MORE
+      .box-mobile
+        img.img-fluid src="#{asset_path 'circle-arrow-orange.png'}"
+        h4 #{@hands_on_coding.name.upcase}
+        .border-blue
+        p.text #{@hands_on_coding.tagline}
+        a.scd-cta-btn href="##{@hands_on_coding.slug}-m" FIND OUT MORE
