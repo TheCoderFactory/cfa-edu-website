@@ -1,8 +1,8 @@
-.anchor#weekends
-.kids-course-summaries.hidden-sm-down
+.anchor#coding-curriculum
+.schools-course-summaries.hidden-sm-down
   .container
-    h3 WEEKEND COURSES
-    - @weekend_courses.each_with_index do |course, index|
+    h3 CODING AND THE CURRICULUM
+    - @coding_curriculum_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
         .row.course-summary
@@ -37,11 +37,12 @@
             - if course.active
               br
               = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
-.schools-course-summaries.hidden-md-up#weekends-m
+.anchor#coding-curriculum-m
+.schools-course-summaries.hidden-md-up
   .container
     center
-      h3 WEEKEND COURSES
-      - @weekend_courses.each do |course|
+      h3 CODING AND THE CURRICULUM
+      - @coding_curriculum_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
           .col-md-6

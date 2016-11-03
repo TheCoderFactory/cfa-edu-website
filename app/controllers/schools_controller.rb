@@ -1,8 +1,7 @@
 class SchoolsController < ApplicationController
   def index
-    @coding_and_the_digital_curriculum = Course.find_by(name: "Coding and the Digital Curriculum")
-    @student_deeper_dive = Course.find_by(name: "Student Deeper Dive")
-    @hands_on_coding = Course.find_by(name: "Hands On Coding")
-    @courses = Course.where(course_type: "Schools")
+    @coding_curriculum_courses = Course.where(subtype: "Coding Curriculum")
+    @maker_space_courses = Course.where(subtype: "Maker Space")
+    @teacher_training_courses = Course.where(subtype: "Maker Space")
   end
 end

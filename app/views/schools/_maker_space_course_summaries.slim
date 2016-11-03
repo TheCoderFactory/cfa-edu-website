@@ -1,6 +1,8 @@
+.anchor#maker-space
 .schools-course-summaries.hidden-sm-down
   .container
-    - @courses.each_with_index do |course, index|
+    h3 MAKER SPACE
+    - @maker_space_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
         .row.course-summary
@@ -35,10 +37,12 @@
             - if course.active
               br
               = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
+.anchor#maker-space-m
 .schools-course-summaries.hidden-md-up
   .container
     center
-      - @courses.each do |course|
+      h3 MAKER SPACE
+      - @maker_space_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
           .col-md-6

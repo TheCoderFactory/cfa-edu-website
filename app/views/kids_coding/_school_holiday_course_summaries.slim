@@ -1,7 +1,7 @@
 .anchor#school-holidays
 .kids-course-summaries.hidden-sm-down
   .container
-    h3 School Holidays
+    h3 SCHOOL HOLIDAYS
     - @school_holiday_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
@@ -41,6 +41,7 @@
 .schools-course-summaries.hidden-md-up
   .container
     center
+      h3 SCHOOL HOLIDAYS
       - @school_holiday_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
