@@ -1,0 +1,60 @@
+.anchor#weekends
+.kids-course-summaries.hidden-sm-down
+  .container
+    h3 WEEKEND COURSES
+    - @weekend_courses.each_with_index do |course, index|
+      - if index%2 == 0
+        .anchor id="#{course.slug}"
+        .row.course-summary
+          .col-md-6
+            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
+            .border
+            p #{course.description.html_safe}
+            br
+            - if course.active
+              br
+              = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
+          .col-md-6
+            - if course.course_image_url
+              img.img-fluid src="#{course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
+      - else
+        .anchor id="#{course.slug}"
+        .row.course-summary
+          .col-md-6
+            - if course.course_image_url
+              img.img-fluid src="#{course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
+          .col-md-6
+            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
+            .border
+            p #{course.description.html_safe}
+            br
+            - if course.active
+              br
+              = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
+.schools-course-summaries.hidden-md-up#weekends-m
+  .container
+    center
+      h3 WEEKEND COURSES
+      - @weekend_courses.each do |course|
+        .anchor id="#{course.slug}-m"
+        .row.course-summary
+          .col-md-6
+            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
+            .border
+            p #{course.description.html_safe}
+          .col-md-6
+            - if course.course_image_url
+              img.img-fluid src="#{course.course_image_url}"
+            - else
+              center
+                p #{fa_icon "picture-o", class: "fa-5x"}
+          br
+          - if course.active
+            br
+            = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-workshop", course_id: course.slug), class: "main-cta-btn"
