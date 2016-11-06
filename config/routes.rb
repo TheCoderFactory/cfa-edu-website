@@ -38,6 +38,8 @@ Rails.application.routes.draw do
 
   get "corporate", to: "corporate#index"
 
+  get "schools", to: "schools#index"
+
   get "kids-coding", to: "kids_coding#index"
 
   get "blog", to: "blog#index"
