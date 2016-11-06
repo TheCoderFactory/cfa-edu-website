@@ -72,8 +72,8 @@ p {
 
   .primary-nav {
     top: 50px !important;
-    padding-bottom: 5px !important;
-    padding-top: 5px !important;
+    padding-bottom: 12px !important;
+    padding-top: 12px !important;
   }
 
 }
@@ -149,7 +149,6 @@ p {
     }
     .nav-link-link {
       display: flex;
-      text-align:center;
       font-size: 14px;
       border: 2px solid #fff;
       font-decoration: bold;
@@ -189,17 +188,17 @@ p {
     button:focus {
       outline: 5px auto #38A9C7;
     }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 541px) {
       li {
         float: none !important;
         margin-left: 0px !important;
         display: flex;
         text-align:center;
-        font-size: 18px;
+        font-size: 12px;
       }
 
       .nav-link {
-        font-size: 14px;
+        font-size: 18px;
         text-align:center;
       }
     }
