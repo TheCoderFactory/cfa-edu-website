@@ -21,6 +21,11 @@
         ul
           - @footer_schools_courses.each do |course|
             li
+              a.course-link href="/schools##{course.slug}" #{course.name.upcase}
+        h6 KIDS
+        ul
+          - @footer_kids_courses.each do |course|
+            li
               a.course-link href="/kids-coding##{course.slug}" #{course.name.upcase}
       .col-md-4
         h2 OUR COMPANY
