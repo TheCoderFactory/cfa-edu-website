@@ -1,7 +1,7 @@
 .anchor#weekends
 .kids-course-summaries.hidden-sm-down
   .container
-    h3 WEEKEND COURSES
+    h3 WEEKEND WORKSHOPS
     - @weekend_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
@@ -40,7 +40,7 @@
 .schools-course-summaries.hidden-md-up#weekends-m
   .container
     center
-      h3 WEEKEND COURSES
+      h3 WEEKEND WORKSHOPS
       - @weekend_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
