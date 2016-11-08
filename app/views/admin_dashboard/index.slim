@@ -1,45 +1,46 @@
 .dashboard
-  .row
-    .col-md-10.col-md-offset-1
-      .row
-        .col-md-6
-          br
-          h3 Coming Intakes
-          br
-          table.table.table-bordered
-            thead
-              tr
-                th width="50%"
-                  = Date.today.strftime('%B')
-                th width="50%"
-                  = (Date.today + 1.month).strftime('%B')
-            tbody
-              - @upcoming_intakes.each_with_index do |intakes|
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        .row
+          .col-md-6
+            br
+            h3 Coming Intakes
+            br
+            table.table.table-bordered
+              thead
                 tr
-                  td
-                    - if intakes[0]
-                      | #{intakes[0].location+', '+intakes[0].course_name}<br>
-                      | #{intakes[0].start_date}<br>
-                      | Bookings: #{intakes[0].bookings.count}
-                  td
-                    - if intakes[1]
-                      | #{intakes[1].location+', '+intakes[1].course_name}<br>
-                      | #{intakes[1].start_date}<br>
-                      | Bookings: #{intakes[1].bookings.count}
-        .col-md-6
-          .row
-            .col-md-6
-              h3 Sydney Bookings
-              br
-              = pie_chart @syd_pie_bookings
-            .col-md-6
-              h3 Melbourne Bookings
-              br
-              = pie_chart @mel_pie_bookings
-      br
-      .row
-        .col-md-12
-          h3 Bookings: Past Month
-          br
-          = column_chart @booking_hash
-          p Total Bookings: #{@booking_count}
+                  th width="50%"
+                    = Date.today.strftime('%B')
+                  th width="50%"
+                    = (Date.today + 1.month).strftime('%B')
+              tbody
+                - @upcoming_intakes.each_with_index do |intakes|
+                  tr
+                    td
+                      - if intakes[0]
+                        | #{intakes[0].location+', '+intakes[0].course_name}<br>
+                        | #{intakes[0].start_date}<br>
+                        | Bookings: #{intakes[0].bookings.count}
+                    td
+                      - if intakes[1]
+                        | #{intakes[1].location+', '+intakes[1].course_name}<br>
+                        | #{intakes[1].start_date}<br>
+                        | Bookings: #{intakes[1].bookings.count}
+          .col-md-6
+            .row
+              .col-md-6
+                h3 Sydney Bookings
+                br
+                = pie_chart @syd_pie_bookings
+              .col-md-6
+                h3 Melbourne Bookings
+                br
+                = pie_chart @mel_pie_bookings
+        br
+        .row
+          .col-md-6
+            h3 Bookings: Past Month
+            br
+            = column_chart @booking_hash
+            p Total Bookings: #{@booking_count}
