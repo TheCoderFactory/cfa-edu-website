@@ -1,25 +1,27 @@
-header
-  nav.navbar
-    a.hidden-md-up href="/"
-      img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
-    button.navbar-toggler.hidden-md-up.pull-right type="button" data-toggle="collapse" data-target="#globalNavbar" &#9776;
-    .collapse.navbar-toggleable-sm#globalNavbar
-      a.hidden-sm-down href="/"
+.header
+  .primary-nav
+    navbar.navbar-default
+      a.hidden-md-up href="/"
         img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
-      ul.nav.navbar-nav.pull-lg-right
-        li.nav-item
-          = active_link_to 'DASHBOARD', admin_dashboard_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'COURSES', courses_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'INTAKES', intakes_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'BOOKINGS', bookings_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'FAST TRACK PAYMENTS', fast_track_payments_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'PROMO CODES', promo_codes_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'BLOG POSTS', posts_path, class: "nav-link"
-        li.nav-item
-          = active_link_to 'LOGOUT', destroy_admin_session_path, method: :delete, class: "nav-link"
+      button.navbar-toggler.hidden-md-up.pull-right type="button" data-toggle="collapse" data-target="#globalNavbar" &#9776;
+      .container
+        .collapse.navbar-toggleable-sm#globalNavbar
+          a.hidden-sm-down href="/"
+            img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
+          ul.nav.navbar-nav.pull-lg-right
+            li.nav-item
+              = active_link_to 'DASHBOARD', admin_dashboard_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'COURSES', courses_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'INTAKES', intakes_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'BOOKINGS', bookings_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'FAST TRACK PAYMENTS', fast_track_payments_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'PROMO CODES', promo_codes_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'BLOG POSTS', posts_path, class: "nav-link"
+            li.nav-item
+              = active_link_to 'LOGOUT', destroy_admin_session_path, method: :delete, class: "nav-link"
