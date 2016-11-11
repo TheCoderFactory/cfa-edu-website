@@ -27,12 +27,12 @@
                       - if intakes[0]
                         | #{intakes[0].location+', '+intakes[0].course_name}<br>
                         | #{intakes[0].start_date}<br>
-                        | Bookings: #{intakes[0].bookings.count}
+                        | Bookings: #{intakes[0].active_bookings.count}
                     td
                       - if intakes[1]
                         | #{intakes[1].location+', '+intakes[1].course_name}<br>
                         | #{intakes[1].start_date}<br>
-                        | Bookings: #{intakes[1].bookings.count}
+                        | Bookings: #{intakes[1].active_bookings.count}
           br
           .col-md-6
             h3 Sydney Bookings
