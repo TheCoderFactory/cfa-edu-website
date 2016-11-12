@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'feeds/blog'
+
+  get 'feeds/course'
+
   mount Ckeditor::Engine => '/ckeditor'
   root "home#index"
   devise_for :admins, skip: [:sessions, :passwords, :registrations]
