@@ -5,7 +5,7 @@ class FeedsController < ApplicationController
     @posts = Post.current_articles
   end
 
-  def course
-    @intakes = 
-  end
+  # def course
+  #   @intakes =
+  # end
 end
