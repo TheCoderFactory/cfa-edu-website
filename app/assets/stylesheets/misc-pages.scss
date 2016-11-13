@@ -365,7 +365,7 @@
     padding-bottom: 50px;
 
     h3 {
-      color: #38A9C7;
+      color: black;
     }
     .border {
       padding: 2px;
@@ -378,12 +378,31 @@
       padding-top: 10px;
       padding-bottom: 10px;
     }
-    .become-a-sponsor a {
+    a {
       display: inline-block;
     }
+
     .partner-info {
       padding: 10px;
     }
+
+  .border-orange {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
 }
 .confirmation-page {
   padding-top: 50px;
@@ -457,4 +476,3 @@
 .row-centered {
     text-align:center;
 }
-
