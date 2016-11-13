@@ -22,6 +22,9 @@ class Intake < ActiveRecord::Base
   def self.chron_order
     order(start: :asc)
   end
+  def active_bookings
+    bookings.where.not(cancelled: true)
+  end
   def active?
     status == "Active"
   end
