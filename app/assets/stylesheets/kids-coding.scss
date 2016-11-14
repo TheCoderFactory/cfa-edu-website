@@ -112,8 +112,35 @@
     padding: 1px;
     margin-bottom: 60px;
   }
-  h3, h5 {
+  h1, h5 {
     color: #000;
+  }
+  .kids-btn {
+    background-color: #38A9C7;
+    border-radius: 5px;
+    color: #FFF !important;
+    font-size: 18px;
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .kids-btn:hover {
+    background-color: #FFF;
+    color: #38A9C7 !important;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #38A9C7;;
+    border-width: 2px 2px 2px 2px;
+    padding: 18px;
+  }
+  .active {
+    background-color: #FFF !important;
+    color: #38A9C7 !important;
+    text-decoration: none !important;
+    border-style: solid !important;
+    border-color: #38A9C7 !important;
+    border-width: 2px 2px 2px 2px !important;
+    padding: 18px !important;
   }
   .price-text {
     color: #EC5037;
