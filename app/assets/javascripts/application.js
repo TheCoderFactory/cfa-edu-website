@@ -25,6 +25,7 @@
 //= require bootstrap-datetimepicker
 //= require pickers
 //= require testimonials
+//= require kids-coding
 //= require stripe-payments
 //= require blog_sidebar
 //= require close-modal

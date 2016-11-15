@@ -1,43 +1,21 @@
 .anchor#weekends
 .kids-course-summaries.hidden-sm-down
   .container
-    h3 WEEKEND WORKSHOPS
-    - @weekend_courses.each_with_index do |course, index|
-      - if index%2 == 0
-        .anchor id="#{course.slug}"
-        .row.course-summary
-          .col-md-6
-            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
-            .border
-            p #{course.description.html_safe}
-            br
-            - if course.active
-              br
-              = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
-          .col-md-6
-            - if course.course_image_url
-              img.img-fluid src="#{course.course_image_url}"
-            - else
-              center
-                p #{fa_icon "picture-o", class: "fa-5x"}
-      - else
-        .anchor id="#{course.slug}"
-        .row.course-summary
-          .col-md-6
-            - if course.course_image_url
-              img.img-fluid src="#{course.course_image_url}"
-            - else
-              center
-                p #{fa_icon "picture-o", class: "fa-5x"}
-          .col-md-6
-            h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
-            .border
-            p #{course.description.html_safe}
-            br
-            - if course.active
-              br
-              = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
-.schools-course-summaries.hidden-md-up#weekends-m
+    center
+      h1 WEEKEND WORKSHOPS
+      br
+      .container
+        .row
+          .col-md-4.offset-md-1
+            a.kids-btn.btn-block#weekend-prim-btn PRIMARY
+          .col-md-4.offset-md-2
+            a.kids-btn.btn-block#weekend-sec-btn SECONDARY
+    .weekend-primary-content
+      = render "course_layout", courses: @weekend_primary_courses
+    .weekend-secondary-content
+      = render "course_layout", courses: @weekend_secondary_courses
+.anchor#weekends-m
+.schools-course-summaries.hidden-md-up
   .container
     center
       h3 WEEKEND WORKSHOPS
