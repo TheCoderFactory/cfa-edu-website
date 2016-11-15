@@ -18,19 +18,21 @@
             table.highlight.bordered#course-table
               thead
                 tr
-                  th width="30%" Name
+                  th width="20%" Name
                   th width="10%" Price
-                  th width="15%" Course Type
+                  th width="10%" Course Type
+                  th width="18%" Subtype
                   th width="10%" Active?
-                  th width="15%" Intakes
-                  th width="10%" Views
-                  th width="10%"
+                  th width="10%" Intakes
+                  th width="4%" Views
+                  th width="8%"
               tbody
                 - @courses.each do |course|
                   tr
                     td #{course.name}
                     td #{course.price}
                     td #{course.course_type}
+                    td #{course.subtype}
                     td #{course.active}
                     td
                       = link_to course_path(course)
