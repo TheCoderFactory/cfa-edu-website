@@ -66,7 +66,7 @@ class BookingsController < ApplicationController
   def admin_create
     @booking = Booking.new(booking_params)
     @intakes = Intake.all
-    if @booking.save
+    if @booking.save(validate: false)
       @booking.send_emails
       redirect_to @booking
     else
