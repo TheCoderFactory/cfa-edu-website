@@ -38,9 +38,9 @@ class Course < ActiveRecord::Base
     return "TAILORED PRICES" if price < 0.0
     if (price > 0.0)
       if price%1 == 0
-        return "$#{price.to_i} + GST #{per}"
+        return "$#{price.to_i} + GST#{" per "+per if per}"
       else
-        return "$#{price} + GST #{per}"
+        return "$#{price} + GST#{" per "+per if per}"
       end
     end
     return "FREE"
