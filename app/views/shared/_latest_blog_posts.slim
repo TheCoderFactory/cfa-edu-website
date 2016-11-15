@@ -5,11 +5,11 @@
     .blog-post-container
       - @posts.each do |p|
         a.blog-post-box href="#{show_post_path(p)}"
-          img.img-fluid.post-image src="#{p.image_url}"
+          img.img-fluid.post-image src="#{p.image_url}" alt="#{p.slug}"
           .post-details
             center
               - if p.author_image_url
-                img.img-circle.img-blog-post-author src="#{p.author_image_url}"
+                img.img-circle.img-blog-post-author src="#{p.author_image_url}" alt="post-author"
               - else
                 = fa_stacked_icon "user inverse", base: "circle", class: "fa-2x unknown-blog-author"
               p.written-by Written By
