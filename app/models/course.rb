@@ -12,7 +12,7 @@ class Course < ActiveRecord::Base
   end
 
   def non_negative_price
-    if price && price < 0.00
+    if price && price < -1.00
       errors.add(:price, "price cannot be negative")
     end
   end
@@ -35,11 +35,12 @@ class Course < ActiveRecord::Base
   end
 
   def get_price
+    return "TAILORED PRICES" if price < 0.0
     if (price > 0.0)
       if price%1 == 0
-        return "$#{price.to_i} + GST"
+        return "$#{price.to_i} + GST #{per}"
       else
-        return "$#{price} + GST"
+        return "$#{price} + GST #{per}"
       end
     end
     return "FREE"
