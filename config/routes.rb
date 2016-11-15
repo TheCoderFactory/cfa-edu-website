@@ -44,7 +44,7 @@ Rails.application.routes.draw do
 
   get "schools", to: "schools#index"
 
-  get "kids-coding", to: "kids_coding#index"
+  get "kids-and-teens-coding", to: "kids_coding#index"
 
   get "blog", to: "blog#index"
   resources :posts, path: "admin/posts", except: [:show] do
