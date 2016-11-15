@@ -13,7 +13,7 @@
               = link_to "BOOK NOW", booking_new_path(course_type: "learn-to-code", course_id: course.slug), class: "main-cta-btn"
           .col-md-6
             - if course.course_image_url
-              img.img-fluid src="#{course.course_image_url}"
+              img.img-fluid src="#{course.course_image_url}" alt="course-image"
             - else
               center
                 p #{fa_icon "picture-o", class: "fa-5x"}
@@ -22,7 +22,7 @@
         .row.course-summary
           .col-md-6
             - if course.course_image_url
-              img.img-fluid src="#{course.course_image_url}"
+              img.img-fluid src="#{course.course_image_url}" alt="course-image"
             - else
               center
                 p #{fa_icon "picture-o", class: "fa-5x"}
@@ -46,7 +46,7 @@
             p #{course.description.html_safe}
             br
             - if course.course_image_url
-              img.img-fluid src="#{course.course_image_url}"
+              img.img-fluid src="#{course.course_image_url}" alt="course-image"
             - else
               center
                 p #{fa_icon "picture-o", class: "fa-5x"}

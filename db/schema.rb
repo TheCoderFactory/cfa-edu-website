@@ -45,14 +45,11 @@ ActiveRecord::Schema.define(version: 20161115020229) do
     t.string   "age"
     t.string   "city"
     t.string   "country"
-    t.string   "business_name",    default: "N/A"
-    t.string   "business_address", default: "N/A"
     t.boolean  "cancelled",        default: false
     t.string   "stripe_token"
     t.decimal  "gst"
     t.decimal  "discount"
     t.string   "discount_code"
-    t.boolean  "zip_money",        default: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -156,17 +153,6 @@ ActiveRecord::Schema.define(version: 20161115020229) do
     t.string   "code_type"
     t.date     "expiry_date"
     t.integer  "number_of_uses"
-  end
-
-  create_table "testimonials", force: :cascade do |t|
-    t.string   "name"
-    t.string   "prev_role"
-    t.string   "image"
-    t.string   "quote"
-    t.string   "vid_link"
-    t.boolean  "active"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
