@@ -12,8 +12,10 @@
       = f.input :tagline
     .form-group.input-field.col-md-12
       = f.input :description, as: :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} }
-    .form-group.input-field.col-md-12
+    .form-group.input-field.col-md-8
       = f.input :price
+    .form-group.input-field.col-md-4
+      = f.input :per
     .form-group.input-field.col-md-12
       label for="image" Course Image
       = f.file_field :course_image
