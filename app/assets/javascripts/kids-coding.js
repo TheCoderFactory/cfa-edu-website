@@ -1,38 +1,19 @@
 $(document).ready(function() {
-  var weekend_prim = $('.weekend-primary-content');
-  var weekend_sec = $('.weekend-secondary-content');
-  weekend_sec.hide();
-  var weekend_prim_btn = $('#weekend-prim-btn');
-  weekend_prim_btn.addClass("active");
-  var weekend_sec_btn = $('#weekend-sec-btn');
-  $(weekend_prim_btn).on("click", function() {
-    weekend_sec.hide();
-    weekend_prim.fadeIn("slow");
-    weekend_sec_btn.toggleClass("active");
-    weekend_prim_btn.toggleClass("active");
-  });
-  $(weekend_sec_btn).on("click", function() {
-    weekend_prim.hide();
-    weekend_sec.fadeIn("slow");
-    weekend_sec_btn.toggleClass("active");
-    weekend_prim_btn.toggleClass("active");
-  });
-  var sh_prim = $('.school-h-primary-content');
-  var sh_sec = $('.school-h-secondary-content');
-  sh_sec.hide();
-  var sh_prim_btn = $('#school-h-prim-btn');
-  sh_prim_btn.addClass("active");
-  var sh_sec_btn = $('#school-h-sec-btn');
-  $(sh_prim_btn).on("click", function() {
-    sh_sec.hide();
-    sh_prim.fadeIn("slow");
-    sh_sec_btn.toggleClass("active");
-    sh_prim_btn.toggleClass("active");
-  });
-  $(sh_sec_btn).on("click", function() {
-    sh_prim.hide();
-    sh_sec.fadeIn("slow");
-    sh_sec_btn.toggleClass("active");
-    sh_prim_btn.toggleClass("active");
-  });
+  $(".weekend-secondary-content").hide();
+  $("#weekend-prim-btn").addClass("active");
+  showSelected("#weekend-prim", "#weekend-sec", ".weekend-primary", ".weekend-secondary");
+  showSelected("#weekend-sec", "#weekend-prim", ".weekend-secondary", ".weekend-primary");
+  $(".school-h-secondary-content").hide();
+  $("#school-h-prim-btn").addClass("active");
+  showSelected("#school-h-prim", "#school-h-sec", ".school-h-primary", ".school-h-secondary");
+  showSelected("#school-h-sec", "#school-h-prim", ".school-h-secondary", ".school-h-primary");
 });
+
+function showSelected(show_btn, hide_btn, show_content, hide_content) {
+  $(show_btn+"-btn").on("click", function() {
+    $(hide_content+"-content").hide();
+    $(show_content+"-content").fadeIn("slow");
+    $(show_btn+"-btn").addClass("active");
+    $(hide_btn+"-btn").removeClass("active");
+  });
+}
