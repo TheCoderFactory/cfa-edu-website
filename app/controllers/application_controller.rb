@@ -13,8 +13,9 @@ class ApplicationController < ActionController::Base
   end
 
   def get_footer_course_lists
-    @footer_short_courses = Course.where(course_type: "Workshop")
-    @footer_corporate_courses = Course.where(course_type: "Corporate")
-    @footer_schools_courses = Course.where(course_type: "Schools")
+    @footer_short_courses = Course.active_courses.where(course_type: "Workshop")
+    @footer_corporate_courses = Course.active_courses.where(course_type: "Corporate")
+    @footer_schools_courses = Course.active_courses.where(course_type: "Schools")
+    @footer_kids_courses = Course.active_courses.where(course_type: "Kids")
   end
 end

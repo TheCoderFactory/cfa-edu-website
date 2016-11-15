@@ -27,6 +27,9 @@ html, body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#header {
+  top: 38px !important;
+}
 body {
   background-color: #FFF;
 }
@@ -49,7 +52,7 @@ a:hover {
 }
 .content {
   padding-top: 81px;
-  padding-bottom: 800px;
+  padding-bottom: 1000px;
   @media only screen and (max-width: 767px) {
     padding-bottom: 1750px;
   }
@@ -63,7 +66,7 @@ a:hover {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 800px;
+  height: 1000px;
   @media only screen and (max-width: 767px) {
     height: 1750px;
   }
