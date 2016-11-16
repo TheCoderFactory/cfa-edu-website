@@ -1,7 +1,8 @@
 .anchor#maker-space
 .schools-course-summaries.hidden-sm-down
   .container
-    h3 MAKER SPACE
+    center
+      h2 MAKERSPACE
     - @maker_space_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
@@ -41,7 +42,7 @@
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h3 MAKER SPACE
+      h2 MAKERSPACE
       - @maker_space_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary

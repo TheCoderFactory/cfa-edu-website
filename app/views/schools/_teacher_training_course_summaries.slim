@@ -1,7 +1,8 @@
 .anchor#teacher-training
 .schools-course-summaries.hidden-sm-down
   .container
-    h3 TEACHER TRAINING
+    center
+      h2 TEACHER TRAINING
     - @teacher_training_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
@@ -41,7 +42,7 @@
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h3 TEACHER TRAINING
+      h2 TEACHER TRAINING
       - @teacher_training_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
