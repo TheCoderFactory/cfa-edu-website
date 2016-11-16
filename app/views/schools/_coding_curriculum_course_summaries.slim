@@ -1,7 +1,8 @@
-.anchor#coding-curriculum
+.anchor.hidden-sm-down#coding-curriculum
 .schools-course-summaries.hidden-sm-down
   .container
-    h3 CODING AND THE CURRICULUM
+    center
+      h2 CODING AND THE CURRICULUM
     - @coding_curriculum_courses.each_with_index do |course, index|
       - if index%2 == 0
         .anchor id="#{course.slug}"
@@ -37,11 +38,11 @@
             - if course.active
               br
               = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
-.anchor#coding-curriculum-m
+.anchor.hidden-md-up#coding-curriculum-m
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h3 CODING AND THE CURRICULUM
+      h2 CODING AND THE CURRICULUM
       - @coding_curriculum_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary

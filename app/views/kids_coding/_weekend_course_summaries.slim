@@ -1,4 +1,4 @@
-.anchor#weekends
+.anchor.hidden-sm-down#weekends
 .kids-course-summaries.hidden-sm-down
   .container
     center
@@ -14,11 +14,11 @@
       = render "course_layout", courses: @weekend_primary_courses
     .weekend-secondary-content
       = render "course_layout", courses: @weekend_secondary_courses
-.anchor#weekends-m
+.anchor.hidden-md-up#weekends-m
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h3 WEEKEND WORKSHOPS
+      h2 WEEKEND WORKSHOPS
       - @weekend_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
