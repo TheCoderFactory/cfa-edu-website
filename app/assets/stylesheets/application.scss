@@ -85,10 +85,11 @@ a:hover {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .course-link {
-    color: #FFF;
+  a.course-link {
+    color: #EC5037;
   }
-  .course-link:hover {
+
+  a.course-link:hover {
     color: #38A9C7;
     text-decoration: none;
   }
