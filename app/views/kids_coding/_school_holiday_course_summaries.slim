@@ -1,4 +1,4 @@
-.anchor#school-holidays
+.anchor.hidden-sm-down#school-holidays
 .kids-course-summaries.hidden-sm-down
   .container
     center
@@ -14,11 +14,11 @@
       = render "course_layout", courses: @sh_primary_courses
     .school-h-secondary-content
       = render "course_layout", courses: @sh_secondary_courses
-.anchor#school-holiidays-m
+.anchor.hidden-md-up#school-holiidays-m
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h3 SCHOOL HOLIDAYS
+      h2 SCHOOL HOLIDAYS
       - @sh_courses.each do |course|
         .anchor id="#{course.slug}-m"
         .row.course-summary
