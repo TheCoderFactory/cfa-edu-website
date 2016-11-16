@@ -35,7 +35,7 @@ class Course < ActiveRecord::Base
   end
 
   def get_price
-    return "TAILORED PRICES" if price < 0.0
+    return "TAILORED RATES" if price < 0.0
     if (price > 0.0)
       if price%1 == 0
         return "$#{price.to_i} + GST#{" per "+per unless per.blank?}"
