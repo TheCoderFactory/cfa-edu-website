@@ -3,30 +3,22 @@
     .row
       .col-sm-12.col-md-4
         h2 OUR COURSES
-        h6 BOOTCAMP
         ul
           li
-            a.course-link href="/fast-track" FAST TRACK
-        h6 SHORT COURSES
-        ul
-          - @footer_short_courses.each do |course|
-            li
-              a.course-link href="/short-courses##{course.slug}" #{course.name.upcase}
-        h6 CORPORATE
-        ul
-          - @footer_corporate_courses.each do |course|
-            li
-              a.course-link href="/corporate##{course.slug}" #{course.name.upcase}
-        h6 SCHOOLS
-        ul
-          - @footer_schools_courses.each do |course|
-            li
-              a.course-link href="/schools##{course.slug}" #{course.name.upcase}
-        h6 KIDS & TEENS
-        ul
-          - @footer_kids_courses.each do |course|
-            li
-              a.course-link href="/kids-and-teens-coding##{course.slug}" #{course.name.upcase}
+            h5 
+              a.course-link href="/fast-track" FAST TRACK
+          li
+            h5
+              a.course-link href="/short-courses/" SHORT COURSES 
+          li
+            h5
+              a.course-link href="/corporate/" CORPORATE
+          li
+            h5
+              a.course-link href="/schools/" SCHOOLS
+          li
+            h5
+              a.course-link href="/kids-and-teens-coding/" KIDS & TEENS
       .col-md-4
         h2 OUR COMPANY
         ul
