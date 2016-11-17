@@ -569,6 +569,9 @@
   h1, h2, h3, h4, h5 {
     color: #000;
   }
+  h5 {
+    margin-top: 30px;
+  }
   .no-list-icons {
     list-style: none;
     padding: 0px;
@@ -596,7 +599,7 @@
     border-color: #EC5037;
     width: 20%;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .border-blue {
     border-style: solid;
@@ -604,7 +607,7 @@
     border-color: #38A9C7;
     width: 10%;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   @media only screen and (max-width: 767px) {
     .border-orange {
@@ -948,4 +951,7 @@
   .hs_how_did_you_hear_about_us > .input > input {
     margin-top: 5px;
   }
+}
+.intake-date {
+  font-size: 16px;
 }
