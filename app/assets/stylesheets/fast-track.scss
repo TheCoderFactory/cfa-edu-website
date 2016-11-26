@@ -641,6 +641,20 @@
     margin-left: 10px;
     @extend .pull-left;
   }
+
+  .hs_email > label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    @extend .pull-left;
+  }
+
+  .hs_email > .input > input {
+    margin-top: 5px;
+  }
+
   .hs_hs_persona > .input > select {
     margin-top: 5px;
   }

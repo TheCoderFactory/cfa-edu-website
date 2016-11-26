@@ -5,6 +5,7 @@ class SitemapController < ApplicationController
     @short_courses = Course.where(course_type: "Workshop")
     @corporate_courses = Course.where(course_type: "Corporate")
     @schools_courses = Course.where(course_type: "Schools")
+    @kids_courses = Course.where(course_type: "Kids")
     @posts = Post.all
     @static_urls = [
       root_url,
