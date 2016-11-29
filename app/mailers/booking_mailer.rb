@@ -1,5 +1,5 @@
 class BookingMailer < ApplicationMailer
-  default from: "Coder Factory Bookings <info@coderfactory.com>"
+  default from: "Coder Factory Academy Bookings <info@coderfactory.com>"
 
   def response(booking_id)
     @booking = Booking.find(booking_id)
