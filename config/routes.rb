@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'feeds/blog'
-
-  get 'feeds/course'
 
   mount Ckeditor::Engine => '/ckeditor'
   root "home#index"
@@ -67,6 +64,7 @@ Rails.application.routes.draw do
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
   get "women-in-tech", to: "pages#women_in_tech"
+  get "vivixx", to: "pages#vivixx"
 
 
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
@@ -85,4 +83,6 @@ Rails.application.routes.draw do
   get "/posts/how-to-prepare-for-the-futureofwork", to: redirect("/posts/how-to-prepare-for-the-future-of-work")
 
   get 'sitemap.xml', :to => 'sitemap#index', :defaults => {:format => 'xml'}
+  get 'feeds/blog'
+  get 'feeds/course'
 end
