@@ -39,4 +39,7 @@ class PagesController < ApplicationController
 
   def video_archive
   end
+
+  def vivixx
+  end
 end
