@@ -14,22 +14,19 @@
         .collapse.navbar-toggleable-sm#globalNavbar
           a.hidden-sm-down href="/"
             img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
-          .container.pull-right
+          .container.pull-lg-right.pull-md-right
             ul.nav.navbar-nav
-                li.nav-item
-                  = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link"
-                li.nav-item
-                  = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
-                li.nav-item
-                   = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
-                li.nav-item
-                   = active_link_to 'SCHOOLS', "/schools", class: "nav-link-link"
-                li.nav-item
-                  = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
-                li.nav-item
-                  a.nav-link.header-major-cta href="/fast-track/apply" APPLY
-
-
-
+              li.nav-item
+                = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link"
+              li.nav-item
+                = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
+              li.nav-item
+                 = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
+              li.nav-item
+                 = active_link_to 'SCHOOLS', "/schools", class: "nav-link-link"
+              li.nav-item
+                = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
+              li.nav-item
+                a.nav-link.header-major-cta href="/fast-track/apply" APPLY
   /! FOOTER
 div style="clear:both"
