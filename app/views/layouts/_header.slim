@@ -1,10 +1,12 @@
 .header
-  .alert-nav
-    h5 
-      NEXT NEXT BOOTCAMP COURSE STARTS: 13TH FEBRUARY 2017 | 
-      a.nav-link.header-major-cta href="/fast-track/apply"  NOW ENROLLING
-  .primary-nav
-    navbar.navbar-default
+  #wrap
+    .navbar.navbar-inverse.navbar-fixed-top.first-navbar
+      .container
+        center
+          h5.center
+            NEXT NEXT BOOTCAMP COURSE STARTS: 13TH FEBRUARY 2017 |
+            a.nav-link.header-major-cta href="/fast-track/apply"  NOW ENROLLING
+    .navbar.navbar-default.navbar-fixed-top.second-navbar
       a.hidden-md-up href="/"
         img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
       button.navbar-toggler.hidden-md-up.pull-right type="button" data-toggle="collapse" data-target="#globalNavbar" &#9776;
@@ -12,17 +14,22 @@
         .collapse.navbar-toggleable-sm#globalNavbar
           a.hidden-sm-down href="/"
             img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
-          ul.nav.navbar-nav.pull-lg-right
-            center
-              li.nav-item
-                = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link"
-              li.nav-item
-                = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
-              li.nav-item
-                 = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
-              li.nav-item
-                 = active_link_to 'SCHOOLS', "/schools", class: "nav-link-link"
-              li.nav-item
-                = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
-              li.nav-item
-                a.nav-link.header-major-cta href="/fast-track/apply" APPLY
+          .container.pull-right
+            ul.nav.navbar-nav
+                li.nav-item
+                  = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link"
+                li.nav-item
+                  = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
+                li.nav-item
+                   = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
+                li.nav-item
+                   = active_link_to 'SCHOOLS', "/schools", class: "nav-link-link"
+                li.nav-item
+                  = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
+                li.nav-item
+                  a.nav-link.header-major-cta href="/fast-track/apply" APPLY
+
+
+
+  /! FOOTER
+div style="clear:both"

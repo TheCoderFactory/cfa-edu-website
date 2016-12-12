@@ -37,9 +37,7 @@ class PagesController < ApplicationController
   def privacy
   end
 
-  def video_archive
+  def cfa_international
   end
 
-  def vivixx
-  end
 end

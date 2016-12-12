@@ -57,67 +57,39 @@ p {
   a {
     font-size: 11px;
   }
-}  
+}
 
 
 .header {
 
-/* Small devices (tablets, 768px and up) */
-@media screen and (max-width: 400px) {
-
- .alert-nav {
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
+  .navbar-brand {
+    padding: 0px;
+  }
+  .navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
   }
 
-  .primary-nav {
-    top: 50px !important;
-    padding-bottom: 12px !important;
-    padding-top: 12px !important;
+
+  body {
+    padding-top: 80px;
   }
-
-}
-
-/* Small devices (tablets, 768px and up) */
-@media screen and (max-width: 641px) {
-
- .alert-nav {
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
-  }
-
-  .primary-nav {
-    top: 50px !important;
-    padding-bottom: 5px !important;
-    padding-top: 5px !important;
-  }
-
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  
- .alert-nav {
-    padding-top: 1.5vh !important;
-    padding-bottom: 2vh !important;
-  }
-
-  .primary-nav {
-    top: 40px !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  } 
-
-}
-
-
-  .alert-nav {
+  .first-navbar {
+    height: 50px;
     background-color: #EC5037;
-    width: 100%;
-    position: fixed;
-    text-align: center;
-    top: 0px;
-    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 25px;
+
+    a.header-major-cta {
+      color: black !important;
+      border: 2px solid #EC5037;
+      font-size: 16px;
+      padding: 0px;
+      border-radius: 5px;
+    }
 
     h5 {
       color:white;
@@ -131,14 +103,11 @@ p {
     a:hover {
       color: white;
     }
-
   }
-
-  .primary-nav {
+  .second-navbar{
+    top:50px;
     background-color: #FFF;
-    width: 100%;
-    z-index: 9999;
-    position: fixed;
+
 
     a:hover {
       text-decoration: none;
@@ -147,47 +116,8 @@ p {
     img {
       display: inline !important;
     }
-    .nav-link-link {
-      display: flex;
-      font-size: 14px;
-      border: 2px solid #fff;
-      font-decoration: bold;
-      padding: 5px;
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-    a {
-      color: #000;
-    }
-    .active {
-      color: #38A9C7;
-    }
-    a.header-major-cta {
-      color: #EC5037 !important;
-      border: 2px solid #EC5037;
-      font-size: 14px;
-      padding: 12px;
-      border-radius: 5px;
-    }
-    nav-item {
-      border: 2px solid black;
-    }
-    a.active:after {
-      content: ' ';
-      position: absolute;
-      border: solid 10px transparent;
-      border-top: solid 0px transparent;
-      border-width: 10px;
-      margin-top: 45px;
-      margin-left: -20px;
-      border-color: #FFF transparent transparent transparent;
-    }
-    button {
-      color: #38A9C7;
-    }
-    button:focus {
-      outline: 5px auto #38A9C7;
-    }
+
+
     @media only screen and (max-width: 541px) {
       li {
         float: none !important;
@@ -197,11 +127,57 @@ p {
         font-size: 12px;
       }
 
-      .nav-link {
-        font-size: 18px;
-        text-align:center;
-      }
     }
+
+
+  }
+
+  @media (min-width: 768px) {
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+    }
+    .navbar-nav > li {
+      float: none;
+      display: inline-block;
+      position: relative;
+      top: 0%;
+    }
+    .navbar-nav > li.navbar-right {
+      float: right !important;
+    }
+  }
+  a.header-major-cta {
+    color: #EC5037 !important;
+    border: 2px solid #EC5037;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 5px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    text-align:center;
+  }
+
+  nav-item {
+    border: 2px solid black;
+  }
+  a.active:after {
+    content: ' ';
+    position: absolute;
+    border: solid 10px transparent;
+    border-top: solid 0px transparent;
+    border-width: 10px;
+    margin-top: 45px;
+    margin-left: -20px;
+    border-color: #FFF transparent transparent transparent;
+  }
+  button {
+    color: #38A9C7;
+  }
+  button:focus {
+    outline: 5px auto #38A9C7;
   }
 
 }
