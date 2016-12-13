@@ -1,6 +1,8 @@
 = content_for :title, 'Coder Factory Academy Blog - Page 0' + params[:page].to_s
 = content_for :description, 'Check out these great posts from our team relating to all things coding.'
 = content_for :feed, auto_discovery_link_tag(:atom, feeds_blog_url(format: "rss"))
+= content_for :twitter_title, 'Coder Factory Academy Blog'
+= content_for :twitter_description, 'Check out these great posts from our team relating to all things coding.'
 .blog
   .container
     .row
