@@ -12,8 +12,9 @@
       .col-md-8.col-xs-12#left-column
         img.img-fluid src="#{@post.image_url}"
         .title-section
-          h2.post-title #{@post.title}
-          .border-secondary
+          h2
+            post-title style="color:white" #{@post.title}
+            .border-secondary
           p
             - if @post.author_image_url
               img.img-circle.pull-left src="#{@post.author_image_url}"
@@ -36,28 +37,25 @@
           .section-content
             .section-inner.layoutSingleColumn
               hr
-              p.graf--p name="07b4" 
-                a.markup--anchor.markup--p-anchor data-href="https://www.coderfactoryacademy.edu.au" href="https://www.coderfactoryacademy.edu.au"
-                  em.markup--em.markup--p-em Coder Factory Academy
-                em.markup--em.markup--p-em 
+              p
+                a href="https://www.coderfactoryacademy.edu.au"
+                  em Coder Factory Academy
+                em
                   | : Meet Australia’s first and only accredited fast-track coding bootcamp! Our immersive course helps students acquire in-demand skills through hands-on, project-based training by industry experts over 23 weeks. Become an employable full-stack developer in only six months.
-              p.graf--p name="c32e" 
-                a.markup--anchor.markup--p-anchor data-href="https://www.coderfactoryacademy.edu.au/fast-track" href="https://www.coderfactoryacademy.edu.au/fast-track" 
-                  em.markup--em.markup--p-em Now enrolling
-                em.markup--em.markup--p-em
+              p
+                a href="https://www.coderfactoryacademy.edu.au/fast-track"
+                  em Now enrolling
+                em
                   |  domestic &amp; international students in Sydney &amp; Melbourne! Study now, pay later! 
-              p.graf--p name="85b9" 
-                a.markup--anchor.markup--p-anchor data-href="https://www.coderfactoryacademy.edu.au" href="https://www.coderfactoryacademy.edu.au" 
-                  em.markup--em.markup--p-em Coder Factory
-                em.markup--em.markup--p-em
+              p
+                a href="https://www.coderfactoryacademy.edu.au"
+                  em Coder Factory
+                em
                   |  now offers digital leadership and technology workshops for employees of companies seeking tech, innovation, and digital literacy. The training sessions function as mini-hackathons, where employees work to use technology in solving real problems within their company.
-              p.graf--p name="92ed" 
-                a.markup--anchor.markup--p-anchor data-href="https://www.coderfactoryacademy.edu.au/corporate" href="https://www.coderfactoryacademy.edu.au/corporate" 
-                  em.markup--em.markup--p-em Learn more about our corporate training workshops.
-              p.graf--p name="3fc2" 
-                em.markup--em.markup--p-em Are you a woman interested in coding?
-                a.markup--anchor.markup--p-anchor data-href="https://www.coderfactoryacademy.edu.au/fast-track/women-in-tech-scholarship" href="https://www.coderfactoryacademy.edu.au/fast-track/women-in-tech-scholarship" 
-                  em.markup--em.markup--p-em  Check out our Women in Tech Scholarship!
+              p
+                em Are you a woman interested in coding?
+                a href="https://www.coderfactoryacademy.edu.au/fast-track/women-in-tech-scholarship"
+                  em  Check out our Women in Tech Scholarship!
       .col-md-4.hidden-sm-down
         = render "shared/blog_sidebar"
 
