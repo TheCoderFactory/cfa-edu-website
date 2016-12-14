@@ -1,3 +1,6 @@
+= content_for :twitter_title, @course.name
+= content_for :twitter_description, @course.description
+= content_for :twitter_image, @course.course_image_url
 .container
   .row
     .col-md-12
@@ -10,7 +13,7 @@
         b Tagline:
         br
         | #{@course.tagline}
-      p 
+      p
         b Course Image:
         br
 
@@ -19,7 +22,7 @@
         b Description:
         br
         | #{@course.description.html_safe}
-      p 
+      p
         b Price:
         br
         | #{@course.get_price}
