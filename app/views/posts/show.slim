@@ -15,49 +15,49 @@
           h2
             post-title #{@post.title}
             .border-secondary
-            p
-              - if @post.author_image_url
-                img.img-circle.pull-left src="#{@post.author_image_url}"
+          p
+            - if @post.author_image_url
+              img.img-circle.pull-left src="#{@post.author_image_url}"
+            - else
+              = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
+            span.label-pill.author
+              -if @post.author_name.nil?
+                | Coder Factory
               - else
-                = fa_stacked_icon "user inverse", base: "circle", class: "fa-3x pull-left"
-              span.label-pill.author
-                -if @post.author_name.nil?
-                  | Coder Factory
-                - else
-                  | #{@post.author_name}
-              br
-              span.label-pill.date #{@post.published_date.strftime('%d %B %Y')}
-              .content-section
-                h5
-                  = @post.lead
-          .body-section
+                | #{@post.author_name}
             br
-            br
-            = @post.content.html_safe
-            .section-content
-              .section-inner.layoutSingleColumn
-                hr
-                p
-                  a href="https://www.coderfactoryacademy.edu.au"
-                    em Coder Factory Academy
-                  em
-                    | : Meet Australia’s first and only accredited fast-track coding bootcamp! Our immersive course helps students acquire in-demand skills through hands-on, project-based training by industry experts over 23 weeks. Become an employable full-stack developer in only six months.
-                p
-                  a href="https://www.coderfactoryacademy.edu.au/fast-track"
-                    em Now enrolling
-                  em
-                    |  domestic &amp; international students in Sydney &amp; Melbourne! Study now, pay later! 
-                p
-                  a href="https://www.coderfactoryacademy.edu.au"
-                    em Coder Factory
-                  em
-                    |  now offers digital leadership and technology workshops for employees of companies seeking tech, innovation, and digital literacy. The training sessions function as mini-hackathons, where employees work to use technology in solving real problems within their company.
-                p
-                  em Are you a woman interested in coding?
-                  a href="https://www.coderfactoryacademy.edu.au/fast-track/women-in-tech-scholarship"
-                    em  Check out our Women in Tech Scholarship!
-        .col-md-4.hidden-sm-down
-          = render "shared/blog_sidebar"
+            span.label-pill.date #{@post.published_date.strftime('%d %B %Y')}
+            .content-section
+              h5
+                = @post.lead
+        .body-section
+          br
+          br
+          = @post.content.html_safe
+          .section-content
+            .section-inner.layoutSingleColumn
+              hr
+              p
+                a href="https://www.coderfactoryacademy.edu.au"
+                  em Coder Factory Academy
+                em
+                  | : Meet Australia’s first and only accredited fast-track coding bootcamp! Our immersive course helps students acquire in-demand skills through hands-on, project-based training by industry experts over 23 weeks. Become an employable full-stack developer in only six months.
+              p
+                a href="https://www.coderfactoryacademy.edu.au/fast-track"
+                  em Now enrolling
+                em
+                  |  domestic &amp; international students in Sydney &amp; Melbourne! Study now, pay later! 
+              p
+                a href="https://www.coderfactoryacademy.edu.au"
+                  em Coder Factory
+                em
+                  |  now offers digital leadership and technology workshops for employees of companies seeking tech, innovation, and digital literacy. The training sessions function as mini-hackathons, where employees work to use technology in solving real problems within their company.
+              p
+                em Are you a woman interested in coding?
+                a href="https://www.coderfactoryacademy.edu.au/fast-track/women-in-tech-scholarship"
+                  em  Check out our Women in Tech Scholarship!
+      .col-md-4.hidden-sm-down
+        = render "shared/blog_sidebar"
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1"></script>

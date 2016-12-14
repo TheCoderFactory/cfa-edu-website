@@ -29,12 +29,8 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  h2 {
-    color: white;
-  }
-
-  .post-title {
-    color: white;
+  .post-title > h2 {
+    color: #FFF;
   }
   .body-section p {
     color: #373A3C !important;
