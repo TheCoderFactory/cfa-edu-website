@@ -16,8 +16,11 @@
             img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
           .container.pull-lg-right.pull-md-right
             ul.nav.navbar-nav
-              li.nav-item
-                = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link"
+              li.nav-item.dropdown
+                = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }
+                .dropdown-menu aria-labelledby="supportedContentDropdown"
+                  a.dropdown-item href="/fast-track-sydney" FAST TRACK SYDNEY
+                  a.dropdown-item href="/fast-track-melbourne" FAST TRACK MELBOURNE
               li.nav-item
                 = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
               li.nav-item

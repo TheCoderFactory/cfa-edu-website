@@ -27,7 +27,8 @@ Rails.application.routes.draw do
 
   get "admin/dashboard", to: "admin_dashboard#index"
   get "admin", to: "admin_dashboard#index"
-  get "fast-track", to: "fast_track#index"
+  get "fast-track-sydney", to: "fast_track#ft_syd"
+  get "fast-track-melbourne", to: "fast_track#ft_mel"
   get "fast-track/apply", to: "fast_track#apply"
   get "fast-track/women-in-tech-scholarship", to: "fast_track#wit_scholarship_info"
   get "fast-track/women-in-tech-scholarship/apply", to: "fast_track#wit_scholarship_apply"
