@@ -368,7 +368,13 @@
 .women-in-tech {
 
 }
-
+.partners-partial {
+  .partner-icons > a > img {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .partners {
     padding-top: 50px;
     padding-bottom: 50px;
