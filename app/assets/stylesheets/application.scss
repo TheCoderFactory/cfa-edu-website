@@ -30,6 +30,15 @@ html, body {
 #header {
   top: 38px !important;
 }
+ul.nav li.dropdown:hover > div.dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+  margin-top: 0px;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
 body {
   background-color: #FFF;
 }
@@ -37,10 +46,6 @@ body {
 .wrapper {
   min-height: 100%;
   position: relative;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 .anchor {
@@ -112,7 +117,13 @@ a {
   color: #38A9C7;
 }
 a:hover {
+  text-decoration: none;
   color: #EC5037;
+}
+@media only screen and (max-width: 767px) {
+  a {
+    font-size: 18px;
+  }
 }
 .img-circle {
   border-radius: 50%;
