@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get "fast-track-sydney", to: "fast_track#ft_syd"
   get "fast-track-melbourne", to: "fast_track#ft_mel"
   get "fast-track/apply", to: "fast_track#apply"
+  get "fast-track-scholarships", to: "fast_track#scholarships"
   get "fast-track/women-in-tech-scholarship", to: "fast_track#wit_scholarship_info"
   get "fast-track/women-in-tech-scholarship/apply", to: "fast_track#wit_scholarship_apply"
   # hide ais pages for now
