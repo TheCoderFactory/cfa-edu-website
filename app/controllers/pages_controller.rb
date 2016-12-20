@@ -16,7 +16,10 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def curriculum
+  def syd_curriculum
+  end
+
+  def mel_curriculum
   end
 
   def faq
