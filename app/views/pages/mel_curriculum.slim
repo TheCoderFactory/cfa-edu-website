@@ -25,32 +25,25 @@
                 tr
                   td February 13
                   td
-                    center Sydney
+                    center Melbourne
                   td
                     center
-                      a.modal-trigger data-toggle="modal" data-target="#courseDatesModal1"  View
+                      a.modal-trigger href="#" data-toggle="modal" data-target="#courseDatesModal1"  View
                 tr
-                  td February 13
+                  td July 31
                   td
                     center Melbourne
                   td
                     center
-                      a.modal-trigger data-toggle="modal" data-target="#courseDatesModal3"  View
-                tr
-                  td July 31
-                  td
-                    center Sydney & Melbourne
-                  td
-                    center
-                      a.modal-trigger data-toggle="modal" data-target="#courseDatesModal2"  View
+                      a.modal-trigger href="#" data-toggle="modal" data-target="#courseDatesModal2"  View
           p
             strong Course duration:
             br
-            |  23 weeks, 40 contact hours/week
+            |  27 weeks, 40 contact hours/week
           p
             strong Qualification:
             br
-            |  Diploma of Software Development ICT50715
+            |  Diploma of Information Technology
           p
             strong Nationally recognised qualification:
             br
@@ -62,16 +55,17 @@
           p
             strong Domestic cost:
             br
-            |  $17,000
+            |  $19,500
           p 
             strong International cost:
             br
-            |  $22,000
+            |  $24,500
           p
             strong Payment options:
             br
             | Installment payments
-            | #{link_to 'VET Student Loans', 'https://docs.education.gov.au/node/41951',  target: '_blank'}
+            br
+            | #{link_to 'FEE-HELP Loans', 'http://studyassist.gov.au/sites/studyassist/helppayingmyfees/fee-help/pages/fee-help-',  target: '_blank'}
       center
         .col-xs-6
           img.img-fluid src="#{asset_path 'nrt.png'}"
@@ -350,79 +344,7 @@
         .modal-header
           button.close aria-label="Close" data-dismiss="modal" type="button" 
             span aria-hidden="true"  ×
-          h4#myModalLabel.modal-title SYDNEY - DIPLOMA OF SOFTWARE DEVELOPMENT
-        .modal-body
-          table.table.table-striped.table-hover
-            thead
-              tr
-                th Term
-                th Start date
-                th Census date
-                th End Date
-            tbody
-              tr
-                th Term 1
-                td 13 Feb 2017
-                td 20 Feb 2017
-                td 17 Mar 2017
-              tr
-                th Term 2
-                td 27 Mar 2017
-                td 3 Apr 2017
-                td 28 Apr 2017
-              tr
-                th Term 3
-                td 8 May 2017
-                td 15 May 2017
-                td 9 Jun 2017
-              tr
-                th Term 4
-                td 19 Jun 2017
-                td 26 Jun 2017
-                td 21 Jul 2017
-  #courseDatesModal2.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
-    .modal-dialog.modal-lg role="document" 
-      .modal-content
-        .modal-header
-          button.close aria-label="Close" data-dismiss="modal" type="button" 
-            span aria-hidden="true"  ×
-          h4#myModalLabel.modal-title SYDNEY - DIPLOMA OF IT
-        .modal-body
-          table.table.table-striped.table-hover
-            thead
-              tr
-                th Term
-                th Start date
-                th Census date
-                th End Date
-            tbody
-              tr
-                th Term 1
-                td 31 Jul 2017
-                td 9 Aug 2017
-                td 15 Sep 2017
-              tr
-                th Term 2
-                td 25 Sep 2017
-                td 4 Oct 2017
-                td 10 Nov 2017
-              tr
-                th Term 3
-                td 20 Nov 2017
-                td 29 Nov 2017
-                td 5 Jan 2018
-              tr
-                th Term 4
-                td 8 Jan 2018
-                td 15 Jan 2018
-                td 2 Feb 2018
-  #courseDatesModal3.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
-    .modal-dialog.modal-lg role="document" 
-      .modal-content
-        .modal-header
-          button.close aria-label="Close" data-dismiss="modal" type="button" 
-            span aria-hidden="true"  ×
-          h4#myModalLabel.modal-title SYDNEY & MELBOURNE - DIPLOMA OF INFORMATION TECHNOLOGY
+          h4#myModalLabel.modal-title MELBOURNE - DIPLOMA OF INFORMATION TECHNOLOGY
         .modal-body
           table.table.table-striped.table-hover
             thead
@@ -452,3 +374,39 @@
                 td 31 Jul 2017
                 td 7 Aug 2017
                 td 25 Aug 2017
+  #courseDatesModal2.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+    .modal-dialog.modal-lg role="document" 
+      .modal-content
+        .modal-header
+          button.close aria-label="Close" data-dismiss="modal" type="button" 
+            span aria-hidden="true"  ×
+          h4#myModalLabel.modal-title MELBOURNE - DIPLOMA OF INFORMATION TECHNOLOGY
+        .modal-body
+          table.table.table-striped.table-hover
+            thead
+              tr
+                th Term
+                th Start date
+                th Census date
+                th End Date
+            tbody
+              tr
+                th Term 1
+                td 31 Jul 2017
+                td 9 Aug 2017
+                td 15 Sep 2017
+              tr
+                th Term 2
+                td 25 Sep 2017
+                td 4 Oct 2017
+                td 10 Nov 2017
+              tr
+                th Term 3
+                td 20 Nov 2017
+                td 29 Nov 2017
+                td 5 Jan 2018
+              tr
+                th Term 4
+                td 8 Jan 2018
+                td 15 Jan 2018
+                td 2 Feb 2018
