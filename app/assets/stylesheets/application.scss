@@ -35,7 +35,7 @@ html, body {
     margin-top: 5px;
   }
 }
-ul.nav li.dropdown:hover > div.dropdown-menu {
+ul.nav li.desktop-dropdown:hover > div.dropdown-menu {
     display: block;
 }
 .nav-item p {
@@ -135,7 +135,7 @@ a:hover {
 }
 @media only screen and (max-width: 767px) {
   a {
-    /* font-size: 18px; */
+    font-size: 18px;
   }
 }
 .img-circle {
@@ -144,4 +144,7 @@ a:hover {
 .social-media {
   padding-left: 10px;
   padding-right: 10px;
+}
+.blue-text {
+  color: #38A9C7;
 }
