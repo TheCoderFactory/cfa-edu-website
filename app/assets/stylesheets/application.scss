@@ -30,6 +30,11 @@ html, body {
 #header {
   top: 38px !important;
 }
+@media only screen and (max-width: 767px) {
+  .nav-item {
+    margin-top: 5px;
+  }
+}
 ul.nav li.dropdown:hover > div.dropdown-menu {
     display: block;
 }
@@ -56,10 +61,10 @@ body {
   padding-top: 81px;
 }
 .content {
-  padding-top: 81px;
+  padding-top: 101px;
   padding-bottom: 600px;
   @media only screen and (max-width: 767px) {
-    padding-bottom: 1750px;
+    padding-bottom: 1500px;
   }
 }
 
@@ -73,7 +78,7 @@ body {
   padding-bottom: 50px;
   height: 600px;
   @media only screen and (max-width: 767px) {
-    height: 1750px;
+    height: 1500px;
   }
 
   ul {

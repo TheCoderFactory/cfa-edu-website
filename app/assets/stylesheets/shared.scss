@@ -410,6 +410,22 @@
     color: #38A9C7;
     text-decoration: none;
   }
+  .partner-logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .partner-logos > a {
+    max-width: 21%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .partner-logos > a {
+    width: 45%;
+  }
 }
 .upcoming-courses {
   padding-top: 50px;
