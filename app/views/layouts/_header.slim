@@ -22,11 +22,13 @@
                 a.dropdown-item href="/fast-track-melbourne" MELBOURNE
                 a.dropdown-item href="/fast-track-scholarships" SCHOLARSHIPS
             li.nav-item.hidden-md-up
-              = active_link_to 'FAST TRACK - SYDNEY', '/fast-track-sydney', class: "nav-link-link"
+              p FAST TRACK
             li.nav-item.hidden-md-up
-              = active_link_to 'FAST TRACK - MELBOURNE', '/fast-track-melbourne', class: "nav-link-link"
+              = active_link_to 'SYDNEY', '/fast-track-sydney', class: "nav-link-link fast-track-link-m"
             li.nav-item.hidden-md-up
-              = active_link_to 'SCHOLARSHIPS', '/fast-track-scholarships', class: "nav-link-link"
+              = active_link_to 'MELBOURNE', '/fast-track-melbourne', class: "nav-link-link fast-track-link-m"
+            li.nav-item.hidden-md-up
+              = active_link_to 'SCHOLARSHIPS', '/fast-track-scholarships', class: "nav-link-link fast-track-link-m"
             li.nav-item
               = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
             li.nav-item
