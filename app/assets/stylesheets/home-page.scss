@@ -14,13 +14,18 @@
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
     padding: 75px;
-    margin: auto;
     margin-top: 50px;
    h2 {
       color: #FFF !important;
     }
     a {
       color: #38A9C7;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .higher-ed-box {
+      padding: 25px;
+      border-radius: 5px;
     }
   }
   .hero-btns {
