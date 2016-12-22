@@ -1,6 +1,14 @@
+.hero-syd {
+  background-image: url(asset-path('syd-cohort.png'));
+}
+.hero-mel {
+  background-image: url(asset-path('mel-cohort.png'));
+}
 .fast-track-hero {
-  background-image: url(asset-path('first_cohort.jpg'));
+  display: flex;
+  align-items: center;
   background-size: cover;
+  background-position: top;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #FFF;
@@ -766,33 +774,16 @@
     @extend.pull-left;
   }
 }
-.australian-innovation-scholarship {
-  padding-top: 50px;
-  padding-bottom: 50px;
-
-  img {
-    width: 65%;
-  }
-  h2 {
-    color: #000;
-  }
-  .border {
-    border-style: solid;
-    border-width: 2px 0px 0px 0px;
-    border-color: #EC5037;
-    width: 50%;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-}
-
-
 .curriculum {
   padding-top: 50px;
   padding-bottom: 50px;
 
   h1, h2 {
     color: #000;
+  }
+  h6 {
+    margin-bottom: 10px;
+    margin-top: 25px;
   }
   .border-orange {
     border: solid 1px #EC5037;
@@ -805,6 +796,13 @@
     margin-top: 5px;
     margin-bottom: 10px;
     width: 52%;
+  }
+  .btn-cfa-blue {
+    background-color: #38A9C7;
+    color: #FFF;
+  }
+  .term-hd {
+    margin-bottom: 5px;
   }
   .bordered-section {
     border: solid 1px #EEE;
@@ -820,154 +818,6 @@
   }
   .modal {
     margin-top: 100px;
-  }
-}
-.ais-apply {
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  h1 {
-    color: #000;
-  }
-  .border {
-    border-style: solid;
-    border-width: 2px 0px 0px 0px;
-    border-color: #EC5037;
-    width: 35%;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-  .hs_hs_persona > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_hs_persona > .input > select {
-    margin-top: 5px;
-  }
-  .hs_campus_preference > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_campus_preference > .input > select {
-    margin-top: 5px;
-  }
-  .hs_age > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_age > .input > input {
-    margin-top: 5px;
-  }
-  .hs_gender > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_gender > .input > select {
-    margin-top: 5px;
-  }
-  .hs_ft_reason_for_application > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_reason_for_application > .input > textarea {
-    margin-top: 5px;
-  }
-  .hs_ft_background > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_background > .input > textarea {
-    margin-top: 5px;
-  }
-  .hs_ft_passion > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_passion > .input > textarea {
-    margin-top: 5px;
-  }
-  .hs_ft_prior_coding_experience > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_prior_coding_experience > .input > input {
-    margin-top: 5px;
-  }
-  .hs_ft_overcame_problem > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_overcame_problem > .input > textarea {
-    margin-top: 5px;
-  }
-  .hs_ft_why_choose_you > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_why_choose_you > .input > textarea {
-    margin-top: 5px;
-  }
-  .hs_ft_links > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_ft_links > .input > input {
-    margin-top: 5px;
-  }
-  .hs_how_did_you_hear_about_us > label {
-    display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    @extend .pull-left;
-  }
-  .hs_how_did_you_hear_about_us > .input > input {
-    margin-top: 5px;
   }
 }
 .intake-date {

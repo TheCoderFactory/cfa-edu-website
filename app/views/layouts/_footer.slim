@@ -54,9 +54,13 @@
         h2 OUR COMMUNITY
         ul
           li
-            a.footer-page-link href="/curriculum" Curriculum
-          li
             a.footer-page-link href="/career-outcomes" Career Outcomes
+          - if action_name == 'ft_syd'
+            li
+              a.footer-page-link href="/sydney-curriculum" Curriculum
+          - if action_name == 'ft_mel'
+            li
+              a.footer-page-link href="/melbourne-curriculum" Curriculum
           li
             a.footer-page-link href="/partners" Partners
           li
