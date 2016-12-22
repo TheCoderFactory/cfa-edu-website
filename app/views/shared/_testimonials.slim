@@ -1,110 +1,119 @@
 .testimonials.hidden-sm-down
   center
     h3 MEET OUR ALUMNI
-    .container#testimonial-images
-      .row.testimonial-row
-        a.testimonial-button onclick="nextTestimonial('left')"
-          img.img-fluid src="#{asset_path 'left-arrow.png'}" alt="Left-arrow"
-        a.testimonial-button onclick="changeTestimonial(1)"
-          img.img-fluid.img-circle.inactive-testimonial#testimonial-1 src="#{asset_path 'alumni/AnnaCrop.jpg'}" alt="Anna Testimonial"
-        a.testimonial-button onclick="changeTestimonial(2)"
-          img.img-fluid.img-circle.inactive-testimonial#testimonial-2 src="#{asset_path 'alumni/AttilaCrop.jpg'}" alt="Attila Testimonial"
-        a.testimonial-button onclick="changeTestimonial(3)"
-          img.img-fluid.img-circle.active-testimonial#testimonial-3 src="#{asset_path 'alumni/DanielCrop.jpg'}" alt="Daniel Testimonial"
-        a.testimonial-button onclick="changeTestimonial(4)"
-          img.img-fluid.img-circle.inactive-testimonial#testimonial-4 src="#{asset_path 'alumni/PeterCrop.jpg'}" alt="Peter Testimonial"
-        a.testimonial-button onclick="changeTestimonial(5)"
-          img.img-fluid.img-circle.inactive-testimonial#testimonial-5 src="#{asset_path 'alumni/SamCrop.jpg'}" alt="Sam Testimonial"
-        a.testimonial-button onclick="nextTestimonial('right')"
-          img.img-fluid src="#{asset_path 'right-arrow.png'}" alt="Right-arrow"
-    .container.inactive-testimonial-content#testimonial-1-content
-      h5 Anna Robson
-      p Refugee Intern, Co-founder
-      hr
-      p.quote
-        | "You will learn so fast and be able to build something in your first lesson!"
-      a href="https://vimeo.com/150739950" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} Watch Video
-    .container.inactive-testimonial-content#testimonial-2-content
-      h5 Attila Zimler
-      p Software Developer
-      hr
-      p.quote
-        | "It's not that hard to learn and develop a web application with Ruby on Rails."
-      a href="https://vimeo.com/150745311" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.active-testimonial-content#testimonial-3-content
-      h5 Daniel Dumycz
-      p Artist
-      hr
-      p.quote
-        | "Coder Factory gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
-      a href="https://vimeo.com/150745848" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.inactive-testimonial-content#testimonial-4-content
-      h5 Peter Hogan
-      p Retail Professional
-      hr
-      p.quote
-        | "The atomosphere is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
-      a href="https://vimeo.com/150745898" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.inactive-testimonial-content#testimonial-5-content
-      h5 Sam Henderson
-      p Entrepeneur
-      hr
-      p.quote
-        | "We really enjoyed it and got a lot out of it. I have changed jobs and I am now using Ruby on Rails in my new startup!"
-      a href="https://vimeo.com/150745955" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-.mobile-testimonials.hidden-md-up
-  center
-    h3 MEET OUR ALUMNI
-    .container#mobile-testimonial-images
-      .row.mobile-testimonial-switch
-        .col-xs-3
-          a.testimonial-button onclick="nextTestimonial('left', true)"
-            img.img-fluid src="#{asset_path 'left-arrow.png'}" alt="Left-arrow"
-        .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-1
-          img.img-fluid.img-circle src="#{asset_path 'alumni/AnnaCrop.jpg'}" alt="Anna Testimonial"
-        .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-2
-          img.img-fluid.img-circle src="#{asset_path 'alumni/AttilaCrop.jpg'}" alt="Attila Testimonial"
-        .col-xs-6.mobile-testimonial.mobile-active-testimonial#mobile-testimonial-3
-          img.img-fluid.img-circle src="#{asset_path 'alumni/DanielCrop.jpg'}" alt="Daniel Testimonial"
-        .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-4
-          img.img-fluid.img-circle src="#{asset_path 'alumni/PeterCrop.jpg'}" alt="Peter Testimonial"
-        .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-5
-          img.img-fluid.img-circle src="#{asset_path 'alumni/SamCrop.jpg'}" alt="Sam Testimonial"
-        .col-xs-3
-          a.testimonial-button onclick="nextTestimonial('right', true)"
-            img.img-fluid src="#{asset_path 'right-arrow.png'}" alt="Right-arrow"
-    .container.mobile-inactive-testimonial#mobile-testimonial-1-content
-      h5 Anna Robson
-      p Refugee Intern, Co-founder
-      hr
-      p
-        | "You will learn so fast and be able to build something in your first lesson!"
-      a href="https://vimeo.com/150739950" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.mobile-inactive-testimonial-content#mobile-testimonial-2-content
-      h5 Attila Zimler
-      p Software Developer
-      hr
-      p
-        | "It's not that hard to learn and develop a web application with Ruby on Rails."
-      a href="https://vimeo.com/150745311" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.mobile-active-testimonial-content#mobile-testimonial-3-content
-      h5 Daniel Dumycz
-      p Artist
-      hr
-      p
-        | "Coder Factory gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
-      a href="https://vimeo.com/150745848" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.mobile-inactive-testimonial-content#mobile-testimonial-4-content
-      h5 Peter Hogan
-      p Retail Professional
-      hr
-      p
-        | "The atomosphere is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
-      a href="https://vimeo.com/150745898" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
-    .container.mobile-inactive-testimonial-content#mobile-testimonial-5-content
-      h5 Sam Henderson
-      p Entrepeneur
-      hr
-      p
-        | "We really enjoyed it and got a lot out of it. I have changed jobs and I am now using Ruby on Rails in my new startup!"
-      a href="https://vimeo.com/150745955" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    br
+    .container
+      .row
+        .col-xs-10.offset-xs-1
+          .embed-responsive.embed-responsive-16by9
+            iframe.embed-responsive-item src="https://player.vimeo.com/video/196662198?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
+
+    / Old section to be updated with new content
+
+    / .container#testimonial-images
+      / .row.testimonial-row
+        / a.testimonial-button onclick="nextTestimonial('left')"
+          / img.img-fluid src="#{asset_path 'left-arrow.png'}" alt="Left-arrow"
+        / a.testimonial-button onclick="changeTestimonial(1)"
+          / img.img-fluid.img-circle.inactive-testimonial#testimonial-1 src="#{asset_path 'alumni/AnnaCrop.jpg'}" alt="Anna Testimonial"
+        / a.testimonial-button onclick="changeTestimonial(2)"
+          / img.img-fluid.img-circle.inactive-testimonial#testimonial-2 src="#{asset_path 'alumni/AttilaCrop.jpg'}" alt="Attila Testimonial"
+        / a.testimonial-button onclick="changeTestimonial(3)"
+          / img.img-fluid.img-circle.active-testimonial#testimonial-3 src="#{asset_path 'alumni/DanielCrop.jpg'}" alt="Daniel Testimonial"
+        / a.testimonial-button onclick="changeTestimonial(4)"
+          / img.img-fluid.img-circle.inactive-testimonial#testimonial-4 src="#{asset_path 'alumni/PeterCrop.jpg'}" alt="Peter Testimonial"
+        / a.testimonial-button onclick="changeTestimonial(5)"
+          / img.img-fluid.img-circle.inactive-testimonial#testimonial-5 src="#{asset_path 'alumni/SamCrop.jpg'}" alt="Sam Testimonial"
+        / a.testimonial-button onclick="nextTestimonial('right')"
+          / img.img-fluid src="#{asset_path 'right-arrow.png'}" alt="Right-arrow"
+    / .container.inactive-testimonial-content#testimonial-1-content
+      / h5 Anna Robson
+      / p Refugee Intern, Co-founder
+      / hr
+      / p.quote
+        / | "You will learn so fast and be able to build something in your first lesson!"
+      / a href="https://vimeo.com/150739950" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} Watch Video
+    / .container.inactive-testimonial-content#testimonial-2-content
+      / h5 Attila Zimler
+      / p Software Developer
+      / hr
+      / p.quote
+        / | "It's not that hard to learn and develop a web application with Ruby on Rails."
+      / a href="https://vimeo.com/150745311" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.active-testimonial-content#testimonial-3-content
+      / h5 Daniel Dumycz
+      / p Artist
+      / hr
+      / p.quote
+        / | "Coder Factory gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
+      / a href="https://vimeo.com/150745848" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.inactive-testimonial-content#testimonial-4-content
+      / h5 Peter Hogan
+      / p Retail Professional
+      / hr
+      / p.quote
+        / | "The atomosphere is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+      / a href="https://vimeo.com/150745898" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.inactive-testimonial-content#testimonial-5-content
+      / h5 Sam Henderson
+      / p Entrepeneur
+      / hr
+      / p.quote
+        / | "We really enjoyed it and got a lot out of it. I have changed jobs and I am now using Ruby on Rails in my new startup!"
+      / a href="https://vimeo.com/150745955" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+/ .mobile-testimonials.hidden-md-up
+  / center
+    / h3 MEET OUR ALUMNI
+    / .container#mobile-testimonial-images
+      / .row.mobile-testimonial-switch
+        / .col-xs-3
+          / a.testimonial-button onclick="nextTestimonial('left', true)"
+            / img.img-fluid src="#{asset_path 'left-arrow.png'}" alt="Left-arrow"
+        / .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-1
+          / img.img-fluid.img-circle src="#{asset_path 'alumni/AnnaCrop.jpg'}" alt="Anna Testimonial"
+        / .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-2
+          / img.img-fluid.img-circle src="#{asset_path 'alumni/AttilaCrop.jpg'}" alt="Attila Testimonial"
+        / .col-xs-6.mobile-testimonial.mobile-active-testimonial#mobile-testimonial-3
+          / img.img-fluid.img-circle src="#{asset_path 'alumni/DanielCrop.jpg'}" alt="Daniel Testimonial"
+        / .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-4
+          / img.img-fluid.img-circle src="#{asset_path 'alumni/PeterCrop.jpg'}" alt="Peter Testimonial"
+        / .col-xs-6.mobile-testimonial.mobile-inactive-testimonial#mobile-testimonial-5
+          / img.img-fluid.img-circle src="#{asset_path 'alumni/SamCrop.jpg'}" alt="Sam Testimonial"
+        / .col-xs-3
+          / a.testimonial-button onclick="nextTestimonial('right', true)"
+            / img.img-fluid src="#{asset_path 'right-arrow.png'}" alt="Right-arrow"
+    / .container.mobile-inactive-testimonial#mobile-testimonial-1-content
+      / h5 Anna Robson
+      / p Refugee Intern, Co-founder
+      / hr
+      / p
+        / | "You will learn so fast and be able to build something in your first lesson!"
+      / a href="https://vimeo.com/150739950" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.mobile-inactive-testimonial-content#mobile-testimonial-2-content
+      / h5 Attila Zimler
+      / p Software Developer
+      / hr
+      / p
+        / | "It's not that hard to learn and develop a web application with Ruby on Rails."
+      / a href="https://vimeo.com/150745311" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.mobile-active-testimonial-content#mobile-testimonial-3-content
+      / h5 Daniel Dumycz
+      / p Artist
+      / hr
+      / p
+        / | "Coder Factory gives you more technical experience rather than being muddled up in all the theories. Students can focus on the practical skills that employers want."
+      / a href="https://vimeo.com/150745848" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.mobile-inactive-testimonial-content#mobile-testimonial-4-content
+      / h5 Peter Hogan
+      / p Retail Professional
+      / hr
+      / p
+        / | "The atomosphere is very casual, very friendly. They have been exceptionally patient with me and determined to help me. I am learning a lot, very quickly!"
+      / a href="https://vimeo.com/150745898" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO
+    / .container.mobile-inactive-testimonial-content#mobile-testimonial-5-content
+      / h5 Sam Henderson
+      / p Entrepeneur
+      / hr
+      / p
+        / | "We really enjoyed it and got a lot out of it. I have changed jobs and I am now using Ruby on Rails in my new startup!"
+      / a href="https://vimeo.com/150745955" target="_blank" #{fa_icon 'play-circle-o', class: 'fa-3x testimonial-play'} WATCH VIDEO

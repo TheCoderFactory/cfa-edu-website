@@ -27,13 +27,12 @@ Rails.application.routes.draw do
 
   get "admin/dashboard", to: "admin_dashboard#index"
   get "admin", to: "admin_dashboard#index"
-  get "fast-track", to: "fast_track#index"
+  get "fast-track-sydney", to: "fast_track#ft_syd"
+  get "fast-track-melbourne", to: "fast_track#ft_mel"
   get "fast-track/apply", to: "fast_track#apply"
+  get "fast-track-scholarships", to: "fast_track#scholarships"
   get "fast-track/women-in-tech-scholarship", to: "fast_track#wit_scholarship_info"
   get "fast-track/women-in-tech-scholarship/apply", to: "fast_track#wit_scholarship_apply"
-  # hide ais pages for now
-  # get "fast-track/australian-innovation-scholarship", to: "fast_track#australian_innovation_scholarship"
-  # get "fast-track/australian-innovation-scholarship/apply", to: "fast_track#australian_innovation_scholarship_apply"
 
   get "short-courses", to: "workshop#index"
 
@@ -50,11 +49,11 @@ Rails.application.routes.draw do
   get "/posts/:id", to: "posts#show", as: :show_post
 
   get "about-coder-factory-academy", to: "pages#about"
-  # get "meet-our-alumni", to: "pages#alumni"
   get "career-outcomes", to: "pages#career_outcomes"
   get "confirmation", to: "pages#confirmation"
   get "contact", to: "pages#contact"
-  get "curriculum", to: "pages#curriculum"
+  get "sydney-curriculum", to: "pages#syd_curriculum"
+  get "melbourne-curriculum", to: "pages#mel_curriculum"
   get "faq", to: "pages#faq"
   get "information-toolkit", to: "pages#information_toolkit"
   get "meet-your-instructors", to: "pages#instructors"

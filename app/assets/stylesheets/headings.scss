@@ -176,6 +176,11 @@ p {
     margin-left: -20px;
     border-color: #FFF transparent transparent transparent;
   }
+  @media only screen and (max-width: 767px) {
+    a.active:after {
+      display: none;
+    }
+  }
   button {
     color: #38A9C7;
   }
