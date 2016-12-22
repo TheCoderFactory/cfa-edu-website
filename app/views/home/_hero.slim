@@ -1,15 +1,18 @@
 .hero
   .container
-    .higher-ed-box.pull-right.hidden-sm-down
-      center
-        h2 NOW HIGHER ED<br>APPROVED WITH<br>ACCESS TO <a href="http://studyassist.gov.au/sites/studyassist/helppayingmyfees/fee-help/pages/fee-help-" target="_blank">FEE-HELP!</a>
-    h2 JOIN THE FAST TRACK
-    h1 AUSTRALIA'S ONLY ACCREDITED<br>CODING BOOTCAMP
-    br
-    h4 Fast track your tech career with Coder Factory Academy.
-    h4 Become an in-demand Junior Developer in six months.
-    br
-    h3 Now in Sydney & Melbourne!
+    .row
+      .col-md-6.col-xs-12
+        h2 JOIN THE FAST TRACK
+        h1 AUSTRALIA'S ONLY ACCREDITED<br>CODING BOOTCAMP
+        br.hidden-sm-down
+        h4 Fast track your tech career with Coder Factory Academy.
+        h4 Become an in-demand Junior Developer in six months.
+        br.hidden-sm-down
+        h3 Now in Sydney & Melbourne!
+      .col-md-6.col-xs-12
+        .higher-ed-box
+          center
+            h2 NOW HIGHER ED<br>APPROVED WITH<br>ACCESS TO <a href="http://studyassist.gov.au/sites/studyassist/helppayingmyfees/fee-help/pages/fee-help-" target="_blank">FEE-HELP!</a>
     .hero-btns
       a.main-cta-btn href="/fast-track" LEARN MORE
       a.hero-video-btn data-toggle="modal" data-target="#myModal" #{fa_icon 'play', class: 'fa-1x'} Watch Video
