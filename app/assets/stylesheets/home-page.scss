@@ -10,6 +10,11 @@
     margin-top: 10px;
     color: #FFF;
   }
+
+  a {
+    color: white;
+  }
+
   .higher-ed-box {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
@@ -173,7 +178,7 @@
     }
   }
   .course-option-4 {
-    padding-top: 100px;
+    padding-top: 60px;
 
     .course-option-4-content {
       text-align: center;
@@ -192,6 +197,20 @@
         color: #FFF;
         background-color: #FFF;
       }
+    }
+
+    .scd-cta-btn {
+      width: 170px;
+    }
+
+    .syd {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .melb {
+      margin-left: 5px;
+      margin-right: 5px;
     }
   }
   @media only screen and (max-width: 767px) {
