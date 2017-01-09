@@ -15,6 +15,11 @@ Rails.application.routes.draw do
 
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
+  resources :partners, path: "admin/partners" do
+    collection do
+      post :import
+    end
+  end
   get "intake-details", to: "intakes#intake_details"
   get "admin/bookings/new", to: "bookings#admin_new"
   post "admin/bookings", to: "bookings#admin_create"

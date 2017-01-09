@@ -32,6 +32,7 @@ class PagesController < ApplicationController
   end
 
   def partners
+    @partners = Partner.active.ordered
   end
 
   def payment_options

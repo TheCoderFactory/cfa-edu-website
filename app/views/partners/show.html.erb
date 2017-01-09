@@ -1,0 +1,31 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Url:</strong>
+    <%= @partner.url %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @partner.name %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= @partner.image %>
+  </p>
+
+  <p>
+    <strong>Order:</strong>
+    <%= @partner.order %>
+  </p>
+
+  <p>
+    <strong>Active:</strong>
+    <%= @partner.active %>
+  </p>
+
+  <%= link_to 'Edit', edit_partner_path(@partner) %> |
+  <%= link_to 'Back', partners_path %>
+</div>

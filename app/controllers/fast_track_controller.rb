@@ -3,9 +3,11 @@ class FastTrackController < ApplicationController
   end
 
   def ft_syd
+    @partners = Partner.active.ordered
   end
 
   def ft_mel
+    @partners = Partner.active.ordered
   end
 
   def apply

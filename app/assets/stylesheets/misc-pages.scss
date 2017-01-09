@@ -378,6 +378,27 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .border-orange {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #EC5037;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    color: #ADADAD;
+  }
 }
 .partners {
     padding-top: 50px;
@@ -408,22 +429,6 @@
       padding: 10px;
     }
 
-  .border-orange {
-    border-style: solid;
-    border-width: 3px 0px 0px 0px;
-    border-color: #EC5037;
-    width: 35%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .border-blue {
-    border-style: solid;
-    border-width: 3px 0px 0px 0px;
-    border-color: #38A9C7;
-    width: 35%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
 
 }
 .confirmation-page {
@@ -485,7 +490,58 @@
     width: 1em;
     margin-left: -1em;
   }
+
+  .vet-student-loans {
+    border: 1px solid #ADADAD;
+    h1,h2,h3,h5,p {
+      color: black;
+    }
+    h4 {
+      color: #EC5037;
+    }
+    h3 {
+      color: #38A9C7;
+      text-align: center;
+    }
+    padding: 30px;
+    margin: 10px;
+    width: 45%;
+  }
+
+  .wrap.match-cols {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrap.match-cols > [class*="col-"]{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrap.match-cols {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  }
+
+  .wrap.match-cols > [class*='col-'] {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+  }
+
 }
+
 .col-centered {
     display:inline-block;
     float:none;

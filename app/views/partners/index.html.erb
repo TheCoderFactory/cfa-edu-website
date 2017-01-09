@@ -1,0 +1,47 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h1>Listing Partners</h1>
+<br>
+<%= link_to 'New Partner', new_partner_path %>
+<br>
+<br>
+<%= link_to("Export CSV", partners_path(format: :csv), class: "btn btn-success") %>
+<br>
+
+<%= form_tag import_partners_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import CSV" %>
+<% end %>
+<br>
+<br>
+  <table>
+    <thead>
+      <tr>
+        <th>Url</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Order</th>
+        <th>Active</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @partners.each do |partner| %>
+        <tr>
+          <td><%= partner.url %></td>
+          <td><%= partner.name %></td>
+          <td><%= partner.image %></td>
+          <td><%= partner.order %></td>
+          <td><%= partner.active %></td>
+          <td><%= link_to 'Show', partner %></td>
+          <td><%= link_to 'Edit', edit_partner_path(partner) %></td>
+          <td><%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+<%= render "shared/partners", local: @partners %>
+</div>
