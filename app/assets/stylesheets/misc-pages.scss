@@ -377,7 +377,11 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
   }
+  h4 {
+    color: #ADADAD;
+    }
 
   .border-orange {
     border-style: solid;
@@ -396,13 +400,14 @@
     margin-bottom: 10px;
   }
 
-  h4 {
-    color: #ADADAD;
-  }
 }
 .partners {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    h4 {
+      color: #ADADAD;
+    }
 
     h3 {
       color: black;
@@ -410,6 +415,7 @@
     h2 {
       color: #ADADAD;
     }
+
     .border {
       padding: 2px;
       width: 30%;

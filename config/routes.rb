@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     delete  "admin/delete-account"  =>  "admins/registrations#destroy", as: :delete_admin_account
   end
 
+  resources :partners, path: "admin/partners" do
+    collection { post :import }
+  end
+  
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
   resources :partners, path: "admin/partners" do
