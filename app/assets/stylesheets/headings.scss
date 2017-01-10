@@ -83,7 +83,7 @@ p {
     justify-content: center;
     line-height: 25px;
 
-    a.header-major-cta {
+    a.header-major-cta-alert {
       color: black !important;
       border: 2px solid #EC5037;
       font-size: 16px;
@@ -126,9 +126,6 @@ p {
         text-align:center;
         font-size: 12px;
       }
-      .nav-link-link {
-        font-size: 16px;
-      }
 
     }
 
@@ -150,12 +147,18 @@ p {
       float: right !important;
     }
   }
-  a.header-major-cta {
-    color: #EC5037 !important;
+  .header-major-cta {
+    color: white;
+    background-color: #EC5037 !important;
     border: 2px solid #EC5037;
     font-size: 14px;
     padding: 12px;
     border-radius: 5px;
+  }
+
+  a.header-major-cta:hover {
+    color: #EC5037 !important;
+    background-color: white !important;
   }
 
   .nav-link {
