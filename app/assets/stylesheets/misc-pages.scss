@@ -184,6 +184,9 @@
     }
   }
 
+  h1 {
+    color: #000;
+  }
   h3 {
     color: #000;
   }
@@ -197,13 +200,22 @@
   h6 {
     color: #000;
   }
-  .border {
+  .border-orange {
     border-style: solid;
     border-width: 3px 0px 0px 0px;
     border-color: #EC5037;
     width: 20%;
     margin-top: 5px;
   }
+
+  .border-blue {
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    border-color: #38A9C7;
+    width: 20%;
+    margin-top: 5px;
+  }
+
   img {
     width: 40%;
     margin-bottom: 10px;
