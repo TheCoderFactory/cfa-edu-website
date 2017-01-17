@@ -72,13 +72,23 @@ p {
   }
 
   .header-major-cta-apply {
-    color: #EC5037;
+    background-color: #EC5037;
+    color: #fff;
     border: 2px solid #EC5037;
     font-size: 14px;
     padding: 12px;
     border-radius: 5px;
-
   }
+
+  a:hover .header-major-cta-apply {
+    background-color: #fff;
+    color: #EC5037;
+    border: 2px solid #fff;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 5px;
+  }
+
 
 
   body {
@@ -119,7 +129,7 @@ p {
 
     .nav-item.nav-link-link a:hover {
       text-decoration: none;
-      color: #38A9C7 !important;
+      color: #EC5037 !important;
     }
     img {
       display: inline !important;
@@ -140,7 +150,7 @@ p {
       font-size: 12px;
     }
     .nav-link-link {
-      font-size: 16px;
+      font-size: 18px;
     }
 
   }
