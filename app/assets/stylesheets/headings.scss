@@ -118,8 +118,18 @@ p {
     }
 
 
-    @media only screen and (max-width: 541px) {
-      
+    @media (min-width: 992px) {
+      .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+      }
+      .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+
       .collapse {
           display: none !important;
       }
@@ -140,7 +150,7 @@ p {
 
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
 
     .navbar-nav {
       width: 100%;
