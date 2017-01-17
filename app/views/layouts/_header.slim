@@ -3,7 +3,7 @@
     .container
       center
         h5.center
-          NEXT NEXT BOOTCAMP COURSE STARTS: 13TH FEBRUARY 2017 | 
+          NEXT NEXT BOOTCAMP COURSE STARTS: 13TH FEBRUARY 2017 |
           a.nav-link.header-major-cta href="/fast-track/apply"  NOW ENROLLING
   .navbar.navbar-default.navbar-fixed-top.second-navbar
     a.hidden-md-up href="/"
@@ -15,25 +15,25 @@
           img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
         .container.pull-lg-right.pull-md-right
           ul.nav.navbar-nav
-            li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
+            li.nav-item.nav-link-link.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 a.dropdown-item href="/fast-track" SYDNEY
                 a.dropdown-item href="/fast-track-melbourne" MELBOURNE
                 a.dropdown-item href="/fast-track-scholarships" SCHOLARSHIPS
-            li.nav-item.dropdown.hidden-md-up
+            li.nav-item.nav-link-link.dropdown.hidden-md-up
               = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 a.dropdown-item.blue-text href="/fast-track" SYDNEY
                 a.dropdown-item.blue-text href="/fast-track-melbourne" MELBOURNE
                 a.dropdown-item.blue-text href="/fast-track-scholarships" SCHOLARSHIPS
+            li.nav-item.nav-link-link
+              = active_link_to 'SHORT COURSES', "/short-courses"
+            li.nav-item.nav-link-link
+              = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding"
+            li.nav-item.nav-link-link
+              = active_link_to 'SCHOOLS', "/schools"
+            li.nav-item.nav-link-link
+              = active_link_to 'CONTACT', "/contact"
             li.nav-item
-              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
-            li.nav-item
-              = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
-            li.nav-item
-              = active_link_to 'SCHOOLS', "/schools", class: "nav-link-link"
-            li.nav-item
-              = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
-            li.nav-item
-              a.nav-link.header-major-cta href="/fast-track/apply" APPLY
+              a.nav-link.header-major-cta-apply href="/fast-track/apply" APPLY
