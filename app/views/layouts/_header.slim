@@ -27,8 +27,16 @@
                 a.dropdown-item.blue-text href="/fast-track" SYDNEY
                 a.dropdown-item.blue-text href="/fast-track-melbourne" MELBOURNE
                 a.dropdown-item.blue-text href="/fast-track-scholarships" SCHOLARSHIPS
-            li.nav-item
-              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
+            li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
+              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link dropdown-toggle", data: { toggle: 'dropdown'}, aria: { haspopup: "true", expanded: "false" }
+              .dropdown-menu aria-labelledby="supportedContentDropdown"
+                - @short_courses.each do |c|
+                  a.dropdown-item href="/short-courses##{c.slug}" #{c.name.upcase}
+            li.nav-item.dropdown.hidden-md-up
+              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link dropdown-toggle", data: { toggle: 'dropdown'}, aria: { haspopup: "true", expanded: "false" }
+              .dropdown-menu aria-labelledby="supportedContentDropdown"
+                - @short_courses.each do |c|
+                  a.dropdown-item.blue-text href="/short-courses##{c.slug}-m" #{c.name.upcase}
             li.nav-item
               = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
             li.nav-item
