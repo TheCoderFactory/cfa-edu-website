@@ -61,9 +61,11 @@ body {
   position: relative;
 }
 
-.anchor {
-  padding: 1px;
-  margin-bottom: 60px;
+.p-anchor {
+  padding-top: 150px !important;
+}
+.m-anchor {
+  margin-top: 150px !important;
 }
 .admin-content {
   padding-top: 81px;

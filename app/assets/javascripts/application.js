@@ -29,4 +29,5 @@
 //= require stripe-payments
 //= require blog_sidebar
 //= require close-modal
+//= require jquery-scrolltofixed-min
 //= require_directory .

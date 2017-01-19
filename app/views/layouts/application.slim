@@ -39,7 +39,7 @@ html
     = render 'layouts/inspectlet_code' if Rails.env.production?
     = yield :conversion_code
 
-body
+body data-spy="scroll" data-target="#course-list"
 
   .wrapper
     = render "layouts/header"
