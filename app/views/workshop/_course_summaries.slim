@@ -6,7 +6,11 @@
           - @courses.each do |course|
             li.nav-item
               a.nav-link href="##{course.slug}" #{course.name.upcase}
-      .col-md-8#course-container
+          li.nav-item.cta
+            hr
+            center
+              a.main-cta-btn href="#enquire" ENQUIRE
+      .col-md-7.offset-md-1#course-container
         - @courses.each_with_index do |course, index|
           - if index%2 == 0
             .row.course-summary.p-anchor id="#{course.slug}"
