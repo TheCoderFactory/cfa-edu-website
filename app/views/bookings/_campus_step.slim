@@ -16,7 +16,7 @@
         p.booking-box-heading Location
         p.booking-box-text Level 2, 7 Kelly St
         p.booking-box-text Ultimo, NSW 2007
-        a href="https://goo.gl/maps/DREaV8thMo62" View Map
+        a href="https://goo.gl/maps/DREaV8thMo62" target="_blank" View Map
         p.booking-box-heading Price
         p.booking-box-text #{number_to_currency(@syd_intakes.first.course.price)}
     - else
@@ -27,8 +27,19 @@
   .mel-intakes
     - if @mel_intakes.size > 0
       .form-group.input-field.col-xs-12
-        = label_tag "Melbourne Intakes"
-        = select_tag :mel_intake, options_for_select(@mel_intakes.collect{|i| [i.get_dates, i.id]}, (@booking.intake.id if @booking.intake))
+        = hidden_field_tag :mel_intake, @mel_intakes.first.id
+        p.booking-box-heading Start Date
+        p.booking-box-text #{@mel_intakes.first.start.strftime("%A, %d %b %Y")}
+        p.booking-box-heading End Date
+        p.booking-box-text #{@mel_intakes.first.finish.strftime("%A, %d %b %Y")}
+        p.booking-box-heading Time
+        p.booking-box-text #{@mel_intakes.first.start.strftime("%l:%M %p")} - #{@mel_intakes.first.finish.strftime("%l:%M %p")}
+        p.booking-box-heading Location
+        p.booking-box-text Level 2, 7 Kelly St
+        p.booking-box-text Ultimo, NSW 2007
+        a href="https://goo.gl/maps/FXWWPbgEanR2" target="_blank" View Map
+        p.booking-box-heading Price
+        p.booking-box-text #{number_to_currency(@mel_intakes.first.course.price)}
     - else
       center
         h6 There are currently no intakes for Melbourne.
