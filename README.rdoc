@@ -2,4 +2,4 @@
 
 hello! it's your friendly marketer/dev.
 
-#learntocode
+Course.course_type options: ["Workshop", "School", "Corporate"]

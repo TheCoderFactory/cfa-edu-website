@@ -107,6 +107,35 @@
   background-color: #FFF;
   padding-bottom: 50px;
 
+  .nav {
+    background-color: #333;
+    border: 1px #333 solid;
+    font-size: 14px;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .nav-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav-item.cta {
+    padding-top: 20px !important;
+    padding-bottom: 15px !important;
+    padding-left: 10px;
+  }
+  .nav-link {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  .active {
+    color: #EC5037 !important;
+    background-color: #FFF;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0px;
+  }
   h5 {
     color: #000;
   }

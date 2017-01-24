@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_footer_course_lists
+    @short_courses = Course.active_courses.where(course_type: "Workshop").order(order: :asc)
     @footer_short_courses = Course.active_courses.where(course_type: "Workshop")
     @footer_corporate_courses = Course.active_courses.where(course_type: "Corporate")
     @footer_schools_courses = Course.active_courses.where(course_type: "Schools")
