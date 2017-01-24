@@ -6,8 +6,6 @@
   .syd-intakes
     - if @syd_intakes.size > 0
       .form-group.input-field.col-xs-12
-        /= label_tag "Sydney Intakes"
-        /= select_tag :syd_intake, options_for_select(@syd_intakes.collect{|i| [i.get_dates, i.id]}, (@booking.intake.id if @booking.intake))
         = hidden_field_tag :syd_intake, @syd_intakes.first.id
         p.booking-box-heading Start Date
         p.booking-box-text #{@syd_intakes.first.start.strftime("%A, %d %b %Y")}
@@ -15,9 +13,6 @@
         p.booking-box-text #{@syd_intakes.first.finish.strftime("%A, %d %b %Y")}
         p.booking-box-heading Time
         p.booking-box-text #{@syd_intakes.first.start.strftime("%l:%M %p")} - #{@syd_intakes.first.finish.strftime("%l:%M %p")}
-        /p.booking-box-text To
-        /p.booking-box-text #{@syd_intakes.first.finish.strftime("%A, %d %b %Y")}
-        /p.booking-box-text #{@syd_intakes.first.finish.strftime("%l:%M %p")}
         p.booking-box-heading Location
         p.booking-box-text Level 2, 7 Kelly St
         p.booking-box-text Ultimo, NSW 2007
