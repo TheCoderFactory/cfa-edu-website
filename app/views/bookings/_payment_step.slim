@@ -1,22 +1,22 @@
 .row
-  .col-md-8.offset-md-3
-      h6 Payment Details
+  .col-xs-12
+      = label_tag "Payment Details"
       p <b>Course Price:</b> #{number_to_currency(@booking.intake.course.price)}
-      p <b>GST (+10%):</b> +#{number_to_currency(@booking.gst)}
-      p <b>Promo code #{"(#{@booking.promo_code ? @booking.promo_code.code : "N/A"})"}:</b> -#{number_to_currency(@booking.discount)}
-      p <b>Total cost:</b> =#{number_to_currency(@booking.total_cost)}
+      p <b>GST (+10%):</b> #{number_to_currency(@booking.gst)}
+      p <b>Promo code #{"(#{@booking.promo_code ? @booking.promo_code.code : "N/A"})"}:</b> #{number_to_currency(@booking.discount)}
+      p <b>Total cost:</b> #{number_to_currency(@booking.total_cost)}
   - if @booking.total_cost > 0
-    .col-md-8.offset-md-3.col-xs-12
+    .col-xs-12
       span.payment-errors
       .row
-        .form-group.col-md-7.col-xs-12
+        .form-group.col-xs-12
           input data-stripe="number" size="20" type="text" placeholder="XXXX XXXX XXXX XXXX"
       .row
-        .form-group.col-md-2.exp-col-1.col-xs-4
+        .form-group.exp-col-1.col-xs-4
           input.stripe-input data-stripe="exp_month" size="2" type="text" placeholder="MM"
-        .form-group.col-md-2.exp-col-2.col-xs-4
+        .form-group.exp-col-2.col-xs-4
           input.stripe-input data-stripe="exp_year" size="2" type="text" placeholder="YYYY"
-        .form-group.col-md-3.cvc-col.col-xs-4
+        .form-group.cvc-col.col-xs-4
           input.stripe-input data-stripe="cvc" size="4" type="text" placeholder="CVC"
     script type="text/javascript" src="https://js.stripe.com/v2/"
     javascript:
