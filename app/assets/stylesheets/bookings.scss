@@ -59,15 +59,11 @@
   .stripe-input {
     margin-top: 10px !important;
   }
-  .scd-cta-btn, .main-cta-btn {
+  .scd-cta-btn {
     padding: 5px 10px 5px 10px !important;
   }
-  .scd-cta-btn:hover, .main-cta-btn:hover {
+  .scd-cta-btn:hover {
     padding: 3px 8px 3px 8px !important;
-  }
-  .main-cta-btn {
-    height: auto;
-    margin-top: 0px;
   }
   #payment_form {
     padding: 20px;
@@ -104,4 +100,10 @@
 
 .enquiry-form {
   margin-top: 20px;
+}
+
+input.main-cta-btn.booking-cta {
+  font-size: 18px;
+  padding: 20px;
+  height: auto;
 }
