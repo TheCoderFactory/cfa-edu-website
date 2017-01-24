@@ -1,5 +1,5 @@
 .new-booking {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 50px;
 
   h2 {
@@ -86,4 +86,22 @@
     margin-top: 5px;
     margin-bottom: 10px;
    }
+}
+
+.booking-box {
+  padding: 0;
+}
+
+.booking-box-heading {
+  text-transform: uppercase;
+  color: black;
+  margin-top: 20px;
+}
+
+.booking-box-text {
+  margin-bottom: 2px;
+}
+
+.enquiry-form {
+  margin-top: 20px;
 }
