@@ -34,11 +34,12 @@
                 - if @booking.confirmation_step?
                   = f.submit "CONFIRM", class: "main-cta-btn booking-cta pull-right" unless @booking.intake.course.price == 0
                 - else
-                  = f.submit "BOOK", class: "main-cta-btn booking-cta #{'pull-right' if !@booking.first_step?}" unless @booking.last_step?
+                  = f.submit "BOOK", class: "main-cta-btn booking-cta center" if @booking.first_step?
+                  = f.submit "CONTINUE", class: "main-cta-btn booking-cta pull-right" if !@booking.first_step? && !@booking.last_step?
                   = f.submit "PAY NOW", class: "main-cta-btn booking-cta pull-right", name: "pay_button" if @booking.last_step? && @booking.total_cost > 0
         - else
           h6 Please contact us via email or phone to make a booking.
 
         #payment_form.enquiry-form.text-xs-center
           p.booking-box-heading Can't find what you're looking for?
-          = link_to 'ASK US', contact_path, class: "main-cta-btn booking-cta"
+          = link_to 'ASK US', contact_path, class: "secondary-cta-btn booking-cta"
