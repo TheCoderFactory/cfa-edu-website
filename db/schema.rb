@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115020229) do
+ActiveRecord::Schema.define(version: 20170118042653) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -75,12 +75,13 @@ ActiveRecord::Schema.define(version: 20161115020229) do
     t.text     "tagline"
     t.string   "slug"
     t.decimal  "price"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "course_image"
     t.boolean  "active"
     t.string   "subtype"
     t.string   "per"
+    t.integer  "order",        default: 0
   end
 
   create_table "fast_track_payments", force: :cascade do |t|

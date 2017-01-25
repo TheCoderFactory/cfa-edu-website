@@ -1,21 +1,22 @@
 .new-booking
   .container
     .row
-      .col-md-10.offset-md-1
+      .col-md-8
         .row
-          h2 #{@course.name.upcase} - <span id="course-price">#{@course.get_price}</span>
-          .col-md-6
+          .col-xs-12.col-md-10
+            h2 #{@course.name.upcase} - <span id="course-price">#{@course.get_price}</span>
             .border
-            - if @course.course_image_url
-              img.img-fluid src="#{@course.course_image_url}"
-            - else
-              center
-                p #{fa_icon "picture-o", class: "fa-5x"}
-            br
-            p #{@course.tagline}
-          .col-md-6.hidden-sm-down
-            br
-            = @course.description.html_safe
+            div class="#{'hidden-xs-down' if !@booking.first_step?}"
+              br
+              p #{@course.tagline}
+              br
+              = @course.description.html_safe
+      .col-md-4
+        - if @course.course_image_url
+          img.img-fluid src="#{@course.course_image_url}"
+        - else
+          center
+            p #{fa_icon "picture-o", class: "fa-5x"}
         br
         - if ["Kids", "Workshop"].include?(@course.course_type)
           = simple_form_for(@booking, url: create_booking_path("learn-to-code", @course.slug), html: {id: :payment_form}) do |f|
@@ -26,15 +27,18 @@
               -flash[:danger] = nil
             = render "#{@booking.current_step}_step", :f => f
             .row
-              .col-md-8.offset-md-2
-                = f.submit "Back", class: "main-cta-btn", name: "back_button" unless @booking.first_step?
+              div class="col-md-12 #{'text-xs-center' if @booking.first_step?}"
+                = f.submit "BACK", class: "main-cta-btn booking-cta", name: "back_button" unless @booking.first_step?
                 - if @booking.confirmation_step? && @booking.intake.course.price == 0 || @booking.last_step? && @booking.total_cost == 0
-                  = f.submit "Confirm Booking", class: "main-cta-btn pull-right", name: "confirm_button"
+                  = f.submit "CONFIRM", class: "main-cta-btn booking-cta pull-right", name: "confirm_button"
                 - if @booking.confirmation_step?
-                  = f.submit "Proceed to Payment", class: "main-cta-btn pull-right" unless @booking.intake.course.price == 0
+                  = f.submit "CONFIRM", class: "main-cta-btn booking-cta pull-right" unless @booking.intake.course.price == 0
                 - else
-                  = f.submit "Continue", class: "main-cta-btn pull-right" unless @booking.last_step?
-                  = f.submit "Pay Now", class: "main-cta-btn pull-right", name: "pay_button" if @booking.last_step? && @booking.total_cost > 0
+                  = f.submit "BOOK", class: "main-cta-btn booking-cta #{'pull-right' if !@booking.first_step?}" unless @booking.last_step?
+                  = f.submit "PAY NOW", class: "main-cta-btn booking-cta pull-right", name: "pay_button" if @booking.last_step? && @booking.total_cost > 0
         - else
           h6 Please contact us via email or phone to make a booking.
 
+        #payment_form.enquiry-form.text-xs-center
+          p.booking-box-heading Can't find what you're looking for?
+          = link_to 'ASK US', contact_path, class: "main-cta-btn booking-cta"
