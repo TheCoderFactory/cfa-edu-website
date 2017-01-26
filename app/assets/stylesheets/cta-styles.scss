@@ -18,20 +18,20 @@
 
 .secondary-cta-btn {
   background-color: #EC5037;
+  color: #fff;
+  border: 2px solid #EC5037;
+  font-size: 14px;
+  padding: 12px;
   border-radius: 5px;
-  color: #FFF;
-  font-size: 16px;
-  padding: 10px;
   display: inline-block;
 }
 .secondary-cta-btn:hover {
-  background-color: #FFF;
+  background-color: #fff;
   color: #EC5037;
-  text-decoration: none;
-  border-style: solid;
-  border-color: #EC5037;
-  border-width: 2px 2px 2px 2px;
-  padding: 8px;
+  border: 2px solid #EC5037;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 5px;
 }
 
 .main-mobile-cta-btn {
