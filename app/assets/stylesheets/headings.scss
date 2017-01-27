@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   margin: 0px;
 }
 
@@ -135,19 +135,35 @@ p {
       display: inline !important;
     }
 
+    @media only screen and (max-width: 541px) {
+      li {
+        float: none !important;
+        margin-left: 0px !important;
+        display: flex;
+        text-align:center;
+        font-size: 12px;
+      }
+      .nav-link-link {
+        font-size: 16px;
+      }
 
-  @media only handheld and (max-: 768px) and (max-width: 1024px) {
 
     .collapse {
         display: none !important;
     }
 
-    li {
-      float: none !important;
-      margin-left: 0px !important;
-      display: flex;
-      text-align:center;
-      font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+    }
+    .navbar-nav > li {
+      float: none;
+      display: inline-block;
+      position: relative;
+      top: 0%;
     }
     .nav-link-link {
       font-size: 18px;
