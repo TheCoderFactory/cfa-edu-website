@@ -122,16 +122,6 @@ ActiveRecord::Schema.define(version: 20170118042653) do
     t.string   "status",        default: "Active"
   end
 
-  create_table "partners", force: :cascade do |t|
-    t.string   "url"
-    t.string   "name"
-    t.string   "image"
-    t.integer  "order"
-    t.boolean  "active",     default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
   create_table "payments", force: :cascade do |t|
     t.integer  "booking_id"
     t.decimal  "amount"
