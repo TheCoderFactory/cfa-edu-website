@@ -18,7 +18,7 @@
         p.booking-box-text Ultimo, NSW 2007
         a href="https://goo.gl/maps/DREaV8thMo62" target="_blank" View Map
         p.booking-box-heading Price
-        p.booking-box-text #{number_to_currency(@syd_intakes.first.course.price)}
+        p.booking-box-text #{@syd_intakes.first.course.get_price}
     - else
       center
         h6 There are currently no intakes for Sydney.
@@ -39,7 +39,7 @@
         p.booking-box-text Ultimo, NSW 2007
         a href="https://goo.gl/maps/FXWWPbgEanR2" target="_blank" View Map
         p.booking-box-heading Price
-        p.booking-box-text #{number_to_currency(@mel_intakes.first.course.price)}
+        p.booking-box-text #{@mel_intakes.first.course.get_price}
     - else
       center
         h6 There are currently no intakes for Melbourne.
