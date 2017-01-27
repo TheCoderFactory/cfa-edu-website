@@ -3,7 +3,7 @@
   border-radius: 5px;
   color: #FFF;
   font-size: 18px;
-  padding: 20px;
+  padding: 22px;
   display: inline-block;
 }
 .main-cta-btn:hover {
@@ -18,20 +18,20 @@
 
 .secondary-cta-btn {
   background-color: #EC5037;
-  color: #fff;
-  border: 2px solid #EC5037;
-  font-size: 14px;
-  padding: 12px;
   border-radius: 5px;
+  color: #FFF;
+  font-size: 14px;
+  padding: 15px;
   display: inline-block;
 }
 .secondary-cta-btn:hover {
-  background-color: #fff;
+  background-color: #FFF;
   color: #EC5037;
-  border: 2px solid #EC5037;
-  font-size: 14px;
-  padding: 12px;
-  border-radius: 5px;
+  text-decoration: none;
+  border-style: solid;
+  border-color: #EC5037;
+  border-width: 2px 2px 2px 2px;
+  padding: 13px;
 }
 
 .main-mobile-cta-btn {
