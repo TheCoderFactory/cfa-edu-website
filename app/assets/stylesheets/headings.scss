@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, h7 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
 
@@ -118,21 +118,7 @@ p {
     }
 
 
-    @media (min-width: 992px) {
-      .nav-tabs.nav-justified > li {
-        display: table-cell;
-        width: 1%;
-      }
-      .nav-tabs.nav-justified > li > a {
-        margin-bottom: 0;
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-
-      .collapse {
-          display: none !important;
-      }
+    @media only screen and (max-width: 541px) {
 
       li {
         float: none !important;
@@ -150,7 +136,7 @@ p {
 
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: 768px) {
 
     .navbar-nav {
       width: 100%;
