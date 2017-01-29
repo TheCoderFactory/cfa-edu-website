@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, h7 {
+h1, h2, h3, h4, h5, h6{
   margin: 0px;
 }
 
@@ -71,6 +71,7 @@ p {
     width: auto;
   }
 
+
   body {
     padding-top: 80px;
   }
@@ -82,7 +83,7 @@ p {
     justify-content: center;
     line-height: 25px;
 
-    a.header-major-cta {
+    .header-major-cta {
       color: black !important;
       border: 2px solid #EC5037;
       font-size: 16px;
@@ -107,60 +108,45 @@ p {
     top:50px;
     background-color: #FFF;
 
-
-    .nav-item.nav-cta a {
-      background-color: #EC5037;
+   .nav-item.nav-cta a{
       color: #FFF;
+      background-color: #EC5037;
       border: 2px solid #EC5037;
       font-size: 14px;
       padding: 12px;
       border-radius: 5px;
     }
 
-    .nav-item.nav-cta a:hover {
+   .nav-item.nav-cta a:hover{
+      color: #EC5037 !important;
       background-color: #FFF;
-      color: #EC5037;
       border: 2px solid #EC5037;
       font-size: 14px;
       padding: 12px;
       border-radius: 5px;
     }
 
-    .nav-item.dropdown a:hover {
+    a:hover {
       text-decoration: none;
       color: #EC5037 !important;
     }
+
+    .nav-link {
+      font-size: 18px;
+      text-align:center;
+    }
+
+    nav-item {
+      border: 2px solid black;
+    }
+
 
     img {
       display: inline !important;
     }
 
 
-  @media only handheld and (max-: 768px) and (max-width: 1024px) {
-
-    .collapse {
-        display: none !important;
-    }
-
-    li {
-      float: none !important;
-      margin-left: 0px !important;
-      display: flex;
-      text-align:center;
-      font-size: 12px;
-    }
-    .nav-link-link {
-      font-size: 18px;
-    }
-
-  }
-
     @media only screen and (max-width: 541px) {
-
-      .collapse {
-          display: none !important;
-      }
-
       li {
         float: none !important;
         margin-left: 0px !important;
@@ -169,7 +155,7 @@ p {
         font-size: 12px;
       }
       .nav-link-link {
-        font-size: 18px;
+        font-size: 16px;
       }
 
     }
@@ -177,8 +163,7 @@ p {
 
   }
 
-  @media (min-width: 600px) {
-
+  @media (min-width: 768px) {
     .navbar-nav {
       width: 100%;
       text-align: center;
@@ -194,14 +179,6 @@ p {
     }
   }
 
-  .nav-link {
-    font-size: 18px;
-    text-align:center;
-  }
-
-  nav-item {
-    border: 2px solid black;
-  }
   a.active:after {
     content: ' ';
     position: absolute;
