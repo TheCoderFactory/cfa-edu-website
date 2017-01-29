@@ -219,53 +219,32 @@
   }
 }
 .our-instructors {
-  background-color: #FFF;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  p {
-    color: #808080;
-    font-size: 12px;
+  h3 {
+    color: #000;
   }
+  background-color: #FFF;
+  padding: 50px;
   .border-orange {
     border-style: solid;
     border-width: 2px 0px 0px 0px;
     border-color: #EC5037;
-    width: 35%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  .border-blue {
-    border-style: solid;
-    border-width: 2px 0px 0px 0px;
-    border-color: #38A9C7;
-    width: 15%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  h3 {
-    color: #333;
-    padding-bottom: 10px;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .img-instructor {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-style: solid;
     border-color: #EC5037;
     border-width: 3px;
-  }
-  a.btn.btn-block.btn-primary {
-    background-color: #38A9C7;
-    border-width: 2px 2px 2px 2px;
-    border-style: solid;
-    border-color: #38A9C7;
-  }
-  a.btn.btn-block.btn-primary:hover {
-    background-color: white;
-    color:#38A9C7;
+    max-height: 200px;
+    max-width: 200px;
   }
   @media only screen and (max-width: 767px) {
     .img-instructor {
-      width: 30%;
+      width: 80%;
+      margin: auto;
     }
   }
   .teacher-name {
