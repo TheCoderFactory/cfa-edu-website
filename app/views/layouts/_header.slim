@@ -28,12 +28,12 @@
                 a.dropdown-item.blue-text href="/fast-track-melbourne" MELBOURNE
                 a.dropdown-item.blue-text href="/fast-track-scholarships" SCHOLARSHIPS
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
-              a.nav-link href="/short-courses" SHORT COURSES
+              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @short_courses.each do |c|
                   a.dropdown-item href="/short-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
-              a.nav-link href="/short-courses" SHORT COURSES
+              = active_link_to 'SHORT COURSES', "/short-courses", class: "nav-link-link"
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @short_courses.each do |c|
                   a.dropdown-item.blue-text href="/short-courses/#{c.slug}-m" #{c.name.upcase}
