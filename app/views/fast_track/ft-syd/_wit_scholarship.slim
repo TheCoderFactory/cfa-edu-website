@@ -1,3 +1,10 @@
+= content_for :twitter_title, 'Women In Tech Scholarship'
+= content_for :twitter_description, 'One scholarship offered per city.'
+= content_for :twitter_image, asset_path 'sharon-chen.jpg'
+= content_for :title, 'Women In Tech Scholarship'
+= content_for :description, 'One scholarship offered per city.'
+= content_for :image, asset_path 'sharon-chen.jpg'
+= content_for :keywords, 'women in tech, scholarship, girls who code'
 .wit-scholarship
   .container
     .row
@@ -8,7 +15,6 @@
         p Scholarships will be judged on a creative submission, and finalists will be determined following an interview. Scholarship deadline is 30 days prior to course start date.
         p <a href="/fast-track/women-in-tech-scholarship">*Terms and conditions apply.</a>
         .row
-          a.main-cta-btn href="#{fast_track_women_in_tech_scholarship_apply_path}" APPLY NOW
           p.terms-text
       .col-md-6.col-xs-12
         .wit-alumni-top-border.hidden-sm-down
@@ -17,7 +23,7 @@
         br.hidden-md-up
         p.wit-alumni-info.pull-right
           img class="img-fluid pull-right img-wit-alumni" src="#{asset_path 'sharon-chen.jpg'}" alt="sharon-chen"
-          span.wit-name Sharon Chen 
+          span.wit-name Sharon Chen
           span.carrot >
           br
           br
