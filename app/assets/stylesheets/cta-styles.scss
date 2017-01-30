@@ -15,6 +15,25 @@
   border-width: 2px 2px 2px 2px;
   padding: 18px;
 }
+
+.secondary-cta-btn {
+  background-color: #EC5037;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 14px;
+  padding: 15px;
+  display: inline-block;
+}
+.secondary-cta-btn:hover {
+  background-color: #FFF;
+  color: #EC5037;
+  text-decoration: none;
+  border-style: solid;
+  border-color: #EC5037;
+  border-width: 2px 2px 2px 2px;
+  padding: 13px;
+}
+
 .main-mobile-cta-btn {
   background-color: #EC5037;
   border-radius: 5px;
