@@ -22,6 +22,14 @@ class Intake < ActiveRecord::Base
   def self.chron_order
     order(start: :asc)
   end
+  def self.all_full?
+    return false if !any?
+    where.not(status: "Cancelled").map { |i| return false if i.status != "Full" }
+    return true
+  end
+  def self.first_active
+    where(status: "Active").first
+  end
   def active_bookings
     bookings.where.not(cancelled: true)
   end
