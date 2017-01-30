@@ -1,7 +1,7 @@
 class Course < ActiveRecord::Base
   extend FriendlyId
   mount_uploader :course_image, CourseImageUploader
-  has_many :intakes, dependent: :restrict_with_error
+  has_many :intakes
   friendly_id :name, use: :slugged
 
   validates :course_type, :name, :description, :tagline, :price, presence: true
