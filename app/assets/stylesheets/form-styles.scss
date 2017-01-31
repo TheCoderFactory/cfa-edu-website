@@ -46,18 +46,18 @@ select {
 
 /* Inputs in focus (selectors for all inputs when clicked)  */
 input[type="text"]:focus,
-input[type="password"]:focus, 
-input[type="datetime"]:focus, 
-input[type="datetime-local"]:focus, 
-input[type="date"]:focus, 
-input[type="month"]:focus, 
-input[type="time"]:focus, 
-input[type="week"]:focus, 
-input[type="number"]:focus, 
-input[type="email"]:focus, 
-input[type="url"]:focus, 
-input[type="search"]:focus, 
-input[type="tel"]:focus, 
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
 input[type="color"]:focus,
 input[type="file"]:focus,
 textarea:focus,
@@ -92,17 +92,17 @@ ul.inputs-list li input {
   margin-left: 10px;
 }
 input[type="radio"] {
-  
+
 }
 input[type="checkbox"] {}
 
 /* Required (selectors for fields, when they do not pass validation) */
-input:focus:required:invalid, 
-textarea:focus:required:invalid, 
+input:focus:required:invalid,
+textarea:focus:required:invalid,
 select:focus:required:invalid {}
 
-input:focus:required:invalid:focus, 
-textarea:focus:required:invalid:focus, 
+input:focus:required:invalid:focus,
+textarea:focus:required:invalid:focus,
 select:focus:required:invalid:focus {}
 
 /* Error message (selector for validation messages) */
@@ -124,7 +124,7 @@ select:focus:required:invalid:focus {}
 ::-moz-placeholder { /* Firefox 19+ */}
 :-ms-input-placeholder { /* IE10 */}
 
-/* Multi Column Form (selectors for fieldsets and field wrappers) 
+/* Multi Column Form (selectors for fieldsets and field wrappers)
  *    ========================================================================== */
 
 fieldset.form-columns-1 {}
@@ -136,7 +136,7 @@ fieldset.form-columns-2 .hs-form-field {}
 fieldset.form-columns-3 {}
 fieldset.form-columns-3 .hs-form-field {}
 
-/* Submit buttons (selectors for all non-CTA buttons) 
+/* Submit buttons (selectors for all non-CTA buttons)
  *    ========================================================================== */
 
 body .hs-button.primary,
@@ -150,12 +150,22 @@ body input[type="button"] {
   border-radius: 5px;
   font-size: 18px;
   margin-top: 10px;
+  text-transform: uppercase;
 }
 
 body .hs-button.primary:hover,
 body input[type="submit"]:hover,
-body input[type="button"]:hover {}
+body input[type="button"]:hover {
+  background-color: #FFF;
+  color: #EC5037;
+  text-decoration: none;
+  border-style: solid;
+  border-color: #EC5037;
+  border-width: 1px 1px 1px 1px;
+  padding: 10px;
+}
 
 body .hs-button.primary:focus,
 body input[type="submit"]:focus,
-body input[type="button"]:focus {}
+body input[type="button"]:focus {
+}
