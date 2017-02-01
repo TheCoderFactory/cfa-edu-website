@@ -202,3 +202,17 @@ p {
   }
 
 }
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 1px;
+  vertical-align: middle;
+  border-top: 12px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 0 solid black;
+  overflow: hidden;
+  transition: 200ms ease;
+}
