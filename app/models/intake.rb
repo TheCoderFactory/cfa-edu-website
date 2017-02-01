@@ -37,10 +37,10 @@ class Intake < ActiveRecord::Base
     status == "Active"
   end
   def course_price
-    course.get_price
+    course ? course.get_price : 0
   end
   def course_name
-    course.name
+    course ? course.name : ""
   end
   def start_date
     start.strftime('%d %b %Y')
@@ -55,10 +55,10 @@ class Intake < ActiveRecord::Base
     finish.strftime("%I:%M %P").upcase
   end
   def course_image
-    return course.course_image_url if course.course_image_url
+    return course.course_image_url if course && course.course_image_url
   end
   def course_type
-    course.course_type
+    course ? course.course_type : ""
   end
   def get_dates
     "#{"~"+status.upcase+"~" if status == "Full"} #{days}, #{start_date} (#{start_time} - #{finish_time}), End: #{finish_date}"
