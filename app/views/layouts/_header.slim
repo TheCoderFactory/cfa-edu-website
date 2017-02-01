@@ -15,13 +15,13 @@
           img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
         .container.pull-lg-right.pull-md-right
           ul.nav.navbar-nav
-            li.nav-item.nav-link-link.dropdown.hidden-sm-down.desktop-dropdown
-              = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }
+            li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
+              = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link"
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 a.dropdown-item href="/fast-track" SYDNEY
                 a.dropdown-item href="/fast-track-melbourne" MELBOURNE
                 a.dropdown-item href="/fast-track-scholarships" SCHOLARSHIPS
-            li.nav-item.nav-link-link.dropdown.hidden-md-up
+            li.nav-item.dropdown.hidden-md-up
               = active_link_to 'FAST TRACK', "/fast-track", class: "nav-link-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 a.dropdown-item.blue-text href="/fast-track" SYDNEY
