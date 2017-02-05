@@ -16,6 +16,24 @@
   padding: 18px;
 }
 
+.ww-cta-btn {
+  background-color: #EC5037;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 18px;
+  padding: 20px;
+  display: inline-block;
+}
+.ww-cta-btn:hover {
+  background-color: #FFF;
+  color: #EC5037;
+  text-decoration: none;
+  border-style: solid;
+  border-color: #EC5037;
+  border-width: 2px 2px 2px 2px;
+  padding: 18px;
+}
+
 .booking-cta-btn {
   background-color: #EC5037;
   border-radius: 5px;
@@ -108,8 +126,6 @@
   margin: auto;
   font-size: 12px;
 }
-
-
 .course-option-button:hover {
   animation-name: hover;
   animation-duration: 0.3s;
