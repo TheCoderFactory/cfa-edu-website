@@ -28,7 +28,7 @@
             = render "#{@booking.current_step}_step", :f => f
             .row
               div class="col-md-12 #{'text-xs-center' if @booking.first_step?}"
-                = f.submit "BACK", class: "booking-cta-btn booking-btn", name: "back_button" unless @booking.first_step?
+                = f.submit "BACK", class: "back-cta-btn booking-cta", name: "back_button" unless @booking.first_step?
                 - if @booking.confirmation_step? && @booking.intake.course.price == 0 || @booking.last_step? && @booking.total_cost == 0
                   = f.submit "CONFIRM", class: "booking-cta-btn booking-cta pull-right", name: "confirm_button"
                 - if @booking.confirmation_step?
