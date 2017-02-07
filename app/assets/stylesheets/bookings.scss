@@ -107,4 +107,53 @@
     padding: 20px;
     height: auto;
   }
+
+  input.main-cta-btn.booking-cta:hover {
+    background-color: #FFF;
+    color: #EC5037;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 2px 2px 2px 2px;
+    padding: 18px;
+  }
+
+  input.back-cta-btn.booking-cta {
+    background-color: #FFF;
+    color: #EC5037;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 5px;
+    padding: 11px;
+    font-size: 16px;
+    display: inline-block;
+  }
+  input.back-cta-btn.booking-cta:hover {
+    background-color: #EC5037;
+    text-decoration: none;
+    color: #FFF;
+    padding: 12px;
+    border-style: none;
+  }
+
+  input.booking-cta-btn.booking-cta {
+    background-color: #EC5037;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #FFF;
+    padding: 12px;
+    border-style: none;
+    display: inline-block;
+  }
+  input.booking-cta-btn.booking-cta:hover {
+    background-color: #FFF;
+    color: #EC5037;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #EC5037;
+    border-width: 2px 2px 2px 2px;
+    padding: 11px;
+  }
+
 }
