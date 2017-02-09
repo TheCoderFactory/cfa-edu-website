@@ -12,7 +12,7 @@
               - if intake.teacher_image_url
                 img.img-fluid.img-circle.course-teacher-image src="#{intake.teacher_image_url}" alt="#{intake.teacher_name if intake.teacher_name}"
               - else
-                img.img-fluid.img-circle.course-teacher-image src="#{asset_path 'circle-logo/.png'}" alt="Coder Factory Academy"
+                img.img-fluid.img-circle.course-teacher-image src="#{asset_path 'circle-logo.png'}" alt="Coder Factory Academy"
               p.taught-by Taught By
               - if intake.teacher_name?
                 p.teacher-name #{intake.teacher_name}
