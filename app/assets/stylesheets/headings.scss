@@ -59,6 +59,10 @@ p {
   }
 }
 
+body {
+  margin-top: -35px;
+}
+
 .header {
 
   .navbar-brand {
@@ -70,41 +74,7 @@ p {
     width: auto;
   }
 
-
-  body {
-    padding-top: 80px;
-  }
-  .first-navbar {
-    height: 50px;
-    background-color: #EC5037;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 25px;
-
-    .header-major-cta {
-      color: black !important;
-      border: 2px solid #EC5037;
-      font-size: 16px;
-      padding: 0px;
-      border-radius: 5px;
-    }
-
-    h5 {
-      color:white;
-      padding: 0px;
-    }
-
-    a {
-      color: #333;
-    }
-
-    a:hover {
-      color: white;
-    }
-  }
   .second-navbar{
-    top:50px;
     background-color: #FFF;
 
    .nav-item.nav-cta a{
