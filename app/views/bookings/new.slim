@@ -8,7 +8,7 @@
             .border
             div class="#{'hidden-xs-down' if !@booking.first_step?}"
               br
-              p #{@course.tagline}
+              h5 #{@course.tagline}
               br
               = @course.description.html_safe
       .col-md-4
