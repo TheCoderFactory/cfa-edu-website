@@ -52,7 +52,7 @@
               i.mobile-caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @teachers_courses.each do |c|
-                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}-m" #{c.name.upcase}
+                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'SCHOOLS ', "/kids-and-teens-coding", class: "nav-link-link"
               i.caret
