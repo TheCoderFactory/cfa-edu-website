@@ -18,7 +18,7 @@
           center
             p #{fa_icon "picture-o", class: "fa-5x"}
         br
-        - if ["Kids", "Workshop"].include?(@course.course_type)
+        - if ["Kids", "Workshop", "Schools"].include?(@course.course_type)
           = simple_form_for(@booking, url: create_booking_path("learn-to-code", @course.slug), html: {id: :payment_form}) do |f|
             = hidden_field_tag :course_id, @course.slug
             - if flash[:danger]
