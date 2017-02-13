@@ -1,11 +1,4 @@
 .header
-  .navbar.navbar-inverse.navbar-fixed-top.first-navbar
-     .container
-       center
-         h5.center
-           NEXT NEXT BOOTCAMP COURSE STARTS: 31ST JULY 2017
-           |   |  
-           a.nav-link.header-major-cta href="/fast-track/apply"  NOW ENROLLING
   .navbar.navbar-default.navbar-fixed-top.second-navbar
     a.hidden-md-up href="/"
       img.img-fluid src="#{asset_path 'cfa-header.svg'}" alt="CFA Logo"
@@ -32,7 +25,7 @@
                 a.dropdown-item.blue-text href="/fast-track-scholarships" SCHOLARSHIPS
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'SHORT COURSES ', "/short-courses", class: "nav-link-link"
-              i.caret
+              i.mobile-caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @short_courses.each do |c|
                   a.dropdown-item href="/short-courses/#{c.slug}" #{c.name.upcase}
@@ -41,11 +34,31 @@
               i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @short_courses.each do |c|
-                  a.dropdown-item.blue-text href="/short-courses/#{c.slug}-m" #{c.name.upcase}
-            li.nav-item
-              = active_link_to 'KIDS & TEENS', "/kids-and-teens-coding", class: "nav-link-link"
-            li.nav-item
-              = active_link_to 'SCHOOLS', "/schools", class: "nav-link-link"
+                  a.dropdown-item.blue-text href="/short-courses/#{c.slug}" #{c.name.upcase}
+            li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
+              = active_link_to 'KIDS & TEENS ', "/kids-and-teens-coding", class: "nav-link-link"
+              i.mobile-caret
+              .dropdown-menu aria-labelledby="supportedContentDropdown"
+                - @kids_courses.each do |c|
+                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
+            li.nav-item.dropdown.hidden-md-up
+              = active_link_to 'KIDS & TEENS ', "/kids-and-teens-coding", class: "nav-link-link"
+              i.caret
+              .dropdown-menu aria-labelledby="supportedContentDropdown"
+                - @kids_courses.each do |c|
+                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
+            li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
+              = active_link_to 'SCHOOLS ', "/schools", class: "nav-link-link"
+              i.mobile-caret
+              .dropdown-menu aria-labelledby="supportedContentDropdown"
+                - @teachers_courses.each do |c|
+                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}-m" #{c.name.upcase}
+            li.nav-item.dropdown.hidden-md-up
+              = active_link_to 'SCHOOLS ', "/kids-and-teens-coding", class: "nav-link-link"
+              i.caret
+              .dropdown-menu aria-labelledby="supportedContentDropdown"
+                - @teachers_courses.each do |c|
+                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item
               = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
             li.nav-item.nav-cta
