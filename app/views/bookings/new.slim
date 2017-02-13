@@ -11,6 +11,7 @@
               h5 #{@course.tagline}
               br
               = @course.description.html_safe
+              br
       .col-md-4
         - if @course.course_image_url
           img.img-fluid src="#{@course.course_image_url}"
@@ -35,7 +36,7 @@
                   = f.submit "CONFIRM", class: "booking-cta-btn booking-cta pull-right" unless @booking.intake.course.price == 0
                 - else
                   = f.submit "BOOK NOW", class: "main-cta-btn booking-cta center" if @booking.first_step?
-                  = f.submit "CONTINUE", class: "booking-cta-btn booking-cta pull-right" if !@booking.first_step? && !@booking.last_step?
+                  = f.submit "@booking.intake.course.teacher_name", class: "booking-cta-btn booking-cta pull-right" if !@booking.first_step? && !@booking.last_step?
                   = f.submit "PAY NOW", class: "booking-cta-btn booking-cta pull-right", name: "pay_button" if @booking.last_step? && @booking.total_cost > 0
         - else
           h6 Please contact us via email or phone to make a booking.
