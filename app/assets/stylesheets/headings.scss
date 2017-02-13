@@ -60,7 +60,7 @@ p {
 }
 
 body {
-  margin-top: -35px;
+  margin-top: 15px;
 }
 
 .header {
@@ -68,14 +68,45 @@ body {
   .navbar-brand {
     padding: 0px;
   }
-  .navbar-brand>img {
+  .navbar-brand > img {
     height: 100%;
     padding: 15px;
     width: auto;
   }
 
+    .first-navbar {
+       height: 50px;
+       background-color: #EC5037;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       line-height: 25px;
+
+       .header-major-cta {
+         color: black !important;
+         border: 2px solid #EC5037;
+         font-size: 16px;
+         padding: 0px;
+         border-radius: 5px;
+       }
+
+       h5 {
+         color:white;
+         padding: 0px;
+       }
+
+       a {
+         color: #333;
+       }
+
+       a:hover {
+         color: white;
+       }
+     }
+
   .second-navbar{
     background-color: #FFF;
+    top: 50px;
 
    .nav-item.nav-cta a{
       color: #FFF;
