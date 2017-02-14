@@ -27,37 +27,37 @@
               = active_link_to 'SHORT COURSES ', "/short-courses", class: "nav-link-link"
               i.mobile-caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @short_courses.each do |c|
+                - @header_short_courses.each do |c|
                   a.dropdown-item.blue-text href="/short-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'SHORT COURSES ', "/short-courses", class: "nav-link-link"
               i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @short_courses.each do |c|
+                - @header_short_courses.each do |c|
                   a.dropdown-item href="/short-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'KIDS & TEENS ', "/kids-and-teens-coding", class: "nav-link-link"
               i.mobile-caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @kids_courses.each do |c|
+                - @header_kids_courses.each do |c|
                   a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'KIDS & TEENS ', "/kids-and-teens-coding", class: "nav-link-link"
               i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @kids_courses.each do |c|
+                - @header_kids_courses.each do |c|
                   a.dropdown-item href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'SCHOOLS ', "/schools", class: "nav-link-link"
               i.mobile-caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @teachers_courses.each do |c|
+                - @header_teachers_courses.each do |c|
                   a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'SCHOOLS ', "/kids-and-teens-coding", class: "nav-link-link"
               i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @teachers_courses.each do |c|
+                - @header_teachers_courses.each do |c|
                   a.dropdown-item href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item
               = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
