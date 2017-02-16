@@ -44,8 +44,9 @@
               = active_link_to 'SCHOOLS ', "/schools", class: "nav-link-link"
               i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @header_teachers_courses.each do |c|
-                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
+                a.dropdown-item.blue-text href="/schools#coding-curriculum" IN SCHOOL CODING
+                a.dropdown-item.blue-text href="/schools#maker-space" IN SCHOOL MAKER SPACE
+                a.dropdown-item.blue-text href="/schools#teacher-training" TEACHER PROFESSIONAL DEVELOPMENT
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'SCHOOLS ', "/kids-and-teens-coding", class: "nav-link-link"
             li.nav-item
