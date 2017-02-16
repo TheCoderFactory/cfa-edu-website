@@ -25,40 +25,29 @@
                 a.dropdown-item href="/fast-track-scholarships" SCHOLARSHIPS
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'SHORT COURSES ', "/short-courses", class: "nav-link-link"
-              i.mobile-caret
+              i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @header_short_courses.each do |c|
                   a.dropdown-item.blue-text href="/short-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'SHORT COURSES ', "/short-courses", class: "nav-link-link"
-              i.caret
-              .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @header_short_courses.each do |c|
-                  a.dropdown-item href="/short-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'KIDS & TEENS ', "/kids-and-teens-coding", class: "nav-link-link"
-              i.mobile-caret
+              i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @header_kids_courses.each do |c|
-                  a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
+                a.dropdown-item.blue-text href="/kids-and-teens-coding#weekends" WEEKENDS
+                a.dropdown-item.blue-text href="/schools" AFTER SCHOOL
+                a.dropdown-item.blue-text href="/kids-and-teens-coding#school-holidays" SCHOOL HOLIDAYS
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'KIDS & TEENS ', "/kids-and-teens-coding", class: "nav-link-link"
-              i.caret
-              .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @header_kids_courses.each do |c|
-                  a.dropdown-item href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-sm-down.desktop-dropdown
               = active_link_to 'SCHOOLS ', "/schools", class: "nav-link-link"
-              i.mobile-caret
+              i.caret
               .dropdown-menu aria-labelledby="supportedContentDropdown"
                 - @header_teachers_courses.each do |c|
                   a.dropdown-item.blue-text href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item.dropdown.hidden-md-up
               = active_link_to 'SCHOOLS ', "/kids-and-teens-coding", class: "nav-link-link"
-              i.caret
-              .dropdown-menu aria-labelledby="supportedContentDropdown"
-                - @header_teachers_courses.each do |c|
-                  a.dropdown-item href="/kids-coding-courses/#{c.slug}" #{c.name.upcase}
             li.nav-item
               = active_link_to 'CONTACT', "/contact", class: "nav-link-link"
             li.nav-item.nav-cta

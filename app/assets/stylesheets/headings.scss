@@ -210,25 +210,16 @@ body {
   height: 0;
   margin-left: 1px;
   vertical-align: middle;
-  border-top: 10px solid black;
+  border-top: 5px solid #38A9C7;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
-  border-bottom: 0 solid black;
+  border-bottom: 0 solid #38A9C7;
   overflow: hidden;
   transition: 200ms ease;
 }
-
-.mobile-caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 1px;
-  vertical-align: middle;
-  border-top: 10px solid black;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-bottom: 0 solid black;
-  overflow: hidden;
-  transition: 200ms ease;
-  margin-top: -2px;
+@media only screen and (max-width: 767px) {
+  .caret {
+    margin-left: 5px;
+    margin-top: 10px;
+  }
 }
