@@ -10,7 +10,7 @@
     .form-group.input-field.col-md-6
       = f.input :finish, as: :datetime_picker, input_html: {data: {date_options: {format: 'DD/MM/YYYY hh:mm A'}}}
     .form-group.input-field.col-md-12
-      = f.input :location
+      = f.select :location, ["Sydney", "Melbourne"]
     .form-group.input-field.col-md-12
       = f.input :days
     .form-group.input-field.col-md-12
