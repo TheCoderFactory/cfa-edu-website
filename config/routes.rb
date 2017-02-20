@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
+  get "remove-image/:intake_id", to: "intakes#remove_image", as: :remove_image
   get "intake-details", to: "intakes#intake_details"
   get "admin/bookings/new", to: "bookings#admin_new"
   post "admin/bookings", to: "bookings#admin_create"
@@ -63,6 +64,7 @@ Rails.application.routes.draw do
   get "privacy", to: "pages#privacy"
   get "video-archive", to: "pages#video_archive"
   get "women-in-tech", to: "pages#women_in_tech"
+  get "terms-and-conditions", to: "pages#terms"
 
 
   get ":course_type/:course_id", to: "bookings#new", as: :booking_new
