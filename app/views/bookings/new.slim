@@ -22,11 +22,12 @@
                     .col-xs-3
                       img.img-fluid.img-circle src="#{@syd_intakes.first.teacher_image_url}"
                     .col-xs-9
-                      h6.blue-text <a href="{@syd_intakes.first.teacher_linkedin}">#{@syd_intakes.first.teacher_name}</a>
-                      br
-                    - if @syd_intakes.first.teacher_linkedin
-                      a.social-media href="#{@syd_intakes.first.teacher_linkedin}"
-                        = fa_icon "linkedin", class: "fa-2x"
+                      - if @syd_intakes.first.teacher_linkedin?
+                        h3.blue-text
+                          a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
+                      - if @syd_intakes.first.teacher_title?
+                        h6.grey-text #{@syd_intakes.first.teacher_title}
+                        br
           - if @mel_intakes.size > 0 && @mel_intakes.first.teacher_image_url && @mel_intakes.first.teacher_name?
           .col-xs-12 class="#{'mel-intakes' if @booking.first_step?}"
                .row
@@ -39,11 +40,12 @@
                           .col-xs-3
                             img.img-fluid.img-circle src="#{@mel_intakes.first.teacher_image_url}"
                           .col-xs-9
-                            h4.blue-text <a href="{@mel_intakes.first.teacher_linkedin}">#{@mel_intakes.first.teacher_name}</a>
-                            br
-                          - if @mel_intakes.first.teacher_linkedin
-                            a.social-media href="#{@mel_intakes.first.teacher_linkedin}"
-                              = fa_icon "linkedin", class: "fa-2x"
+                            - if @mel_intakes.first.teacher_linkedin?
+                              h3.blue-text
+                                a href="#{@mel_intakes.first.teacher_linkedin}"  target='_blank' #{@mel_intakes.first.teacher_name}
+                            - if @mel_intakes.first.teacher_title?
+                              h6.grey-text #{@mel_intakes.first.teacher_title}
+                              br
 
         br
         h3.black-text About
