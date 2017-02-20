@@ -75,7 +75,7 @@ class IntakesController < ApplicationController
 
   private
   def intake_params
-    params.require(:intake).permit(:course_id, :start, :finish, :location, :teacher_name, :teacher_image, :days, :status)
+    params.require(:intake).permit(:course_id, :start, :finish, :location, :teacher_name, :teacher_image, :days, :status, :teacher_title)
   end
 
   def intake_id_param
