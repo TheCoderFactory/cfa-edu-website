@@ -43,4 +43,6 @@ class PagesController < ApplicationController
   def cfa_international
   end
 
+  def terms
+  end
 end

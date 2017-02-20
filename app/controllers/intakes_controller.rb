@@ -57,6 +57,13 @@ class IntakesController < ApplicationController
     redirect_to intakes_path
   end
 
+  def remove_image
+    @intake = Intake.find(params[:intake_id])
+    @intake.remove_teacher_image!
+    @intake.save!
+    redirect_to @intake
+  end
+
   def intake_details
     @intake = Intake.find(intake_id_param[:intake_id])
     if @intake
@@ -68,7 +75,7 @@ class IntakesController < ApplicationController
 
   private
   def intake_params
-    params.require(:intake).permit(:course_id, :start, :finish, :location, :teacher_name, :teacher_image, :days, :status, :teacher_linkedin)
+    params.require(:intake).permit(:course_id, :start, :finish, :location, :teacher_name, :teacher_image, :days, :status, :teacher_title, :teacher_linkedin)
   end
 
   def intake_id_param

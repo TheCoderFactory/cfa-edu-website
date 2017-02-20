@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220024149) do
+ActiveRecord::Schema.define(version: 20170220052305) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20170220024149) do
     t.decimal  "discount"
     t.string   "discount_code"
     t.boolean  "zip_money",        default: false
+    t.boolean  "accept_terms",     default: true
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -124,6 +125,7 @@ ActiveRecord::Schema.define(version: 20170220024149) do
     t.string   "days"
     t.string   "status",           default: "Active"
     t.string   "teacher_linkedin"
+    t.string   "teacher_title"
   end
 
   create_table "payments", force: :cascade do |t|

@@ -24,3 +24,6 @@
   .row
     .form-group.input-field.col-xs-12
       = f.input :discount_code, placeholder: "Promo Code", label: "Have a promo code? Enter it here"
+.row
+  .form-group.input-field.col-xs-12
+    = f.input :accept_terms, label: ("I accept the <a target='_blank' href='/terms-and-conditions'>Terms & Conditions</a>.").html_safe
