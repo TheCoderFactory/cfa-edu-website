@@ -378,6 +378,10 @@
     border-color: #EC5037;
     border-width: 3px;
   }
+  .desktop {
+    position: fixed;
+    top: 100px;
+  }
   @media only screen and (max-width: 767px) {
     .img-mentors {
       width: 30%;
