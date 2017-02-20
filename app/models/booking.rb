@@ -13,6 +13,7 @@ class Booking < ActiveRecord::Base
   validates_presence_of :intake, if: lambda {|o| o.current_step == "campus"}
   validate :active_intake, on: :create, if: lambda {|o| o.current_step == "campus"}
   validate :valid_promo_code, on: :create, if: lambda {|o| o.current_step == "confirmation"}
+  validates :accept_terms, inclusion: [true], on: :create, if: lambda {|o| o.current_step == "confirmation"}
   validate :valid_total_cost, :non_negative_total_cost, :valid_payment, :valid_total_cost, on: :create, if: lambda {|o| o.current_step == "payment"}
 
   after_save :update_promo_code, on: :create
