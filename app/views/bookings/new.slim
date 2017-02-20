@@ -25,6 +25,9 @@
                           .col-xs-9
                             h6.blue-text #{@syd_intakes.first.teacher_name}
                             br
+                            - if @syd_intakes.first.teacher_linkedin
+                              a.social-media href="#{@syd_intakes.first.teacher_linkedin}"
+                                = fa_icon "linkedin", class: "fa-2x"
                   - if @mel_intakes.size > 0 && @mel_intakes.first.teacher_image_url && @mel_intakes.first.teacher_name?
                     - if @booking.first_step? || @booking.intake.location.include?("Melbourne")
                       .col-xs-12 class="#{'mel-intakes' if @booking.first_step?}"
@@ -34,9 +37,13 @@
                           .col-xs-9
                             h4.blue-text #{@mel_intakes.first.teacher_name}
                             br
+                            - if @mel_intakes.first.teacher_linkedin
+                              a.social-media href="#{@mel_intakes.first.teacher_linkedin}"
+                                = fa_icon "linkedin", class: "fa-2x"
               br
               h3.black-text About
               .border-blue
+              br
               = @course.description.html_safe
               br
       .col-md-4
