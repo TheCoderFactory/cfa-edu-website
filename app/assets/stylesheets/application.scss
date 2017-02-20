@@ -71,7 +71,7 @@ body {
   padding-top: 81px;
 }
 .content {
-  padding-top: 101px;
+  padding-top: 66px;
   padding-bottom: 600px;
   @media only screen and (max-width: 767px) {
     padding-bottom: 1500px;
@@ -149,4 +149,10 @@ a:hover {
 }
 .blue-text {
   color: #38A9C7;
+}
+.grey-text {
+  color: #ADADAD;
+}
+.black-text {
+  color: #000;
 }

@@ -15,6 +15,7 @@
             - if course.active
               br
               = link_to "MORE INFO", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
+              = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
           .col-md-6
             - if course.course_image_url
               img.img-fluid src="#{course.course_image_url}"
@@ -38,6 +39,7 @@
             - if course.active
               br
               = link_to "MORE INFO", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
+              = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
 .anchor.hidden-md-up#maker-space-m
 .schools-course-summaries.hidden-md-up
   .container
@@ -60,3 +62,4 @@
           - if course.active
             br
             = link_to "MORE INFO", booking_new_path(course_type: "kids-coding-workshop", course_id: course.slug), class: "main-cta-btn"
+            = link_to "BOOK NOW", booking_new_path(course_type: "kids-coding-courses", course_id: course.slug), class: "main-cta-btn"
