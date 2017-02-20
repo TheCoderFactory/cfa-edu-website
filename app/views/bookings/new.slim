@@ -22,9 +22,8 @@
                       .col-xs-3
                         img.img-fluid.img-circle src="#{@syd_intakes.first.teacher_image_url}"
                       .col-xs-9
-                        - if @syd_intakes.first.teacher_linkedin?
-                          h3.blue-text
-                            a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
+                        h3.blue-text
+                          a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
                         - if @syd_intakes.first.teacher_title?
                           h6.grey-text #{@syd_intakes.first.teacher_title}
                           br
