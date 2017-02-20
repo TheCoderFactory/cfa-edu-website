@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :courses, path: "admin/courses"
   resources :intakes, path: "admin/intakes"
+  get "remove-image/:intake_id", to: "intakes#remove_image", as: :remove_image
   get "intake-details", to: "intakes#intake_details"
   get "admin/bookings/new", to: "bookings#admin_new"
   post "admin/bookings", to: "bookings#admin_create"

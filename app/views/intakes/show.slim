@@ -20,13 +20,15 @@
         | #{@intake.days}
       p
         b Teacher:
+        br
         - if @intake.teacher_image_url
           img.img-fluid.img-circle src="#{@intake.teacher_image_url}"
         - if @intake.teacher_name
           #{@intake.teacher_name}
 
 
-      = link_to "New Booking", admin_bookings_new_path(intake_id: @intake.id), class: "main-cta-btn"
+      = link_to "REMOVE IMAGE", remove_image_path(intake_id: @intake.id), class: "big-red-button"
+      = link_to "New Booking", admin_bookings_new_path(intake_id: @intake.id), class: "main-cta-btn pull-right"
       center
         h1 Active Bookings
 

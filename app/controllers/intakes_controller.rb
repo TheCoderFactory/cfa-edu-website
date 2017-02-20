@@ -57,6 +57,13 @@ class IntakesController < ApplicationController
     redirect_to intakes_path
   end
 
+  def remove_image
+    @intake = Intake.find(params[:intake_id])
+    @intake.remove_teacher_image!
+    @intake.save!
+    redirect_to @intake
+  end
+
   def intake_details
     @intake = Intake.find(intake_id_param[:intake_id])
     if @intake
