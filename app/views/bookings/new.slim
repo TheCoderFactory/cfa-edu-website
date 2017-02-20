@@ -17,21 +17,23 @@
                     .border-blue
                     br
                   - if @syd_intakes.size > 0 && @syd_intakes.first.teacher_image_url && @syd_intakes.first.teacher_name?
-                    .col-xs-12
-                      .row
-                        .col-xs-3
-                          img class="img-fluid img-circle img-mentors" src="#{@syd_intakes.first.teacher_image_url}"
-                        .col-xs-9
-                          h6.blue-text #{@syd_intakes.first.teacher_name}
-                          br
+                    - if @booking.first_step? || @booking.intake.location.include?("Sydney")
+                      .col-xs-12 class="#{'syd-intakes' if @booking.first_step?}"
+                        .row
+                          .col-xs-3
+                            img.img-fluid.img-circle src="#{@syd_intakes.first.teacher_image_url}"
+                          .col-xs-9
+                            h6.blue-text #{@syd_intakes.first.teacher_name}
+                            br
                   - if @mel_intakes.size > 0 && @mel_intakes.first.teacher_image_url && @mel_intakes.first.teacher_name?
-                    .col-xs-12
-                      .row
-                        .col-xs-3
-                          img class="img-fluid img-circle img-mentors" src="#{@mel_intakes.first.teacher_image_url}"
-                        .col-xs-9
-                          h4.blue-text #{@mel_intakes.first.teacher_name}
-                          br
+                    - if @booking.first_step? || @booking.intake.location.include?("Melbourne")
+                      .col-xs-12 class="#{'mel-intakes' if @booking.first_step?}"
+                        .row
+                          .col-xs-3
+                            img.img-fluid.img-circle src="#{@mel_intakes.first.teacher_image_url}"
+                          .col-xs-9
+                            h4.blue-text #{@mel_intakes.first.teacher_name}
+                            br
               br
               h3.black-text About
               .border-blue
