@@ -25,7 +25,7 @@
                         - if @syd_intakes.first.teacher_linkedin?
                           h3.blue-text
                             a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
-                        - else !@syd_intakes.first.teacher_linkedin
+                        - else
                           h3.blue-text #{@syd_intakes.first.teacher_name}
                         - if @syd_intakes.first.teacher_title?
                           h6.grey-text #{@syd_intakes.first.teacher_title}
@@ -45,7 +45,7 @@
                               - if @mel_intakes.first.teacher_linkedin?
                                 h3.blue-text
                                   a href="#{@mel_intakes.first.teacher_linkedin}"  target='_blank' #{@mel_intakes.first.teacher_name}
-                              - else !@mel_intakes.first.teacher_linkedin
+                              - else
                                 h3.blue-text #{@mel_intakes.first.teacher_name}
                               - if @mel_intakes.first.teacher_title?
                                 h6.grey-text #{@mel_intakes.first.teacher_title}
