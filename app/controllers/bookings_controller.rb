@@ -29,7 +29,7 @@ class BookingsController < ApplicationController
     session[:booking_params].deep_merge!(stripe_token: params[:stripeToken]) if params[:stripeToken]
     @booking = Booking.new(session[:booking_params])
 
-    session[:campus] = params[:campus]
+    session[:campus] = params[:campus] if params[:campus]
     if session[:campus] == "Sydney"
       session[:intake] = params[:syd_intake] if params[:syd_intake]
     elsif session[:campus] == "Melbourne"
