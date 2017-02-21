@@ -10,19 +10,26 @@
         br
     - elsif @syd_intakes.size > 0
       .form-group.input-field.col-xs-12
-        = hidden_field_tag :syd_intake, @syd_intakes.first_active.id
+        = label_tag "Choose your intake"
         p.booking-box-heading Start Date
-        p.booking-box-text #{@syd_intakes.first_active.start.strftime("%A, %d %b %Y")}
-        p.booking-box-heading End Date
-        p.booking-box-text #{@syd_intakes.first_active.finish.strftime("%A, %d %b %Y")}
-        p.booking-box-heading Time
-        p.booking-box-text #{@syd_intakes.first_active.start.strftime("%l:%M %p")} - #{@syd_intakes.first_active.finish.strftime("%l:%M %p")}
-        p.booking-box-heading Location
-        p.booking-box-text Level 2, 7 Kelly St,
-        p.booking-box-text Ultimo, NSW 2007
-        a href="https://goo.gl/maps/DREaV8thMo62" target="_blank" View Map
-        p.booking-box-heading Price
-        p.booking-box-text #{@syd_intakes.first_active.course.get_price}
+        = select_tag :syd_intake,\
+          options_for_select(\
+            @syd_intakes.collect do |i|\
+              [i.start.strftime("%A, %d %b %Y"), i.id]\
+            end\
+          , session[:intake])
+        - @syd_intakes.each do |intake|
+          .intake-details-syd id="#{intake.id}"
+            p.booking-box-heading End Date
+            p.booking-box-text #{intake.finish.strftime("%A, %d %b %Y")}
+            p.booking-box-heading Time
+            p.booking-box-text #{intake.start.strftime("%l:%M %p")} - #{intake.finish.strftime("%l:%M %p")}
+            p.booking-box-heading Location
+            p.booking-box-text Level 2, 7 Kelly St,
+            p.booking-box-text Ultimo, NSW 2007
+            a href="https://goo.gl/maps/DREaV8thMo62" target="_blank" View Map
+            p.booking-box-heading Price
+            p.booking-box-text #{intake.course.get_price}
     - else
       center
         h6 There are currently no intakes for Sydney.
@@ -35,19 +42,26 @@
         br
     - elsif @mel_intakes.size > 0
       .form-group.input-field.col-xs-12
-        = hidden_field_tag :mel_intake, @mel_intakes.first_active.id
+        = label_tag "Choose your intake"
         p.booking-box-heading Start Date
-        p.booking-box-text #{@mel_intakes.first_active.start.strftime("%A, %d %b %Y")}
-        p.booking-box-heading End Date
-        p.booking-box-text #{@mel_intakes.first_active.finish.strftime("%A, %d %b %Y")}
-        p.booking-box-heading Time
-        p.booking-box-text #{@mel_intakes.first_active.start.strftime("%l:%M %p")} - #{@mel_intakes.first_active.finish.strftime("%l:%M %p")}
-        p.booking-box-heading Location
-        p.booking-box-text Level 8, 120 Spencer Street,
-        p.booking-box-text Melbourne, VIC 3000
-        a href="https://goo.gl/maps/FXWWPbgEanR2" target="_blank" View Map
-        p.booking-box-heading Price
-        p.booking-box-text #{@mel_intakes.first_active.course.get_price}
+        = select_tag :mel_intake,\
+          options_for_select(\
+            @mel_intakes.collect do |i|\
+              [i.start.strftime("%A, %d %b %Y"), i.id]\
+            end\
+          , selected: session[:intake])
+        - @mel_intakes.each do |intake|
+          .intake-details-mel id="#{intake.id}"
+            p.booking-box-heading End Date
+            p.booking-box-text #{intake.finish.strftime("%A, %d %b %Y")}
+            p.booking-box-heading Time
+            p.booking-box-text #{intake.start.strftime("%l:%M %p")} - #{intake.finish.strftime("%l:%M %p")}
+            p.booking-box-heading Location
+            p.booking-box-text Level 2, 7 Kelly St,
+            p.booking-box-text Ultimo, NSW 2007
+            a href="https://goo.gl/maps/DREaV8thMo62" target="_blank" View Map
+            p.booking-box-heading Price
+            p.booking-box-text #{intake.course.get_price}
     - else
       center
         h6 There are currently no intakes for Melbourne.
