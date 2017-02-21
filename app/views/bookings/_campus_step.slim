@@ -11,7 +11,7 @@
     - elsif @syd_intakes.size > 0
       .form-group.input-field.col-xs-12
         = label_tag "Choose your intake"
-        p.booking-box-heading Start Date
+        p.booking-box-heading-start Start Date
         = select_tag :syd_intake,\
           options_for_select(\
             @syd_intakes.collect do |i|\
