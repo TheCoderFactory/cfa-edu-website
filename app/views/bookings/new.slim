@@ -26,8 +26,7 @@
                           h3.blue-text
                             a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
                         - else
-                          h3.blue-text
-                            #{@syd_intakes.first.teacher_name}
+                          h3.blue-text #{@syd_intakes.first.teacher_name}
                         - if @syd_intakes.first.teacher_title?
                           h6.grey-text #{@syd_intakes.first.teacher_title}
                           br
@@ -48,8 +47,7 @@
                             h3.blue-text
                               a href="#{@mel_intakes.first.teacher_linkedin}"  target='_blank' #{@mel_intakes.first.teacher_name}
                           - else
-                            h3.blue-text
-                              #{@mel_intakes.first.teacher_name}
+                            h3.blue-text #{@mel_intakes.first.teacher_name}
                           - if @mel_intakes.first.teacher_title?
                             h6.grey-text #{@mel_intakes.first.teacher_title}
                             br
