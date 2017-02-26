@@ -446,7 +446,6 @@
     }
   }
   .upcoming-course {
-    padding: 10px;
     background-color: #333;
     margin: 15px;
     width: 25%;
@@ -498,6 +497,7 @@
     color: #FFF;
     display: flex;
     flex-direction: column;
+    padding: 10px;
   }
   .upcoming-course-icon {
     vertical-align: middle;
