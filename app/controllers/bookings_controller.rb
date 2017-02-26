@@ -28,16 +28,15 @@ class BookingsController < ApplicationController
     session[:booking_params].deep_merge!(booking_params) if params[:booking]
     session[:booking_params].deep_merge!(stripe_token: params[:stripeToken]) if params[:stripeToken]
     @booking = Booking.new(session[:booking_params])
-
-    session[:campus] = params[:campus] if params[:campus]
-    if session[:campus] == "Sydney"
-      session[:intake] = params[:syd_intake] if params[:syd_intake]
-    elsif session[:campus] == "Melbourne"
-      session[:intake] = params[:mel_intake] if params[:mel_intake]
-    end
-    @booking.intake = Intake.find(session[:intake]) if session[:intake]
-
     @booking.current_step = session[:booking_step]
+
+    if @booking.campus_step?
+      session[:campus] = params[:campus]
+      session[:intake] = params[:syd_intake] if session[:campus] == "Sydney"
+      session[:intake] = params[:mel_intake] if session[:campus] == "Melbourne"
+    end
+    @booking.intake = Intake.find(session[:intake])
+
     if params[:back_button]
       @booking.previous_step
     elsif @booking.valid?
@@ -54,7 +53,11 @@ class BookingsController < ApplicationController
       render :new
     else
       session[:booking_params] = session[:booking_step] = session[:campus] = session[:promo_code] = session[:intake] = nil
-      redirect_to confirmation_path
+      if @booking.course_name == "Coding For Beginners"
+        redirect_to confirmation_path(type: "coding for beginners booking")
+      else
+        redirect_to confirmation_path
+      end
     end
   end
 
