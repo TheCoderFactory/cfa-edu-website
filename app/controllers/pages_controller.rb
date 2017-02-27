@@ -9,7 +9,9 @@ class PagesController < ApplicationController
   end
 
   def confirmation
-    @type = params[:type]
+    course = Course.friendly.find(params[:course_id]) if params[:course_id]
+    @type = course.name.downcase + " booking" if course
+    @type = params[:type] if params[:type]
     @type ||= "booking"
   end
 
