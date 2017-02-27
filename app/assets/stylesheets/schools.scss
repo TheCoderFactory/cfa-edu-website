@@ -148,11 +148,15 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  .mobile {
+    margin-top: -60px;
+  }
+
   .anchor {
     padding: 1px;
     margin-bottom: 60px;
   }
-  h2, h5 {
+  h1, h2, h5 {
     color: #000;
   }
   .price-text {
@@ -215,7 +219,6 @@
     border-width: 2px 0px 0px 0px;
     border-color: #EC5037;
     width: 20%;
-    margin-top: 10px;
     margin-bottom: 30px;
   }
   .no-list-icons {
@@ -239,6 +242,9 @@
     content: "-";
     width: 1em;
     margin-left: -1em;
+  }
+  .desktop {
+    margin-top: -80px;
   }
 }
 .out-of-school {

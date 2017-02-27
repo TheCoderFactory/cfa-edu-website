@@ -18,10 +18,10 @@
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h2 SCHOOL HOLIDAYS
+      h1 SCHOOL HOLIDAYS
       - @sh_courses.each do |course|
         .anchor id="#{course.slug}-m"
-        .row.course-summary
+        .row.course-summary.mobile
           .col-md-6
             h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
             .border
