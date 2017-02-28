@@ -53,7 +53,7 @@ class BookingsController < ApplicationController
       render :new
     else
       session[:booking_params] = session[:booking_step] = session[:campus] = session[:promo_code] = session[:intake] = nil
-      redirect_to confirmation_path
+      redirect_to confirmation_path(course_id: @booking.intake.course.slug)
     end
   end
 

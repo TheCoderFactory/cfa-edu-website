@@ -5,7 +5,7 @@
       h1 AFTER SCHOOL
     - @after_school_courses.each_with_index do |course, index|
       - if index%2 == 0
-        .row.course-summary.p-anchor id="#{course.slug}"
+        .row.course-summary.p-anchor.after-school-course-summary-spacer id="#{course.slug}"
           .col-md-6
             h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
             .border
@@ -38,10 +38,10 @@
 .schools-course-summaries.hidden-md-up
   .container
     center
-      h2 AFTER SCHOOL
+      h2.mobile-course-type-title AFTER SCHOOL
       - @after_school_courses.each do |course|
         .anchor id="#{course.slug}-m"
-        .row.course-summary
+        .row.course-summary.mobile-course-summary-spacer
           .col-md-6
             h5 #{course.name.upcase} - <span class="price-text">#{course.get_price}</span>
             .border
