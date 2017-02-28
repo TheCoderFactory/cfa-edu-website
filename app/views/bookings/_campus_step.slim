@@ -1,6 +1,6 @@
 .row
   .form-group.input-field.col-xs-12
-    = label_tag "Choose your campus"
+    = label_tag "Choose your campus:"
     = select_tag :campus, options_for_select(["Sydney", "Melbourne"], selected: session[:campus])
 .row
   .syd-intakes
@@ -10,7 +10,7 @@
         br
     - elsif @syd_intakes.size > 0
       .form-group.input-field.col-xs-12
-        = label_tag "Choose your intake"
+        = label_tag "Choose your intake:"
         p.booking-box-heading-start Start Date
         = select_tag :syd_intake,\
           options_for_select(\
@@ -42,8 +42,8 @@
         br
     - elsif @mel_intakes.size > 0
       .form-group.input-field.col-xs-12
-        = label_tag "Choose your intake"
-        p.booking-box-heading Start Date
+        = label_tag "Choose your intake:"
+        p.booking-box-heading-start Start Date
         = select_tag :mel_intake,\
           options_for_select(\
             @mel_intakes.collect do |i|\
