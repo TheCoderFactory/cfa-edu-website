@@ -53,11 +53,7 @@ class BookingsController < ApplicationController
       render :new
     else
       session[:booking_params] = session[:booking_step] = session[:campus] = session[:promo_code] = session[:intake] = nil
-      if @booking.course_name == "Coding For Beginners"
-        redirect_to confirmation_path(type: "coding for beginners booking")
-      else
-        redirect_to confirmation_path
-      end
+      redirect_to confirmation_path(course_id: @booking.intake.course.slug)
     end
   end
 
