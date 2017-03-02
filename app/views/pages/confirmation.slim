@@ -1,6 +1,7 @@
 - content_for :conversion_code do
   = render "/layouts/fb_conversion_code.html.erb" if @type == "fast track application"
   = render "/layouts/fb_pixel_code.html.erb" if @type == "fast track application" || @type == "info session booking"
+- content_for :gorepp_code do
   - if @type == "coding for beginners booking"
     <script>gorepp.complete(function(){});</script>
 .confirmation-page

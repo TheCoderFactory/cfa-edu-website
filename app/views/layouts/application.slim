@@ -37,7 +37,6 @@ html
     = render 'layouts/hubspot_tracking_code'
     = render 'layouts/ga_tracking_code'
     = render 'layouts/inspectlet_code' if Rails.env.production?
-    script src="https://cdn.gorepp.com/gorepp.min.js"
     = yield :conversion_code
 
   body data-spy="scroll" data-target="#course-list"
@@ -48,3 +47,5 @@ html
         = yield
       = render "layouts/footer"
 
+    script src="https://cdn.gorepp.com/gorepp.min.js"
+    = yield :gorepp_code
