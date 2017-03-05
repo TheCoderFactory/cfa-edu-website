@@ -49,6 +49,7 @@ class BookingsController < ApplicationController
     session[:booking_step] = @booking.current_step
     if @booking.new_record?
       flash[:terms] = @booking.errors.delete(:accept_terms)
+      flash[:intake] = @booking.errors.delete(:intake)
       flash[:danger] = @booking.errors.reduce([]) { |arr, b| arr << "#{b[0].capitalize} #{b[1]}"; arr }
       render :new
     else
