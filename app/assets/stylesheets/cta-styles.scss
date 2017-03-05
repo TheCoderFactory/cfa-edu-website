@@ -98,13 +98,11 @@
   padding: 22px;
   border-style: none;
 }
-.hero-video-mobile-btn {
-  margin-left: 30px;
-  color: white;
-  font-size: 14px;
-}
-.hero-video-mobile-btn:hover {
-  color: white;
+@media only screen and (max-width: 767px) {
+  .hero-video-btn {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
 }
 .course-option-button {
   background-color: rgba(0, 0, 0, 0.7);
