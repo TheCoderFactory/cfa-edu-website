@@ -10,47 +10,46 @@
               br
               h5 #{@course.tagline}
               br
-          .col-xs-12 class="#{'mel-intakes' if @booking.first_step?}"
-            - if @mel_intakes.size > 0 && @mel_intakes.first.teacher_image_url && @mel_intakes.first.teacher_name?
-                - if @booking.first_step? || @booking.intake.location.include?("Melbourne")
-                    .row
-                      .col-xs-12
-                        h3.black-text Instructor
-                        .border-blue
-                        br
-                        .row
-                          .col-xs-3
-                            img.img-fluid.img-circle src="#{@mel_intakes.first.teacher_image_url}"
-                          .col-xs-9
-                            - if @mel_intakes.first.teacher_linkedin?
-                              h3.blue-text
-                                a href="#{@mel_intakes.first.teacher_linkedin}"  target='_blank' #{@mel_intakes.first.teacher_name}
-                            - else
-                              h3.blue-text
-                                | #{@mel_intakes.first.teacher_name}
-                            - if @mel_intakes.first.teacher_title?
-                              h6.grey-text #{@mel_intakes.first.teacher_title}
-                              br
           .col-xs-12 class="#{'syd-intakes' if @booking.first_step?}"
             - if @syd_intakes.size > 0 && @syd_intakes.first.teacher_image_url && @syd_intakes.first.teacher_name?
               - if @booking.first_step? || @booking.intake.location.include?("Sydney")
-                  .row
-                    .col-xs-12
-                      h3.black-text Instructor
-                      .border-blue
-                      br
+                .row
+                  .col-xs-12
+                    h3.black-text Instructor
+                    .border-blue
+                    br
+                    .row
+                      .col-xs-3
+                        img.img-fluid.img-circle src="#{@syd_intakes.first.teacher_image_url}"
+                      .col-xs-9
+                        - if @syd_intakes.first.teacher_linkedin?
+                          h3.blue-text
+                            a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
+                        - else
+                          h3.blue-text #{@syd_intakes.first.teacher_name}
+                        - if @syd_intakes.first.teacher_title?
+                          h6.grey-text #{@syd_intakes.first.teacher_title}
+                          br
+
+          .col-xs-12 class="#{'mel-intakes' if @booking.first_step?}"
+            - if @mel_intakes.size > 0 && @mel_intakes.first.teacher_image_url && @mel_intakes.first.teacher_name?
+              - if @booking.first_step? || @booking.intake.location.include?("Melbourne")
+                 .row
+                   .col-xs-12
+                     h3.black-text Instructor
+                     .border-blue
+                     br
                       .row
                         .col-xs-3
-                          img.img-fluid.img-circle src="#{@syd_intakes.first.teacher_image_url}"
+                          img.img-fluid.img-circle src="#{@mel_intakes.first.teacher_image_url}"
                         .col-xs-9
-                          - if @syd_intakes.first.teacher_linkedin?
+                          - if @mel_intakes.first.teacher_linkedin?
                             h3.blue-text
-                              a href="#{@syd_intakes.first.teacher_linkedin}"  target='_blank' #{@syd_intakes.first.teacher_name}
+                              a href="#{@mel_intakes.first.teacher_linkedin}"  target='_blank' #{@mel_intakes.first.teacher_name}
                           - else
-                            h3.blue-text
-                              | #{@syd_intakes.first.teacher_name}
-                          - if @syd_intakes.first.teacher_title?
-                            h6.grey-text #{@syd_intakes.first.teacher_title}
+                            h3.blue-text #{@mel_intakes.first.teacher_name}
+                          - if @mel_intakes.first.teacher_title?
+                            h6.grey-text #{@mel_intakes.first.teacher_title}
                             br
         br
         h3.black-text About
